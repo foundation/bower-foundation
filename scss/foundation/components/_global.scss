@@ -283,19 +283,18 @@ $cursor-text-value: text !default;
 
 @include exports("global") {
   // Used to provide media query values for javascript components.
-  // Single quotes placed around everything to convince PhantomJS to read the value.
   meta.foundation-mq-small {
-    font-family: "'" + unquote($small) + "'";
+    font-family: $small;
     width: $small-screen;
   }
 
   meta.foundation-mq-medium {
-    font-family: "'" + unquote($medium) + "'";
+    font-family: $medium;
     width: $medium-screen;
   }
 
   meta.foundation-mq-large {
-    font-family: "'" + unquote($large) + "'";
+    font-family: $large;
     width: $large-screen;
   }
 
