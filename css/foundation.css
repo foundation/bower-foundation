@@ -4303,7 +4303,7 @@ html, body {
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block; } }
 
-.off-canvas-wrap, .inner-wrap, nav.tab-bar, .off-canvas-wrap #left-off-canvas-menu, .off-canvas-wrap #right-off-canvas-menu, .off-canvas-wrap.move-right a.exit-offcanvas, .off-canvas-wrap.move-left a.exit-offcanvas, .main-section {
+.off-canvas-wrap, .inner-wrap, nav.tab-bar, .off-canvas-wrap #left-off-canvas-menu, .off-canvas-wrap #right-off-canvas-menu, .off-canvas-wrap.move-right a.exit-off-canvas, .off-canvas-wrap.move-left a.exit-off-canvas, .main-section {
   -webkit-transform: translateZ(0x);
   -webkit-backface-visibility: hidden; }
 
@@ -4441,7 +4441,7 @@ a.menu-icon {
   -ms-transform: translate3d(250px, 0, 0);
   -o-transform: translate3d(250px, 0, 0);
   transform: translate3d(250px, 0, 0); }
-.off-canvas-wrap.move-right a.exit-offcanvas {
+.off-canvas-wrap.move-right a.exit-off-canvas {
   transition: background 300ms ease;
   cursor: pointer;
   box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
@@ -4454,7 +4454,7 @@ a.menu-icon {
   right: 0;
   z-index: 1002; }
   @media only screen and (min-width:768px) {
-    .off-canvas-wrap.move-right a.exit-offcanvas:hover {
+    .off-canvas-wrap.move-right a.exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 .off-canvas-wrap.move-left .inner-wrap {
   -webkit-transform: translate3d(-250px, 0, 0);
@@ -4462,7 +4462,7 @@ a.menu-icon {
   -ms-transform: translate3d(-250px, 0, 0);
   -o-transform: translate3d(-250px, 0, 0);
   transform: translate3d(-250px, 0, 0); }
-.off-canvas-wrap.move-left a.exit-offcanvas {
+.off-canvas-wrap.move-left a.exit-off-canvas {
   transition: background 300ms ease;
   cursor: pointer;
   box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
@@ -4475,7 +4475,7 @@ a.menu-icon {
   right: 0;
   z-index: 1002; }
   @media only screen and (min-width:768px) {
-    .off-canvas-wrap.move-left a.exit-offcanvas:hover {
+    .off-canvas-wrap.move-left a.exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
 
