@@ -90,8 +90,8 @@ select {
   position: relative;
   padding: 0.875em 1.5em 0.9375em 0.875em;
   font-size: 0.8125em;
-  background-color: #2ba6cb;
-  border-color: #2797b6;
+  background-color: #008cba;
+  border-color: #007ba1;
   color: white; }
   .alert-box .close {
     font-size: 1.375em;
@@ -111,8 +111,8 @@ select {
     -webkit-border-radius: 1000px;
     border-radius: 1000px; }
   .alert-box.success {
-    background-color: #43ac61;
-    border-color: #3c9a56;
+    background-color: #43ac6a;
+    border-color: #3c9a5e;
     color: white; }
   .alert-box.alert {
     background-color: #f04124;
@@ -418,7 +418,7 @@ select {
       text-decoration: underline; }
     .breadcrumbs > * a, .breadcrumbs > * span {
       text-transform: uppercase;
-      color: #2ba6cb; }
+      color: #008cba; }
     .breadcrumbs > *.current {
       cursor: default;
       color: #333333; }
@@ -461,11 +461,11 @@ button, .button {
   padding-left: 2em;
   font-size: 1em;
   /*     @else                            { font-size: $padding - em-calc(2); } */
-  background-color: #2ba6cb;
-  border-color: #2797b6;
+  background-color: #008cba;
+  border-color: #007ba1;
   color: white; }
   button:hover, button:focus, .button:hover, .button:focus {
-    background-color: #2797b6; }
+    background-color: #007ba1; }
   button:hover, button:focus, .button:hover, .button:focus {
     color: white; }
   button.secondary, .button.secondary {
@@ -477,11 +477,11 @@ button, .button {
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       color: #333333; }
   button.success, .button.success {
-    background-color: #43ac61;
-    border-color: #3c9a56;
+    background-color: #43ac6a;
+    border-color: #3c9a5e;
     color: white; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
-      background-color: #3c9a56; }
+      background-color: #3c9a5e; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       color: white; }
   button.alert, .button.alert {
@@ -524,19 +524,19 @@ button, .button {
     text-align: right;
     padding-right: 0.75em; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
-    background-color: #2ba6cb;
-    border-color: #2797b6;
+    background-color: #008cba;
+    border-color: #007ba1;
     color: white;
     cursor: default;
     opacity: 0.7;
     -webkit-box-shadow: none;
     box-shadow: none; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2797b6; }
+      background-color: #007ba1; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       color: white; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-      background-color: #2ba6cb; }
+      background-color: #008cba; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background-color: #e7e7e7;
       border-color: #dadada;
@@ -552,19 +552,19 @@ button, .button {
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: #e7e7e7; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
-      background-color: #43ac61;
-      border-color: #3c9a56;
+      background-color: #43ac6a;
+      border-color: #3c9a5e;
       color: white;
       cursor: default;
       opacity: 0.7;
       -webkit-box-shadow: none;
       box-shadow: none; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #3c9a56; }
+        background-color: #3c9a5e; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         color: white; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-        background-color: #43ac61; }
+        background-color: #43ac6a; }
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: #f04124;
       border-color: #ea2d10;
@@ -2555,7 +2555,7 @@ label.error {
   margin-bottom: inherit;
   padding: 0.4375em 1em;
   font-size: 0.8125em;
-  background-color: #2ba6cb;
+  background-color: #008cba;
   color: white; }
   .label.radius {
     -webkit-border-radius: 3px;
@@ -2567,7 +2567,7 @@ label.error {
     background-color: #f04124;
     color: white; }
   .label.success {
-    background-color: #43ac61;
+    background-color: #43ac6a;
     color: white; }
   .label.secondary {
     background-color: #e7e7e7;
@@ -2841,12 +2841,12 @@ ul.pagination {
     ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
       background: transparent; }
     ul.pagination li.current a {
-      background: #2ba6cb;
+      background: #008cba;
       color: white;
       font-weight: bold;
       cursor: default; }
       ul.pagination li.current a:hover, ul.pagination li.current a:focus {
-        background: #2ba6cb; }
+        background: #008cba; }
   ul.pagination li {
     float: left;
     display: block; }
@@ -2880,10 +2880,10 @@ ul.pagination {
   .panel.callout {
     border-style: solid;
     border-width: 1px;
-    border-color: #2285a1;
+    border-color: #006887;
     margin-bottom: 1.25em;
     padding: 1.25em;
-    background: #2ba6cb;
+    background: #008cba;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
     .panel.callout > :first-child {
@@ -2957,7 +2957,7 @@ ul.pagination {
   padding: 0.125em;
   margin-bottom: 0.625em; }
   .progress .meter {
-    background: #2ba6cb;
+    background: #008cba;
     height: 100%;
     display: block; }
   .progress.secondary .meter {
@@ -2965,7 +2965,7 @@ ul.pagination {
     height: 100%;
     display: block; }
   .progress.success .meter {
-    background: #43ac61;
+    background: #43ac6a;
     height: 100%;
     display: block; }
   .progress.alert .meter {
@@ -3063,7 +3063,7 @@ ul.pagination {
     font-size: 0.875em; }
     .side-nav li a {
       display: block;
-      color: #2ba6cb; }
+      color: #008cba; }
     .side-nav li.active > a:first-child {
       color: #4d4d4d;
       font-weight: normal;
@@ -3184,17 +3184,17 @@ ul.pagination {
       text-decoration: none;
       color: #999999; }
       .sub-nav dt a:hover, .sub-nav dd a:hover, .sub-nav li a:hover {
-        color: #2797b6; }
+        color: #007ba1; }
     .sub-nav dt.active a, .sub-nav dd.active a, .sub-nav li.active a {
       -webkit-border-radius: 3px;
       border-radius: 3px;
       font-weight: normal;
-      background: #2ba6cb;
+      background: #008cba;
       padding: 0.1875em 1em;
       cursor: default;
       color: white; }
       .sub-nav dt.active a:hover, .sub-nav dd.active a:hover, .sub-nav li.active a:hover {
-        background: #2797b6; }
+        background: #007ba1; }
 
 div.switch {
   position: relative;
@@ -3281,8 +3281,8 @@ div.switch {
     background: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
     background: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 100%);
     background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
-    -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #f3fbf5, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
-    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #f3fbf5, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke; }
+    -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #f3fbf6, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
+    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #f3fbf6, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke; }
   div.switch:hover span:last-child, div.switch:focus span:last-child {
     background: white;
     background: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
@@ -3452,8 +3452,8 @@ table {
   -moz-transition: all 200ms ease-out;
   transition: all 200ms ease-out; }
   .th:hover, .th:focus {
-    -webkit-box-shadow: 0 0 6px 1px rgba(43, 166, 203, 0.5);
-    box-shadow: 0 0 6px 1px rgba(43, 166, 203, 0.5); }
+    -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5); }
   .th.radius {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
@@ -3469,8 +3469,8 @@ a.th {
   font-weight: bold;
   color: #333333; }
   .has-tip:hover, .has-tip:focus {
-    border-bottom: dotted 1px #196377;
-    color: #2ba6cb; }
+    border-bottom: dotted 1px #004054;
+    color: #008cba; }
   .has-tip.tip-left, .has-tip.tip-right {
     float: none !important; }
 
@@ -3499,8 +3499,8 @@ a.th {
     border-color: transparent transparent #333333 transparent;
     top: -10px; }
   .tooltip.opened {
-    color: #2ba6cb !important;
-    border-bottom: dotted 1px #196377 !important; }
+    color: #008cba !important;
+    border-bottom: dotted 1px #004054 !important; }
 
 .tap-to-close {
   display: block;
@@ -3550,11 +3550,11 @@ div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, t
 
 /* Default Link Styles */
 a {
-  color: #2ba6cb;
+  color: #008cba;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #2797b6; }
+    color: #007ba1; }
   a img {
     border: none; }
 
@@ -3933,20 +3933,20 @@ blockquote, blockquote p {
     font-weight: normal;
     background: #333333; }
     .top-bar-section ul li > a.button {
-      background: #2ba6cb;
+      background: #008cba;
       font-size: 0.8125em;
       padding-right: 15px;
       padding-left: 15px; }
       .top-bar-section ul li > a.button:hover {
-        background: #2285a1; }
+        background: #006887; }
     .top-bar-section ul li > a.button.secondary {
       background: #e7e7e7; }
       .top-bar-section ul li > a.button.secondary:hover {
         background: #cecece; }
     .top-bar-section ul li > a.button.success {
-      background: #43ac61; }
+      background: #43ac6a; }
       .top-bar-section ul li > a.button.success:hover {
-        background: #35874c; }
+        background: #358753; }
     .top-bar-section ul li > a.button.alert {
       background: #f04124; }
       .top-bar-section ul li > a.button.alert:hover {
@@ -3956,11 +3956,11 @@ blockquote, blockquote p {
     color: white;
     box-shadow: inset 0 -4px #0e0e0e; }
   .top-bar-section ul li.active > a {
-    background: #2ba6cb;
+    background: #008cba;
     color: white;
-    box-shadow: inset 0 -4px #2285a1; }
+    box-shadow: inset 0 -4px #006887; }
     .top-bar-section ul li.active > a:hover {
-      background: #2797b6; }
+      background: #007ba1; }
   .top-bar-section .has-form {
     padding: 15px; }
   .top-bar-section .has-dropdown {
@@ -4130,7 +4130,7 @@ blockquote, blockquote p {
     background: #272727;
     color: white; }
   .no-js .top-bar-section ul li:active > a {
-    background: #2ba6cb;
+    background: #008cba;
     color: white; }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block; } }
