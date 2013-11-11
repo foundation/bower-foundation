@@ -2938,7 +2938,8 @@ if (typeof jQuery === "undefined" &&
 
           if (!self.locked) {
             var settings = $('[data-reveal].open').data('reveal-init'),
-              bg_clicked = $(e.target)[0] === $('.' + settings.bg_class)[0];
+                bg_clicked = $(e.target)[0] === $('.' + settings.bg_class)[0];
+
             if (bg_clicked && !settings.close_on_background_click) {
               return;
             }
