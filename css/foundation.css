@@ -96,7 +96,7 @@ html, body {
   font-weight: normal;
   margin-bottom: 1.25em;
   position: relative;
-  padding: 0.875em 1.5em 0.9375em 0.875em;
+  padding: 0.875em 1.5em 0.875em 0.875em;
   font-size: 0.8125em;
   background-color: #008cba;
   border-color: #007ba1;
@@ -2625,7 +2625,7 @@ html, body {
   display: inline-block;
   position: relative;
   margin-bottom: inherit;
-  padding: 0.4375em 1em;
+  padding: 0.4375em 1em 0.5625em;
   font-size: 0.8125em;
   background-color: #008cba;
   color: white; }
