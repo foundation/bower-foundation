@@ -4303,7 +4303,7 @@ html, body {
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block; } }
 
-.off-canvas-wrap, .inner-wrap, nav.tab-bar, .off-canvas-wrap #left-off-canvas-menu, .off-canvas-wrap #right-off-canvas-menu, .off-canvas-wrap.move-right a.exit-off-canvas, .off-canvas-wrap.move-left a.exit-off-canvas, .main-section {
+.off-canvas-wrap, .inner-wrap, nav.tab-bar, .off-canvas-wrap .left-off-canvas-menu, .off-canvas-wrap .right-off-canvas-menu, .off-canvas-wrap.move-right a.exit-off-canvas, .off-canvas-wrap.move-left a.exit-off-canvas, .main-section {
   -webkit-transform: translateZ(0x);
   -webkit-backface-visibility: hidden; }
 
@@ -4389,13 +4389,13 @@ a.menu-icon {
     -webkit-box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3;
     box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3; }
 
-.off-canvas-wrap .inner-wrap {
+.off-canvas-wrap > .inner-wrap {
   -webkit-transition: -webkit-transform 500ms ease;
   -moz-transition: -moz-transform 500ms ease;
   -ms-transition: -ms-transform 500ms ease;
   -o-transition: -o-transform 500ms ease;
   transition: transform 500ms ease; }
-.off-canvas-wrap #left-off-canvas-menu, .off-canvas-wrap #right-off-canvas-menu {
+.off-canvas-wrap .left-off-canvas-menu, .off-canvas-wrap .right-off-canvas-menu {
   width: 250px;
   top: 0;
   bottom: 0;
@@ -4404,13 +4404,13 @@ a.menu-icon {
   overflow-y: auto;
   background: #333333;
   z-index: 1001; }
-.off-canvas-wrap #left-off-canvas-menu {
+.off-canvas-wrap .left-off-canvas-menu {
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0); }
-.off-canvas-wrap #right-off-canvas-menu {
+.off-canvas-wrap .right-off-canvas-menu {
   -webkit-transform: translate3d(100%, 0, 0);
   -moz-transform: translate3d(100%, 0, 0);
   -ms-transform: translate3d(100%, 0, 0);
@@ -4435,7 +4435,7 @@ a.menu-icon {
     padding: 0.66667em;
     color: rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid #262626; }
-.off-canvas-wrap.move-right .inner-wrap {
+.off-canvas-wrap.move-right > .inner-wrap {
   -webkit-transform: translate3d(250px, 0, 0);
   -moz-transform: translate3d(250px, 0, 0);
   -ms-transform: translate3d(250px, 0, 0);
@@ -4456,7 +4456,7 @@ a.menu-icon {
   @media only screen and (min-width:768px) {
     .off-canvas-wrap.move-right a.exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
-.off-canvas-wrap.move-left .inner-wrap {
+.off-canvas-wrap.move-left > .inner-wrap {
   -webkit-transform: translate3d(-250px, 0, 0);
   -moz-transform: translate3d(-250px, 0, 0);
   -ms-transform: translate3d(-250px, 0, 0);
