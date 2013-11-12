@@ -4401,7 +4401,7 @@ a.menu-icon {
   bottom: 0;
   height: 100%;
   position: absolute;
-  overflow: scroll;
+  overflow-y: auto;
   background: #333333;
   z-index: 1001; }
 .off-canvas-wrap #left-off-canvas-menu {
