@@ -1422,7 +1422,7 @@
 
       this.cache = {};
       this.cached_images = [];
-      this.images_loaded = false;
+      this.images_loaded = (count === 0);
 
       for (var i = count - 1; i >= 0; i--) {
         loaded_count++;
