@@ -9,10 +9,18 @@
 (function ($, window, document, undefined) {
   'use strict';
 
-  $('head').append([
-    '<meta class="foundation-mq-small">', 
-    '<meta class="foundation-mq-medium">', 
-    '<meta class="foundation-mq-large">'].join(''));
+  // Used to retrieve Foundation media queries from CSS.
+  if($('head').has('.foundation-mq-small').length === 0) {
+    $('head').append('<meta class="foundation-mq-small">')
+  }
+
+  if($('head').has('.foundation-mq-medium').length === 0) {
+    $('head').append('<meta class="foundation-mq-medium">')
+  }
+
+  if($('head').has('.foundation-mq-large').length === 0) {
+    $('head').append('<meta class="foundation-mq-large">')
+  }
 
   // Enable FastClick
   if(typeof FastClick !== 'undefined') {
@@ -141,6 +149,15 @@
   }
 
   }( jQuery ));
+
+
+  function removeQuotes (string) {
+    if (typeof string === 'string' || string instanceof String) {
+      string = string.replace(/^[\\'"]+|(;\s?})+|[\\'"]+$/g, '');
+    }
+
+    return string;
+  }
 
   window.Foundation = {
     name : 'Foundation',
@@ -293,6 +310,13 @@
         }
 
         return true;
+      },
+
+      register_media : function(media, media_class) {
+        if(Foundation.media_queries[media] === undefined) {
+          $('head').append('<meta class="' + media_class + '">');
+          Foundation.media_queries[media] = removeQuotes($('.' + media_class).css('font-family'));
+        }
       },
 
       addCustomRule : function(rule, media) {

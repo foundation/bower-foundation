@@ -4173,6 +4173,10 @@ html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
+meta.foundation-mq-topbar {
+  font-family: "only screen and (min-width: 940px)";
+  width: 940px; }
+
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
@@ -4387,10 +4391,6 @@ html, body {
       color: #777777;
       font-weight: bold;
       font-size: 0.625em; }
-
-.top-bar-js-breakpoint {
-  width: 940px !important;
-  visibility: hidden; }
 
 .js-generated {
   display: block; }
