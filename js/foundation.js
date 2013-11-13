@@ -71,6 +71,77 @@
 
   }( document ));
 
+  /*
+   * jquery.requestAnimationFrame
+   * https://github.com/gnarf37/jquery-requestAnimationFrame
+   * Requires jQuery 1.8+
+   *
+   * Copyright (c) 2012 Corey Frang
+   * Licensed under the MIT license.
+   */
+
+  (function( $ ) {
+
+  // requestAnimationFrame polyfill adapted from Erik Möller
+  // fixes from Paul Irish and Tino Zijdel
+  // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+  // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+
+  var animating,
+    lastTime = 0,
+    vendors = ['webkit', 'moz'],
+    requestAnimationFrame = window.requestAnimationFrame,
+    cancelAnimationFrame = window.cancelAnimationFrame;
+
+  for(; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
+    requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
+    cancelAnimationFrame = cancelAnimationFrame ||
+      window[ vendors[lastTime] + "CancelAnimationFrame" ] || 
+      window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
+  }
+
+  function raf() {
+    if ( animating ) {
+      requestAnimationFrame( raf );
+      jQuery.fx.tick();
+    }
+  }
+
+  if ( requestAnimationFrame ) {
+    // use rAF
+    window.requestAnimationFrame = requestAnimationFrame;
+    window.cancelAnimationFrame = cancelAnimationFrame;
+    jQuery.fx.timer = function( timer ) {
+      if ( timer() && jQuery.timers.push( timer ) && !animating ) {
+        animating = true;
+        raf();
+      }
+    };
+
+    jQuery.fx.stop = function() {
+      animating = false;
+    };
+  } else {
+    // polyfill
+    window.requestAnimationFrame = function( callback, element ) {
+      var currTime = new Date().getTime(),
+        timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) ),
+        id = window.setTimeout( function() {
+          callback( currTime + timeToCall );
+        }, timeToCall );
+      lastTime = currTime + timeToCall;
+      return id;
+    };
+
+    window.cancelAnimationFrame = function(id) {
+      clearTimeout(id);
+    };
+      
+  }
+
+  }( jQuery ));
+
   window.Foundation = {
     name : 'Foundation',
 
@@ -1488,7 +1559,8 @@
       modal                : false,      // Whether to cover page with modal during the tour
       tip_location          : 'bottom',  // 'top' or 'bottom' in relation to parent
       nub_position          : 'auto',    // override on a per tooltip bases
-      scroll_speed          : 300,       // Page scrolling speed in milliseconds, 0 = no scroll animation
+      scroll_speed          : 1500,       // Page scrolling speed in milliseconds, 0 = no scroll animation
+      scroll_animation     : 'linear',   // supports 'swing' and 'linear', extend with jQuery UI.
       timer                : 0,         // 0 = no timer , all other numbers = timer in milliseconds
       start_timer_on_click    : true,      // true or false - true requires clicking the first button start the timer
       start_offset          : 0,         // the index of the tooltip you want to start on (index of the li)
@@ -1861,10 +1933,11 @@
 
       window_half = $(window).height() / 2;
       tipOffset = Math.ceil(this.settings.$target.offset().top - window_half + this.settings.$next_tip.outerHeight());
+
       if (tipOffset > 0) {
         $('html, body').animate({
           scrollTop: tipOffset
-        }, this.settings.scroll_speed);
+        }, this.settings.scroll_speed, 'swing');
       }
     },
 
