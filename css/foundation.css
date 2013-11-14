@@ -4,16 +4,16 @@
 /* 1441px, 1919px */
 /* 1920px */
 meta.foundation-mq-small {
-  font-family: "only screen and (max-width: 40em)";
-  width: 40em; }
+  font-family: "only screen";
+  width: 0em; }
 
 meta.foundation-mq-medium {
-  font-family: "only screen and (min-width:40.063em) and (max-width:63.938em)";
-  width: 63.938em; }
+  font-family: "only screen and (min-width:40.063em)";
+  width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "only screen and (min-width:64em) and (max-width:90em)";
-  width: 90em; }
+  font-family: "only screen and (min-width:64em)";
+  width: 64em; }
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
