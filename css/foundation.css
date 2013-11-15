@@ -90,6 +90,53 @@ html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
+.accordion {
+  *zoom: 1;
+  margin-bottom: 0; }
+  .accordion:before, .accordion:after {
+    content: " ";
+    display: table; }
+  .accordion:after {
+    clear: both; }
+  .accordion dd {
+    float: none;
+    display: block;
+    background: #efefef;
+    margin-bottom: 0;
+    position: relative;
+    top: 1px;
+    border: 1px solid #efefef;
+    border-bottom: 1px solid white; }
+    .accordion dd.active {
+      background: white;
+      border-bottom: 1px solid white; }
+    .accordion dd:hover {
+      background: #e4e4e4; }
+    .accordion dd > a {
+      color: #222222;
+      padding: 0.75em 2em;
+      display: block;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size: 1em; }
+  .accordion.vertical {
+    width: 20%;
+    float: left;
+    margin-bottom: 1.25em; }
+    .accordion.vertical dd {
+      float: none;
+      top: 0px; }
+  .accordion .content {
+    display: none;
+    padding: 1em 2em; }
+    .accordion .content.active {
+      display: block;
+      background: white; }
+
+@media only screen and (max-width: 40em) {
+  .accordion dd a {
+    font-size: 0.85em;
+    padding: 0.75em 1em; } }
+
 /* 0px, 640px */
 /* 641px, 1023px */
 /* 1024px, 1440px */
@@ -3700,16 +3747,6 @@ html, body {
     .tabs.vertical dd {
       float: none;
       top: 0px; }
-  .tabs.accordion dd {
-    float: none;
-    display: block;
-    border-bottom: 1px solid white; }
-  .tabs.accordion div.content {
-    display: none;
-    padding: 1em 2em; }
-    .tabs.accordion div.content.active {
-      display: block;
-      background: white; }
 
 .tabs-content {
   *zoom: 1;
