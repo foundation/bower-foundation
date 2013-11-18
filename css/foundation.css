@@ -564,7 +564,15 @@ button, .button {
   /*     @else                            { font-size: $padding - em-calc(2); } */
   background-color: #008cba;
   border-color: #007ba1;
-  color: white; }
+  color: white;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  padding-top: 1.0625em;
+  padding-bottom: 1em;
+  -webkit-appearance: none;
+  border: none;
+  font-weight: normal !important; }
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #007ba1; }
   button:hover, button:focus, .button:hover, .button:focus {
@@ -624,6 +632,12 @@ button, .button {
   button.right-align, .button.right-align {
     text-align: right;
     padding-right: 0.75em; }
+  button.radius, .button.radius {
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+  button.round, .button.round {
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
     background-color: #008cba;
     border-color: #007ba1;
@@ -680,45 +694,6 @@ button, .button {
         color: white; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #f04124; }
-
-button, .button {
-  -webkit-transition: background-color 300ms ease-out;
-  -moz-transition: background-color 300ms ease-out;
-  transition: background-color 300ms ease-out;
-  padding-top: 1.0625em;
-  padding-bottom: 1em;
-  -webkit-appearance: none;
-  border: none;
-  font-weight: normal !important; }
-  button.tiny, .button.tiny {
-    padding-top: 0.6875em;
-    padding-bottom: 0.625em;
-    -webkit-appearance: none;
-    border: none;
-    font-weight: normal !important; }
-  button.small, .button.small {
-    padding-top: 0.9375em;
-    padding-bottom: 0.875em;
-    -webkit-appearance: none;
-    border: none;
-    font-weight: normal !important; }
-  button.large, .button.large {
-    padding-top: 1.15625em;
-    padding-bottom: 1.15625em;
-    -webkit-appearance: none;
-    border: none;
-    font-weight: normal !important; }
-
-button, .button {
-  -webkit-transition: background-color 300ms ease-out;
-  -moz-transition: background-color 300ms ease-out;
-  transition: background-color 300ms ease-out; }
-  button.radius, .button.radius {
-    -webkit-border-radius: 3px;
-    border-radius: 3px; }
-  button.round, .button.round {
-    -webkit-border-radius: 1000px;
-    border-radius: 1000px; }
 
 @media only screen and (min-width:40.063em) {
   button, .button {
@@ -1273,7 +1248,8 @@ label {
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
-  line-height: 2.125em; }
+  line-height: 2.125em;
+  border: none; }
 
 .prefix.button {
   padding-left: 0;
@@ -1281,7 +1257,8 @@ label {
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
-  line-height: 2.125em; }
+  line-height: 2.125em;
+  border: none; }
 
 .prefix.button.radius {
   -webkit-border-radius: 0;
