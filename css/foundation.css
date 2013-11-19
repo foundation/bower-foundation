@@ -10,6 +10,14 @@ meta.foundation-mq-large {
   font-family: 'only screen and (min-width:64rem)';
   width: 64rem; }
 
+meta.foundation-mq-xlarge {
+  font-family: 'only screen and (min-width:90.0625rem)';
+  width: 90.0625rem; }
+
+meta.foundation-mq-xlarge {
+  font-family: 'only screen and (min-width:120rem)';
+  width: 120rem; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
