@@ -3589,7 +3589,7 @@ html, body {
 
 .tabs {
   *zoom: 1;
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
   .tabs:before, .tabs:after {
     content: " ";
     display: table; }
@@ -3597,33 +3597,41 @@ html, body {
     clear: both; }
   .tabs dd {
     float: left;
-    background: #efefef;
-    margin-bottom: 0;
     position: relative;
-    top: 1px;
-    border: 1px solid #efefef; }
-    .tabs dd.active {
-      background: white;
-      border-bottom: 1px solid white; }
-    .tabs dd:hover {
-      background: #e4e4e4; }
+    margin-bottom: 0 !important;
+    top: 1px; }
     .tabs dd > a {
+      background: #efefef;
       color: #222222;
-      padding: 0.75em 2em;
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem;
       display: block;
-      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-      font-size: 1em; }
-  .tabs.vertical {
-    width: 20%;
-    float: left;
-    margin-bottom: 1.25em; }
-    .tabs.vertical dd {
-      float: none;
-      top: 0px; }
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+      .tabs dd > a:hover {
+        background: #e4e4e4; }
+    .tabs dd.active a {
+      background: white; }
+  .tabs.radius dd:first-child a {
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px; }
+  .tabs.radius dd:last-child a {
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  .tabs.vertical dd {
+    float: none;
+    top: 0px; }
 
 .tabs-content {
   *zoom: 1;
-  margin-bottom: 1.25em; }
+  margin-bottom: 1.5rem; }
   .tabs-content:before, .tabs-content:after {
     content: " ";
     display: table; }
@@ -3632,21 +3640,26 @@ html, body {
   .tabs-content > .content {
     display: none;
     float: left;
-    padding: 1em 1.35em;
-    border: 1px solid #efefef; }
+    padding: 1rem 1.35rem; }
     .tabs-content > .content.active {
       display: block; }
     .tabs-content > .content p {
       margin-bottom: 0; }
   .tabs-content.vertical {
+    display: block; }
+
+@media only screen and (min-width:40.0625rem) {
+  .tabs dd > a {
+    padding: 0.85rem 2rem;
+    font-size: 1rem; }
+  .tabs.vertical {
+    width: 20%;
+    float: left;
+    margin-bottom: 1.25em; }
+  .tabs-content.vertical {
     width: 80%;
     float: left;
-    margin-left: -1px; }
-
-@media only screen and (max-width: 40rem) {
-  .tabs dd a {
-    font-size: 0.85em;
-    padding: 0.75em 1em; } }
+    margin-left: -1px; } }
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
