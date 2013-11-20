@@ -4412,7 +4412,8 @@ meta.foundation-mq-topbar {
   position: absolute;
   overflow-y: auto;
   background: #333333;
-  z-index: 1001; }
+  z-index: 1001;
+  box-sizing: content-box; }
 
 section.left-small, section.right-small {
   width: 2.8125rem;
@@ -4579,6 +4580,15 @@ ul.off-canvas-list {
   @media only screen and (min-width:40.0625rem) {
     .move-left a.exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
+
+.lt-ie10 .left-off-canvas-menu {
+  left: -250px; }
+.lt-ie10 .right-off-canvas-menu {
+  right: -250px; }
+.lt-ie10 .move-left > .inner-wrap {
+  right: 250px; }
+.lt-ie10 .move-right > .inner-wrap {
+  left: 250px; }
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
