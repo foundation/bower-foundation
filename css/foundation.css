@@ -4408,13 +4408,17 @@ section.left-small, section.right-small {
   overflow: hidden; }
 
 .inner-wrap {
-  bottom: 0;
-  top: 0;
+  *zoom: 1;
   -webkit-transition: -webkit-transform 500ms ease;
   -moz-transition: -moz-transform 500ms ease;
   -ms-transition: -ms-transform 500ms ease;
   -o-transition: -o-transform 500ms ease;
   transition: transform 500ms ease; }
+  .inner-wrap:before, .inner-wrap:after {
+    content: " ";
+    display: table; }
+  .inner-wrap:after {
+    clear: both; }
 
 nav.tab-bar {
   background: #333333;
