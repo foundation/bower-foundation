@@ -2719,6 +2719,8 @@ html, body {
     margin-bottom: 0; }
     [data-magellan-expedition] .sub-nav dd {
       margin-bottom: 0; }
+    [data-magellan-expedition] .sub-nav .active {
+      line-height: 1.8em; }
 
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
