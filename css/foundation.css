@@ -3647,8 +3647,6 @@ html, body {
     padding: 0.9375rem 0; }
     .tabs-content > .content.active {
       display: block; }
-    .tabs-content > .content p {
-      margin-bottom: 0; }
     .tabs-content > .content.contained {
       padding: 0.9375rem; }
   .tabs-content.vertical {
@@ -3660,7 +3658,7 @@ html, body {
   .tabs.vertical {
     width: 20%;
     float: left;
-    margin-bottom: 1.25em; }
+    margin-bottom: 1.25rem; }
   .tabs-content.vertical {
     width: 80%;
     float: left;
