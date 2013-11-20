@@ -3596,19 +3596,22 @@ html, body {
   .tabs:after {
     clear: both; }
   .tabs dd {
-    float: left;
     position: relative;
     margin-bottom: 0 !important;
-    top: 1px; }
+    top: 1px;
+    float: left; }
     .tabs dd > a {
+      display: block;
       background: #efefef;
       color: #222222;
-      font-size: 0.875rem;
-      padding: 0.75rem 1rem;
-      display: block;
-      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+      padding-top: 1rem;
+      padding-right: 2rem;
+      padding-bottom: 1.0625rem;
+      padding-left: 2rem;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size: 1rem; }
       .tabs dd > a:hover {
-        background: #e4e4e4; }
+        background: #e2e2e2; }
     .tabs dd.active a {
       background: white; }
   .tabs.radius dd:first-child a {
@@ -3627,6 +3630,7 @@ html, body {
     border-bottom-right-radius: 3px; }
   .tabs.vertical dd {
     float: none;
+    display: block;
     top: 0px; }
 
 .tabs-content {
@@ -3640,18 +3644,19 @@ html, body {
   .tabs-content > .content {
     display: none;
     float: left;
-    padding: 1rem 1.35rem; }
+    padding: 0.9375rem 0; }
     .tabs-content > .content.active {
       display: block; }
     .tabs-content > .content p {
       margin-bottom: 0; }
+    .tabs-content > .content.contained {
+      padding: 0.9375rem; }
   .tabs-content.vertical {
     display: block; }
+    .tabs-content.vertical > .content {
+      padding: 0 0.9375rem; }
 
 @media only screen and (min-width:40.0625rem) {
-  .tabs dd > a {
-    padding: 0.85rem 2rem;
-    font-size: 1rem; }
   .tabs.vertical {
     width: 20%;
     float: left;
