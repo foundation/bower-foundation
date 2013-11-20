@@ -1,22 +1,22 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 meta.foundation-mq-small {
-  font-family: 'only screen';
+  font-family: "/only screen/";
   width: 0; }
 
 meta.foundation-mq-medium {
-  font-family: 'only screen and (min-width:40.0625rem)';
+  font-family: "/only screen and (min-width:40.0625rem)/";
   width: 40.0625rem; }
 
 meta.foundation-mq-large {
-  font-family: 'only screen and (min-width:64rem)';
+  font-family: "/only screen and (min-width:64rem)/";
   width: 64rem; }
 
 meta.foundation-mq-xlarge {
-  font-family: 'only screen and (min-width:90.0625rem)';
+  font-family: "/only screen and (min-width:90.0625rem)/";
   width: 90.0625rem; }
 
 meta.foundation-mq-xxlarge {
-  font-family: 'only screen and (min-width:120rem)';
+  font-family: "/only screen and (min-width:120rem)/";
   width: 120rem; }
 
 *, *:before, *:after {
