@@ -1362,7 +1362,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     background-color: #dddddd; }
 
 /* Adjust margin for form elements below */
-input[type="file"], select {
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
   margin: 0 0 1rem 0; }
 
 input[type="checkbox"] + label, input[type="radio"] + label {
