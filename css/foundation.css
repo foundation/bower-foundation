@@ -2522,7 +2522,7 @@ html, body {
 .joyride-tip-guide {
   display: none;
   position: absolute;
-  background: red;
+  background: #333333;
   color: white;
   z-index: 101;
   top: 0;
@@ -2549,17 +2549,17 @@ html, body {
   left: 22px;
   width: 0;
   height: 0;
-  border: 10px solid red; }
+  border: 10px solid #333333; }
   .joyride-tip-guide .joyride-nub.top {
     border-top-style: solid;
-    border-color: red;
+    border-color: #333333;
     border-top-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     top: -20px; }
   .joyride-tip-guide .joyride-nub.bottom {
     border-bottom-style: solid;
-    border-color: red !important;
+    border-color: #333333 !important;
     border-bottom-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
@@ -2642,13 +2642,13 @@ html, body {
     width: 300px;
     left: inherit; }
     .joyride-tip-guide .joyride-nub.bottom {
-      border-color: red !important;
+      border-color: #333333 !important;
       border-bottom-color: transparent !important;
       border-left-color: transparent !important;
       border-right-color: transparent !important;
       bottom: -20px; }
     .joyride-tip-guide .joyride-nub.right {
-      border-color: red !important;
+      border-color: #333333 !important;
       border-top-color: transparent !important;
       border-right-color: transparent !important;
       border-bottom-color: transparent !important;
@@ -2656,7 +2656,7 @@ html, body {
       left: auto;
       right: -20px; }
     .joyride-tip-guide .joyride-nub.left {
-      border-color: red !important;
+      border-color: #333333 !important;
       border-top-color: transparent !important;
       border-left-color: transparent !important;
       border-bottom-color: transparent !important;
