@@ -3022,25 +3022,23 @@ html, body {
   .panel.callout {
     border-style: solid;
     border-width: 1px;
-    border-color: #006887;
+    border-color: #baf0ff;
     margin-bottom: 1.25rem;
     padding: 1.25rem;
-    background: #008cba;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; }
+    background: #edfbff; }
     .panel.callout > :first-child {
       margin-top: 0; }
     .panel.callout > :last-child {
       margin-bottom: 0; }
     .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p {
-      color: white; }
+      color: #333333; }
     .panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
       line-height: 1;
       margin-bottom: 0.625rem; }
       .panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
         line-height: 1.4; }
     .panel.callout a {
-      color: white; }
+      color: #008cba; }
   .panel.radius {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
