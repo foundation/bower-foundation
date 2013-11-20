@@ -1144,7 +1144,7 @@
     version : '5.0.0',
 
     settings : {
-      activeClass: 'open',
+      active_class: 'open',
       is_hover: false,
       opened: function(){},
       closed: function(){}
@@ -1204,10 +1204,10 @@
     close: function (dropdown) {
       var self = this;
       dropdown.each(function () {
-        if ($(this).hasClass(self.settings.activeClass)) {
+        if ($(this).hasClass(self.settings.active_class)) {
           $(this)
             .css(Foundation.rtl ? 'right':'left', '-99999px')
-            .removeClass(self.settings.activeClass);
+            .removeClass(self.settings.active_class);
           $(this).trigger('closed');
         }
       });
@@ -1216,7 +1216,7 @@
     open: function (dropdown, target) {
         this
           .css(dropdown
-            .addClass(this.settings.activeClass), target);
+            .addClass(this.settings.active_class), target);
         dropdown.trigger('opened');
     },
 
@@ -1229,7 +1229,7 @@
 
       this.close.call(this, $('[data-dropdown-content]').not(dropdown));
 
-      if (dropdown.hasClass(this.settings.activeClass)) {
+      if (dropdown.hasClass(this.settings.active_class)) {
         this.close.call(this, dropdown);
       } else {
         this.close.call(this, $('[data-dropdown-content]'))
@@ -1300,6 +1300,7 @@
     reflow : function () {}
   };
 }(jQuery, this, this.document));
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
