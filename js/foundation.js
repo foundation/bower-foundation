@@ -1722,6 +1722,8 @@
           integer_settings = ['timer', 'scrollSpeed', 'startOffset', 'tipAnimationFadeSpeed', 'cookieExpires'],
           int_settings_count = integer_settings.length;
 
+      if (!$this.length > 0) return;
+
       if (!this.settings.init) this.events();
 
       this.settings = $this.data('joyride-init');
