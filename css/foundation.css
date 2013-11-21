@@ -3898,7 +3898,8 @@ meta.foundation-mq-topbar {
   .top-bar .button {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 0.75rem; }
   .top-bar .title-area {
     position: relative;
     margin: 0; }
