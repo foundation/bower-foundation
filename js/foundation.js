@@ -3939,7 +3939,7 @@
     },
 
     breakpoint : function () {
-      return matchMedia(Foundation.media_queries['medium']).matches;
+      return matchMedia(Foundation.media_queries['topbar']).matches;
     },
 
     assemble : function (topbar) {
