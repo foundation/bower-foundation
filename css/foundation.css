@@ -4024,8 +4024,8 @@ html, body {
   -webkit-text-size-adjust: none; }
 
 meta.foundation-mq-topbar {
-  font-family: "only screen and (min-width: 40em)";
-  width: 40em; }
+  font-family: "only screen and (min-width: 63.938em)";
+  width: 63.938em; }
 
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
@@ -4242,7 +4242,7 @@ meta.foundation-mq-topbar {
 .js-generated {
   display: block; }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 63.938em) {
   .top-bar {
     background: #333333;
     *zoom: 1;
