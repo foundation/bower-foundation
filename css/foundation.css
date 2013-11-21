@@ -4588,7 +4588,7 @@ td.show-for-small, td.show-for-small-only, td.show-for-medium-down td.show-for-l
   /* Specific visilbity for tables */
   .hide-for-small, .hide-for-small-only, .hide-for-medium, .hide-for-medium-down, .show-for-medium-up, .show-for-large, .show-for-large-up, .show-for-large-only {
     display: inherit !important; }
-  .show-for-medium, .show-for-medium-down, .show-for-medium-only, .hide-for-large, .hide-for-large-up, .hide-for-large-only, .show-for-xlarge .show-for-xlarge-up, .show-for-xlarge-only, .show-for-xxlarge-up, .show-for-xxlarge-only {
+  .show-for-small-only, .show-for-medium, .show-for-medium-down, .show-for-medium-only, .hide-for-large, .hide-for-large-up, .hide-for-large-only, .show-for-xlarge .show-for-xlarge-up, .show-for-xlarge-only, .show-for-xxlarge-up, .show-for-xxlarge-only {
     display: none !important; }
   table.show-for-large, table.show-for-large-up, table.hide-for-medium, table.hide-for-medium-down {
     display: table; }
