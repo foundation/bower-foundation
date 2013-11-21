@@ -8,15 +8,15 @@ meta.foundation-mq-medium {
   width: 40.063em; }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64em) and (max-width:90em)/";
+  font-family: "/only screen and (min-width:64em)/";
   width: 64em; }
 
 meta.foundation-mq-xlarge {
-  font-family: "/only screen and (min-width:90.063em) and (max-width:119.938em)/";
+  font-family: "/only screen and (min-width:90.063em)/";
   width: 90.063em; }
 
 meta.foundation-mq-xxlarge {
-  font-family: "/only screen and (min-width:120em) and (max-width:999999999999)/";
+  font-family: "/only screen and (min-width:120em)/";
   width: 120em; }
 
 *, *:before, *:after {
