@@ -94,7 +94,6 @@ html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -1164,7 +1163,6 @@ html, body {
       display: block;
       background: white; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -1211,7 +1209,6 @@ html, body {
     border-color: #dadada;
     color: #4e4e4e; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -1490,7 +1487,6 @@ html, body {
     .large-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -1543,12 +1539,10 @@ html, body {
       content: " ";
       margin: 0; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -1820,12 +1814,10 @@ button, .button {
     .button-bar .button-group div {
       overflow: hidden; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -1984,7 +1976,6 @@ html, body {
     padding-left: 0;
     padding-top: 0; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2081,7 +2072,6 @@ html, body {
   .f-dropdown.large {
     max-width: 800px; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2131,7 +2121,6 @@ html, body {
   .dropdown.button.secondary:before {
     border-color: #333333 transparent transparent transparent; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2154,12 +2143,10 @@ html, body {
     width: 100%;
     height: 100%; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2472,12 +2459,10 @@ input.error, textarea.error {
 label.error {
   color: #f04124; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2497,7 +2482,6 @@ html, body {
     .inline-list > li > * {
       display: block; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2652,7 +2636,6 @@ html, body {
       left: -20px;
       right: auto; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2670,7 +2653,6 @@ html, body {
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2705,7 +2687,6 @@ html, body {
     background-color: #e7e7e7;
     color: #333333; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2722,7 +2703,6 @@ html, body {
     [data-magellan-expedition] .sub-nav .active {
       line-height: 1.8em; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -2962,7 +2942,6 @@ html, body {
   .orbit-stack-on-small .orbit-timer, .orbit-stack-on-small .orbit-next, .orbit-stack-on-small .orbit-prev, .orbit-stack-on-small .orbit-bullets {
     display: none; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3007,7 +2986,6 @@ ul.pagination {
     float: none;
     display: inline-block; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3055,7 +3033,6 @@ html, body {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3106,7 +3083,6 @@ html, body {
     text-align: center;
     padding: 1.25rem 1.25rem 0; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3147,7 +3123,6 @@ html, body {
       -webkit-border-radius: 999px;
       border-radius: 999px; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3218,7 +3193,6 @@ html, body {
   .reveal-modal {
     background: white !important; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3247,17 +3221,14 @@ html, body {
       list-style: none;
       border-top-color: #e6e6e6; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3348,7 +3319,6 @@ html, body {
     border-top-right-radius: 1000px;
     border-bottom-right-radius: 1000px; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3388,7 +3358,6 @@ html, body {
       .sub-nav dt.active a:hover, .sub-nav dd.active a:hover, .sub-nav li.active a:hover {
         background: #007ba1; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3545,7 +3514,6 @@ div.switch {
   to {
     position: relative; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3572,7 +3540,6 @@ table {
     display: table-cell;
     line-height: 1.125rem; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3654,7 +3621,6 @@ html, body {
     float: left;
     margin-left: -1px; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3680,7 +3646,6 @@ a.th {
   display: inline-block;
   max-width: 100%; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -3754,32 +3719,26 @@ html, body {
     top: 50%;
     margin-top: -5px; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
@@ -4048,12 +4007,10 @@ blockquote, blockquote p {
   .show-for-print {
     display: inherit !important; } }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 html, body {
   height: 100%;
   -webkit-text-size-adjust: none; }
