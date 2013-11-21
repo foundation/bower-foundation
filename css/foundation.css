@@ -3893,18 +3893,14 @@ meta.foundation-mq-topbar {
     margin-bottom: 0; }
   .top-bar input {
     height: auto;
-    padding-top: 0.3rem;
-    padding-bottom: 0.25rem;
-    font-size: 0.75rem; }
-  .top-bar .button {
     padding-top: 0.35rem;
     padding-bottom: 0.35rem;
+    font-size: 0.75rem; }
+  .top-bar .button {
+    padding-top: 0.45rem;
+    padding-bottom: 0.35rem;
     margin-bottom: 0;
-    font-size: 0.75rem;
-    @moz-document {
-      position: relative;
-      top: -1px; }
- }
+    font-size: 0.75rem; }
   .top-bar .title-area {
     position: relative;
     margin: 0; }
@@ -4094,7 +4090,7 @@ meta.foundation-mq-topbar {
     .top-bar input, .top-bar .button {
       font-size: 0.875rem;
       position: relative;
-      top: 8px; }
+      top: 7px; }
     .top-bar.expanded {
       background: #333333; }
   .contain-to-grid .top-bar {
@@ -4235,8 +4231,7 @@ nav.tab-bar {
   color: white;
   height: 2.8125rem;
   line-height: 2.8125rem;
-  position: relative;
-  z-index: 999; }
+  position: relative; }
   nav.tab-bar h1, nav.tab-bar h2, nav.tab-bar h3, nav.tab-bar h4, nav.tab-bar h5, nav.tab-bar h6 {
     color: white;
     font-weight: bold;
