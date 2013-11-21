@@ -55,11 +55,19 @@ img {
 #map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object {
   max-width: none !important; }
 
-.left {
+.float-left {
   float: left !important; }
 
-.right {
+.float-right {
   float: right !important; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
 
 .text-left {
   text-align: left !important; }
@@ -4348,7 +4356,7 @@ meta.foundation-mq-topbar {
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block; } }
 
-.off-canvas-wrap, .inner-wrap, nav.tab-bar, .left-off-canvas-menu, .right-off-canvas-menu, .move-right a.exit-off-canvas, .move-left a.exit-off-canvas {
+.off-canvas-wrap, .inner-wrap, nav.tab-bar, .left-off-canvas-menu, .left-off-canvas-menu *, .right-off-canvas-menu, .move-right a.exit-off-canvas, .move-left a.exit-off-canvas {
   -webkit-transform: translateZ(0x);
   -webkit-backface-visibility: hidden; }
 
