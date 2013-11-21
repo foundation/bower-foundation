@@ -165,7 +165,7 @@
 
   function removeQuotes (string) {
     if (typeof string === 'string' || string instanceof String) {
-      string = string.replace(/^[\\'"]+|(;\s?})+|[\\'"]+$/g, '');
+      string = string.replace(/^[\\/'"]+|(;\s?})+|[\\/'"]+$/g, '');
     }
 
     return string;
@@ -3800,7 +3800,7 @@
             self.toggle();
             return;
           }
-          console.log(self.breakpoint())
+
           if (self.breakpoint()) return;
           if (settings.is_hover && !Modernizr.touch) return;
 
@@ -3939,7 +3939,7 @@
     },
 
     breakpoint : function () {
-      return matchMedia(Foundation.media_queries['topbar']).matches;
+      return !matchMedia(Foundation.media_queries['topbar']).matches;
     },
 
     assemble : function (topbar) {
