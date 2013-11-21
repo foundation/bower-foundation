@@ -55,10 +55,10 @@ img {
 #map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object {
   max-width: none !important; }
 
-.float-left {
+.left {
   float: left !important; }
 
-.float-right {
+.right {
   float: right !important; }
 
 .clearfix {
