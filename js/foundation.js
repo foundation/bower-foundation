@@ -375,25 +375,29 @@
       },
 
       bindings : function (method, options) {
-        var self = this;
+        var self = this,
+            should_bind_events = !S(this).data(this.name + '-init');
 
         if (typeof method === 'string') {
           return this[method].call(this);
         }
 
         if (S(this.scope).is('[data-' + this.name +']')) {
-          if (!S(this).data(this.name + '-init')) {
+          S(this.scope).data(this.name + '-init', $.extend({}, this.settings, (options || method), this.data_options(S(this.scope))));
+
+          if (should_bind_events) {
             this.events(this.scope);
           }
 
-          S(this.scope).data(this.name + '-init', $.extend({}, this.settings, (options || method), this.data_options(S(this.scope))));
         } else {
           S('[data-' + this.name + ']', this.scope).each(function () {
-            if (!S(this).data(self.name + '-init')) {
-              self.events(this);
-            }
+            var should_bind_events = !S(this).data(self.name + '-init');
 
             S(this).data(self.name + '-init', $.extend({}, self.settings, (options || method), self.data_options(S(this))));
+
+            if (should_bind_events) {
+              self.events(this);
+            }
           });
         }
       }
@@ -3719,7 +3723,6 @@
       }
 
       var settings = topbar.data('topbar-init');
-      if (typeof settings === 'undefined') {settings = {};}
 
       var section = $('section, .section', topbar);
 
@@ -3896,7 +3899,7 @@
       var self = this;
       $('[data-topbar]').each(function () {
         var topbar = $(this),
-            settings = topbar.data('topbar-int');
+            settings = topbar.data('topbar-init');
 
         var stickyContainer = topbar.parent('.' + self.settings.sticky_class);
         var stickyOffset;
@@ -3910,7 +3913,7 @@
             .removeClass('hover');
 
             if(doToggle) {
-              self.toggle();
+              self.toggle(topbar);
             }
         }
 
