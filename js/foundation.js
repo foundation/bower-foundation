@@ -3744,7 +3744,7 @@
           .css('height', '');
       }
 
-      if(settings.scrolltop) {
+      if (settings.scrolltop) {
         if (!topbar.hasClass('expanded')) {
           if (topbar.hasClass('fixed')) {
             topbar.parent().addClass('fixed');
@@ -3800,7 +3800,7 @@
             self.toggle();
             return;
           }
-
+          console.log(self.breakpoint())
           if (self.breakpoint()) return;
           if (settings.is_hover && !Modernizr.touch) return;
 
