@@ -1143,8 +1143,7 @@ html, body {
     clear: both; }
   .accordion dd {
     display: block;
-    margin-bottom: 0;
-    position: relative; }
+    margin-bottom: 0 !important; }
     .accordion dd.active a {
       background: #e7e7e7; }
     .accordion dd > a {
@@ -3586,9 +3585,10 @@ html, body {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px; }
   .tabs.vertical dd {
+    position: inherit;
     float: none;
     display: block;
-    top: 0px; }
+    top: auto; }
 
 .tabs-content {
   *zoom: 1;
