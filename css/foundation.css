@@ -2161,6 +2161,13 @@ select {
     background-position-y: center;
     border-color: #999999; }
 
+@-moz-document url-prefix() {
+  select {
+    background: #fafafa; }
+
+  select:hover {
+    background: #f2f2f2; } }
+
 /* Attach elements to the beginning or end of an input */
 .prefix, .postfix {
   display: block;
