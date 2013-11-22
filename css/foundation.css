@@ -4193,7 +4193,7 @@ meta.foundation-mq-topbar {
     display: block; } }
 
 .off-canvas-wrap, .inner-wrap, nav.tab-bar, .left-off-canvas-menu, .left-off-canvas-menu *, .right-off-canvas-menu, .move-right a.exit-off-canvas, .move-left a.exit-off-canvas {
-  -webkit-transform: translateZ(0x);
+  -webkit-transform: translateZ(0);
   -webkit-backface-visibility: hidden; }
 
 .off-canvas-wrap, .inner-wrap {
