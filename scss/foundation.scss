@@ -1,7 +1,3 @@
-// Make sure the charset is set appropriately
-@charset "UTF-8";
-
-// Behold, here are all the Foundation components.
 @import
   "foundation/components/accordion",
   "foundation/components/alert-boxes",
@@ -34,5 +30,6 @@
   "foundation/components/tabs",
   "foundation/components/thumbs",
   "foundation/components/tooltips",
+  "foundation/components/tabs",
   "foundation/components/offcanvas",
   "foundation/components/visibility";
