@@ -4,7 +4,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.0.1',
+    version: '5.0.0',
 
     settings : {
       index : 0,
@@ -35,7 +35,7 @@
         var topbarContainer = topbar.parent();
         if(topbarContainer.hasClass('fixed') || topbarContainer.hasClass(settings.sticky_class)) {
           self.settings.sticky_class = settings.sticky_class;
-          self.settings.stick_topbar = topbar;
+          self.settings.sticky_topbar = topbar;
           topbar.data('height', topbarContainer.outerHeight());
           topbar.data('stickyoffset', topbarContainer.offset().top);
         } else {
