@@ -35,11 +35,9 @@
 
 
   // Enable FastClick
-  $(function() {
-    if(typeof FastClick !== 'undefined') {
-      FastClick.attach(document.body);
-    }
-  });
+  if(typeof FastClick !== 'undefined') {
+    FastClick.attach(document.body);
+  }
 
   // private Fast Selector wrapper,
   // returns jQuery object. Only use where
@@ -176,7 +174,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.0.3',
+    version : '5.0.0',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
