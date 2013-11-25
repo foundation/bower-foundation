@@ -35,9 +35,11 @@
 
 
   // Enable FastClick
-  if(typeof FastClick !== 'undefined') {
-    FastClick.attach(document.body);
-  }
+  $(function() {
+    if(typeof FastClick !== 'undefined') {
+      FastClick.attach(document.body);
+    }
+  });
 
   // private Fast Selector wrapper,
   // returns jQuery object. Only use where
@@ -174,7 +176,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.0.0',
+    version : '5.0.3',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -622,7 +624,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '5.0.0',
+    version : '5.0.1',
 
     settings : {
       active_class: 'active',
@@ -634,12 +636,12 @@
     },
 
     events : function () {
-      $(this.scope).off('.accordion').on('click.fndtn.accordion', '[data-accordion] a', function (e) {
+      $(this.scope).off('.accordion').on('click.fndtn.accordion', '[data-accordion] > dd > a', function (e) {
         var accordion = $(this).parent(),
             target = $('#' + this.href.split('#')[1]),
-            siblings = $('.content', target.closest('[data-accordion]')),
+            siblings = $('> dd > .content', target.closest('[data-accordion]')),
             settings = accordion.parent().data('accordion-init'),
-            active = $('.content.' + settings.active_class, accordion.parent());
+            active = $('> dd > .content.' + settings.active_class, accordion.parent());
 
         e.preventDefault();
 
@@ -3069,7 +3071,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '5.0.0',
+    version : '5.0.3',
 
     locked : false,
 
@@ -3101,7 +3103,6 @@
 
     init : function (scope, method, options) {
       Foundation.inherit(this, 'delay');
-
       this.bindings(method, options);
     },
 
@@ -3180,6 +3181,7 @@
     },
 
     open : function (target, ajax_settings) {
+      var self = this;
       if (target) {
         if (typeof target.selector !== 'undefined') {
           var modal = $('#' + target.data('reveal-id'));
@@ -3192,6 +3194,8 @@
         var modal = $(this.scope);
       }
 
+      var settings = modal.data('reveal-init');
+
       if (!modal.hasClass('open')) {
         var open_modal = $('[data-reveal].open');
 
@@ -3203,15 +3207,18 @@
         modal.trigger('open');
 
         if (open_modal.length < 1) {
-          this.toggle_bg();
+          this.toggle_bg(modal);
         }
 
         if (typeof ajax_settings === 'undefined' || !ajax_settings.url) {
-          this.hide(open_modal, this.settings.css.close);
-          this.show(modal, this.settings.css.open);
+          if (open_modal.length > 0) {
+            var open_modal_settings = open_modal.data('reveal-init');
+            this.hide(open_modal, open_modal_settings.css.close);
+          }
+
+          this.show(modal, settings.css.open);
         } else {
-          var self = this,
-              old_success = typeof ajax_settings.success !== 'undefined' ? ajax_settings.success : null;
+          var old_success = typeof ajax_settings.success !== 'undefined' ? ajax_settings.success : null;
 
           $.extend(ajax_settings, {
             success: function (data, textStatus, jqXHR) {
@@ -3222,8 +3229,11 @@
               modal.html(data);
               $(modal).foundation('section', 'reflow');
 
-              self.hide(open_modal, self.settings.css.close);
-              self.show(modal, self.settings.css.open);
+              if (open_modal.length > 0) {
+                var open_modal_settings = open_modal.data('reveal-init');
+                self.hide(open_modal, open_modal_settings.css.close);
+              }
+              self.show(modal, settings.css.open);
             }
           });
 
@@ -3233,15 +3243,15 @@
     },
 
     close : function (modal) {
-
       var modal = modal && modal.length ? modal : $(this.scope),
-          open_modals = $('[data-reveal].open');
+          open_modals = $('[data-reveal].open'),
+          settings = modal.data('reveal-init');
 
       if (open_modals.length > 0) {
         this.locked = true;
         modal.trigger('close');
-        this.toggle_bg();
-        this.hide(open_modals, this.settings.css.close);
+        this.toggle_bg(modal);
+        this.hide(open_modals, settings.css.close, settings);
       }
     },
 
@@ -3255,7 +3265,9 @@
       return base;
     },
 
-    toggle_bg : function () {
+    toggle_bg : function (modal) {
+      var settings = modal.data('reveal-init');
+
       if ($('.' + this.settings.bg_class).length === 0) {
         this.settings.bg = $('<div />', {'class': this.settings.bg_class})
           .appendTo('body');
@@ -3271,6 +3283,7 @@
     show : function (el, css) {
       // is modal
       if (css) {
+        var settings = el.data('reveal-init');
         if (el.parent('body').length === 0) {
           var placeholder = el.wrap('<div style="display: none;" />').parent();
           el.on('closed.fndtn.reveal.wrapped', function() {
@@ -3281,7 +3294,7 @@
           el.detach().appendTo('body');
         }
 
-        if (/pop/i.test(this.settings.animation)) {
+        if (/pop/i.test(settings.animation)) {
           css.top = $(window).scrollTop() - el.data('offset') + 'px';
           var end_css = {
             top: $(window).scrollTop() + el.data('css-top') + 'px',
@@ -3291,34 +3304,36 @@
           return this.delay(function () {
             return el
               .css(css)
-              .animate(end_css, this.settings.animation_speed, 'linear', function () {
+              .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
                 el.trigger('opened');
               }.bind(this))
               .addClass('open');
-          }.bind(this), this.settings.animation_speed / 2);
+          }.bind(this), settings.animation_speed / 2);
         }
 
-        if (/fade/i.test(this.settings.animation)) {
+        if (/fade/i.test(settings.animation)) {
           var end_css = {opacity: 1};
 
           return this.delay(function () {
             return el
               .css(css)
-              .animate(end_css, this.settings.animation_speed, 'linear', function () {
+              .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
                 el.trigger('opened');
               }.bind(this))
               .addClass('open');
-          }.bind(this), this.settings.animation_speed / 2);
+          }.bind(this), settings.animation_speed / 2);
         }
 
         return el.css(css).show().css({opacity: 1}).addClass('open').trigger('opened');
       }
 
+      var settings = this.settings;
+
       // should we animate the background?
-      if (/fade/i.test(this.settings.animation)) {
-        return el.fadeIn(this.settings.animation_speed / 2);
+      if (/fade/i.test(settings.animation)) {
+        return el.fadeIn(settings.animation_speed / 2);
       }
 
       return el.show();
@@ -3327,7 +3342,8 @@
     hide : function (el, css) {
       // is modal
       if (css) {
-        if (/pop/i.test(this.settings.animation)) {
+        var settings = el.data('reveal-init');
+        if (/pop/i.test(settings.animation)) {
           var end_css = {
             top: - $(window).scrollTop() - el.data('offset') + 'px',
             opacity: 0
@@ -3335,33 +3351,35 @@
 
           return this.delay(function () {
             return el
-              .animate(end_css, this.settings.animation_speed, 'linear', function () {
+              .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
                 el.css(css).trigger('closed');
               }.bind(this))
               .removeClass('open');
-          }.bind(this), this.settings.animation_speed / 2);
+          }.bind(this), settings.animation_speed / 2);
         }
 
-        if (/fade/i.test(this.settings.animation)) {
+        if (/fade/i.test(settings.animation)) {
           var end_css = {opacity: 0};
 
           return this.delay(function () {
             return el
-              .animate(end_css, this.settings.animation_speed, 'linear', function () {
+              .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
                 el.css(css).trigger('closed');
               }.bind(this))
               .removeClass('open');
-          }.bind(this), this.settings.animation_speed / 2);
+          }.bind(this), settings.animation_speed / 2);
         }
 
         return el.hide().css(css).removeClass('open').trigger('closed');
       }
 
+      var settings = this.settings;
+
       // should we animate the background?
-      if (/fade/i.test(this.settings.animation)) {
-        return el.fadeOut(this.settings.animation_speed / 2);
+      if (/fade/i.test(settings.animation)) {
+        return el.fadeOut(settings.animation_speed / 2);
       }
 
       return el.hide();
@@ -3418,7 +3436,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '5.0.0',
+    version : '5.0.1',
 
     settings : {
       active_class: 'active'
@@ -3429,7 +3447,7 @@
     },
 
     events : function () {
-      $(this.scope).off('.tab').on('click.fndtn.tab', '[data-tab] a', function (e) {
+      $(this.scope).off('.tab').on('click.fndtn.tab', '[data-tab] > dd > a', function (e) {
         e.preventDefault();
 
         var tab = $(this).parent(),
@@ -3658,7 +3676,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.0.0',
+    version: '5.0.3',
 
     settings : {
       index : 0,
