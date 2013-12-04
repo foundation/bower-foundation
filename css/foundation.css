@@ -3530,75 +3530,6 @@ a.th {
   display: inline-block;
   max-width: 100%; }
 
-/* Tooltips */
-.has-tip {
-  border-bottom: dotted 1px #cccccc;
-  cursor: help;
-  font-weight: bold;
-  color: #333333; }
-  .has-tip:hover, .has-tip:focus {
-    border-bottom: dotted 1px #004054;
-    color: #008cba; }
-  .has-tip.tip-left, .has-tip.tip-right {
-    float: none !important; }
-
-.tooltip {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  font-weight: normal;
-  font-size: 0.875rem;
-  line-height: 1.3;
-  padding: 0.75rem;
-  max-width: 85%;
-  left: 50%;
-  width: 100%;
-  color: white;
-  background: #333333;
-  -webkit-border-radius: 3px;
-  border-radius: 3px; }
-  .tooltip > .nub {
-    display: block;
-    left: 5px;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: solid 5px;
-    border-color: transparent transparent #333333 transparent;
-    top: -10px; }
-  .tooltip.opened {
-    color: #008cba !important;
-    border-bottom: dotted 1px #004054 !important; }
-
-.tap-to-close {
-  display: block;
-  font-size: 0.625rem;
-  color: #777777;
-  font-weight: normal; }
-
-@media only screen and (min-width:40.063em) {
-  .tooltip > .nub {
-    border-color: transparent transparent #333333 transparent;
-    top: -10px; }
-  .tooltip.tip-top > .nub {
-    border-color: #333333 transparent transparent transparent;
-    top: auto;
-    bottom: -10px; }
-  .tooltip.tip-left, .tooltip.tip-right {
-    float: none !important; }
-  .tooltip.tip-left > .nub {
-    border-color: transparent transparent transparent #333333;
-    right: -10px;
-    left: auto;
-    top: 50%;
-    margin-top: -5px; }
-  .tooltip.tip-right > .nub {
-    border-color: transparent #333333 transparent transparent;
-    right: auto;
-    left: -10px;
-    top: 50%;
-    margin-top: -5px; } }
-
 /* Typography resets */
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
@@ -3859,6 +3790,75 @@ blockquote, blockquote p {
     display: none !important; }
   .show-for-print {
     display: inherit !important; } }
+
+/* Tooltips */
+.has-tip {
+  border-bottom: dotted 1px #cccccc;
+  cursor: help;
+  font-weight: bold;
+  color: #333333; }
+  .has-tip:hover, .has-tip:focus {
+    border-bottom: dotted 1px #004054;
+    color: #008cba; }
+  .has-tip.tip-left, .has-tip.tip-right {
+    float: none !important; }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  padding: 0.75rem;
+  max-width: 85%;
+  left: 50%;
+  width: 100%;
+  color: white;
+  background: #333333;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .tooltip > .nub {
+    display: block;
+    left: 5px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: transparent transparent #333333 transparent;
+    top: -10px; }
+  .tooltip.opened {
+    color: #008cba !important;
+    border-bottom: dotted 1px #004054 !important; }
+
+.tap-to-close {
+  display: block;
+  font-size: 0.625rem;
+  color: #777777;
+  font-weight: normal; }
+
+@media only screen and (min-width:40.063em) {
+  .tooltip > .nub {
+    border-color: transparent transparent #333333 transparent;
+    top: -10px; }
+  .tooltip.tip-top > .nub {
+    border-color: #333333 transparent transparent transparent;
+    top: auto;
+    bottom: -10px; }
+  .tooltip.tip-left, .tooltip.tip-right {
+    float: none !important; }
+  .tooltip.tip-left > .nub {
+    border-color: transparent transparent transparent #333333;
+    right: -10px;
+    left: auto;
+    top: 50%;
+    margin-top: -5px; }
+  .tooltip.tip-right > .nub {
+    border-color: transparent #333333 transparent transparent;
+    right: auto;
+    left: -10px;
+    top: 50%;
+    margin-top: -5px; } }
 
 meta.foundation-mq-topbar {
   font-family: "/only screen and (min-width:40.063em)/";
