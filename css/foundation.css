@@ -4548,7 +4548,7 @@ td.hide-for-landscape, td.show-for-portrait, th.hide-for-landscape, th.show-for-
   display: table-cell !important; }
 
 @media only screen and (orientation: landscape) {
-  /* Specific visilbity for tables */
+  /* Specific visibility for tables */
   .show-for-landscape, .hide-for-portrait {
     display: inherit !important; }
   .hide-for-landscape, .show-for-portrait {
@@ -4565,7 +4565,7 @@ td.hide-for-landscape, td.show-for-portrait, th.hide-for-landscape, th.show-for-
     display: table-cell !important; } }
 
 @media only screen and (orientation: portrait) {
-  /* Specific visilbity for tables */
+  /* Specific visibility for tables */
   .show-for-portrait, .hide-for-landscape {
     display: inherit !important; }
   .hide-for-portrait, .show-for-landscape {
@@ -4594,7 +4594,7 @@ td.hide-for-landscape, td.show-for-portrait, th.hide-for-landscape, th.show-for-
 .touch .hide-for-touch {
   display: none !important; }
 
-/* Specific visilbity for tables */
+/* Specific visibility for tables */
 table.hide-for-touch {
   display: table; }
 
