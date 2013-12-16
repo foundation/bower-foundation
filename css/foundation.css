@@ -1984,7 +1984,7 @@ button, .button {
 /* Foundation Dropdowns */
 .f-dropdown {
   position: absolute;
-  top: -9999px;
+  left: -9999px;
   list-style: none;
   margin-left: 0;
   width: 100%;
@@ -2043,7 +2043,7 @@ button, .button {
       color: #555555; }
   .f-dropdown.content {
     position: absolute;
-    top: -9999px;
+    left: -9999px;
     list-style: none;
     margin-left: 0;
     padding: 1.25rem;
