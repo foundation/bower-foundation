@@ -381,7 +381,7 @@
             should_bind_events = !S(this).data(this.name + '-init');
 
         if (typeof method === 'string') {
-          return this[method].call(this);
+          return this[method].call(this, options);
         }
 
         if (S(this.scope).is('[data-' + this.name +']')) {
@@ -3225,6 +3225,12 @@
 
         if (open_modal.length < 1) {
           this.toggle_bg(modal);
+        }
+
+        if (typeof ajax_settings === 'string') {
+          ajax_settings = {
+            url: ajax_settings
+          };
         }
 
         if (typeof ajax_settings === 'undefined' || !ajax_settings.url) {
