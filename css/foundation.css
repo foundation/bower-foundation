@@ -2227,6 +2227,9 @@ select {
     background-position-y: center;
     border-color: #999999; }
 
+select::-ms-expand {
+  display: none; }
+
 @-moz-document url-prefix() {
   select {
     background: #fafafa; }
