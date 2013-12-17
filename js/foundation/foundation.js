@@ -31,9 +31,13 @@
   }
 
   // Enable FastClick if present
+
   $(function() {
     if(typeof FastClick !== 'undefined') {
-      FastClick.attach(document.body);
+      // Don't attach to body if undefined
+      if (typeof document.body !== 'undefined') {
+        FastClick.attach(document.body);
+      }
     }
   });
 
