@@ -151,13 +151,18 @@ select {
   width: 100%;
   float: left; }
 
-[class*="column"] + [class*="column"]:last-child {
-  float: right; }
-
-[class*="column"] + [class*="column"].end {
-  float: left; }
-
 @media only screen {
+  .column.small-centered, .columns.small-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+  .column.small-uncentered, .columns.small-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+  .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
+    float: right; }
   .small-push-1 {
     position: relative;
     left: 8.33333%;
@@ -287,52 +292,56 @@ select {
   .small-12 {
     position: relative;
     width: 100%; }
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+  [class*="column"] + [class*="column"].end {
+    float: left; }
   .small-offset-0 {
     position: relative;
-    margin-left: 0%; }
+    margin-left: 0% !important; }
   .small-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
   .small-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
   .small-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 25% !important; }
   .small-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
   .small-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
   .small-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 50% !important; }
   .small-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
   .small-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
   .small-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 75% !important; }
   .small-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
-  .column.small-centered, .columns.small-centered {
+    margin-left: 83.33333% !important; } }
+
+@media only screen and (min-width:40.063em) {
+  .column.medium-centered, .columns.medium-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; }
-  .column.small-uncentered, .columns.small-uncentered {
+    float: none; }
+  .column.medium-uncentered, .columns.medium-uncentered {
     margin-left: 0;
     margin-right: 0;
-    float: left !important; }
-  .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
-    float: right !important; } }
-
-@media only screen and (min-width:40.063em) {
+    float: left; }
+  .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
+    float: right; }
   .medium-push-1 {
     position: relative;
     left: 8.33333%;
@@ -462,50 +471,43 @@ select {
   .medium-12 {
     position: relative;
     width: 100%; }
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+  [class*="column"] + [class*="column"].end {
+    float: left; }
   .medium-offset-0 {
     position: relative;
-    margin-left: 0%; }
+    margin-left: 0% !important; }
   .medium-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
   .medium-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
   .medium-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 25% !important; }
   .medium-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
   .medium-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
   .medium-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 50% !important; }
   .medium-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
   .medium-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
   .medium-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 75% !important; }
   .medium-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
-  .column.medium-centered, .columns.medium-centered {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important; }
-  .column.medium-uncentered, .columns.medium-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left !important; }
-  .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
-    float: right !important; }
+    margin-left: 83.33333% !important; }
   .push-1 {
     position: relative;
     left: 8.33333%;
@@ -596,6 +598,17 @@ select {
     left: auto; } }
 
 @media only screen and (min-width:64.063em) {
+  .column.large-centered, .columns.large-centered {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+  .column.large-uncentered, .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+  .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
+    float: right; }
   .large-push-1 {
     position: relative;
     left: 8.33333%;
@@ -725,52 +738,56 @@ select {
   .large-12 {
     position: relative;
     width: 100%; }
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+  [class*="column"] + [class*="column"].end {
+    float: left; }
   .large-offset-0 {
     position: relative;
-    margin-left: 0%; }
+    margin-left: 0% !important; }
   .large-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
   .large-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
   .large-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 25% !important; }
   .large-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
   .large-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
   .large-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 50% !important; }
   .large-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
   .large-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
   .large-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 75% !important; }
   .large-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
-  .column.large-centered, .columns.large-centered {
+    margin-left: 83.33333% !important; } }
+
+@media only screen and (min-width:90.063em) {
+  .column.xlarge-centered, .columns.xlarge-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; }
-  .column.large-uncentered, .columns.large-uncentered {
+    float: none; }
+  .column.xlarge-uncentered, .columns.xlarge-uncentered {
     margin-left: 0;
     margin-right: 0;
-    float: left !important; }
-  .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
-    float: right !important; } }
-
-@media only screen and (min-width:90.063em) {
+    float: left; }
+  .column.xlarge-uncentered.opposite, .columns.xlarge-uncentered.opposite {
+    float: right; }
   .xlarge-push-1 {
     position: relative;
     left: 8.33333%;
@@ -900,52 +917,56 @@ select {
   .xlarge-12 {
     position: relative;
     width: 100%; }
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+  [class*="column"] + [class*="column"].end {
+    float: left; }
   .xlarge-offset-0 {
     position: relative;
-    margin-left: 0%; }
+    margin-left: 0% !important; }
   .xlarge-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
   .xlarge-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
   .xlarge-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 25% !important; }
   .xlarge-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
   .xlarge-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
   .xlarge-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 50% !important; }
   .xlarge-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
   .xlarge-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
   .xlarge-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 75% !important; }
   .xlarge-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
-  .column.xlarge-centered, .columns.xlarge-centered {
+    margin-left: 83.33333% !important; } }
+
+@media only screen and (min-width:120.063em) {
+  .column.xxlarge-centered, .columns.xxlarge-centered {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    float: none !important; }
-  .column.xlarge-uncentered, .columns.xlarge-uncentered {
+    float: none; }
+  .column.xxlarge-uncentered, .columns.xxlarge-uncentered {
     margin-left: 0;
     margin-right: 0;
-    float: left !important; }
-  .column.xlarge-uncentered.opposite, .columns.xlarge-uncentered.opposite {
-    float: right !important; } }
-
-@media only screen and (min-width:120.063em) {
+    float: left; }
+  .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
+    float: right; }
   .xxlarge-push-1 {
     position: relative;
     left: 8.33333%;
@@ -1075,50 +1096,43 @@ select {
   .xxlarge-12 {
     position: relative;
     width: 100%; }
+  [class*="column"] + [class*="column"]:last-child {
+    float: right; }
+  [class*="column"] + [class*="column"].end {
+    float: left; }
   .xxlarge-offset-0 {
     position: relative;
-    margin-left: 0%; }
+    margin-left: 0% !important; }
   .xxlarge-offset-1 {
     position: relative;
-    margin-left: 8.33333%; }
+    margin-left: 8.33333% !important; }
   .xxlarge-offset-2 {
     position: relative;
-    margin-left: 16.66667%; }
+    margin-left: 16.66667% !important; }
   .xxlarge-offset-3 {
     position: relative;
-    margin-left: 25%; }
+    margin-left: 25% !important; }
   .xxlarge-offset-4 {
     position: relative;
-    margin-left: 33.33333%; }
+    margin-left: 33.33333% !important; }
   .xxlarge-offset-5 {
     position: relative;
-    margin-left: 41.66667%; }
+    margin-left: 41.66667% !important; }
   .xxlarge-offset-6 {
     position: relative;
-    margin-left: 50%; }
+    margin-left: 50% !important; }
   .xxlarge-offset-7 {
     position: relative;
-    margin-left: 58.33333%; }
+    margin-left: 58.33333% !important; }
   .xxlarge-offset-8 {
     position: relative;
-    margin-left: 66.66667%; }
+    margin-left: 66.66667% !important; }
   .xxlarge-offset-9 {
     position: relative;
-    margin-left: 75%; }
+    margin-left: 75% !important; }
   .xxlarge-offset-10 {
     position: relative;
-    margin-left: 83.33333%; }
-  .column.xxlarge-centered, .columns.xxlarge-centered {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important; }
-  .column.xxlarge-uncentered, .columns.xxlarge-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left !important; }
-  .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
-    float: right !important; } }
+    margin-left: 83.33333% !important; } }
 
 .accordion {
   *zoom: 1;
