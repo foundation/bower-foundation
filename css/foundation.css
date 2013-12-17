@@ -3891,11 +3891,11 @@ meta.foundation-mq-topbar {
     .top-bar-section li.hover > a:not(.button) {
       background: #272727;
       color: white; }
-    .top-bar-section li a:not(.button) {
+    .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
       background: #333333; }
-      .top-bar-section li a:not(.button):hover {
+      .top-bar-section li:not(.has-form) a:not(.button):hover {
         background: #272727; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
