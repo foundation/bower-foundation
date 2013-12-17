@@ -2772,7 +2772,7 @@ label.error {
         background-color: rgba(51, 51, 51, 0.8);
         color: white;
         width: 100%;
-        padding: 10px 14px;
+        padding: 0.625rem 0.875rem;
         font-size: 0.875rem; }
   .orbit-container .orbit-slide-number {
     position: absolute;
