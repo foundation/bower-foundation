@@ -2507,6 +2507,9 @@
 
     init : function (scope, method, options) {
       this.fixed_magellan = $("[data-magellan-expedition]");
+      this.magellan_placeholder = $('<div></div>').css({
+        height: this.fixed_magellan.outerHeight(true)
+      }).hide().insertAfter(this.fixed_magellan);
       this.set_threshold();
       this.set_active_class(method);
       this.last_destination = $('[data-magellan-destination]').last();
@@ -2562,9 +2565,11 @@
               if (fixed_position) {
                 $expedition.addClass('fixed');
                 $expedition.css({position:"fixed", top:0});
+                self.magellan_placeholder.show();
               } else {
                 $expedition.removeClass('fixed');
                 $expedition.css({position:"", top:""});
+                self.magellan_placeholder.hide();
               }
               if (fixed_position && typeof attr != 'undefined' && attr != false) {
                 $expedition.css({position:"fixed", top:attr + "px"});
@@ -3491,7 +3496,12 @@
             target = $('#' + this.href.split('#')[1]),
             siblings = tab.siblings(),
             settings = tabs.data('tab-init');
-
+        
+        // allow usage of data-tab-content attribute instead of href
+        if ($(this).data('tab-content')) {
+          target = $('#' + $(this).data('tab-content').split('#')[1]);
+        }
+        
         tab.addClass(settings.active_class).trigger('opened');
         siblings.removeClass(settings.active_class);
         target.siblings().removeClass(settings.active_class).end().addClass(settings.active_class);
