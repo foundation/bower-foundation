@@ -3462,11 +3462,11 @@ table {
   margin-bottom: 1.25rem;
   border: solid 1px #dddddd; }
   table thead, table tfoot {
-    background: whitesmoke;
-    font-weight: bold; }
+    background: whitesmoke; }
     table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td {
       padding: 0.5rem 0.625rem 0.625rem;
       font-size: 0.875rem;
+      font-weight: bold;
       color: #222222;
       text-align: left; }
   table tr th, table tr td {
