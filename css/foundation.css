@@ -3997,6 +3997,10 @@ meta.foundation-mq-topbar {
           color: white;
           line-height: 22.5px;
           display: block; }
+      .top-bar-section .dropdown li.has-form {
+        padding: 8px 15px; }
+      .top-bar-section .dropdown li .button {
+        top: auto; }
     .top-bar-section .dropdown label {
       padding: 8px 15px 2px;
       margin-bottom: 0;
