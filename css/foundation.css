@@ -1,4 +1,3 @@
-@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em; }
@@ -3699,6 +3698,7 @@ table {
   line-height: 0;
   display: inline-block;
   border: solid 4px white;
+  max-width: 100%;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 200ms ease-out;
@@ -3710,10 +3710,6 @@ table {
   .th.radius {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
-
-a.th {
-  display: inline-block;
-  max-width: 100%; }
 
 /* Tooltips */
 .has-tip {
@@ -4159,7 +4155,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #222222;
