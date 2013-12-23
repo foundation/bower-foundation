@@ -2911,13 +2911,13 @@ label.error {
   top: 10px;
   float: none;
   text-align: center;
-  display: inline-block; }
+  display: block; }
   .orbit-bullets li {
-    display: block;
+    display: inline-block;
     width: 0.5625rem;
     height: 0.5625rem;
     background: #cccccc;
-    float: left;
+    float: none;
     margin-right: 6px;
     -webkit-border-radius: 1000px;
     border-radius: 1000px; }
