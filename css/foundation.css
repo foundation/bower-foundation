@@ -3711,7 +3711,8 @@ meta.foundation-mq-topbar {
       content: "\00bb";
       top: 1rem;
       margin-top: -2px;
-      right: 5px; }
+      right: 5px;
+      line-height: 1.2; }
     .top-bar-section .dropdown {
       left: 0;
       top: auto;
