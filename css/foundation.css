@@ -4479,25 +4479,21 @@ ul.off-canvas-list {
 .csstransforms.no-csstransforms3d .left-off-canvas-menu {
   -webkit-transform: translate(-100%, 0);
   -moz-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
   -o-transform: translate(-100%, 0);
   transform: translate(-100%, 0); }
 .csstransforms.no-csstransforms3d .right-off-canvas-menu {
   -webkit-transform: translate(100%, 0);
   -moz-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
   -o-transform: translate(100%, 0);
   transform: translate(100%, 0); }
 .csstransforms.no-csstransforms3d .move-left > .inner-wrap {
   -webkit-transform: translate(-250px, 0);
   -moz-transform: translate(-250px, 0);
-  -ms-transform: translate(-250px, 0);
   -o-transform: translate(-250px, 0);
   transform: translate(-250px, 0); }
 .csstransforms.no-csstransforms3d .move-right > .inner-wrap {
   -webkit-transform: translate(250px, 0);
   -moz-transform: translate(250px, 0);
-  -ms-transform: translate(250px, 0);
   -o-transform: translate(250px, 0);
   transform: translate(250px, 0); }
 
