@@ -3501,17 +3501,19 @@ meta.foundation-mq-topbar {
       margin-top: -16px;
       padding-left: 40px; }
       .top-bar .toggle-topbar.menu-icon a {
-        text-indent: -48px;
-        width: 34px;
         height: 34px;
         line-height: 33px;
         padding: 0;
-        color: white; }
-        .top-bar .toggle-topbar.menu-icon a span {
+        padding-right: 25px;
+        color: white;
+        position: relative; }
+        .top-bar .toggle-topbar.menu-icon a::after {
+          content: "";
           position: absolute;
           right: 0;
           display: block;
           width: 16px;
+          top: 0;
           height: 0;
           -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
           box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
