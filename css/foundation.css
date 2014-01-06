@@ -2230,6 +2230,15 @@ span.error, small.error {
   font-style: italic;
   background: #f04124;
   color: white; }
+.error > label > small {
+  color: #686868;
+  background: transparent;
+  padding: 0;
+  text-transform: capitalize;
+  font-style: normal;
+  font-size: 60%;
+  margin: 0;
+  display: inline; }
 .error span.error-message {
   display: block; }
 
