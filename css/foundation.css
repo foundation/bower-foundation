@@ -4016,10 +4016,6 @@ blockquote, blockquote p {
   .show-for-print {
     display: inherit !important; } }
 
-meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:40.063em)/";
-  width: 40.063em; }
-
 .off-canvas-wrap {
   -webkit-backface-visibility: hidden;
   position: relative;
