@@ -1199,6 +1199,8 @@
           var settings = $(this).data('dropdown-init') || self.settings;
           e.preventDefault();
 
+          self.closeall.call(self);
+
           if (!settings.is_hover || Modernizr.touch) self.toggle($(this));
         })
         .on('mouseenter.fndtn.dropdown', '[data-dropdown], [data-dropdown-content]', function (e) {
@@ -1214,6 +1216,11 @@
           }
 
           var settings = target.data('dropdown-init') || self.settings;
+          
+          if($(e.target).data('dropdown') && settings.is_hover) {
+            self.closeall.call(self);
+          }
+          
           if (settings.is_hover) self.open.apply(self, [dropdown, target]);
         })
         .on('mouseleave.fndtn.dropdown', '[data-dropdown], [data-dropdown-content]', function (e) {
@@ -1267,6 +1274,13 @@
             .removeClass(self.settings.active_class);
           $(this).trigger('closed');
         }
+      });
+    },
+
+    closeall: function() {
+      var self = this;
+      $.each($('[data-dropdown-content]'), function() {
+        self.close.call(self, $(this))
       });
     },
 
