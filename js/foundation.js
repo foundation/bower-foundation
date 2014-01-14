@@ -1654,7 +1654,7 @@
       var uuid = this.uuid(),
           current_uuid = el.data('uuid');
 
-      if (current_uuid) return this.cache[current_uuid];
+      if (this.cache[current_uuid]) return this.cache[current_uuid];
 
       el.attr('data-uuid', uuid);
 
@@ -3732,7 +3732,7 @@
         objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', left);
         tip.removeClass('tip-override');
         if (classes && classes.indexOf('tip-top') > -1) {
-          objPos(tip, (target.offset().top - tip.outerHeight()), 'auto', 'auto', left)
+          objPos(tip, (target.offset().top - tip.outerHeight() - 10), 'auto', 'auto', left)
             .removeClass('tip-override');
         } else if (classes && classes.indexOf('tip-left') > -1) {
           objPos(tip, (target.offset().top + (target.outerHeight() / 2) - (tip.outerHeight() / 2)), 'auto', 'auto', (target.offset().left - tip.outerWidth() - nubHeight))
