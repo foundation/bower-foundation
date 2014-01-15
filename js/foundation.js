@@ -2540,7 +2540,7 @@
   Foundation.libs.magellan = {
     name : 'magellan',
 
-    version : '5.0.0',
+    version : '5.0.3',
 
     settings : {
       active_class: 'active',
