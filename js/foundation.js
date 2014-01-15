@@ -1566,7 +1566,7 @@
     },
 
     update_nodes : function () {
-      var nodes = this.S('[' + this.data_attr + ']:not(img)'),
+      var nodes = this.S('[' + this.data_attr + ']').not('img'),
           count = nodes.length,
           loaded_count = 0,
           data_attr = this.data_attr;
@@ -1690,6 +1690,7 @@
   };
 
 }(jQuery, this, this.document));
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
@@ -3732,7 +3733,7 @@
         objPos(tip, (target.offset().top + target.outerHeight() + 10), 'auto', 'auto', left);
         tip.removeClass('tip-override');
         if (classes && classes.indexOf('tip-top') > -1) {
-          objPos(tip, (target.offset().top - tip.outerHeight()), 'auto', 'auto', left)
+          objPos(tip, (target.offset().top - tip.outerHeight() - 10), 'auto', 'auto', left)
             .removeClass('tip-override');
         } else if (classes && classes.indexOf('tip-left') > -1) {
           objPos(tip, (target.offset().top + (target.outerHeight() / 2) - (tip.outerHeight() / 2)), 'auto', 'auto', (target.offset().left - tip.outerWidth() - nubHeight))
