@@ -2726,12 +2726,17 @@
         locked = false,
         adjust_height_after = false;
 
-    slides_container.children().first().addClass(settings.active_slide_class);
+
+    self.slides = function() {
+      return slides_container.children(settings.slide_selector);
+    };
+
+    self.slides().first().addClass(settings.active_slide_class);
 
     self.update_slide_number = function(index) {
       if (settings.slide_number) {
         number_container.find('span:first').text(parseInt(index)+1);
-        number_container.find('span:last').text(slides_container.children().length);
+        number_container.find('span:last').text(self.slides().length);
       }
       if (settings.bullets) {
         bullets_container.children().removeClass(settings.bullets_active_class);
@@ -2740,7 +2745,7 @@
     };
 
     self.update_active_link = function(index) {
-      var link = $('a[data-orbit-link="'+slides_container.children().eq(index).attr('data-orbit-slide')+'"]');
+      var link = $('a[data-orbit-link="'+self.slides().eq(index).attr('data-orbit-slide')+'"]');
       link.siblings().removeClass(settings.bullets_active_class);
       link.addClass(settings.bullets_active_class);
     };
@@ -2773,7 +2778,7 @@
         bullets_container = $('<ol>').addClass(settings.bullets_container_class);
         container.append(bullets_container);
         bullets_container.wrap('<div class="orbit-bullets-container"></div>');
-        slides_container.children().each(function(idx, el) {
+        self.slides().each(function(idx, el) {
           var bullet = $('<li>').attr('data-orbit-slide', idx);
           bullets_container.append(bullet);
         });
@@ -2791,7 +2796,7 @@
       // if (locked) {return false;}
       if (next_idx === idx) {return false;}
       if (typeof timer === 'object') {timer.restart();}
-      var slides = slides_container.children();
+      var slides = self.slides();
 
       var dir = 'next';
       locked = true;
@@ -2887,10 +2892,10 @@
     }
     
     self.compute_dimensions = function() {
-      var current = $(slides_container.children().get(idx));
+      var current = $(self.slides().get(idx));
       var h = current.height();
       if (!settings.variable_height) {
-        slides_container.children().each(function(){
+        self.slides().each(function(){
           if ($(this).height() > h) { h = $(this).height(); }
         });
       }
@@ -3114,6 +3119,7 @@
       timer_paused_class: 'paused',
       timer_progress_class: 'orbit-progress',
       slides_container_class: 'orbit-slides-container',
+      slide_selector: '*',
       bullets_container_class: 'orbit-bullets',
       bullets_active_class: 'active',
       slide_number_class: 'orbit-slide-number',
