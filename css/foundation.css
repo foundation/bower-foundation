@@ -1506,12 +1506,12 @@ button, .button {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px; }
   .button-group.radius > *:last-child, .button-group.radius > *:last-child > a, .button-group.radius > *:last-child > button, .button-group.radius > *:last-child > .button {
-    -moz-border-radius-topright: 3px;
     -moz-border-radius-bottomright: 3px;
-    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
     -webkit-border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
+    -webkit-border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
   .button-group.round > * > button, .button-group.round > * .button {
     border-right: 1px solid;
     border-color: rgba(255, 255, 255, 0.5); }
@@ -1525,12 +1525,12 @@ button, .button {
     border-bottom-left-radius: 1000px;
     border-top-left-radius: 1000px; }
   .button-group.round > *:last-child, .button-group.round > *:last-child > a, .button-group.round > *:last-child > button, .button-group.round > *:last-child > .button {
-    -moz-border-radius-topright: 1000px;
     -moz-border-radius-bottomright: 1000px;
-    -webkit-border-top-right-radius: 1000px;
+    -moz-border-radius-topright: 1000px;
     -webkit-border-bottom-right-radius: 1000px;
-    border-top-right-radius: 1000px;
-    border-bottom-right-radius: 1000px; }
+    -webkit-border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    border-top-right-radius: 1000px; }
   .button-group.even-2 li {
     width: 50%; }
     .button-group.even-2 li > button, .button-group.even-2 li .button {
@@ -2034,12 +2034,12 @@ select::-ms-expand {
 .postfix.button.radius {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-topright: 3px;
   -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
   -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  -webkit-border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
 
 .prefix.button.round {
   -webkit-border-radius: 0;
@@ -2054,12 +2054,12 @@ select::-ms-expand {
 .postfix.button.round {
   -webkit-border-radius: 0;
   border-radius: 0;
-  -moz-border-radius-topright: 1000px;
   -moz-border-radius-bottomright: 1000px;
-  -webkit-border-top-right-radius: 1000px;
+  -moz-border-radius-topright: 1000px;
   -webkit-border-bottom-right-radius: 1000px;
-  border-top-right-radius: 1000px;
-  border-bottom-right-radius: 1000px; }
+  -webkit-border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  border-top-right-radius: 1000px; }
 
 /* Separate prefix and postfix styles when on span or label so buttons keep their own */
 span.prefix, label.prefix {
@@ -2085,12 +2085,12 @@ span.postfix, label.postfix {
   span.postfix.radius, label.postfix.radius {
     -webkit-border-radius: 0;
     border-radius: 0;
-    -moz-border-radius-topright: 3px;
     -moz-border-radius-bottomright: 3px;
-    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
     -webkit-border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
+    -webkit-border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
 
 /* Input groups will automatically style first and last elements of the group */
 .input-group.radius > *:first-child, .input-group.radius > *:first-child * {
@@ -2101,12 +2101,12 @@ span.postfix, label.postfix {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px; }
 .input-group.radius > *:last-child, .input-group.radius > *:last-child * {
-  -moz-border-radius-topright: 3px;
   -moz-border-radius-bottomright: 3px;
-  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
   -webkit-border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  -webkit-border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px; }
 .input-group.round > *:first-child, .input-group.round > *:first-child * {
   -moz-border-radius-bottomleft: 1000px;
   -moz-border-radius-topleft: 1000px;
@@ -2115,12 +2115,12 @@ span.postfix, label.postfix {
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px; }
 .input-group.round > *:last-child, .input-group.round > *:last-child * {
-  -moz-border-radius-topright: 1000px;
   -moz-border-radius-bottomright: 1000px;
-  -webkit-border-top-right-radius: 1000px;
+  -moz-border-radius-topright: 1000px;
   -webkit-border-bottom-right-radius: 1000px;
-  border-top-right-radius: 1000px;
-  border-bottom-right-radius: 1000px; }
+  -webkit-border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  border-top-right-radius: 1000px; }
 
 /* We use this to get basic styling on all basic form elements */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
@@ -3031,19 +3031,19 @@ ul.pagination {
   .split.button.secondary span:before {
     border-color: #333333 transparent transparent transparent; }
   .split.button.radius span {
-    -moz-border-radius-topright: 3px;
     -moz-border-radius-bottomright: 3px;
-    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
     -webkit-border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
+    -webkit-border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
   .split.button.round span {
-    -moz-border-radius-topright: 1000px;
     -moz-border-radius-bottomright: 1000px;
-    -webkit-border-top-right-radius: 1000px;
+    -moz-border-radius-topright: 1000px;
     -webkit-border-bottom-right-radius: 1000px;
-    border-top-right-radius: 1000px;
-    border-bottom-right-radius: 1000px; }
+    -webkit-border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    border-top-right-radius: 1000px; }
 
 .sub-nav {
   display: block;
@@ -3289,12 +3289,12 @@ table {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px; }
   .tabs.radius dd:last-child a {
-    -moz-border-radius-topright: 3px;
     -moz-border-radius-bottomright: 3px;
-    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
     -webkit-border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px; }
+    -webkit-border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px; }
   .tabs.vertical dd {
     position: inherit;
     float: none;
