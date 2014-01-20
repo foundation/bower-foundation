@@ -2948,8 +2948,10 @@ ul.pagination {
     .side-nav li a {
       display: block;
       color: #008cba; }
+      .side-nav li a:hover, .side-nav li a:focus {
+        color: #1ccaff; }
     .side-nav li.active > a:first-child {
-      color: #4d4d4d;
+      color: #1ccaff;
       font-weight: normal;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
     .side-nav li.divider {
