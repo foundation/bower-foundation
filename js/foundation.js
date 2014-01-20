@@ -589,11 +589,13 @@
             if (label.length > 0 && this.settings.error_labels) label.removeClass('error');
 
             validations.push(true);
+            $(el).trigger('valid');
           } else {
             $(el).attr('data-invalid', '').parent().addClass('error');
             if (label.length > 0 && this.settings.error_labels) label.addClass('error');
 
             validations.push(false);
+            $(el).trigger('invalid');
           }
         }
       }
@@ -649,7 +651,6 @@
     }
   };
 }(jQuery, this, this.document));
-
 ;(function ($, window, document, undefined) {
   'use strict';
 
