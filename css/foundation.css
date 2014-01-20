@@ -1854,10 +1854,10 @@ button, .button {
   .f-dropdown.large {
     max-width: 800px; }
 
-.dropdown.button {
+.dropdown.button, button.dropdown {
   position: relative;
   padding-right: 3.5625rem; }
-  .dropdown.button:before {
+  .dropdown.button:before, button.dropdown:before {
     position: absolute;
     content: "";
     width: 0;
@@ -1866,37 +1866,37 @@ button, .button {
     border-style: solid;
     border-color: white transparent transparent transparent;
     top: 50%; }
-  .dropdown.button:before {
+  .dropdown.button:before, button.dropdown:before {
     border-width: 0.375rem;
     right: 1.40625rem;
     margin-top: -0.15625rem; }
-  .dropdown.button:before {
+  .dropdown.button:before, button.dropdown:before {
     border-color: white transparent transparent transparent; }
-  .dropdown.button.tiny {
+  .dropdown.button.tiny, button.dropdown.tiny {
     padding-right: 2.625rem; }
-    .dropdown.button.tiny:before {
+    .dropdown.button.tiny:before, button.dropdown.tiny:before {
       border-width: 0.375rem;
       right: 1.125rem;
       margin-top: -0.125rem; }
-    .dropdown.button.tiny:before {
+    .dropdown.button.tiny:before, button.dropdown.tiny:before {
       border-color: white transparent transparent transparent; }
-  .dropdown.button.small {
+  .dropdown.button.small, button.dropdown.small {
     padding-right: 3.0625rem; }
-    .dropdown.button.small:before {
+    .dropdown.button.small:before, button.dropdown.small:before {
       border-width: 0.4375rem;
       right: 1.3125rem;
       margin-top: -0.15625rem; }
-    .dropdown.button.small:before {
+    .dropdown.button.small:before, button.dropdown.small:before {
       border-color: white transparent transparent transparent; }
-  .dropdown.button.large {
+  .dropdown.button.large, button.dropdown.large {
     padding-right: 3.625rem; }
-    .dropdown.button.large:before {
+    .dropdown.button.large:before, button.dropdown.large:before {
       border-width: 0.3125rem;
       right: 1.71875rem;
       margin-top: -0.15625rem; }
-    .dropdown.button.large:before {
+    .dropdown.button.large:before, button.dropdown.large:before {
       border-color: white transparent transparent transparent; }
-  .dropdown.button.secondary:before {
+  .dropdown.button.secondary:before, button.dropdown.secondary:before {
     border-color: #333333 transparent transparent transparent; }
 
 .flex-video {
