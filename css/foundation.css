@@ -83,18 +83,6 @@ img {
 .hide {
   display: none; }
 
-.start {
-  float: left !important; }
-
-.end {
-  float: right !important; }
-
-.text-start {
-  text-align: left !important; }
-
-.text-end {
-  text-align: right !important; }
-
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
