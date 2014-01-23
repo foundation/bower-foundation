@@ -796,7 +796,6 @@ select {
 @media only screen {
   .small-block-grid-1 > li {
     width: 100%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-1 > li:nth-of-type(n) {
       clear: none; }
@@ -804,7 +803,6 @@ select {
       clear: both; }
   .small-block-grid-2 > li {
     width: 50%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-2 > li:nth-of-type(n) {
       clear: none; }
@@ -812,7 +810,6 @@ select {
       clear: both; }
   .small-block-grid-3 > li {
     width: 33.33333%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-3 > li:nth-of-type(n) {
       clear: none; }
@@ -820,7 +817,6 @@ select {
       clear: both; }
   .small-block-grid-4 > li {
     width: 25%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-4 > li:nth-of-type(n) {
       clear: none; }
@@ -828,7 +824,6 @@ select {
       clear: both; }
   .small-block-grid-5 > li {
     width: 20%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-5 > li:nth-of-type(n) {
       clear: none; }
@@ -836,7 +831,6 @@ select {
       clear: both; }
   .small-block-grid-6 > li {
     width: 16.66667%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-6 > li:nth-of-type(n) {
       clear: none; }
@@ -844,7 +838,6 @@ select {
       clear: both; }
   .small-block-grid-7 > li {
     width: 14.28571%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-7 > li:nth-of-type(n) {
       clear: none; }
@@ -852,7 +845,6 @@ select {
       clear: both; }
   .small-block-grid-8 > li {
     width: 12.5%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-8 > li:nth-of-type(n) {
       clear: none; }
@@ -860,7 +852,6 @@ select {
       clear: both; }
   .small-block-grid-9 > li {
     width: 11.11111%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-9 > li:nth-of-type(n) {
       clear: none; }
@@ -868,7 +859,6 @@ select {
       clear: both; }
   .small-block-grid-10 > li {
     width: 10%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-10 > li:nth-of-type(n) {
       clear: none; }
@@ -876,7 +866,6 @@ select {
       clear: both; }
   .small-block-grid-11 > li {
     width: 9.09091%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-11 > li:nth-of-type(n) {
       clear: none; }
@@ -884,7 +873,6 @@ select {
       clear: both; }
   .small-block-grid-12 > li {
     width: 8.33333%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .small-block-grid-12 > li:nth-of-type(n) {
       clear: none; }
@@ -894,7 +882,6 @@ select {
 @media only screen and (min-width:40.063em) {
   .medium-block-grid-1 > li {
     width: 100%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-1 > li:nth-of-type(n) {
       clear: none; }
@@ -902,7 +889,6 @@ select {
       clear: both; }
   .medium-block-grid-2 > li {
     width: 50%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-2 > li:nth-of-type(n) {
       clear: none; }
@@ -910,7 +896,6 @@ select {
       clear: both; }
   .medium-block-grid-3 > li {
     width: 33.33333%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-3 > li:nth-of-type(n) {
       clear: none; }
@@ -918,7 +903,6 @@ select {
       clear: both; }
   .medium-block-grid-4 > li {
     width: 25%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-4 > li:nth-of-type(n) {
       clear: none; }
@@ -926,7 +910,6 @@ select {
       clear: both; }
   .medium-block-grid-5 > li {
     width: 20%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-5 > li:nth-of-type(n) {
       clear: none; }
@@ -934,7 +917,6 @@ select {
       clear: both; }
   .medium-block-grid-6 > li {
     width: 16.66667%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-6 > li:nth-of-type(n) {
       clear: none; }
@@ -942,7 +924,6 @@ select {
       clear: both; }
   .medium-block-grid-7 > li {
     width: 14.28571%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-7 > li:nth-of-type(n) {
       clear: none; }
@@ -950,7 +931,6 @@ select {
       clear: both; }
   .medium-block-grid-8 > li {
     width: 12.5%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-8 > li:nth-of-type(n) {
       clear: none; }
@@ -958,7 +938,6 @@ select {
       clear: both; }
   .medium-block-grid-9 > li {
     width: 11.11111%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-9 > li:nth-of-type(n) {
       clear: none; }
@@ -966,7 +945,6 @@ select {
       clear: both; }
   .medium-block-grid-10 > li {
     width: 10%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-10 > li:nth-of-type(n) {
       clear: none; }
@@ -974,7 +952,6 @@ select {
       clear: both; }
   .medium-block-grid-11 > li {
     width: 9.09091%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-11 > li:nth-of-type(n) {
       clear: none; }
@@ -982,7 +959,6 @@ select {
       clear: both; }
   .medium-block-grid-12 > li {
     width: 8.33333%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .medium-block-grid-12 > li:nth-of-type(n) {
       clear: none; }
@@ -992,7 +968,6 @@ select {
 @media only screen and (min-width:64.063em) {
   .large-block-grid-1 > li {
     width: 100%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-1 > li:nth-of-type(n) {
       clear: none; }
@@ -1000,7 +975,6 @@ select {
       clear: both; }
   .large-block-grid-2 > li {
     width: 50%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-2 > li:nth-of-type(n) {
       clear: none; }
@@ -1008,7 +982,6 @@ select {
       clear: both; }
   .large-block-grid-3 > li {
     width: 33.33333%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-3 > li:nth-of-type(n) {
       clear: none; }
@@ -1016,7 +989,6 @@ select {
       clear: both; }
   .large-block-grid-4 > li {
     width: 25%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-4 > li:nth-of-type(n) {
       clear: none; }
@@ -1024,7 +996,6 @@ select {
       clear: both; }
   .large-block-grid-5 > li {
     width: 20%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-5 > li:nth-of-type(n) {
       clear: none; }
@@ -1032,7 +1003,6 @@ select {
       clear: both; }
   .large-block-grid-6 > li {
     width: 16.66667%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-6 > li:nth-of-type(n) {
       clear: none; }
@@ -1040,7 +1010,6 @@ select {
       clear: both; }
   .large-block-grid-7 > li {
     width: 14.28571%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-7 > li:nth-of-type(n) {
       clear: none; }
@@ -1048,7 +1017,6 @@ select {
       clear: both; }
   .large-block-grid-8 > li {
     width: 12.5%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-8 > li:nth-of-type(n) {
       clear: none; }
@@ -1056,7 +1024,6 @@ select {
       clear: both; }
   .large-block-grid-9 > li {
     width: 11.11111%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-9 > li:nth-of-type(n) {
       clear: none; }
@@ -1064,7 +1031,6 @@ select {
       clear: both; }
   .large-block-grid-10 > li {
     width: 10%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-10 > li:nth-of-type(n) {
       clear: none; }
@@ -1072,7 +1038,6 @@ select {
       clear: both; }
   .large-block-grid-11 > li {
     width: 9.09091%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-11 > li:nth-of-type(n) {
       clear: none; }
@@ -1080,7 +1045,6 @@ select {
       clear: both; }
   .large-block-grid-12 > li {
     width: 8.33333%;
-    padding: 0 0.625rem 1.25rem;
     list-style: none; }
     .large-block-grid-12 > li:nth-of-type(n) {
       clear: none; }
