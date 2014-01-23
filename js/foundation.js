@@ -3149,6 +3149,7 @@
     },
 
     events : function (instance) {
+      var self = this;
       var orbit_instance = new Orbit($(instance), $(instance).data('orbit-init'));
       $(instance).data(self.name + '-instance', orbit_instance);
     },
