@@ -2201,7 +2201,7 @@ label.error {
   top: 0;
   left: 0; }
 
-/* Styles for screens that are atleast 768px; */
+/* Styles for screens that are at least 768px; */
 @media only screen and (min-width:40.063em) {
   .joyride-tip-guide {
     width: 300px;
@@ -2761,12 +2761,12 @@ ul.pagination {
   .side-nav li {
     margin: 0 0 0.4375rem 0;
     font-size: 0.875rem; }
-    .side-nav li a {
+    .side-nav li a:not(.button) {
       display: block;
       color: #008cba; }
-      .side-nav li a:hover, .side-nav li a:focus {
+      .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
         color: #1ccaff; }
-    .side-nav li.active > a:first-child {
+    .side-nav li.active > a:first-child:not(.button) {
       color: #1ccaff;
       font-weight: normal;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
