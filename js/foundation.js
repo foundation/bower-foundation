@@ -3474,8 +3474,6 @@
         return el.fadeIn(settings.animation_speed / 2);
       }
 
-      this.locked = false;
-
       return el.show();
     },
 
