@@ -3526,7 +3526,7 @@
     },
 
     close_video : function (e) {
-      var video = $(this).find('.flex-video'),
+      var video = $(e.target).find('.flex-video'),
           iframe = video.find('iframe');
 
       if (iframe.length > 0) {
@@ -3537,7 +3537,7 @@
     },
 
     open_video : function (e) {
-      var video = $(this).find('.flex-video'),
+      var video = $(e.target).find('.flex-video'),
           iframe = video.find('iframe');
 
       if (iframe.length > 0) {
