@@ -4608,6 +4608,8 @@ If you require to comma separate your list
   position: relative;
   width: 100%;
   overflow: hidden; }
+  .off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
+    height: 100%; }
 
 .inner-wrap {
   -webkit-backface-visibility: hidden;
