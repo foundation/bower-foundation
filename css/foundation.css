@@ -1,3 +1,21 @@
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em; }
@@ -98,6 +116,24 @@ textarea {
 select {
   width: 100%; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .row {
   width: 100%;
   margin-left: auto;
@@ -726,6 +762,24 @@ select {
       display: block;
       background: white; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .alert-box {
   border-style: solid;
   border-width: 1px;
@@ -777,6 +831,24 @@ select {
     border-color: #74bfdd;
     color: #4f4f4f; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 [class*="block-grid-"] {
   display: block;
   padding: 0;
@@ -1051,6 +1123,24 @@ select {
     .large-block-grid-12 > li:nth-of-type(12n+1) {
       clear: both; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .breadcrumbs {
   display: block;
   padding: 0.5625rem 0.875rem 0.5625rem;
@@ -1099,6 +1189,42 @@ select {
       content: " ";
       margin: 0; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 button, .button {
   border-style: solid;
   border-width: 0px;
@@ -1388,6 +1514,42 @@ button, .button {
     .button-bar .button-group div {
       overflow: hidden; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Clearing Styles */
 [data-clearing] {
   *zoom: 1;
@@ -1542,6 +1704,24 @@ button, .button {
     padding-left: 0;
     padding-top: 0; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 @media only screen and (max-width: 40em) {
   .f-dropdown {
     max-width: 100%;
@@ -1634,6 +1814,24 @@ button, .button {
   .f-dropdown.large {
     max-width: 800px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .dropdown.button, button.dropdown {
   position: relative;
   padding-right: 3.5625rem; }
@@ -1679,6 +1877,24 @@ button, .button {
   .dropdown.button.secondary:before, button.dropdown.secondary:before {
     border-color: #333333 transparent transparent transparent; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .flex-video {
   position: relative;
   padding-top: 1.5625rem;
@@ -1697,6 +1913,42 @@ button, .button {
     width: 100%;
     height: 100%; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Standard Forms */
 form {
   margin: 0 0 1rem; }
@@ -2028,6 +2280,42 @@ input.error, textarea.error {
 label.error {
   color: #f04124; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .inline-list {
   margin: 0 auto 1.0625rem auto;
   margin-left: -1.375rem;
@@ -2043,6 +2331,24 @@ label.error {
     .inline-list > li > * {
       display: block; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Foundation Joyride */
 .joyride-list {
   display: none; }
@@ -2193,6 +2499,24 @@ label.error {
       left: -20px;
       right: auto; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .keystroke, kbd {
   background-color: #ededed;
   border-color: gainsboro;
@@ -2206,6 +2530,24 @@ label.error {
   -webkit-border-radius: 3px;
   border-radius: 3px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .label {
   font-weight: normal;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -2236,6 +2578,24 @@ label.error {
     background-color: #e7e7e7;
     color: #333333; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 [data-magellan-expedition] {
   background: white;
   z-index: 50;
@@ -2248,6 +2608,24 @@ label.error {
     [data-magellan-expedition] .sub-nav .active {
       line-height: 1.8em; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg); }
@@ -2484,6 +2862,24 @@ label.error {
   .orbit-stack-on-small .orbit-timer, .orbit-stack-on-small .orbit-next, .orbit-stack-on-small .orbit-prev, .orbit-stack-on-small .orbit-bullets {
     display: none; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 ul.pagination {
   display: block;
   height: 1.5rem;
@@ -2524,6 +2920,24 @@ ul.pagination {
     float: none;
     display: inline-block; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Panels */
 .panel {
   border-style: solid;
@@ -2567,6 +2981,24 @@ ul.pagination {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Pricing Tables */
 .pricing-table {
   border: solid 1px #dddddd;
@@ -2613,6 +3045,24 @@ ul.pagination {
     text-align: center;
     padding: 1.25rem 1.25rem 0; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Progress Bar */
 .progress {
   background-color: #f6f6f6;
@@ -2649,6 +3099,24 @@ ul.pagination {
       -webkit-border-radius: 999px;
       border-radius: 999px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .reveal-modal-bg {
   position: fixed;
   height: 100%;
@@ -2715,6 +3183,24 @@ ul.pagination {
   .reveal-modal {
     background: white !important; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .side-nav {
   display: block;
   margin: 0;
@@ -2741,6 +3227,60 @@ ul.pagination {
       list-style: none;
       border-top-color: white; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .split.button {
   position: relative;
   padding-right: 5.0625rem; }
@@ -2827,6 +3367,24 @@ ul.pagination {
     border-bottom-right-radius: 1000px;
     border-top-right-radius: 1000px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .sub-nav {
   display: block;
   width: auto;
@@ -2862,6 +3420,24 @@ ul.pagination {
       .sub-nav dt.active a:hover, .sub-nav dd.active a:hover, .sub-nav li.active a:hover {
         background: #007ba0; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 div.switch {
   position: relative;
   padding: 0;
@@ -3014,6 +3590,24 @@ div.switch {
   to {
     position: relative; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 table {
   background: white;
   margin-bottom: 1.25rem;
@@ -3036,6 +3630,42 @@ table {
     display: table-cell;
     line-height: 1.125rem; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .tabs {
   *zoom: 1;
   margin-bottom: 0 !important; }
@@ -3114,6 +3744,24 @@ table {
     float: left;
     margin-left: -1px; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Image Thumbnails */
 .th {
   line-height: 0;
@@ -3132,6 +3780,24 @@ table {
     -webkit-border-radius: 3px;
     border-radius: 3px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Tooltips */
 .has-tip {
   border-bottom: dotted 1px #cccccc;
@@ -3201,6 +3867,42 @@ table {
     top: 50%;
     margin-top: -5px; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 meta.foundation-mq-topbar {
   font-family: "/only screen and (min-width:40.063em)/";
   width: 40.063em; }
@@ -3552,6 +4254,24 @@ meta.foundation-mq-topbar {
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
     display: block; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Typography resets */
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
@@ -3811,6 +4531,78 @@ blockquote, blockquote p {
   .show-for-print {
     display: inherit !important; } }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 .off-canvas-wrap {
   -webkit-backface-visibility: hidden;
   position: relative;
@@ -4045,6 +4837,24 @@ ul.off-canvas-list {
 .no-csstransforms .move-right > .inner-wrap {
   left: 250px; }
 
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
 /* Foundation Visibility HTML Classes */
 .show-for-small, .show-for-small-only, .show-for-medium-down, .show-for-large-down, .hide-for-medium, .hide-for-medium-up, .hide-for-medium-only, .hide-for-large, .hide-for-large-up, .hide-for-large-only, .hide-for-xlarge, .hide-for-xlarge-up, .hide-for-xlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge-only {
   display: inherit !important; }
