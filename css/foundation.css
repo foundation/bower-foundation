@@ -3668,9 +3668,7 @@ ul {
 /* Unordered Lists */
 ul li ul, ul li ol {
   margin-left: 1.25rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  /* Override nested font-size change */ }
+  margin-bottom: 0; }
 ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
 ul.square {
