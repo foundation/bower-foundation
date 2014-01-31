@@ -16,6 +16,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
   width: 0em; }
@@ -134,6 +137,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .row {
   width: 100%;
   margin-left: auto;
@@ -780,6 +786,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .alert-box {
   border-style: solid;
   border-width: 1px;
@@ -849,6 +858,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 [class*="block-grid-"] {
   display: block;
   padding: 0;
@@ -1141,6 +1153,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .breadcrumbs {
   display: block;
   padding: 0.5625rem 0.875rem 0.5625rem;
@@ -1207,6 +1222,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -1225,6 +1243,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 button, .button {
   border-style: solid;
   border-width: 0px;
@@ -1532,6 +1553,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -1550,6 +1574,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Clearing Styles */
 [data-clearing] {
   *zoom: 1;
@@ -1722,6 +1749,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 @media only screen and (max-width: 40em) {
   .f-dropdown {
     max-width: 100%;
@@ -1832,6 +1862,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .dropdown.button, button.dropdown {
   position: relative;
   padding-right: 3.5625rem; }
@@ -1895,6 +1928,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .flex-video {
   position: relative;
   padding-top: 1.5625rem;
@@ -1931,6 +1967,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -1949,6 +1988,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Standard Forms */
 form {
   margin: 0 0 1rem; }
@@ -2298,6 +2340,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -2316,6 +2361,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .inline-list {
   margin: 0 auto 1.0625rem auto;
   margin-left: -1.375rem;
@@ -2349,6 +2397,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Foundation Joyride */
 .joyride-list {
   display: none; }
@@ -2517,6 +2568,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .keystroke, kbd {
   background-color: #ededed;
   border-color: gainsboro;
@@ -2548,6 +2602,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .label {
   font-weight: normal;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -2596,6 +2653,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 [data-magellan-expedition] {
   background: white;
   z-index: 50;
@@ -2626,6 +2686,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(0deg); }
@@ -2880,6 +2943,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 ul.pagination {
   display: block;
   height: 1.5rem;
@@ -2938,6 +3004,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Panels */
 .panel {
   border-style: solid;
@@ -2999,6 +3068,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Pricing Tables */
 .pricing-table {
   border: solid 1px #dddddd;
@@ -3063,6 +3135,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Progress Bar */
 .progress {
   background-color: #f6f6f6;
@@ -3117,6 +3192,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .reveal-modal-bg {
   position: fixed;
   height: 100%;
@@ -3201,6 +3279,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .side-nav {
   display: block;
   margin: 0;
@@ -3245,6 +3326,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -3263,6 +3347,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -3281,6 +3368,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .split.button {
   position: relative;
   padding-right: 5.0625rem; }
@@ -3385,6 +3475,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .sub-nav {
   display: block;
   width: auto;
@@ -3438,6 +3531,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 div.switch {
   position: relative;
   padding: 0;
@@ -3608,6 +3704,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 table {
   background: white;
   margin-bottom: 1.25rem;
@@ -3648,6 +3747,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -3666,6 +3768,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .tabs {
   *zoom: 1;
   margin-bottom: 0 !important; }
@@ -3762,6 +3867,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Image Thumbnails */
 .th {
   line-height: 0;
@@ -3798,6 +3906,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Tooltips */
 .has-tip {
   border-bottom: dotted 1px #cccccc;
@@ -3885,6 +3996,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -3903,6 +4017,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 meta.foundation-mq-topbar {
   font-family: "/only screen and (min-width:40.063em)/";
   width: 40.063em; }
@@ -4272,6 +4389,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Typography resets */
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
@@ -4549,6 +4669,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -4567,6 +4690,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -4585,6 +4711,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /*
 New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
 Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
@@ -4603,6 +4732,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 .off-canvas-wrap {
   -webkit-backface-visibility: hidden;
   position: relative;
@@ -4855,6 +4987,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+html, body {
+  height: 100%; }
+
 /* Foundation Visibility HTML Classes */
 .show-for-small, .show-for-small-only, .show-for-medium-down, .show-for-large-down, .hide-for-medium, .hide-for-medium-up, .hide-for-medium-only, .hide-for-large, .hide-for-large-up, .hide-for-large-only, .hide-for-xlarge, .hide-for-xlarge-up, .hide-for-xlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge-only {
   display: inherit !important; }
