@@ -4704,7 +4704,6 @@ a.menu-icon {
   width: 250px;
   top: 0;
   bottom: 0;
-  height: 100%;
   position: absolute;
   overflow-y: auto;
   background: #333333;
@@ -4723,7 +4722,6 @@ a.menu-icon {
   width: 250px;
   top: 0;
   bottom: 0;
-  height: 100%;
   position: absolute;
   overflow-y: auto;
   background: #333333;
