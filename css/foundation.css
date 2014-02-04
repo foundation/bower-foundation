@@ -2138,9 +2138,9 @@ select::-ms-expand {
 /* Separate prefix and postfix styles when on span or label so buttons keep their own */
 span.prefix, label.prefix {
   background: #f2f2f2;
-  border-color: #d7d7d7;
   border-right: none;
-  color: #333333; }
+  color: #333333;
+  border-color: #cccccc; }
   span.prefix.radius, label.prefix.radius {
     -webkit-border-radius: 0;
     border-radius: 0;
@@ -2153,9 +2153,9 @@ span.prefix, label.prefix {
 
 span.postfix, label.postfix {
   background: #f2f2f2;
-  border-color: #cbcbcb;
   border-left: none;
-  color: #333333; }
+  color: #333333;
+  border-color: #cccccc; }
   span.postfix.radius, label.postfix.radius {
     -webkit-border-radius: 0;
     border-radius: 0;
