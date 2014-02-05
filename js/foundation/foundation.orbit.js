@@ -82,9 +82,6 @@
       if (settings.stack_on_small) {
         container.addClass(settings.stack_on_small_class);
       }
-
-      self.update_slide_number(0);
-      self.update_active_link(0);
     };
 
     self._goto = function(next_idx, start_timer) {
@@ -223,7 +220,10 @@
 
     self.init = function() {
       self.build_markup();
-      if (settings.timer) {timer = self.create_timer(); timer.start();}
+      if (settings.timer) {
+        timer = self.create_timer(); 
+        Foundation.utils.image_loaded(this.slides().children('img'), timer.start);
+      }
       animate = new FadeAnimation(settings, slides_container);
       if (settings.animation === 'slide') 
         animate = new SlideAnimation(settings, slides_container);        
@@ -283,11 +283,13 @@
       
       $(document).on('click', '[data-orbit-link]', self.link_custom);
       $(window).on('resize', self.compute_dimensions);
-      $(window).on('load', self.compute_dimensions);
-      $(window).on('load', function(){
+      Foundation.utils.image_loaded(this.slides().children('img'), self.compute_dimensions);
+      Foundation.utils.image_loaded(this.slides().children('img'), function() {
         container.prev('.preloader').css('display', 'none');
+        self.update_slide_number(0);
+        self.update_active_link(0);
+        slides_container.trigger('ready.fndtn.orbit');
       });
-      slides_container.trigger('ready.fndtn.orbit');
     };
 
     self.init();
@@ -394,7 +396,7 @@
   Foundation.libs.orbit = {
     name: 'orbit',
 
-    version: '5.0.3',
+    version: '5.1.0',
 
     settings: {
       animation: 'slide',
@@ -436,21 +438,20 @@
     },
 
     events : function (instance) {
-      var self = this;
-      var orbit_instance = new Orbit($(instance), $(instance).data('orbit-init'));
-      $(instance).data(self.name + '-instance', orbit_instance);
+      var orbit_instance = new Orbit(this.S(instance), this.S(instance).data('orbit-init'));
+      this.S(instance).data(self.name + '-instance', orbit_instance);
     },
 
     reflow : function () {
       var self = this;
 
-      if ($(self.scope).is('[data-orbit]')) {
-        var $el = $(self.scope);
+      if (self.S(self.scope).is('[data-orbit]')) {
+        var $el = self.S(self.scope);
         var instance = $el.data(self.name + '-instance');
         instance.compute_dimensions();
       } else {
-        $('[data-orbit]', self.scope).each(function(idx, el) {
-          var $el = $(el);
+        self.S('[data-orbit]', self.scope).each(function(idx, el) {
+          var $el = self.S(el);
           var opts = self.data_options($el);
           var instance = $el.data(self.name + '-instance');
           instance.compute_dimensions();

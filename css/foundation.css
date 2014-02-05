@@ -16,8 +16,14 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
+
+meta.foundation-version {
+  font-family: "/5.1.0/"; }
 
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
@@ -89,18 +95,6 @@ img {
   .clearfix:after {
     clear: both; }
 
-.text-left {
-  text-align: left !important; }
-
-.text-right {
-  text-align: right !important; }
-
-.text-center {
-  text-align: center !important; }
-
-.text-justify {
-  text-align: justify !important; }
-
 .hide {
   display: none; }
 
@@ -137,6 +131,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -201,6 +198,12 @@ html, body {
     float: left; }
   .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
     float: right; }
+  .small-push-0 {
+    left: 0%;
+    right: auto; }
+  .small-pull-0 {
+    right: 0%;
+    left: auto; }
   .small-push-1 {
     left: 8.33333%;
     right: auto; }
@@ -322,7 +325,9 @@ html, body {
     margin-left: 75% !important; }
   .small-offset-10 {
     margin-left: 83.33333% !important; }
-  .column.small-reset-order, .columns.small-reset-order {
+  .small-offset-11 {
+    margin-left: 91.66667% !important; }
+  .small-reset-order, .small-reset-order {
     margin-left: 0;
     margin-right: 0;
     left: auto;
@@ -340,6 +345,12 @@ html, body {
     float: left; }
   .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
     float: right; }
+  .medium-push-0 {
+    left: 0%;
+    right: auto; }
+  .medium-pull-0 {
+    right: 0%;
+    left: auto; }
   .medium-push-1 {
     left: 8.33333%;
     right: auto; }
@@ -461,12 +472,20 @@ html, body {
     margin-left: 75% !important; }
   .medium-offset-10 {
     margin-left: 83.33333% !important; }
-  .column.medium-reset-order, .columns.medium-reset-order {
+  .medium-offset-11 {
+    margin-left: 91.66667% !important; }
+  .medium-reset-order, .medium-reset-order {
     margin-left: 0;
     margin-right: 0;
     left: auto;
     right: auto;
     float: left; }
+  .push-0 {
+    left: 0%;
+    right: auto; }
+  .pull-0 {
+    right: 0%;
+    left: auto; }
   .push-1 {
     left: 8.33333%;
     right: auto; }
@@ -545,6 +564,12 @@ html, body {
     float: left; }
   .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
     float: right; }
+  .large-push-0 {
+    left: 0%;
+    right: auto; }
+  .large-pull-0 {
+    right: 0%;
+    left: auto; }
   .large-push-1 {
     left: 8.33333%;
     right: auto; }
@@ -666,12 +691,20 @@ html, body {
     margin-left: 75% !important; }
   .large-offset-10 {
     margin-left: 83.33333% !important; }
-  .column.large-reset-order, .columns.large-reset-order {
+  .large-offset-11 {
+    margin-left: 91.66667% !important; }
+  .large-reset-order, .large-reset-order {
     margin-left: 0;
     margin-right: 0;
     left: auto;
     right: auto;
     float: left; }
+  .push-0 {
+    left: 0%;
+    right: auto; }
+  .pull-0 {
+    right: 0%;
+    left: auto; }
   .push-1 {
     left: 8.33333%;
     right: auto; }
@@ -786,6 +819,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -858,6 +894,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1153,6 +1192,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1222,6 +1264,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1243,6 +1288,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1553,6 +1601,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1574,23 +1625,28 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
 /* Clearing Styles */
-[data-clearing] {
+.clearing-thumbs, [data-clearing] {
   *zoom: 1;
   margin-bottom: 0;
   margin-left: 0;
   list-style: none; }
-  [data-clearing]:before, [data-clearing]:after {
+  .clearing-thumbs:before, .clearing-thumbs:after, [data-clearing]:before, [data-clearing]:after {
     content: " ";
     display: table; }
-  [data-clearing]:after {
+  .clearing-thumbs:after, [data-clearing]:after {
     clear: both; }
-  [data-clearing] li {
+  .clearing-thumbs li, [data-clearing] li {
     float: left;
     margin-right: 10px; }
+  .clearing-thumbs[class*="block-grid-"] li, [data-clearing][class*="block-grid-"] li {
+    margin-right: 0; }
 
 .clearing-blackout {
   background: #333333;
@@ -1609,6 +1665,13 @@ html, body {
   height: 100%;
   overflow: hidden;
   margin: 0; }
+
+.clearing-touch-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #aaaaaa;
+  font-size: 0.6em; }
 
 .visible-img {
   height: 95%;
@@ -1749,6 +1812,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1862,6 +1928,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1928,6 +1997,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1939,7 +2011,7 @@ html, body {
   margin-bottom: 1rem;
   overflow: hidden; }
   .flex-video.widescreen {
-    padding-bottom: 57.25%; }
+    padding-bottom: 56.55%; }
   .flex-video.vimeo {
     padding-top: 0; }
   .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
@@ -1967,6 +2039,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -1988,6 +2063,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2019,7 +2097,8 @@ label {
   cursor: pointer;
   display: block;
   font-weight: normal;
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  margin-bottom: 0;
   /* Styles for required inputs */ }
   label.right {
     float: none;
@@ -2166,36 +2245,6 @@ span.postfix, label.postfix {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px; }
 
-/* Input groups will automatically style first and last elements of the group */
-.input-group.radius > *:first-child, .input-group.radius > *:first-child * {
-  -moz-border-radius-bottomleft: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px; }
-.input-group.radius > *:last-child, .input-group.radius > *:last-child * {
-  -moz-border-radius-bottomright: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px; }
-.input-group.round > *:first-child, .input-group.round > *:first-child * {
-  -moz-border-radius-bottomleft: 1000px;
-  -moz-border-radius-topleft: 1000px;
-  -webkit-border-bottom-left-radius: 1000px;
-  -webkit-border-top-left-radius: 1000px;
-  border-bottom-left-radius: 1000px;
-  border-top-left-radius: 1000px; }
-.input-group.round > *:last-child, .input-group.round > *:last-child * {
-  -moz-border-radius-bottomright: 1000px;
-  -moz-border-radius-topright: 1000px;
-  -webkit-border-bottom-right-radius: 1000px;
-  -webkit-border-top-right-radius: 1000px;
-  border-bottom-right-radius: 1000px;
-  border-top-right-radius: 1000px; }
-
 /* We use this to get basic styling on all basic form elements */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea {
   -webkit-appearance: none;
@@ -2292,9 +2341,11 @@ span.error, small.error {
 
 .error input, .error textarea, .error select {
   margin-bottom: 0; }
+.error input[type="checkbox"], .error input[type="radio"] {
+  margin-bottom: 1rem; }
 .error label, .error label.error {
   color: #f04124; }
-.error > small, .error small.error {
+.error small.error {
   display: block;
   padding: 0.375rem 0.5625rem 0.5625rem;
   margin-top: -1px;
@@ -2340,6 +2391,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2361,6 +2415,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2397,6 +2454,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2568,6 +2628,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2602,6 +2665,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2653,6 +2719,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2665,7 +2734,7 @@ html, body {
     margin-bottom: 0; }
     [data-magellan-expedition] .sub-nav dd {
       margin-bottom: 0; }
-    [data-magellan-expedition] .sub-nav .active {
+    [data-magellan-expedition] .sub-nav a {
       line-height: 1.8em; }
 
 /*
@@ -2686,6 +2755,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -2773,7 +2845,8 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
-    position: relative; }
+    position: relative;
+    -webkit-transform: translateZ(0); }
     .orbit-container .orbit-slides-container img {
       display: block;
       max-width: 100%; }
@@ -2943,6 +3016,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3004,6 +3080,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3068,6 +3147,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3135,6 +3217,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3192,6 +3277,91 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
+html, body {
+  height: 100%; }
+
+.range-slider {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  border: 1px solid #dddddd;
+  margin: 1.25rem 0;
+  background: #fafafa; }
+  .range-slider.vertical-range {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    border: 1px solid #dddddd;
+    margin: 1.25rem 0;
+    display: inline-block;
+    width: 1rem;
+    height: 12.5rem; }
+    .range-slider.vertical-range .range-slider-handle {
+      margin-top: 0;
+      margin-left: -0.5rem;
+      position: absolute;
+      bottom: -10.5rem; }
+    .range-slider.vertical-range .range-slider-active-segment {
+      width: 0.875rem;
+      height: auto;
+      bottom: 0; }
+  .range-slider.radius {
+    background: #fafafa;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+    .range-slider.radius .range-slider-handle {
+      background: #008cba;
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+      .range-slider.radius .range-slider-handle:hover {
+        background: #007da4; }
+
+.range-slider-active-segment {
+  display: inline-block;
+  position: absolute;
+  height: 0.875rem;
+  background: #e5e5e5; }
+  .range-slider-active-segment ~ .range-slider-handle {
+    margin-left: -0.5rem; }
+
+.range-slider-handle {
+  display: inline-block;
+  position: relative;
+  margin-top: -0.625rem;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #0080a7;
+  cursor: pointer;
+  background: #008cba; }
+  .range-slider-handle:hover {
+    background: #007da4; }
+
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3206,7 +3376,7 @@ html, body {
   top: 0;
   left: 0; }
 
-.reveal-modal {
+dialog, .reveal-modal {
   visibility: hidden;
   display: none;
   position: absolute;
@@ -3221,13 +3391,13 @@ html, body {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   top: 6.25rem; }
-  .reveal-modal .column, .reveal-modal .columns {
+  dialog .column, dialog .columns, .reveal-modal .column, .reveal-modal .columns {
     min-width: 0; }
-  .reveal-modal > :first-child {
+  dialog > :first-child, .reveal-modal > :first-child {
     margin-top: 0; }
-  .reveal-modal > :last-child {
+  dialog > :last-child, .reveal-modal > :last-child {
     margin-bottom: 0; }
-  .reveal-modal .close-reveal-modal {
+  dialog .close-reveal-modal, .reveal-modal .close-reveal-modal {
     font-size: 1.375rem;
     line-height: 1;
     position: absolute;
@@ -3237,28 +3407,32 @@ html, body {
     font-weight: bold;
     cursor: pointer; }
 
+dialog[open] {
+  display: block;
+  visibility: visible; }
+
 @media only screen and (min-width:40.063em) {
-  .reveal-modal {
+  dialog, .reveal-modal {
     padding: 1.875rem;
     top: 6.25rem; }
-    .reveal-modal.tiny {
+    dialog.tiny, .reveal-modal.tiny {
       margin-left: -15%;
       width: 30%; }
-    .reveal-modal.small {
+    dialog.small, .reveal-modal.small {
       margin-left: -20%;
       width: 40%; }
-    .reveal-modal.medium {
+    dialog.medium, .reveal-modal.medium {
       margin-left: -30%;
       width: 60%; }
-    .reveal-modal.large {
+    dialog.large, .reveal-modal.large {
       margin-left: -35%;
       width: 70%; }
-    .reveal-modal.xlarge {
+    dialog.xlarge, .reveal-modal.xlarge {
       margin-left: -47.5%;
       width: 95%; } }
 
 @media print {
-  .reveal-modal {
+  dialog, .reveal-modal {
     background: white !important; } }
 
 /*
@@ -3279,6 +3453,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3326,6 +3503,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3347,6 +3527,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3368,6 +3551,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3475,6 +3661,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3499,7 +3688,8 @@ html, body {
     color: #999999; }
     .sub-nav dt a, .sub-nav dd a, .sub-nav li a {
       text-decoration: none;
-      color: #999999; }
+      color: #999999;
+      padding: 0.1875rem 1rem; }
       .sub-nav dt a:hover, .sub-nav dd a:hover, .sub-nav li a:hover {
         color: #737373; }
     .sub-nav dt.active a, .sub-nav dd.active a, .sub-nav li.active a {
@@ -3531,6 +3721,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3704,6 +3897,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3747,6 +3943,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3768,6 +3967,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3820,7 +4022,8 @@ html, body {
 
 .tabs-content {
   *zoom: 1;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  width: 100%; }
   .tabs-content:before, .tabs-content:after {
     content: " ";
     display: table; }
@@ -3829,7 +4032,8 @@ html, body {
   .tabs-content > .content {
     display: none;
     float: left;
-    padding: 0.9375rem 0; }
+    padding: 0.9375rem 0;
+    width: 100%; }
     .tabs-content > .content.active {
       display: block; }
     .tabs-content > .content.contained {
@@ -3867,6 +4071,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3906,6 +4113,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -3933,9 +4143,7 @@ html, body {
   left: 50%;
   width: 100%;
   color: white;
-  background: #333333;
-  -webkit-border-radius: 3px;
-  border-radius: 3px; }
+  background: #333333; }
   .tooltip > .nub {
     display: block;
     left: 5px;
@@ -3945,6 +4153,14 @@ html, body {
     border: solid 5px;
     border-color: transparent transparent #333333 transparent;
     top: -10px; }
+  .tooltip.radius {
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
+  .tooltip.round {
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; }
+    .tooltip.round > .nub {
+      left: 2rem; }
   .tooltip.opened {
     color: #008cba !important;
     border-bottom: dotted 1px #004054 !important; }
@@ -3996,6 +4212,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -4017,6 +4236,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -4299,6 +4521,13 @@ meta.foundation-mq-topbar {
       background: #333333; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background: #272727; }
+    .top-bar-section li.active:not(.has-form) a:not(.button) {
+      padding: 0 15px;
+      line-height: 45px;
+      color: white;
+      background: #008cba; }
+      .top-bar-section li.active:not(.has-form) a:not(.button):hover {
+        background: #007ba0; }
     .top-bar-section .has-dropdown > a {
       padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {
@@ -4389,8 +4618,123 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+@media only screen and (max-width: 40em) {
+  .small-only-text-left {
+    text-align: left !important; }
+  .small-only-text-right {
+    text-align: right !important; }
+  .small-only-text-center {
+    text-align: center !important; }
+  .small-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen {
+  .small-text-left {
+    text-align: left !important; }
+  .small-text-right {
+    text-align: right !important; }
+  .small-text-center {
+    text-align: center !important; }
+  .small-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .medium-only-text-left {
+    text-align: left !important; }
+  .medium-only-text-right {
+    text-align: right !important; }
+  .medium-only-text-center {
+    text-align: center !important; }
+  .medium-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:40.063em) {
+  .medium-text-left {
+    text-align: left !important; }
+  .medium-text-right {
+    text-align: right !important; }
+  .medium-text-center {
+    text-align: center !important; }
+  .medium-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:64.063em) and (max-width:90em) {
+  .large-only-text-left {
+    text-align: left !important; }
+  .large-only-text-right {
+    text-align: right !important; }
+  .large-only-text-center {
+    text-align: center !important; }
+  .large-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:64.063em) {
+  .large-text-left {
+    text-align: left !important; }
+  .large-text-right {
+    text-align: right !important; }
+  .large-text-center {
+    text-align: center !important; }
+  .large-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:90.063em) and (max-width:120em) {
+  .xlarge-only-text-left {
+    text-align: left !important; }
+  .xlarge-only-text-right {
+    text-align: right !important; }
+  .xlarge-only-text-center {
+    text-align: center !important; }
+  .xlarge-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:90.063em) {
+  .xlarge-text-left {
+    text-align: left !important; }
+  .xlarge-text-right {
+    text-align: right !important; }
+  .xlarge-text-center {
+    text-align: center !important; }
+  .xlarge-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:120.063em) and (max-width:99999999em) {
+  .xxlarge-only-text-left {
+    text-align: left !important; }
+  .xxlarge-only-text-right {
+    text-align: right !important; }
+  .xxlarge-only-text-center {
+    text-align: center !important; }
+  .xxlarge-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:120.063em) {
+  .xxlarge-text-left {
+    text-align: left !important; }
+  .xxlarge-text-right {
+    text-align: right !important; }
+  .xxlarge-text-center {
+    text-align: center !important; }
+  .xxlarge-text-justify {
+    text-align: justify !important; } }
 
 /* Typography resets */
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
@@ -4669,6 +5013,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -4690,6 +5037,145 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
+html, body {
+  height: 100%; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+@media only screen and (max-width: 40em) {
+  .small-only-text-left {
+    text-align: left !important; }
+  .small-only-text-right {
+    text-align: right !important; }
+  .small-only-text-center {
+    text-align: center !important; }
+  .small-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen {
+  .small-text-left {
+    text-align: left !important; }
+  .small-text-right {
+    text-align: right !important; }
+  .small-text-center {
+    text-align: center !important; }
+  .small-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .medium-only-text-left {
+    text-align: left !important; }
+  .medium-only-text-right {
+    text-align: right !important; }
+  .medium-only-text-center {
+    text-align: center !important; }
+  .medium-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:40.063em) {
+  .medium-text-left {
+    text-align: left !important; }
+  .medium-text-right {
+    text-align: right !important; }
+  .medium-text-center {
+    text-align: center !important; }
+  .medium-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:64.063em) and (max-width:90em) {
+  .large-only-text-left {
+    text-align: left !important; }
+  .large-only-text-right {
+    text-align: right !important; }
+  .large-only-text-center {
+    text-align: center !important; }
+  .large-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:64.063em) {
+  .large-text-left {
+    text-align: left !important; }
+  .large-text-right {
+    text-align: right !important; }
+  .large-text-center {
+    text-align: center !important; }
+  .large-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:90.063em) and (max-width:120em) {
+  .xlarge-only-text-left {
+    text-align: left !important; }
+  .xlarge-only-text-right {
+    text-align: right !important; }
+  .xlarge-only-text-center {
+    text-align: center !important; }
+  .xlarge-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:90.063em) {
+  .xlarge-text-left {
+    text-align: left !important; }
+  .xlarge-text-right {
+    text-align: right !important; }
+  .xlarge-text-center {
+    text-align: center !important; }
+  .xlarge-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:120.063em) and (max-width:99999999em) {
+  .xxlarge-only-text-left {
+    text-align: left !important; }
+  .xxlarge-only-text-right {
+    text-align: right !important; }
+  .xxlarge-only-text-center {
+    text-align: center !important; }
+  .xxlarge-only-text-justify {
+    text-align: justify !important; } }
+
+@media only screen and (min-width:120.063em) {
+  .xxlarge-text-left {
+    text-align: left !important; }
+  .xxlarge-text-right {
+    text-align: right !important; }
+  .xxlarge-text-center {
+    text-align: center !important; }
+  .xxlarge-text-justify {
+    text-align: justify !important; } }
+
+/*
+New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+
+  rem-calc(10 20 30px 40);
+
+Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+
+  rem-calc((10, 20, 30, 40px));
+
+Optionally call with a different base (eg: 8px) to calculate rem.
+
+  rem-calc(16px 32px 48px, 8px);
+
+If you require to comma separate your list
+
+  rem-calc((16px, 32px, 48), 8px);
+*/
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
@@ -4711,27 +5197,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
-html, body {
-  height: 100%; }
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
 
-/*
-New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
-Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
-
-  rem-calc(10 20 30px 40);
-
-Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
-
-  rem-calc((10, 20, 30, 40px));
-
-Optionally call with a different base (eg: 8px) to calculate rem.
-
-  rem-calc(16px 32px 48px, 8px);
-
-If you require to comma separate your list
-
-  rem-calc((16px, 32px, 48), 8px);
-*/
 html, body {
   height: 100%; }
 
@@ -4739,7 +5207,7 @@ html, body {
   -webkit-backface-visibility: hidden;
   position: relative;
   width: 100%;
-  overflow: hidden; }
+  overflow-x: hidden; }
   .off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
     height: 100%; }
 
@@ -4987,6 +5455,9 @@ If you require to comma separate your list
 
   rem-calc((16px, 32px, 48), 8px);
 */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
 html, body {
   height: 100%; }
 
