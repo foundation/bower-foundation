@@ -1290,27 +1290,28 @@ button, .button {
 .button-group {
   list-style: none;
   margin: 0;
+  left: 0;
   *zoom: 1; }
   .button-group:before, .button-group:after {
     content: " ";
     display: table; }
   .button-group:after {
     clear: both; }
-  .button-group > * {
+  .button-group li {
     margin: 0;
     float: left; }
-    .button-group > * > button, .button-group > * .button {
-      border-right: 1px solid;
+    .button-group li > button, .button-group li .button {
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group > *:last-child button, .button-group > *:last-child .button {
-      border-right: 0; }
-    .button-group > *:first-child {
+    .button-group li:first-child button, .button-group li:first-child .button {
+      border-left: 0; }
+    .button-group li:first-child {
       margin-left: 0; }
   .button-group.radius > * > button, .button-group.radius > * .button {
-    border-right: 1px solid;
+    border-left: 1px solid;
     border-color: rgba(255, 255, 255, 0.5); }
-  .button-group.radius > *:last-child button, .button-group.radius > *:last-child .button {
-    border-right: 0; }
+  .button-group.radius > *:first-child button, .button-group.radius > *:first-child .button {
+    border-left: 0; }
   .button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button {
     -moz-border-radius-bottomleft: 3px;
     -moz-border-radius-topleft: 3px;
@@ -1326,10 +1327,10 @@ button, .button {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px; }
   .button-group.round > * > button, .button-group.round > * .button {
-    border-right: 1px solid;
+    border-left: 1px solid;
     border-color: rgba(255, 255, 255, 0.5); }
-  .button-group.round > *:last-child button, .button-group.round > *:last-child .button {
-    border-right: 0; }
+  .button-group.round > *:first-child button, .button-group.round > *:first-child .button {
+    border-left: 0; }
   .button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button {
     -moz-border-radius-bottomleft: 1000px;
     -moz-border-radius-topleft: 1000px;
@@ -1347,64 +1348,64 @@ button, .button {
   .button-group.even-2 li {
     width: 50%; }
     .button-group.even-2 li > button, .button-group.even-2 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-2 li:last-child button, .button-group.even-2 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-2 li:first-child button, .button-group.even-2 li:first-child .button {
+      border-left: 0; }
     .button-group.even-2 li button, .button-group.even-2 li .button {
       width: 100%; }
   .button-group.even-3 li {
     width: 33.33333%; }
     .button-group.even-3 li > button, .button-group.even-3 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-3 li:last-child button, .button-group.even-3 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-3 li:first-child button, .button-group.even-3 li:first-child .button {
+      border-left: 0; }
     .button-group.even-3 li button, .button-group.even-3 li .button {
       width: 100%; }
   .button-group.even-4 li {
     width: 25%; }
     .button-group.even-4 li > button, .button-group.even-4 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-4 li:last-child button, .button-group.even-4 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-4 li:first-child button, .button-group.even-4 li:first-child .button {
+      border-left: 0; }
     .button-group.even-4 li button, .button-group.even-4 li .button {
       width: 100%; }
   .button-group.even-5 li {
     width: 20%; }
     .button-group.even-5 li > button, .button-group.even-5 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-5 li:last-child button, .button-group.even-5 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-5 li:first-child button, .button-group.even-5 li:first-child .button {
+      border-left: 0; }
     .button-group.even-5 li button, .button-group.even-5 li .button {
       width: 100%; }
   .button-group.even-6 li {
     width: 16.66667%; }
     .button-group.even-6 li > button, .button-group.even-6 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-6 li:last-child button, .button-group.even-6 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-6 li:first-child button, .button-group.even-6 li:first-child .button {
+      border-left: 0; }
     .button-group.even-6 li button, .button-group.even-6 li .button {
       width: 100%; }
   .button-group.even-7 li {
     width: 14.28571%; }
     .button-group.even-7 li > button, .button-group.even-7 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-7 li:last-child button, .button-group.even-7 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-7 li:first-child button, .button-group.even-7 li:first-child .button {
+      border-left: 0; }
     .button-group.even-7 li button, .button-group.even-7 li .button {
       width: 100%; }
   .button-group.even-8 li {
     width: 12.5%; }
     .button-group.even-8 li > button, .button-group.even-8 li .button {
-      border-right: 1px solid;
+      border-left: 1px solid;
       border-color: rgba(255, 255, 255, 0.5); }
-    .button-group.even-8 li:last-child button, .button-group.even-8 li:last-child .button {
-      border-right: 0; }
+    .button-group.even-8 li:first-child button, .button-group.even-8 li:first-child .button {
+      border-left: 0; }
     .button-group.even-8 li button, .button-group.even-8 li .button {
       width: 100%; }
 
