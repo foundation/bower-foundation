@@ -1585,11 +1585,6 @@ button, .button {
     padding-left: 0;
     padding-top: 0; } }
 
-@media only screen and (max-width: 40em) {
-  .f-dropdown {
-    max-width: 100%;
-    left: 0; } }
-
 /* Foundation Dropdowns */
 .f-dropdown {
   position: absolute;
@@ -1601,7 +1596,7 @@ button, .button {
   height: auto;
   background: white;
   border: solid 1px #cccccc;
-  font-size: 16px;
+  font-size: 0.875rem;
   z-index: 99;
   margin-top: 2px;
   max-width: 200px; }
@@ -1661,7 +1656,7 @@ button, .button {
     max-height: none;
     background: white;
     border: solid 1px #cccccc;
-    font-size: 16px;
+    font-size: 0.875rem;
     z-index: 99;
     max-width: 200px; }
     .f-dropdown.content > *:first-child {
