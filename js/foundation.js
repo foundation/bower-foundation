@@ -539,7 +539,9 @@
       image_loaded : function (images, callback) {
         var self = this,
             unloaded = images.length;
-
+        if(unloaded == 0){
+            callback(images);
+        }
         images.each(function(){
           single_image_loaded(self.S(this),function(){
             unloaded -= 1; 
@@ -3301,7 +3303,7 @@
       self.build_markup();
       if (settings.timer) {
         timer = self.create_timer();
-        Foundation.utils.image_loaded(this.slides().children('img'), timer.start);
+        Foundation.utils.image_loaded(this.slides().find('img'), timer.start);
       }
       animate = new FadeAnimation(settings, slides_container);
       if (settings.animation === 'slide')
@@ -3362,8 +3364,8 @@
 
       $(document).on('click', '[data-orbit-link]', self.link_custom);
       $(window).on('resize', self.compute_dimensions);
-      Foundation.utils.image_loaded(this.slides().children('img'), self.compute_dimensions);
-      Foundation.utils.image_loaded(this.slides().children('img'), function() {
+      Foundation.utils.image_loaded(this.slides().find('img'), self.compute_dimensions);
+      Foundation.utils.image_loaded(this.slides().find('img'), function() {
         container.prev('.preloader').css('display', 'none');
         self.update_slide_number(0);
         self.update_active_link(0);
