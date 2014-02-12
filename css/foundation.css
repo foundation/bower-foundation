@@ -2213,7 +2213,7 @@ label.error {
   border-width: 1px;
   margin: 0;
   font-family: "Consolas", "Menlo", "Courier", monospace;
-  font-size: 0.875rem;
+  font-size: inherit;
   padding: 0.125rem 0.25rem 0;
   -webkit-border-radius: 3px;
   border-radius: 3px; }
