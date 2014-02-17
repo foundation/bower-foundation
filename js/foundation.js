@@ -4050,6 +4050,9 @@
               self.showOrCreateTip(S(this));
             }
           })
+          .on('DOMNodeRemoved DOMAttrModified', '[' + this.attr_name() + ']:not(a)', function (e) {
+            self.hide(S(this));
+          })
           .on('click.fndtn.tooltip touchstart.fndtn.tooltip touchend.fndtn.tooltip', 
             this.settings.tooltip_class, function (e) {
             e.preventDefault();
@@ -4070,6 +4073,9 @@
               clearTimeout(this.timer);
               self.hide($this);
             }
+          })
+          .on('DOMNodeRemoved DOMAttrModified', '[' + this.attr_name() + ']:not(a)', function (e) {
+            self.hide(S(this));
           });
       }
     },
