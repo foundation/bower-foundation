@@ -21,11 +21,11 @@
   };
 
   header_helpers([
-    'foundation-mq-small', 
-    'foundation-mq-medium', 
-    'foundation-mq-large', 
-    'foundation-mq-xlarge', 
-    'foundation-mq-xxlarge', 
+    'foundation-mq-small',
+    'foundation-mq-medium',
+    'foundation-mq-large',
+    'foundation-mq-xlarge',
+    'foundation-mq-xxlarge',
     'foundation-data-attribute-namespace']);
 
   // Enable FastClick if present
@@ -44,7 +44,7 @@
   // getElementById is not available.
   var S = function (selector, context) {
     if (typeof selector === 'string') {
-      if (context) { 
+      if (context) {
         var cont;
         if (context.jquery) {
           cont = context[0];
@@ -159,7 +159,7 @@
       bindLoad.call(image);
     }
   }
-
+  
   /*
     https://github.com/paulirish/matchMedia.js
   */
@@ -860,7 +860,7 @@
     },
 
     init : function (scope, method, options) {
-      this.bindings(method, options); 
+      this.bindings(method, options);
     },
 
     events : function () {
@@ -967,7 +967,7 @@
 
       this.bindings(method, options);
 
-      if (self.S(this.scope).is('[' + this.attr_name() + ']')) { 
+      if (self.S(this.scope).is('[' + this.attr_name() + ']')) {
         this.assemble(self.S('li', this.scope));
       } else {
         self.S('[' + this.attr_name() + ']', this.scope).each(function () {
