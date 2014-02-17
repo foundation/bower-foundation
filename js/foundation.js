@@ -2077,7 +2077,7 @@
     init : function (scope, method, options) {
       Foundation.inherit(this, 'throttle random_str');
 
-      this.settings = this.defaults;
+      this.settings = $.extend({}, this.defaults, (options || method));
 
       this.bindings(method, options)
     },
@@ -2227,7 +2227,6 @@
     },
 
     create : function (opts) {
-      console.log(opts.$li)
       var buttonText = opts.$li.attr(this.add_namespace('data-button')) 
         || opts.$li.attr(this.add_namespace('data-text')),
         tipClass = opts.$li.attr('class'),
@@ -2394,7 +2393,6 @@
     },
 
     set_target : function () {
-      console.log(this.add_namespace('data-class'))
       var cl = this.settings.$li.attr(this.add_namespace('data-class')),
           id = this.settings.$li.attr(this.add_namespace('data-id')),
           $sel = function () {
@@ -2406,8 +2404,6 @@
               return $('body');
             }
           };
-
-      console.log(cl, id)
 
       this.settings.$target = $sel();
     },
