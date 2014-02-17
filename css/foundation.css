@@ -149,7 +149,7 @@ select {
   .column.small-centered, .columns.small-centered {
     margin-left: auto;
     margin-right: auto;
-    float: none; }
+    float: none !important; }
   .column.small-uncentered, .columns.small-uncentered {
     margin-left: 0;
     margin-right: 0;
@@ -296,7 +296,7 @@ select {
   .column.medium-centered, .columns.medium-centered {
     margin-left: auto;
     margin-right: auto;
-    float: none; }
+    float: none !important; }
   .column.medium-uncentered, .columns.medium-uncentered {
     margin-left: 0;
     margin-right: 0;
@@ -515,7 +515,7 @@ select {
   .column.large-centered, .columns.large-centered {
     margin-left: auto;
     margin-right: auto;
-    float: none; }
+    float: none !important; }
   .column.large-uncentered, .columns.large-uncentered {
     margin-left: 0;
     margin-right: 0;
