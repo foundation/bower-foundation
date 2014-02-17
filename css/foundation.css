@@ -3423,6 +3423,8 @@ meta.foundation-mq-topbar {
       position: static; }
       .top-bar-section .has-dropdown.moved > .dropdown {
         display: block; }
+      .top-bar-section .has-dropdown.moved > a:after {
+        display: none; }
   .top-bar-section .dropdown {
     position: absolute;
     left: 100%;
