@@ -3408,7 +3408,7 @@ meta.foundation-mq-topbar {
       background: #f04124; }
       .top-bar-section ul li > a.button.alert:hover {
         background: #d4290f; }
-  .top-bar-section ul li:hover > a {
+  .top-bar-section ul li:hover:not(.has-form) > a {
     background: #272727;
     color: white; }
   .top-bar-section ul li.active > a {
