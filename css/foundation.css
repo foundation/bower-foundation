@@ -4159,7 +4159,7 @@ blockquote, blockquote p {
     left: 2.8125rem;
     right: 2.8125rem; }
 
-.menu-icon {
+.tab-bar .menu-icon {
   text-indent: 2.1875rem;
   width: 2.8125rem;
   height: 2.8125rem;
@@ -4168,7 +4168,7 @@ blockquote, blockquote p {
   padding: 0;
   color: white;
   position: relative; }
-  .menu-icon span {
+  .tab-bar .menu-icon span {
     position: absolute;
     display: block;
     width: 1rem;
@@ -4177,7 +4177,7 @@ blockquote, blockquote p {
     top: 0.3125rem;
     -webkit-box-shadow: 1px 10px 1px 1px white, 1px 16px 1px 1px white, 1px 22px 1px 1px white;
     box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
-  .menu-icon:hover span {
+  .tab-bar .menu-icon:hover span {
     -webkit-box-shadow: 1px 10px 1px 1px #b3b3b3, 1px 16px 1px 1px #b3b3b3, 1px 22px 1px 1px #b3b3b3;
     box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3; }
 
