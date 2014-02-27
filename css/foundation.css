@@ -1153,8 +1153,6 @@ button, .button {
   background-color: #008cba;
   border-color: #007295;
   color: white;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
@@ -1170,9 +1168,7 @@ button, .button {
   button.secondary, .button.secondary {
     background-color: #e7e7e7;
     border-color: #b9b9b9;
-    color: #333333;
-    -webkit-border-radius: 3px;
-    border-radius: 3px; }
+    color: #333333; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       background-color: #b9b9b9; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
@@ -1180,9 +1176,7 @@ button, .button {
   button.success, .button.success {
     background-color: #43ac6a;
     border-color: #368a54;
-    color: white;
-    -webkit-border-radius: 3px;
-    border-radius: 3px; }
+    color: white; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       background-color: #368a54; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
@@ -1190,9 +1184,7 @@ button, .button {
   button.alert, .button.alert {
     background-color: #f04124;
     border-color: #cf280e;
-    color: white;
-    -webkit-border-radius: 3px;
-    border-radius: 3px; }
+    color: white; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       background-color: #cf280e; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
@@ -1241,9 +1233,7 @@ button, .button {
     cursor: default;
     opacity: 0.7;
     -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-border-radius: 3px;
-    border-radius: 3px; }
+    box-shadow: none; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #007295; }
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -1257,9 +1247,7 @@ button, .button {
       cursor: default;
       opacity: 0.7;
       -webkit-box-shadow: none;
-      box-shadow: none;
-      -webkit-border-radius: 3px;
-      border-radius: 3px; }
+      box-shadow: none; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: #b9b9b9; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
@@ -1273,9 +1261,7 @@ button, .button {
       cursor: default;
       opacity: 0.7;
       -webkit-box-shadow: none;
-      box-shadow: none;
-      -webkit-border-radius: 3px;
-      border-radius: 3px; }
+      box-shadow: none; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #368a54; }
       button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
@@ -1289,9 +1275,7 @@ button, .button {
       cursor: default;
       opacity: 0.7;
       -webkit-box-shadow: none;
-      box-shadow: none;
-      -webkit-border-radius: 3px;
-      border-radius: 3px; }
+      box-shadow: none; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #cf280e; }
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
