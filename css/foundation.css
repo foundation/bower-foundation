@@ -1970,7 +1970,7 @@ input[type="file"] {
 
 /* We add basic fieldset styling */
 fieldset {
-  border: solid 1px #dddddd;
+  border: 1px solid #dddddd;
   padding: 1.25rem;
   margin: 1.125rem 0; }
   fieldset legend {
