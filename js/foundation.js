@@ -3346,7 +3346,8 @@
         animate = new SlideAnimation(settings, slides_container);
       container.on('click', '.'+settings.next_class, self.next);
       container.on('click', '.'+settings.prev_class, self.prev);
-      container.on('click', '[data-orbit-slide]', self.link_bullet);
+      if (settings.next_on_click)
+        container.on('click', '[data-orbit-slide]', self.link_bullet);
       container.on('click', self.toggle_timer);
       if (settings.swipe) {
         container.on('touchstart.fndtn.orbit', function(e) {
@@ -3520,6 +3521,7 @@
       timer_speed: 10000,
       pause_on_hover: true,
       resume_on_mouseout: false,
+      next_on_click: true,
       animation_speed: 500,
       stack_on_small: false,
       navigation_arrows: true,
@@ -3837,7 +3839,11 @@
           el.detach().appendTo(rootElement);
         }
 
-        if (/pop/i.test(settings.animation)) {
+        var animData = getAnimationData(settings.animation);
+        if (!animData.animate) {
+          this.locked = false;
+        }
+        if (animData.pop) {
           css.top = $(window).scrollTop() - el.data('offset') + 'px';
           var end_css = {
             top: $(window).scrollTop() + el.data('css-top') + 'px',
@@ -3855,7 +3861,7 @@
           }.bind(this), settings.animation_speed / 2);
         }
 
-        if (/fade/i.test(settings.animation)) {
+        if (animData.fade) {
           css.top = $(window).scrollTop() + el.data('css-top') + 'px';
           var end_css = {opacity: 1};
 
@@ -3876,7 +3882,7 @@
       var settings = this.settings;
 
       // should we animate the background?
-      if (/fade/i.test(settings.animation)) {
+      if (getAnimationData(settings.animation).fade) {
         return el.fadeIn(settings.animation_speed / 2);
       }
 
@@ -3889,7 +3895,11 @@
       // is modal
       if (css) {
         var settings = el.data(this.attr_name(true) + '-init');
-        if (/pop/i.test(settings.animation)) {
+        var animData = getAnimationData(settings.animation);
+        if (!animData.animate) {
+          this.locked = false;
+        }
+        if (animData.pop) {
           var end_css = {
             top: - $(window).scrollTop() - el.data('offset') + 'px',
             opacity: 0
@@ -3905,7 +3915,7 @@
           }.bind(this), settings.animation_speed / 2);
         }
 
-        if (/fade/i.test(settings.animation)) {
+        if (animData.fade) {
           var end_css = {opacity: 0};
 
           return setTimeout(function () {
@@ -3924,7 +3934,7 @@
       var settings = this.settings;
 
       // should we animate the background?
-      if (/fade/i.test(settings.animation)) {
+      if (getAnimationData(settings.animation).fade) {
         return el.fadeOut(settings.animation_speed / 2);
       }
 
@@ -3981,6 +3991,23 @@
 
     reflow : function () {}
   };
+
+  /*
+   * getAnimationData('popAndFade') // {animate: true,  pop: true,  fade: true}
+   * getAnimationData('fade')       // {animate: true,  pop: false, fade: true}
+   * getAnimationData('pop')        // {animate: true,  pop: true,  fade: false}
+   * getAnimationData('foo')        // {animate: false, pop: false, fade: false}
+   * getAnimationData(null)         // {animate: false, pop: false, fade: false}
+   */
+  function getAnimationData(str) {
+    var fade = /fade/i.test(str);
+    var pop = /pop/i.test(str);
+    return {
+      animate: fade || pop,
+      pop: pop,
+      fade: fade
+    };
+  }
 }(jQuery, this, this.document));
 
 /*jslint unparam: true, browser: true, indent: 2 */
