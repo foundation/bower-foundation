@@ -3392,6 +3392,7 @@ meta.foundation-mq-topbar {
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.8125rem;
     font-weight: normal;
+    text-transform: none;
     background: #333333; }
     .top-bar-section ul li > a.button {
       background: #008cba;
