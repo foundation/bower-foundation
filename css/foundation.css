@@ -3149,6 +3149,10 @@ table {
     float: left;
     margin-left: -1px; } }
 
+.no-js .tabs-content > .content {
+  display: block;
+  float: none; }
+
 /* Image Thumbnails */
 .th {
   line-height: 0;
