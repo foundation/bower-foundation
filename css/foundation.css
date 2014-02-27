@@ -2315,9 +2315,9 @@ label.error {
       display: block; }
   .slideshow-wrapper .orbit-container {
     background-color: transparent; }
-    .slideshow-wrapper .orbit-container li {
+    .slideshow-wrapper .orbit-container ul li {
       display: block; }
-      .slideshow-wrapper .orbit-container li .orbit-caption {
+      .slideshow-wrapper .orbit-container ul li .orbit-caption {
         display: block; }
 
 .preloader {
