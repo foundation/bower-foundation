@@ -4104,8 +4104,8 @@
       disable_for_touch: false,
       hover_delay: 200,
       tip_template : function (selector, content) {
-        return '<span data-selector="' + selector + '" class="' 
-          + Foundation.libs.tooltip.settings.tooltip_class.substring(1) 
+        return '<span data-selector="' + selector + '" class="'
+          + Foundation.libs.tooltip.settings.tooltip_class.substring(1)
           + '">' + content + '<span class="nub"></span></span>';
       }
     },
@@ -4120,10 +4120,12 @@
     events : function () {
       var self = this,
           S = self.S;
-      
+
+      self.create(this.S(instance));
+
       $(this.scope)
         .off('.tooltip')
-        .on('mouseenter.fndtn.tooltip mouseleave.fndtn.tooltip touchstart.fndtn.tooltip', 
+        .on('mouseenter.fndtn.tooltip mouseleave.fndtn.tooltip touchstart.fndtn.tooltip',
           '[' + this.attr_name() + ']:not(a)', function (e) {
           var $this = S(this),
               settings = $.extend({}, self.settings, self.data_options($this)),
@@ -4143,13 +4145,13 @@
 
             if (/enter|over/i.test(e.type)) {
               this.timer = setTimeout(function () {
-                var tip = self.showOrCreateTip($this);
+                var tip = self.showTip($this);
               }.bind(this), self.settings.hover_delay);
             } else if (e.type === 'mouseout' || e.type === 'mouseleave') {
               clearTimeout(this.timer);
               self.hide($this);
             } else {
-              self.showOrCreateTip($this);
+              self.showTip($this);
             }
           }
         })
@@ -4168,14 +4170,10 @@
         });
     },
 
-    showOrCreateTip : function ($target, is_touch) {
+    showTip : function ($target) {
       var $tip = this.getTip($target);
-      
-      if ($tip && $tip.length > 0) {
-        return this.show($target);
-      }
 
-      return this.create($target, is_touch);
+        return this.show($target);
     },
 
     getTip : function ($target) {
@@ -4196,7 +4194,7 @@
 
       if ((id && id.length < 1 || !id) && typeof dataSelector != 'string') {
         dataSelector = this.random_str(6);
-        $target.attr('data-selector', this.random_str(6));
+        $target.attr('data-selector', dataSelector);
       }
 
       return (id && id.length > 0) ? id : dataSelector;
@@ -4206,11 +4204,11 @@
       var self = this,
           settings = $.extend({}, this.settings, this.data_options($target)),
           tip_template = this.settings.tip_template;
-      
+
       if (typeof settings.tip_template === 'string' && window.hasOwnProperty(settings.tip_template)) {
         tip_template = window[settings.tip_template];
       }
-      
+
       var $tip = $(tip_template(this.selector($target), $('<div></div>').html($target.attr('title')).html())),
           classes = this.inheritable_classes($target);
 
@@ -4224,7 +4222,6 @@
       }
 
       $target.removeAttr('title').attr('title','');
-      this.show($target);
     },
 
     reposition : function (target, tip, classes) {
@@ -4236,7 +4233,7 @@
       nub = tip.children('.nub');
       nubHeight = nub.outerHeight();
       nubWidth = nub.outerHeight();
-      
+
       if (this.small()) {
         tip.css({'width' : '100%' });
       } else {
@@ -4308,7 +4305,7 @@
           self.hide($target);
         });
       }
-      
+
       $target.data('tooltip-open-event-type', 'touch');
     },
 
@@ -4326,7 +4323,7 @@
 
     hide : function ($target) {
       var $tip = this.getTip($target);
-      
+
       $tip.fadeOut(150, function() {
         $tip.find('.tap-to-close').remove();
         $tip.off('click.fndtn.tooltip.tapclose touchstart.fndtn.tooltip.tapclose');
@@ -4345,6 +4342,7 @@
     reflow : function () {}
   };
 }(jQuery, this, this.document));
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
