@@ -2668,7 +2668,7 @@ ul.pagination {
   width: 100%;
   background: black;
   background: rgba(0, 0, 0, 0.45);
-  z-index: 98;
+  z-index: 99;
   display: none;
   top: 0;
   left: 0; }
@@ -2678,7 +2678,7 @@ dialog, .reveal-modal {
   display: none;
   position: absolute;
   left: 50%;
-  z-index: 99;
+  z-index: 100;
   height: auto;
   margin-left: -40%;
   width: 80%;
