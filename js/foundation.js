@@ -4226,7 +4226,7 @@
       this.bindings(method, options);
     },
 
-    events : function () {
+    events : function (instance) {
       var self = this,
           S = self.S;
 
