@@ -110,8 +110,7 @@ select {
     clear: both; }
   .row.collapse > .column, .row.collapse > .columns {
     padding-left: 0;
-    padding-right: 0;
-    float: left; }
+    padding-right: 0; }
   .row.collapse .row {
     margin-left: 0;
     margin-right: 0; }
