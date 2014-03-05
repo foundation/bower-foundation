@@ -2,7 +2,7 @@
   "name": "foundation",
   "version": "5.1.1",
   "main": [
-    "css/foundation.css",
+    "css/foundation.min.css",
     "js/foundation.min.js"
   ],
   "dependencies": {
