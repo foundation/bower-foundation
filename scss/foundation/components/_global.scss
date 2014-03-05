@@ -298,7 +298,7 @@ $cursor-text-value: text !default;
   @if $include-html-global-classes {
 
     meta.foundation-version {
-      font-family: "/5.1.0/";
+      font-family: "/5.2.0/";
     }
     // Used to provide media query values for javascript components.
     // Forward slash placed around everything to convince PhantomJS to read the value.
@@ -361,12 +361,8 @@ $cursor-text-value: text !default;
   a:hover { cursor: $cursor-pointer-value; }
 
     // Grid Defaults to get images and embeds to work properly
-    img,
-    object,
-    embed { max-width: 100%; height: auto; }
+    img { max-width: 100%; height: auto; }
 
-    object,
-    embed { height: 100%; }
     img { -ms-interpolation-mode: bicubic; }
 
     #map_canvas,
