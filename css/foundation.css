@@ -3663,7 +3663,7 @@ dialog, .reveal-modal {
   visibility: hidden;
   display: none;
   position: absolute;
-  z-index: 99;
+  z-index: 100;
   width: 100vw;
   top: 0;
   left: 0;
