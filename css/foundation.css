@@ -149,7 +149,7 @@ select {
   .column.small-uncentered, .columns.small-uncentered {
     margin-left: 0;
     margin-right: 0;
-    float: left; }
+    float: left !important; }
   .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
     float: right; }
   .small-push-0 {
@@ -296,7 +296,7 @@ select {
   .column.medium-uncentered, .columns.medium-uncentered {
     margin-left: 0;
     margin-right: 0;
-    float: left; }
+    float: left !important; }
   .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
     float: right; }
   .medium-push-0 {
@@ -515,7 +515,7 @@ select {
   .column.large-uncentered, .columns.large-uncentered {
     margin-left: 0;
     margin-right: 0;
-    float: left; }
+    float: left !important; }
   .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
     float: right; }
   .large-push-0 {
