@@ -4517,7 +4517,8 @@
       siblings.removeClass(settings.active_class);
       target.siblings().removeClass(settings.active_class).end().addClass(settings.active_class);
       settings.callback(tab);
-      tabs.triggerHandler('toggled', [tab]);
+      target.triggerHandler('toggled', [tab]);
+      tabs.triggerHandler('toggled', [target]);
     },
 
     data_attr: function (str) {
