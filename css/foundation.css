@@ -2559,7 +2559,7 @@ button, .button {
   margin-bottom: 1rem;
   overflow: hidden; }
   .flex-video.widescreen {
-    padding-bottom: 56.55%; }
+    padding-bottom: 56.34%; }
   .flex-video.vimeo {
     padding-top: 0; }
   .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
@@ -4127,7 +4127,8 @@ table {
     padding: 0.9375rem 0;
     width: 100%; }
     .tabs-content > .content.active {
-      display: block; }
+      display: block;
+      float: none; }
     .tabs-content > .content.contained {
       padding: 0.9375rem; }
   .tabs-content.vertical {

@@ -1014,8 +1014,8 @@
 
             // if clearing is open and the current image is
             // clicked, go to the next image in sequence
-            if (target.hasClass('visible') && 
-              current[0] === target[0] && 
+            if (target.hasClass('visible') &&
+              current[0] === target[0] &&
               next.length > 0 && self.is_open(current)) {
               target = next;
               image = S('img', target);
@@ -1149,7 +1149,7 @@
         container.addClass('clearing-container');
         visible_image.show();
         this.fix_height(target)
-          .caption(self.S('.clearing-caption', visible_image), $image)
+          .caption(self.S('.clearing-caption', visible_image), self.S('img', target))
           .center_and_label(image, label)
           .shift(current, target, function () {
             target.siblings().removeClass('visible');
@@ -1164,7 +1164,7 @@
           .css('visibility', 'hidden');
 
         startLoad.call(this);
-        
+
       }
     },
 
@@ -1338,7 +1338,7 @@
     // image caption
 
     caption : function (container, $image) {
-      var caption = $image.data('caption');
+      var caption = $image.attr('data-caption');
 
       if (caption) {
         container
@@ -3519,8 +3519,6 @@
       container.on('click', self.toggle_timer);
       if (settings.swipe) {
         slides_container.on('touchstart.fndtn.orbit',function(e) {
-          e.preventDefault();
-          e.stopPropagation();
           if (self.cache.animating) {return;}
           if (!e.touches) {e = e.originalEvent;}
 
@@ -3534,11 +3532,15 @@
           self.stop_timer(); // does not appear to prevent callback from occurring          
         })
         .on('touchmove.fndtn.orbit',function(e) {
-          if (self.cache.animating) {return;}
-          e.preventDefault();
-          e.stopPropagation();
+          if (Math.abs(self.cache.delta_x) > 5) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+
+          if (self.cache.animating) {return;}          
           requestAnimationFrame(function(){
             if (!e.touches) { e = e.originalEvent; }
+
             // Ignore pinch/zoom events
             if(e.touches.length > 1 || e.scale && e.scale !== 1) return;
 
@@ -3548,7 +3550,9 @@
               self.cache.is_scrolling = !!( self.cache.is_scrolling || Math.abs(self.cache.delta_x) < Math.abs(e.touches[0].pageY - self.cache.start_page_y) );
             }
 
-            if (self.cache.is_scrolling) {return;}
+            if (self.cache.is_scrolling) {
+              return;
+            }
             
             var direction = (self.cache.delta_x < 0) ? (idx+1) : (idx-1);
             if (self.cache.direction !== direction) {
