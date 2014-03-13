@@ -940,7 +940,7 @@
 
         e.preventDefault();
         alertBox[settings.animation](settings.speed, function () {
-          S(this).trigger('close').remove();
+          S(this).trigger('closed').remove();
           settings.callback();
         });
       });
