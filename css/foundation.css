@@ -2,7 +2,7 @@ meta.foundation-version {
   font-family: "/5.2.1/"; }
 
 meta.foundation-mq-small {
-  font-family: "/only screen and (max-width: 40em)/";
+  font-family: "/only screen/";
   width: 0em; }
 
 meta.foundation-mq-medium {
