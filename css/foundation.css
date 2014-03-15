@@ -5241,6 +5241,7 @@ blockquote, blockquote p {
     display: block;
     height: 0;
     width: 1rem;
+    line-height: 1;
     top: 0.9375rem;
     left: 0.90625rem;
     -webkit-box-shadow: 1px 0px 1px 1px white, 1px 7px 1px 1px white, 1px 14px 1px 1px white;
