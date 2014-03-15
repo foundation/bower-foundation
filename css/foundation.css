@@ -5230,7 +5230,12 @@ blockquote, blockquote p {
   line-height: 2.0625rem;
   padding: 0;
   color: white;
-  position: relative; }
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
   .tab-bar .menu-icon span {
     position: absolute;
     display: block;
