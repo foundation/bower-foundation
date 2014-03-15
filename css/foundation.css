@@ -4520,24 +4520,40 @@ meta.foundation-mq-topbar {
     text-transform: none;
     background: #333333; }
     .top-bar-section ul li > a.button {
-      background: #008cba;
       font-size: 0.8125rem;
       padding-right: 15px;
-      padding-left: 15px; }
-      .top-bar-section ul li > a.button:hover {
-        background: #006888; }
+      padding-left: 15px;
+      background-color: #008cba;
+      border-color: #007295;
+      color: white; }
+      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+        background-color: #007295; }
+      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+        color: white; }
     .top-bar-section ul li > a.button.secondary {
-      background: #e7e7e7; }
-      .top-bar-section ul li > a.button.secondary:hover {
-        background: #cecece; }
+      background-color: #e7e7e7;
+      border-color: #b9b9b9;
+      color: #333333; }
+      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+        background-color: #b9b9b9; }
+      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+        color: #333333; }
     .top-bar-section ul li > a.button.success {
-      background: #43ac6a; }
-      .top-bar-section ul li > a.button.success:hover {
-        background: #358853; }
+      background-color: #43ac6a;
+      border-color: #368a54;
+      color: white; }
+      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+        background-color: #368a54; }
+      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+        color: white; }
     .top-bar-section ul li > a.button.alert {
-      background: #f04124; }
-      .top-bar-section ul li > a.button.alert:hover {
-        background: #d4290f; }
+      background-color: #f04124;
+      border-color: #cf280e;
+      color: white; }
+      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+        background-color: #cf280e; }
+      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+        color: white; }
   .top-bar-section ul li:hover:not(.has-form) > a {
     background: #272727;
     color: white; }
