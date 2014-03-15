@@ -3829,9 +3829,14 @@ dialog[open] {
 @media only screen and (min-width:40.063em) {
   dialog, .reveal-modal {
     padding: 1.875rem; }
-    @media only screen and (min-width:40.063em) {
-      dialog, .reveal-modal {
-        top: 6.25rem; } }
+    dialog.radius, .reveal-modal.radius {
+      -webkit-border-radius: 3px;
+      border-radius: 3px; }
+    dialog.round, .reveal-modal.round {
+      -webkit-border-radius: 1000px;
+      border-radius: 1000px; }
+    dialog.collapse, .reveal-modal.collapse {
+      padding: 0; }
     @media only screen and (min-width:40.063em) {
       dialog.tiny, .reveal-modal.tiny {
         margin-left: -15%;
