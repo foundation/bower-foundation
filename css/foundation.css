@@ -4420,7 +4420,7 @@ meta.foundation-mq-topbar {
     padding-top: 0.35rem;
     padding-bottom: 0.35rem;
     font-size: 0.75rem; }
-  .top-bar .button {
+  .top-bar .button, .top-bar button {
     padding-top: 0.45rem;
     padding-bottom: 0.35rem;
     margin-bottom: 0;
@@ -4554,6 +4554,41 @@ meta.foundation-mq-topbar {
         background-color: #cf280e; }
       .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
         color: white; }
+  .top-bar-section ul li > button {
+    font-size: 0.8125rem;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #008cba;
+    border-color: #007295;
+    color: white; }
+    .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
+      background-color: #007295; }
+    .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
+      color: white; }
+    .top-bar-section ul li > button.secondary {
+      background-color: #e7e7e7;
+      border-color: #b9b9b9;
+      color: #333333; }
+      .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
+        background-color: #b9b9b9; }
+      .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
+        color: #333333; }
+    .top-bar-section ul li > button.success {
+      background-color: #43ac6a;
+      border-color: #368a54;
+      color: white; }
+      .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
+        background-color: #368a54; }
+      .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
+        color: white; }
+    .top-bar-section ul li > button.alert {
+      background-color: #f04124;
+      border-color: #cf280e;
+      color: white; }
+      .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
+        background-color: #cf280e; }
+      .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
+        color: white; }
   .top-bar-section ul li:hover:not(.has-form) > a {
     background: #272727;
     color: white; }
@@ -4620,7 +4655,7 @@ meta.foundation-mq-topbar {
           display: block; }
       .top-bar-section .dropdown li.has-form {
         padding: 8px 15px; }
-      .top-bar-section .dropdown li .button {
+      .top-bar-section .dropdown li .button, .top-bar-section .dropdown li button {
         top: auto; }
     .top-bar-section .dropdown label {
       padding: 8px 15px 2px;
@@ -4649,7 +4684,7 @@ meta.foundation-mq-topbar {
       float: left; }
     .top-bar .name h1 a {
       width: auto; }
-    .top-bar input, .top-bar .button {
+    .top-bar input, .top-bar .button, .top-bar button {
       font-size: 0.875rem;
       position: relative;
       top: 7px; }
