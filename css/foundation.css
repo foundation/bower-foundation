@@ -5187,7 +5187,7 @@ blockquote, blockquote p {
   -webkit-backface-visibility: hidden;
   position: relative;
   width: 100%;
-  overflow-x: hidden; }
+  overflow: hidden; }
   .off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
     height: 100%; }
 
