@@ -3068,7 +3068,7 @@
                 settings = expedition.data('magellan-expedition-init');
 
             var hash = this.hash.split('#').join(''),
-                target = $('a[name='+hash+']');
+                target = $("a[name='"+hash+"']");
             if (target.length === 0) target = $('#'+hash);
 
             // Account for expedition height if fixed position
@@ -3202,6 +3202,7 @@
     }
   };
 }(jQuery, this, this.document));
+
 ;(function ($, window, document, undefined) {
   'use strict';
 
