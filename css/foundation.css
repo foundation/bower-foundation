@@ -884,6 +884,9 @@ select {
   position: relative;
   padding: 0.875rem 1.5rem 0.875rem 0.875rem;
   font-size: 0.8125rem;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
   background-color: #008cba;
   border-color: #007ba0;
   color: white; }
@@ -925,6 +928,8 @@ select {
     background-color: #a0d3e8;
     border-color: #74bfdd;
     color: #4f4f4f; }
+  .alert-box.alert-close {
+    opacity: 0; }
 
 [class*="block-grid-"] {
   display: block;
@@ -1265,19 +1270,12 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  /*     @else                            { font-size: $padding - rem-calc(2); } */
   background-color: #008cba;
   border-color: #007295;
   color: white;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
-  transition: background-color 300ms ease-out;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
-  font-size: 1rem;
-  /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+  transition: background-color 300ms ease-out; }
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #007295; }
   button:hover, button:focus, .button:hover, .button:focus {
@@ -1311,22 +1309,19 @@ button, .button {
     padding-right: 2.25rem;
     padding-bottom: 1.1875rem;
     padding-left: 2.25rem;
-    font-size: 1.25rem;
-    /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+    font-size: 1.25rem; }
   button.small, .button.small {
     padding-top: 0.875rem;
     padding-right: 1.75rem;
     padding-bottom: 0.9375rem;
     padding-left: 1.75rem;
-    font-size: 0.8125rem;
-    /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+    font-size: 0.8125rem; }
   button.tiny, .button.tiny {
     padding-top: 0.625rem;
     padding-right: 1.25rem;
     padding-bottom: 0.6875rem;
     padding-left: 1.25rem;
-    font-size: 0.6875rem;
-    /*     @else                            { font-size: $padding - rem-calc(2); } */ }
+    font-size: 0.6875rem; }
   button.expand, .button.expand {
     padding-right: 0;
     padding-left: 0;

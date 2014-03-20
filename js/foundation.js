@@ -922,8 +922,6 @@
     version : '5.2.1',
 
     settings : {
-      animation: 'fadeOut',
-      speed: 300, // fade out speed
       callback: function (){}
     },
 
@@ -940,10 +938,18 @@
               settings = alertBox.data(self.attr_name(true) + '-init') || self.settings;
 
         e.preventDefault();
-        alertBox[settings.animation](settings.speed, function () {
-          S(this).trigger('close').remove();
-          settings.callback();
-        });
+        if ('transitionend' in window || 'webkitTransitionEnd' in window || 'oTransitionEnd' in window) {
+          alertBox.addClass("alert-close");
+          alertBox.on('transitionend webkitTransitionEnd oTransitionEnd', function(e) {
+            S(this).trigger('close').remove();
+            settings.callback();
+          });
+        } else {
+          alertBox.fadeOut(300, function () {
+            S(this).trigger('close').remove();
+            settings.callback();
+          });
+        }
       });
     },
 
@@ -3534,7 +3540,8 @@
       container.on('click', '.'+settings.next_class, self.next);
       container.on('click', '.'+settings.prev_class, self.prev);
 
-      container.on('click', '[data-orbit-slide]', self.link_bullet);
+      if (settings.next_on_click)
+        container.on('click', '[data-orbit-slide]', self.link_bullet);
       container.on('click', self.toggle_timer);
       if (settings.swipe) {
         slides_container.on('touchstart.fndtn.orbit',function(e) {
@@ -3720,6 +3727,7 @@
       timer_speed: 10000,
       pause_on_hover: true,
       resume_on_mouseout: false,
+      next_on_click: true,
       animation_speed: 500,
       stack_on_small: false,
       navigation_arrows: true,
