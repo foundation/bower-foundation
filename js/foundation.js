@@ -2230,6 +2230,7 @@
       cookie_domain            : false,     // Will this cookie be attached to a domain, ie. '.notableapp.com'
       cookie_expires           : 365,       // set when you would like the cookie to expire.
       tip_container            : 'body',    // Where will the tip be attached
+      abort_on_close           : true,      // When true, the close event will not fire any callback
       tip_location_patterns    : {
         top: ['bottom'],
         bottom: [], // bottom should not need to be repositioned
@@ -2286,7 +2287,7 @@
 
         .on('click.fndtn.joyride', '.joyride-close-tip', function (e) {
           e.preventDefault();
-          this.end();
+          this.end(this.settings.abort_on_close);
         }.bind(this));
 
       $(window)
@@ -3010,7 +3011,7 @@
       }
     },
 
-    end : function () {
+    end : function (abort) {
       if (this.settings.cookie_monster) {
         $.cookie(this.settings.cookie_name, 'ridden', { expires: this.settings.cookie_expires, domain: this.settings.cookie_domain });
       }
@@ -3027,8 +3028,12 @@
 
       $('.joyride-modal-bg').hide();
       this.settings.$current_tip.hide();
-      this.settings.post_step_callback(this.settings.$li.index(), this.settings.$current_tip);
-      this.settings.post_ride_callback(this.settings.$li.index(), this.settings.$current_tip);
+
+      if (typeof abort === 'undefined') {
+        this.settings.post_step_callback(this.settings.$li.index(), this.settings.$current_tip);
+        this.settings.post_ride_callback(this.settings.$li.index(), this.settings.$current_tip);
+      }
+
       $('.joyride-tip-guide').remove();
     },
 
