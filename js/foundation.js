@@ -5085,7 +5085,7 @@
           return;
         }
 
-        S('[' + self.attr_name() + '] li').removeClass('hover');
+        S('[' + self.attr_name() + '] li.hover').removeClass('hover');
       });
 
       // Go up a level on Click
