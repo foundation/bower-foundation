@@ -140,16 +140,6 @@ select {
   float: left; }
 
 @media only screen {
-  .column.small-centered, .columns.small-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important; }
-  .column.small-uncentered, .columns.small-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left !important; }
-  .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
-    float: right; }
   .small-push-0 {
     position: relative;
     left: 0%;
@@ -308,19 +298,19 @@ select {
     margin-right: 0;
     left: auto;
     right: auto;
-    float: left; } }
-
-@media only screen and (min-width:40.063em) {
-  .column.medium-centered, .columns.medium-centered {
+    float: left; }
+  .column.small-centered, .columns.small-centered {
     margin-left: auto;
     margin-right: auto;
-    float: none !important; }
-  .column.medium-uncentered, .columns.medium-uncentered {
+    float: none; }
+  .column.small-uncentered, .columns.small-uncentered {
     margin-left: 0;
     margin-right: 0;
     float: left !important; }
-  .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
-    float: right; }
+  .column.small-uncentered.opposite, .columns.small-uncentered.opposite {
+    float: right; } }
+
+@media only screen and (min-width:40.063em) {
   .medium-push-0 {
     position: relative;
     left: 0%;
@@ -480,6 +470,16 @@ select {
     left: auto;
     right: auto;
     float: left; }
+  .column.medium-centered, .columns.medium-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+  .column.medium-uncentered, .columns.medium-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; }
+  .column.medium-uncentered.opposite, .columns.medium-uncentered.opposite {
+    float: right; }
   .push-0 {
     position: relative;
     left: 0%;
@@ -578,16 +578,6 @@ select {
     left: auto; } }
 
 @media only screen and (min-width:64.063em) {
-  .column.large-centered, .columns.large-centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important; }
-  .column.large-uncentered, .columns.large-uncentered {
-    margin-left: 0;
-    margin-right: 0;
-    float: left !important; }
-  .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
-    float: right; }
   .large-push-0 {
     position: relative;
     left: 0%;
@@ -747,6 +737,16 @@ select {
     left: auto;
     right: auto;
     float: left; }
+  .column.large-centered, .columns.large-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+  .column.large-uncentered, .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left !important; }
+  .column.large-uncentered.opposite, .columns.large-uncentered.opposite {
+    float: right; }
   .push-0 {
     position: relative;
     left: 0%;
