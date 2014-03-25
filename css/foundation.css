@@ -1273,7 +1273,7 @@ button, .button {
     color: white; }
   button.secondary, .button.secondary {
     background-color: #e7e7e7;
-    border-color: #007295;
+    border-color: #b9b9b9;
     color: #333333; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       background-color: #b9b9b9; }
@@ -1281,7 +1281,7 @@ button, .button {
       color: #333333; }
   button.success, .button.success {
     background-color: #43ac6a;
-    border-color: #007295;
+    border-color: #368a54;
     color: white; }
     button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       background-color: #368a54; }
@@ -1289,7 +1289,7 @@ button, .button {
       color: white; }
   button.alert, .button.alert {
     background-color: #f04124;
-    border-color: #007295;
+    border-color: #cf280e;
     color: white; }
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       background-color: #cf280e; }
@@ -1342,7 +1342,7 @@ button, .button {
       background-color: #008cba; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background-color: #e7e7e7;
-      border-color: #007295;
+      border-color: #b9b9b9;
       color: #333333;
       cursor: default;
       opacity: 0.7;
@@ -1355,7 +1355,7 @@ button, .button {
         background-color: #e7e7e7; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #43ac6a;
-      border-color: #007295;
+      border-color: #368a54;
       color: white;
       cursor: default;
       opacity: 0.7;
@@ -1368,7 +1368,7 @@ button, .button {
         background-color: #43ac6a; }
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: #f04124;
-      border-color: #007295;
+      border-color: #cf280e;
       color: white;
       cursor: default;
       opacity: 0.7;
@@ -3602,7 +3602,7 @@ meta.foundation-mq-topbar {
         color: white; }
     .top-bar-section ul li > a.button.secondary {
       background-color: #e7e7e7;
-      border-color: #007295;
+      border-color: #b9b9b9;
       color: #333333; }
       .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
         background-color: #b9b9b9; }
@@ -3610,7 +3610,7 @@ meta.foundation-mq-topbar {
         color: #333333; }
     .top-bar-section ul li > a.button.success {
       background-color: #43ac6a;
-      border-color: #007295;
+      border-color: #368a54;
       color: white; }
       .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
         background-color: #368a54; }
@@ -3618,7 +3618,7 @@ meta.foundation-mq-topbar {
         color: white; }
     .top-bar-section ul li > a.button.alert {
       background-color: #f04124;
-      border-color: #007295;
+      border-color: #cf280e;
       color: white; }
       .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
         background-color: #cf280e; }
@@ -3637,7 +3637,7 @@ meta.foundation-mq-topbar {
       color: white; }
     .top-bar-section ul li > button.secondary {
       background-color: #e7e7e7;
-      border-color: #007295;
+      border-color: #b9b9b9;
       color: #333333; }
       .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
         background-color: #b9b9b9; }
@@ -3645,7 +3645,7 @@ meta.foundation-mq-topbar {
         color: #333333; }
     .top-bar-section ul li > button.success {
       background-color: #43ac6a;
-      border-color: #007295;
+      border-color: #368a54;
       color: white; }
       .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
         background-color: #368a54; }
@@ -3653,7 +3653,7 @@ meta.foundation-mq-topbar {
         color: white; }
     .top-bar-section ul li > button.alert {
       background-color: #f04124;
-      border-color: #007295;
+      border-color: #cf280e;
       color: white; }
       .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
         background-color: #cf280e; }
