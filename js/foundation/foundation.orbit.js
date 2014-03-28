@@ -49,7 +49,12 @@
       slides_container.wrap('<div class="'+settings.container_class+'"></div>');
       container = slides_container.parent();
       slides_container.addClass(settings.slides_container_class);
+      slides_container.addClass(settings.animation);
       
+      if (settings.stack_on_small) {
+        container.addClass(settings.stack_on_small_class);
+      }
+
       if (settings.navigation_arrows) {
         container.append($('<a href="#"><span></span></a>').addClass(settings.prev_class));
         container.append($('<a href="#"><span></span></a>').addClass(settings.next_class));
@@ -79,9 +84,6 @@
         });
       }
 
-      if (settings.stack_on_small) {
-        container.addClass(settings.stack_on_small_class);
-      }
     };
 
     self._prepare_direction = function(next_idx, current_direction) {
@@ -107,7 +109,6 @@
       var current = $(slides.get(idx))
         , next = $(slides.get(next_idx));
       
-
       return [dir, current, next, next_idx];
     };
 
@@ -124,6 +125,9 @@
         , current = res[1]
         , next = res[2]
         , next_idx = res[3];
+
+      // This means that circular is disabled and we most likely reached the last slide.
+      if (res === false) return false;
 
       slides_container.trigger('before-slide-change.fndtn.orbit');
       settings.before_slide_change();
@@ -264,14 +268,13 @@
         self.cache.timer = self.create_timer(); 
         Foundation.utils.image_loaded(this.slides().children('img'), self.cache.timer.start);
       }
-      // animate = new FadeAnimation(settings, slides_container);
-      // if (settings.animation === 'slide') 
-      //   animate = new SlideAnimation(settings, slides_container);
-      if(settings.animation === 'fade') {slides_container.addClass('fade');}
+      
       animate = new CSSAnimation(settings, slides_container);
+
       if (has_init_active) {
         self._goto(slides_container.find("." + settings.active_slide_class).index());
       }
+
       container.on('click', '.'+settings.next_class, self.next);
       container.on('click', '.'+settings.prev_class, self.prev);
 
@@ -363,7 +366,7 @@
       var children = this.slides().find('img');
       Foundation.utils.image_loaded(children, self.compute_dimensions);
       Foundation.utils.image_loaded(children, function() {
-        container.prev('.preloader').css('display', 'none');
+        container.prev('.'+settings.preloader_class).css('display', 'none');
         self.update_slide_number(idx);
         self.update_active_link(idx);
         slides_container.trigger('ready.fndtn.orbit');
@@ -479,6 +482,7 @@
       timer_paused_class: 'paused',
       timer_progress_class: 'orbit-progress',
       slides_container_class: 'orbit-slides-container',
+      preloader_class: 'preloader',
       slide_selector: '*',
       bullets_container_class: 'orbit-bullets',
       bullets_active_class: 'active',
