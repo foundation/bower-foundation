@@ -4406,7 +4406,7 @@
     },
 
     normalized_percentage : function(val, start, end) {
-      return val/(end - start);
+      return (val - start)/(end - start);
     },
 
     normalized_value : function(val, start, end, step) {
@@ -4416,7 +4416,7 @@
           mod = (point-(point%step)) / step,
           rem = point % step,
           round = ( rem >= step*0.5 ? step : 0);
-      return (mod*step + round);
+      return (mod*step + round) + start;
     },
 
     set_translate : function(ele, offset, vertical) {
@@ -4452,7 +4452,7 @@
 
     set_initial_position : function($ele) {
       var settings = $.data($ele.children('.range-slider-handle')[0], 'settings'),
-          initial = (!!settings.initial ? settings.initial : Math.floor((settings.end-settings.start)*0.5/settings.step)*settings.step),
+          initial = (!!settings.initial ? settings.initial : Math.floor((settings.end-settings.start)*0.5/settings.step)*settings.step)+settings.start,
           $handle = $ele.children('.range-slider-handle');
       this.set_ui($handle, initial);
     },
@@ -4476,7 +4476,7 @@
         self.initialize_settings(handle);
 
         if (val) {
-          self.set_ui($(handle), parseInt(val));
+          self.set_ui($(handle), parseFloat(val));
         } else {
           self.set_initial_position($(this));
         }
