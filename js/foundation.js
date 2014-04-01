@@ -419,10 +419,12 @@
         return function () {
           var context = this, args = arguments;
 
-          clearTimeout(timer);
-          timer = setTimeout(function () {
-            func.apply(context, args);
-          }, delay);
+          if (timer == null) {
+            timer = setTimeout(function () {
+              func.apply(context, args);
+              timer = null;
+            }, delay);
+          }
         };
       },
 
@@ -4694,10 +4696,14 @@
       $(this.scope)
         .off('.tooltip')
         .on('mouseenter.fndtn.tooltip mouseleave.fndtn.tooltip touchstart.fndtn.tooltip MSPointerDown.fndtn.tooltip',
-          '[' + this.attr_name() + ']:not(a)', function (e) {
+          '[' + this.attr_name() + ']', function (e) {
           var $this = S(this),
               settings = $.extend({}, self.settings, self.data_options($this)),
               is_touch = false;
+
+          if (Modernizr.touch && /touchstart|MSPointerDown/i.test(e.type) && S(e.target).is('a')) {
+            return false;
+          }
 
           if (/mouse/i.test(e.type) && self.ie_touch(e)) return false;
 

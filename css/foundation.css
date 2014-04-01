@@ -2626,7 +2626,7 @@ label.error {
     height: 60px;
     line-height: 50px;
     color: white;
-    background-color: none;
+    background-color: transparent;
     text-indent: -9999px !important;
     z-index: 10; }
     .orbit-container .orbit-prev:hover, .orbit-container .orbit-next:hover {
