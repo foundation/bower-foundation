@@ -4312,7 +4312,8 @@ blockquote, blockquote p {
   width: 100%;
   overflow: hidden; }
   .off-canvas-wrap.move-right, .off-canvas-wrap.move-left {
-    min-height: 100%; }
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch; }
 
 .inner-wrap {
   -webkit-backface-visibility: hidden;
