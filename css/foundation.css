@@ -1259,6 +1259,8 @@ button, .button {
   position: relative;
   text-decoration: none;
   text-align: center;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   display: inline-block;
   padding-top: 1rem;
   padding-right: 2rem;
