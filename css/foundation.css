@@ -2626,7 +2626,7 @@ label.error {
     height: 60px;
     line-height: 50px;
     color: white;
-    background-color: none;
+    background-color: transparent;
     text-indent: -9999px !important;
     z-index: 10; }
     .orbit-container .orbit-prev:hover, .orbit-container .orbit-next:hover {
@@ -2962,7 +2962,6 @@ dialog, .reveal-modal {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 40em) {
     dialog, .reveal-modal {
-      height: 100vh;
       min-height: 100vh; } }
   @media only screen and (min-width:40.063em) {
     dialog, .reveal-modal {
