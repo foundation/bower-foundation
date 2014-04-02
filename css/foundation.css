@@ -3887,6 +3887,12 @@ meta.foundation-mq-topbar {
         white-space: nowrap;
         padding: 12px 15px;
         background: #333; }
+      .top-bar-section .dropdown li:not(.has-form) a:not(.button) {
+        color: #fff;
+        background: #333; }
+      .top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
+        color: #fff;
+        background: #272727; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
         background: #333; }
