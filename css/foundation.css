@@ -1641,7 +1641,8 @@ button, .button {
         padding: 0;
         position: relative;
         cursor: pointer;
-        opacity: 0.4; }
+        opacity: 0.4;
+        clear: none; }
         .clearing-assembled .clearing-container .carousel > ul li.fix-height img {
           height: 100%;
           max-width: none; }
