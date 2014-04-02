@@ -1217,11 +1217,11 @@ select {
     float: left;
     font-size: 0.6875rem;
     line-height: 0.6875rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #008CBA; }
     .breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
       text-decoration: underline; }
-    .breadcrumbs > * a, .breadcrumbs > * span {
-      text-transform: uppercase;
+    .breadcrumbs > * a {
       color: #008CBA; }
     .breadcrumbs > *.current {
       cursor: default;
