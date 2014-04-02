@@ -1216,6 +1216,7 @@ select {
     margin: 0;
     float: left;
     font-size: 0.6875rem;
+    line-height: 0.6875rem;
     text-transform: uppercase; }
     .breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
       text-decoration: underline; }
