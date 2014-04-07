@@ -3481,6 +3481,8 @@
         var unlock = function() {
           if (start_timer === true) {self.cache.timer.restart();}
           self.update_slide_number(idx);
+          // Remove "animate-in" class as late as possible to avoid "flickering" (especially with variable_height).
+          next.removeClass("animate-in");
           next.addClass(settings.active_slide_class);
           self.update_active_link(next_idx);
           slides_container.trigger('after-slide-change.fndtn.orbit',[{slide_number: idx, total_slides: slides.length}]);
@@ -3786,7 +3788,6 @@
         next.on(animation_end, function(e){
           next.unbind(animation_end);
           current.removeClass("active animate-out");
-          next.removeClass("animate-in");
           container.children().css({
             "transform":"",
             "-ms-transform":"",
@@ -3800,7 +3801,6 @@
       } else {
         setTimeout(function(){
           current.removeClass("active animate-out");
-          next.removeClass("animate-in");
           container.children().css({
             "transform":"",
             "-ms-transform":"",
@@ -3829,7 +3829,6 @@
         prev.on(animation_end, function(e){
           prev.unbind(animation_end);
           current.removeClass("active animate-out");
-          prev.removeClass("animate-in");
           container.children().css({
             "transform":"",
             "-ms-transform":"",
@@ -3843,7 +3842,6 @@
       } else {
         setTimeout(function(){
           current.removeClass("active animate-out");
-          prev.removeClass("animate-in");
           container.children().css({
             "transform":"",
             "-ms-transform":"",
