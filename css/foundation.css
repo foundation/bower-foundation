@@ -3622,10 +3622,10 @@ meta.foundation-mq-topbar {
   width: auto;
   transition: left 300ms ease-out; }
   .top-bar-section ul {
+    padding: 0;
     width: 100%;
     height: auto;
     display: block;
-    background: #333;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider, .top-bar-section [role="separator"] {
@@ -3633,96 +3633,97 @@ meta.foundation-mq-topbar {
     clear: both;
     height: 1px;
     width: 100%; }
-  .top-bar-section ul li > a {
-    display: block;
-    width: 100%;
-    color: #fff;
-    padding: 12px 0 12px 0;
-    padding-left: 15px;
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    font-size: 0.8125rem;
-    font-weight: normal;
-    text-transform: none;
+  .top-bar-section ul li {
     background: #333; }
-    .top-bar-section ul li > a.button {
+    .top-bar-section ul li > a {
+      display: block;
+      width: 100%;
+      color: #fff;
+      padding: 12px 0 12px 0;
+      padding-left: 15px;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size: 0.8125rem;
+      font-weight: normal;
+      text-transform: none; }
+      .top-bar-section ul li > a.button {
+        font-size: 0.8125rem;
+        padding-right: 15px;
+        padding-left: 15px;
+        background-color: #008CBA;
+        border-color: #007295;
+        color: #fff; }
+        .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+          background-color: #007295; }
+        .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+          color: #fff; }
+      .top-bar-section ul li > a.button.secondary {
+        background-color: #e7e7e7;
+        border-color: #b9b9b9;
+        color: #333; }
+        .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+          background-color: #b9b9b9; }
+        .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+          color: #333; }
+      .top-bar-section ul li > a.button.success {
+        background-color: #43AC6A;
+        border-color: #368a54;
+        color: #fff; }
+        .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+          background-color: #368a54; }
+        .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+          color: #fff; }
+      .top-bar-section ul li > a.button.alert {
+        background-color: #f04124;
+        border-color: #cf280e;
+        color: #fff; }
+        .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+          background-color: #cf280e; }
+        .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+          color: #fff; }
+    .top-bar-section ul li > button {
       font-size: 0.8125rem;
       padding-right: 15px;
       padding-left: 15px;
       background-color: #008CBA;
       border-color: #007295;
       color: #fff; }
-      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+      .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
         background-color: #007295; }
-      .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
+      .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
         color: #fff; }
-    .top-bar-section ul li > a.button.secondary {
-      background-color: #e7e7e7;
-      border-color: #b9b9b9;
-      color: #333; }
-      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
-        background-color: #b9b9b9; }
-      .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
+      .top-bar-section ul li > button.secondary {
+        background-color: #e7e7e7;
+        border-color: #b9b9b9;
         color: #333; }
-    .top-bar-section ul li > a.button.success {
-      background-color: #43AC6A;
-      border-color: #368a54;
-      color: #fff; }
-      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
-        background-color: #368a54; }
-      .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
+        .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
+          background-color: #b9b9b9; }
+        .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
+          color: #333; }
+      .top-bar-section ul li > button.success {
+        background-color: #43AC6A;
+        border-color: #368a54;
         color: #fff; }
-    .top-bar-section ul li > a.button.alert {
-      background-color: #f04124;
-      border-color: #cf280e;
-      color: #fff; }
-      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
-        background-color: #cf280e; }
-      .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
+        .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
+          background-color: #368a54; }
+        .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
+          color: #fff; }
+      .top-bar-section ul li > button.alert {
+        background-color: #f04124;
+        border-color: #cf280e;
         color: #fff; }
-  .top-bar-section ul li > button {
-    font-size: 0.8125rem;
-    padding-right: 15px;
-    padding-left: 15px;
-    background-color: #008CBA;
-    border-color: #007295;
-    color: #fff; }
-    .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
-      background-color: #007295; }
-    .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
+        .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
+          background-color: #cf280e; }
+        .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
+          color: #fff; }
+    .top-bar-section ul li:hover:not(.has-form) > a {
+      background: #272727;
       color: #fff; }
-    .top-bar-section ul li > button.secondary {
-      background-color: #e7e7e7;
-      border-color: #b9b9b9;
-      color: #333; }
-      .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
-        background-color: #b9b9b9; }
-      .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
-        color: #333; }
-    .top-bar-section ul li > button.success {
-      background-color: #43AC6A;
-      border-color: #368a54;
+    .top-bar-section ul li.active > a {
+      background: #008CBA;
       color: #fff; }
-      .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
-        background-color: #368a54; }
-      .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
+      .top-bar-section ul li.active > a:hover {
+        background: #007ba0;
         color: #fff; }
-    .top-bar-section ul li > button.alert {
-      background-color: #f04124;
-      border-color: #cf280e;
-      color: #fff; }
-      .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
-        background-color: #cf280e; }
-      .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
-        color: #fff; }
-  .top-bar-section ul li:hover:not(.has-form) > a {
-    background: #272727;
-    color: #fff; }
-  .top-bar-section ul li.active > a {
-    background: #008CBA;
-    color: #fff; }
-    .top-bar-section ul li.active > a:hover {
-      background: #007ba0;
-      color: #fff; }
   .top-bar-section .has-form {
     padding: 15px; }
   .top-bar-section .has-dropdown {
@@ -3754,6 +3755,7 @@ meta.foundation-mq-topbar {
       .top-bar-section .has-dropdown.moved > a:after {
         display: none; }
   .top-bar-section .dropdown {
+    padding: 0;
     position: absolute;
     left: 100%;
     top: 0;
@@ -3773,7 +3775,8 @@ meta.foundation-mq-topbar {
         .top-bar-section .dropdown li a.parent-link {
           font-weight: normal; }
       .top-bar-section .dropdown li.title h5 {
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        margin-top: 0; }
         .top-bar-section .dropdown li.title h5 a {
           color: #fff;
           line-height: 22.5px;
@@ -3834,13 +3837,11 @@ meta.foundation-mq-topbar {
       color: #fff; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
-      line-height: 45px;
       background: #333; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background: #272727; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 15px;
-      line-height: 45px;
       color: #fff;
       background: #008CBA; }
       .top-bar-section li.active:not(.has-form) a:not(.button):hover {
@@ -3888,7 +3889,7 @@ meta.foundation-mq-topbar {
       min-width: 100%; }
       .top-bar-section .dropdown li a {
         color: #fff;
-        line-height: 1;
+        line-height: 45px;
         white-space: nowrap;
         padding: 12px 15px;
         background: #333; }
