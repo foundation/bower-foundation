@@ -2555,6 +2555,8 @@ label.error {
       -moz-transform: translate3d(100%, 0, 0);
       -o-transform: translate3d(100%, 0, 0);
       transform: translate3d(100%, 0, 0); }
+      .orbit-container .orbit-slides-container li > a {
+        display: block; }
       .orbit-container .orbit-slides-container li.active {
         opacity: 1;
         position: relative;
