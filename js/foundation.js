@@ -1863,7 +1863,8 @@
     settings : {
       use_tallest: true,
       before_height_change: $.noop,
-      after_height_change: $.noop
+      after_height_change: $.noop,
+      equalize_on_small: false
     },
 
     init : function (scope, method, options) {
@@ -1894,9 +1895,13 @@
           isStacked = true;
         }
       });
-      if (isStacked) return;
+
+      if(settings.equalize_on_small === false){
+        if (isStacked) return;
+      };
 
       var heights = vals.map(function(){ return $(this).outerHeight(false) }).get();
+
       if (settings.use_tallest) {
         var max = Math.max.apply(null, heights);
         vals.css('height', max);
@@ -1919,7 +1924,11 @@
       });
     }
   };
+<<<<<<< HEAD
+}(jQuery, this, this.document));
+=======
 }(jQuery, window, window.document));
+>>>>>>> df57ab6d14f5bad956f6d7b98925ba7889950f5e
 
 ;(function ($, window, document, undefined) {
   'use strict';
