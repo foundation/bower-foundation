@@ -2490,7 +2490,7 @@ label.error {
     .orbit-container .orbit-slides-container img {
       display: block;
       max-width: 100%; }
-    .orbit-container .orbit-slides-container.fade li {
+    .orbit-container .orbit-slides-container.fade > li {
       opacity: 0;
       transition: opacity 500ms ease-in-out;
       -ms-transform: translate(0, 0);
@@ -2498,54 +2498,54 @@ label.error {
       -moz-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-      .orbit-container .orbit-slides-container.fade li.animate-in {
+      .orbit-container .orbit-slides-container.fade > li.animate-in {
         opacity: 1;
         z-index: 20;
         transition: opacity 500ms ease-in-out; }
-      .orbit-container .orbit-slides-container.fade li.animate-out {
+      .orbit-container .orbit-slides-container.fade > li.animate-out {
         z-index: 10;
         transition: opacity 500ms ease-in-out; }
-    .orbit-container .orbit-slides-container.swipe-next li {
+    .orbit-container .orbit-slides-container.swipe-next > li {
       -ms-transform: translate(100%, 0);
       -webkit-transform: translate3d(100%, 0, 0);
       -moz-transform: translate3d(100%, 0, 0);
       -o-transform: translate3d(100%, 0, 0);
       transform: translate3d(100%, 0, 0); }
-      .orbit-container .orbit-slides-container.swipe-next li.animate-in {
+      .orbit-container .orbit-slides-container.swipe-next > li.animate-in {
         -ms-transform: translate(0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         transition-duration: 500ms; }
-      .orbit-container .orbit-slides-container.swipe-next li.animate-out {
+      .orbit-container .orbit-slides-container.swipe-next > li.animate-out {
         -ms-transform: translate(-100%, 0);
         -webkit-transform: translate3d(-100%, 0, 0);
         -moz-transform: translate3d(-100%, 0, 0);
         -o-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0);
         transition-duration: 500ms; }
-    .orbit-container .orbit-slides-container.swipe-prev li {
+    .orbit-container .orbit-slides-container.swipe-prev > li {
       -ms-transform: translate(-100%, 0);
       -webkit-transform: translate3d(-100%, 0, 0);
       -moz-transform: translate3d(-100%, 0, 0);
       -o-transform: translate3d(-100%, 0, 0);
       transform: translate3d(-100%, 0, 0); }
-      .orbit-container .orbit-slides-container.swipe-prev li.animate-in {
+      .orbit-container .orbit-slides-container.swipe-prev > li.animate-in {
         -ms-transform: translate(0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
         transition-duration: 500ms; }
-      .orbit-container .orbit-slides-container.swipe-prev li.animate-out {
+      .orbit-container .orbit-slides-container.swipe-prev > li.animate-out {
         -ms-transform: translate(100%, 0);
         -webkit-transform: translate3d(100%, 0, 0);
         -moz-transform: translate3d(100%, 0, 0);
         -o-transform: translate3d(100%, 0, 0);
         transform: translate3d(100%, 0, 0);
         transition-duration: 500ms; }
-    .orbit-container .orbit-slides-container li {
+    .orbit-container .orbit-slides-container > li {
       position: absolute;
       top: 0;
       left: 0;
@@ -2555,9 +2555,9 @@ label.error {
       -moz-transform: translate3d(100%, 0, 0);
       -o-transform: translate3d(100%, 0, 0);
       transform: translate3d(100%, 0, 0); }
-      .orbit-container .orbit-slides-container li > a {
+      .orbit-container .orbit-slides-container > li > a {
         display: block; }
-      .orbit-container .orbit-slides-container li.active {
+      .orbit-container .orbit-slides-container > li.active {
         opacity: 1;
         position: relative;
         top: 0;
@@ -2567,7 +2567,7 @@ label.error {
         -moz-transform: translate3d(0, 0, 0);
         -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0); }
-      .orbit-container .orbit-slides-container li .orbit-caption {
+      .orbit-container .orbit-slides-container > li .orbit-caption {
         position: absolute;
         bottom: 0;
         background-color: rgba(51, 51, 51, 0.8);
