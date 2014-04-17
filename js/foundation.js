@@ -1868,7 +1868,7 @@
       use_tallest: true,
       before_height_change: $.noop,
       after_height_change: $.noop,
-      equalize_on_small: false
+      equalize_on_stack: false
     },
 
     init : function (scope, method, options) {
@@ -1900,7 +1900,7 @@
         }
       });
 
-      if (settings.equalize_on_small === false) {
+      if (settings.equalize_on_stack === false) {
         if (isStacked) return;
       };
 
