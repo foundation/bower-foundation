@@ -1975,7 +1975,7 @@ label {
   margin-bottom: 0;
   /* Styles for required inputs */ }
   label.right {
-    float: none !important;
+    float: none;
     text-align: right; }
   label.inline {
     margin: 0 0 1rem 0;
