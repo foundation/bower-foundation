@@ -4402,7 +4402,7 @@ blockquote, blockquote p {
   display: block;
   line-height: 2.0625rem;
   padding: 0;
-  color: #FFF;
+  color: #fff;
   position: relative;
   -ms-transform: translate(0, 0);
   -webkit-transform: translate3d(0, 0, 0);
