@@ -3846,11 +3846,13 @@ meta.foundation-mq-topbar {
       color: #fff; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
+      line-height: 45px;
       background: #333; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
         background: #272727; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 15px;
+      line-height: 45px;
       color: #fff;
       background: #008CBA; }
       .top-bar-section li.active:not(.has-form) a:not(.button):hover {
@@ -4402,7 +4404,7 @@ blockquote, blockquote p {
   display: block;
   line-height: 2.0625rem;
   padding: 0;
-  color: #fff;
+  color: #FFF;
   position: relative;
   -ms-transform: translate(0, 0);
   -webkit-transform: translate3d(0, 0, 0);
