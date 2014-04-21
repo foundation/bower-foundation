@@ -290,7 +290,7 @@ select {
     margin-left: 83.33333% !important; }
   .small-offset-11 {
     margin-left: 91.66667% !important; }
-  .small-reset-order, .small-reset-order {
+  .small-reset-order {
     margin-left: 0;
     margin-right: 0;
     left: auto;
@@ -461,7 +461,7 @@ select {
     margin-left: 83.33333% !important; }
   .medium-offset-11 {
     margin-left: 91.66667% !important; }
-  .medium-reset-order, .medium-reset-order {
+  .medium-reset-order {
     margin-left: 0;
     margin-right: 0;
     left: auto;
@@ -728,7 +728,7 @@ select {
     margin-left: 83.33333% !important; }
   .large-offset-11 {
     margin-left: 91.66667% !important; }
-  .large-reset-order, .large-reset-order {
+  .large-reset-order {
     margin-left: 0;
     margin-right: 0;
     left: auto;
@@ -4402,7 +4402,7 @@ blockquote, blockquote p {
   display: block;
   line-height: 2.0625rem;
   padding: 0;
-  color: #fff;
+  color: #FFF;
   position: relative;
   -ms-transform: translate(0, 0);
   -webkit-transform: translate3d(0, 0, 0);
