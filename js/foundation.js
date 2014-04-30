@@ -2663,7 +2663,7 @@
       tipOffset = Math.ceil(this.settings.$target.offset().top - window_half + this.settings.$next_tip.outerHeight());
 
       if (tipOffset != 0) {
-        $('html, body').animate({
+        $('html, body').stop().animate({
           scrollTop: tipOffset
         }, this.settings.scroll_speed, 'swing');
       }
@@ -4115,6 +4115,7 @@
       }
 
       var settings = modal.data(self.attr_name(true) + '-init');
+      settings = settings || this.settings;
 
       if (!modal.hasClass('open')) {
         var open_modal = self.S('[' + self.attr_name() + '].open');
@@ -4212,6 +4213,8 @@
       // is modal
       if (css) {
         var settings = el.data(this.attr_name(true) + '-init');
+        settings = settings || this.settings;
+
         if (el.parent('body').length === 0) {
           var placeholder = el.wrap('<div style="display: none;" />').parent(),
               rootElement = this.settings.rootElement || 'body';
@@ -4280,6 +4283,8 @@
       // is modal
       if (css) {
         var settings = el.data(this.attr_name(true) + '-init');
+        settings = settings || this.settings;
+
         var animData = getAnimationData(settings.animation);
         if (!animData.animate) {
           this.locked = false;
