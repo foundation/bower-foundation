@@ -2725,7 +2725,7 @@ label.error {
 
 ul.pagination {
   display: block;
-  height: 1.5rem;
+  min-height: 1.5rem;
   margin-left: -0.3125rem; }
   ul.pagination li {
     height: 1.5rem;
