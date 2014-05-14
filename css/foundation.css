@@ -2584,7 +2584,7 @@ label.error {
     background: rgba(0, 0, 0, 0);
     z-index: 10; }
     .orbit-container .orbit-slide-number span {
-      font-weight: 700;
+      font-weight: bold;
       padding: 0.3125rem; }
   .orbit-container .orbit-timer {
     position: absolute;
