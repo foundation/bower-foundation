@@ -862,12 +862,12 @@ select {
       font-size: 1rem; }
       .accordion dd > a:hover {
         background: #e3e3e3; }
-  .accordion .content {
-    display: none;
-    padding: 0.9375rem; }
-    .accordion .content.active {
-      display: block;
-      background: #fff; }
+    .accordion dd > .content {
+      display: none;
+      padding: 0.9375rem; }
+      .accordion dd > .content.active {
+        display: block;
+        background: #fff; }
 
 .alert-box {
   border-style: solid;
