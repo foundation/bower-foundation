@@ -3977,14 +3977,16 @@ meta.foundation-mq-topbar {
         color: #fff;
         position: relative; }
         .top-bar .toggle-topbar.menu-icon a::after {
-          content: "";
-          position: absolute;
-          right: 0;
-          display: block;
-          width: 16px;
-          top: 0;
-          height: 0;
-          box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff; }
+          right: 0; }
+          .top-bar .toggle-topbar.menu-icon a::after span:after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 0;
+            box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+            width: 16px; }
+          .top-bar .toggle-topbar.menu-icon a::after:hover {
+            box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -4411,16 +4413,16 @@ meta.foundation-mq-topbar {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  .menu-icon span {
+  .menu-icon span:after {
+    content: '';
     position: absolute;
     display: block;
     height: 0;
-    width: 1rem;
-    line-height: 1;
-    top: 0.9375rem;
+    top: 0.03125rem;
     left: 0.90625rem;
-    box-shadow: 0 0px 0 1px #FFF, 0 7px 0 1px #FFF, 0 14px 0 1px #FFF; }
-  .menu-icon:hover span {
+    box-shadow: 0 0px 0 1px #FFF, 0 7px 0 1px #FFF, 0 14px 0 1px #FFF;
+    width: 1rem; }
+  .menu-icon:hover {
     box-shadow: 0 0px 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3; }
 
 .left-off-canvas-menu {
