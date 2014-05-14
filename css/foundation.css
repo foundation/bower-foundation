@@ -4398,7 +4398,7 @@ meta.foundation-mq-topbar {
     left: 2.8125rem;
     right: 2.8125rem; }
 
-.menu-icon {
+.tab-bar .menu-icon {
   text-indent: 2.1875rem;
   width: 2.8125rem;
   height: 2.8125rem;
@@ -4413,7 +4413,7 @@ meta.foundation-mq-topbar {
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  .menu-icon span:after {
+  .tab-bar .menu-icon span:after {
     content: '';
     position: absolute;
     display: block;
@@ -4422,7 +4422,7 @@ meta.foundation-mq-topbar {
     left: 0.90625rem;
     box-shadow: 0 0px 0 1px #FFF, 0 7px 0 1px #FFF, 0 14px 0 1px #FFF;
     width: 1rem; }
-  .menu-icon:hover {
+  .tab-bar .menu-icon:hover {
     box-shadow: 0 0px 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3; }
 
 .left-off-canvas-menu {
