@@ -3985,7 +3985,7 @@ meta.foundation-mq-topbar {
             height: 0;
             box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
             width: 16px; }
-          .top-bar .toggle-topbar.menu-icon a::after:hover {
+          .top-bar .toggle-topbar.menu-icon a::after span:hover:after {
             box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
   .top-bar.expanded {
     height: auto;
@@ -4418,11 +4418,12 @@ meta.foundation-mq-topbar {
     position: absolute;
     display: block;
     height: 0;
-    top: 0.03125rem;
+    top: 50%;
+    margin-top: -0.5rem;
     left: 0.90625rem;
     box-shadow: 0 0px 0 1px #FFF, 0 7px 0 1px #FFF, 0 14px 0 1px #FFF;
     width: 1rem; }
-  .tab-bar .menu-icon:hover {
+  .tab-bar .menu-icon span:hover:after {
     box-shadow: 0 0px 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3; }
 
 .left-off-canvas-menu {
