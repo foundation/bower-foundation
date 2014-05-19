@@ -3332,6 +3332,11 @@ table {
   background: #fff;
   margin-bottom: 1.25rem;
   border: solid 1px #ddd; }
+  table caption {
+    background: transparent;
+    color: #222;
+    font-size: 1rem;
+    font-weight: bold; }
   table thead {
     background: #f5f5f5; }
     table thead tr th, table thead tr td {
