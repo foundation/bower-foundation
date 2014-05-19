@@ -3061,8 +3061,11 @@ dialog[open] {
     font-size: 0.875rem; }
     .side-nav li a:not(.button) {
       display: block;
-      color: #008CBA; }
+      color: #008CBA;
+      margin: 0;
+      padding: 0.4375rem 0.875rem; }
       .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
+        background: rgba(0, 0, 0, 0.025);
         color: #1ccaff; }
     .side-nav li.active > a:first-child:not(.button) {
       color: #1ccaff;
@@ -3074,6 +3077,11 @@ dialog[open] {
       padding: 0;
       list-style: none;
       border-top-color: white; }
+    .side-nav li.heading {
+      color: #008CBA;
+      font-size: 0.875rem;
+      font-weight: bold;
+      text-transform: uppercase; }
 
 .split.button {
   position: relative;
@@ -3324,6 +3332,11 @@ table {
   background: #fff;
   margin-bottom: 1.25rem;
   border: solid 1px #ddd; }
+  table caption {
+    background: transparent;
+    color: #222;
+    font-size: 1rem;
+    font-weight: bold; }
   table thead {
     background: #f5f5f5; }
     table thead tr th, table thead tr td {
