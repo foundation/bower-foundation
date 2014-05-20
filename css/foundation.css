@@ -4243,7 +4243,7 @@ meta.foundation-mq-topbar {
       .top-bar-section li.active:not(.has-form) a:not(.button):hover {
         background: #007ba0; }
     .top-bar-section .has-dropdown > a {
-      padding-right: 15px !important; }
+      padding-right: 35px !important; }
       .top-bar-section .has-dropdown > a:after {
         content: "";
         display: block;
