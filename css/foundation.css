@@ -3764,7 +3764,7 @@ blockquote, blockquote p {
   .tabs.radius dd:last-child a, .tabs.radius .tab:last-child a {
     border-bottom-right-radius: 3px;
     border-top-right-radius: 3px; }
-  .tabs.vertical dd, .tabs.vertical .tab {
+  .tabs.vertical dd, .tabs.vertical .tab-title {
     position: inherit;
     float: none;
     display: block;
