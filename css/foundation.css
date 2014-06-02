@@ -3680,7 +3680,11 @@ blockquote, blockquote p {
   h3 {
     font-size: 1.6875rem; }
   h4 {
-    font-size: 1.4375rem; } }
+    font-size: 1.4375rem; }
+  h5 {
+    font-size: 1.125rem; }
+  h6 {
+    font-size: 1rem; } }
 
 /*
        * Print styles.
