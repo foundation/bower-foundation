@@ -4490,9 +4490,11 @@ ul.off-canvas-list {
   padding: 0;
   margin: 0; }
   ul.off-canvas-list li label {
+    display: block;
     padding: 0.3rem 0.9375rem;
     color: #999;
     text-transform: uppercase;
+    font-size: 0.75rem;
     font-weight: bold;
     background: #444;
     border-top: 1px solid #5e5e5e;
