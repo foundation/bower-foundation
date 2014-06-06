@@ -4133,6 +4133,7 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
           color: #fff; }
     .top-bar-section ul li:hover:not(.has-form) > a {
+      background-color: #555555;
       background: #272727;
       color: #fff; }
     .top-bar-section ul li.active > a {
@@ -4250,6 +4251,7 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
+      background-color: #555555;
       background: #272727;
       color: #fff; }
     .top-bar-section li:not(.has-form) a:not(.button) {
@@ -4257,6 +4259,7 @@ meta.foundation-mq-topbar {
       line-height: 45px;
       background: #333; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
+        background-color: #555555;
         background: #272727; }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 15px;
@@ -4317,6 +4320,7 @@ meta.foundation-mq-topbar {
         background: #333; }
       .top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
         color: #fff;
+        background-color: #555555;
         background: #272727; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
@@ -4346,6 +4350,7 @@ meta.foundation-mq-topbar {
       .top-bar-section .left li .dropdown li .dropdown {
         left: 100%; }
   .no-js .top-bar-section ul li:hover > a {
+    background-color: #555555;
     background: #272727;
     color: #fff; }
   .no-js .top-bar-section ul li:active > a {
