@@ -3994,27 +3994,26 @@ meta.foundation-mq-topbar {
       height: 45px;
       line-height: 45px; }
     .top-bar .toggle-topbar.menu-icon {
-      right: 15px;
       top: 50%;
-      margin-top: -16px;
-      padding-left: 40px; }
+      margin-top: -16px; }
       .top-bar .toggle-topbar.menu-icon a {
         height: 34px;
         line-height: 33px;
-        padding: 0;
+        padding: 0 40px 0 15px;
         color: #fff;
         position: relative; }
-        .top-bar .toggle-topbar.menu-icon a::after {
-          right: 0; }
-          .top-bar .toggle-topbar.menu-icon a::after span:after {
-            content: '';
-            position: absolute;
-            display: block;
-            height: 0;
-            box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-            width: 16px; }
-          .top-bar .toggle-topbar.menu-icon a::after span:hover:after {
-            box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
+        .top-bar .toggle-topbar.menu-icon a span::after {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 0;
+          top: 50%;
+          margin-top: -8px;
+          right: 15px;
+          box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+          width: 16px; }
+        .top-bar .toggle-topbar.menu-icon a span:hover:after {
+          box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -4444,13 +4443,12 @@ meta.foundation-mq-topbar {
   width: 2.8125rem;
   height: 2.8125rem;
   display: block;
-  line-height: 2.0625rem;
   padding: 0;
   color: #FFF;
   position: relative;
   transform: translate3d(0, 0, 0); }
-  .tab-bar .menu-icon span:after {
-    content: '';
+  .tab-bar .menu-icon span::after {
+    content: "";
     position: absolute;
     display: block;
     height: 0;
