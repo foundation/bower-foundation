@@ -1995,12 +1995,12 @@ label {
 select::-ms-expand {
   display: none; }
 
+/* Workaround to hide the select arrow on Firefox */
 @-moz-document url-prefix() {
   select {
-    background: #fafafa; }
-
-  select:hover {
-    background: #f3f3f3; } }
+    text-indent: 0.01px;
+    text-overflow: '';
+    -moz-appearance: none; } }
 
 /* Attach elements to the beginning or end of an input */
 .prefix, .postfix {
