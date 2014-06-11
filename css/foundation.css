@@ -2564,9 +2564,10 @@ label.error {
       height: 14px;
       border: inset 8px;
       border-left-style: solid;
-      border-color: transparent #fff transparent transparent; }
+      border-color: transparent;
+      border-left-color: #fff; }
       .orbit-container .orbit-timer.paused > span.dark {
-        border-color: transparent #333 transparent transparent; }
+        border-left-color: #333; }
   .orbit-container:hover .orbit-timer > span {
     display: block; }
   .orbit-container .orbit-prev, .orbit-container .orbit-next {
