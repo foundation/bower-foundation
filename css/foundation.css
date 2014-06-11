@@ -3279,7 +3279,9 @@ div.switch {
     margin-left: -2.1875rem; }
   div.switch span:last-child {
     width: 2.25rem;
-    height: 2.25rem; }
+    height: 2.25rem;
+    line-height: 2.25rem;
+    text-align: center; }
   div.switch span:last-child {
     border-color: #b3b3b3;
     background: #fff;
@@ -3301,7 +3303,9 @@ div.switch {
       margin-left: -2.6875rem; }
     div.switch.large span:last-child {
       width: 2.75rem;
-      height: 2.75rem; }
+      height: 2.75rem;
+      line-height: 2.75rem;
+      text-align: center; }
   div.switch.small {
     height: 1.75rem; }
     div.switch.small label {
@@ -3313,7 +3317,9 @@ div.switch {
       margin-left: -1.6875rem; }
     div.switch.small span:last-child {
       width: 1.75rem;
-      height: 1.75rem; }
+      height: 1.75rem;
+      line-height: 1.75rem;
+      text-align: center; }
   div.switch.tiny {
     height: 1.375rem; }
     div.switch.tiny label {
@@ -3325,7 +3331,9 @@ div.switch {
       margin-left: -1.3125rem; }
     div.switch.tiny span:last-child {
       width: 1.375rem;
-      height: 1.375rem; }
+      height: 1.375rem;
+      line-height: 1.375rem;
+      text-align: center; }
   div.switch.radius {
     border-radius: 4px; }
     div.switch.radius span:last-child {
