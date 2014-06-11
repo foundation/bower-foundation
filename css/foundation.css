@@ -2653,7 +2653,7 @@ label.error {
     position: relative;
     margin: 0% !important;
     opacity: 1 !important; }
-  .orbit-stack-on-small .orbit-timer, .orbit-stack-on-small .orbit-next, .orbit-stack-on-small .orbit-prev, .orbit-stack-on-small .orbit-bullets, .orbit-stack-on-small .orbit-slide-number {
+  .orbit-stack-on-small .orbit-slide-number {
     display: none; }
   .orbit-timer {
     display: none; }
