@@ -847,6 +847,34 @@ select {
     right: 91.66667%;
     left: auto; } }
 
+/* 
+  Mixin: accordion-container() 
+
+  Decription: Responsible for the container component of accordions, generating styles relating to a margin of zero and a clearfix
+
+  Explicit Dependencies: a clearfix mixin *is* defined. 
+
+  Implicit Dependencies: None 
+
+*/
+/*
+  Mixin: accordion-navigation( $bg, $hover-bg, $active-bg, $padding, $active_class,  $font-color, $font-size, $font-family){
+  
+    @params $bg-color: [ color or string ]: Specify the background color for the navigation element
+    @params $hover-bg-color [ color or string ]: Specify the background color for the navigation element when hovered
+    @params $active-bg [ color or string ]: Specify the background color for the navigation element when clicked and not released. 
+    @params $active_class [ string ]: Specify the class name used to keep track of which accordion tab should be visible 
+    @params $font-color [ color or string ]: Color of the font for accordion 
+    @params $font-size [ number ]: Specifiy the font-size of the text inside the navigation element 
+    @params $font-family [ string ]: Specify the font family for the text of the navigation of the accorion
+*/
+/*
+
+  Mixin: accordion-content($bg, $padding, $active-class) 
+    @params $padding [ number ]: Padding for the content of the container 
+    @params $bg [ color  ]: Background color for the content when it's visible 
+    @params $active_class [ string ]: Class name used to keep track of which accordion tab should be visible. 
+*/
 .accordion {
   margin-bottom: 0; }
   .accordion:before, .accordion:after {
@@ -854,24 +882,24 @@ select {
     display: table; }
   .accordion:after {
     clear: both; }
-  .accordion dd {
+  .accordion .accordion-navigation, .accordion dd {
     display: block;
     margin-bottom: 0 !important; }
-    .accordion dd.active > a {
+    .accordion .accordion-navigation.active > a, .accordion dd.active > a {
       background: #e8e8e8; }
-    .accordion dd > a {
+    .accordion .accordion-navigation > a, .accordion dd > a {
       background: #efefef;
       color: #222;
       padding: 1rem;
       display: block;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
-      .accordion dd > a:hover {
+      .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
         background: #e3e3e3; }
-    .accordion dd > .content {
+    .accordion .accordion-navigation > .content, .accordion dd > .content {
       display: none;
       padding: 0.9375rem; }
-      .accordion dd > .content.active {
+      .accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
         display: block;
         background: #fff; }
 
