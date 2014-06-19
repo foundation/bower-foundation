@@ -715,19 +715,19 @@
           settings = form.data(this.attr_name(true) + '-init') || {},
           submit_event = /submit/.test(e.type);
 
-      form.trigger('validated');
+      form.trigger('validated').trigger('validated.fndtn.abide');
       // Has to count up to make sure the focus gets applied to the top error
       for (var i=0; i < validation_count; i++) {
         if (!validations[i] && (submit_event || is_ajax)) {
           if (settings.focus_on_invalid) els[i].focus();
-          form.trigger('invalid');
+          form.trigger('invalid').trigger('invalid.fndtn.abide');
           this.S(els[i]).closest('[data-' + this.attr_name(true) + ']').attr(this.invalid_attr, '');
           return false;
         }
       }
 
       if (submit_event || is_ajax) {
-        form.trigger('valid');
+        form.trigger('valid').trigger('valid.fndtn.abide');
       }
 
       form.removeAttr(this.invalid_attr);
@@ -1003,15 +1003,15 @@
               settings = alertBox.data(self.attr_name(true) + '-init') || self.settings;
 
         e.preventDefault();
-        if ('transitionend' in window || 'webkitTransitionEnd' in window || 'oTransitionEnd' in window) {
+        if (Modernizr.csstransitions) {
           alertBox.addClass("alert-close");
           alertBox.on('transitionend webkitTransitionEnd oTransitionEnd', function(e) {
-            S(this).trigger('close').remove();
+            S(this).trigger('close').trigger('close.fndtn.alert').remove();
             settings.callback();
           });
         } else {
           alertBox.fadeOut(300, function () {
-            S(this).trigger('close').remove();
+            S(this).trigger('close').trigger('close.fndtn.alert').remove();
             settings.callback();
           });
         }
@@ -1154,7 +1154,11 @@
 
           data.delta_x = e.touches[0].pageX - data.start_page_x;
 
-          if ( typeof data.is_scrolling === 'undefined') {
+          if (Foundation.rtl) {
+            data.delta_x = -data.delta_x;
+          }
+
+          if (typeof data.is_scrolling === 'undefined') {
             data.is_scrolling = !!( data.is_scrolling || Math.abs(data.delta_x) < Math.abs(e.touches[0].pageY - data.start_page_y) );
           }
 
@@ -1229,7 +1233,7 @@
               cb.call(this, image);
             }
           }.bind(this));
-        }.bind(this), 50);
+        }.bind(this), 100);
       }
 
       function cb (image) {
@@ -1302,7 +1306,7 @@
 
       if (e.which === NEXT_KEY) this.go(clearing, 'next');
       if (e.which === PREV_KEY) this.go(clearing, 'prev');
-      if (e.which === ESC_KEY) this.S('a.clearing-close').trigger('click');
+      if (e.which === ESC_KEY) this.S('a.clearing-close').trigger('click').trigger('click.fndtn.clearing');
     },
 
     nav : function (e, direction) {
@@ -1455,7 +1459,7 @@
 
       if (target.length) {
         this.S('img', target)
-          .trigger('click', [current, target])
+          .trigger('click', [current, target]).trigger('click.fndtn.clearing', [current, target])
           .trigger('change.fndtn.clearing');
       }
     },
@@ -1674,7 +1678,7 @@
             .removeClass(self.settings.active_class)
             .removeData('target');
 
-          self.S(this).trigger('closed', [dropdown]);
+          self.S(this).trigger('closed').trigger('closed.fndtn.dropdown', [dropdown]);
         }
       });
     },
@@ -1691,7 +1695,7 @@
           .css(dropdown
             .addClass(this.settings.active_class), target);
         dropdown.prev('[' + this.attr_name() + ']').addClass(this.settings.active_class);
-        dropdown.data('target', target.get(0)).trigger('opened', [dropdown, target]);
+        dropdown.data('target', target.get(0)).trigger('opened').trigger('opened.fndtn.dropdown', [dropdown, target]);
     },
 
     data_attr: function () {
@@ -1730,7 +1734,7 @@
     },
 
     css : function (dropdown, target) {
-      var left_offset = (target.width() - dropdown.width()) / 2;
+      var left_offset = Math.max((target.width() - dropdown.width()) / 2, 8);
       
       this.clear_idx();
 
@@ -1778,7 +1782,7 @@
       top: function (t, s) {
         var self = Foundation.libs.dropdown,
             p = self.dirs._base.call(this, t),
-            pip_offset_base = (t.outerWidth() / 2) - 8;
+            pip_offset_base = 8;
 
         this.addClass('drop-top');
 
@@ -1796,7 +1800,7 @@
       bottom: function (t, s) {
         var self = Foundation.libs.dropdown,
             p = self.dirs._base.call(this, t),
-            pip_offset_base = (this.outerWidth() / 2) - 8;
+            pip_offset_base = 8;
 
         if (t.outerWidth() < this.outerWidth() || self.small()) {
           self.adjust_pip(pip_offset_base, p);
@@ -1910,7 +1914,7 @@
       if (vals.length === 0) return;
       var firstTopOffset = vals.first().offset().top;
       settings.before_height_change();
-      equalizer.trigger('before-height-change');
+      equalizer.trigger('before-height-change').trigger('before-height-change.fndth.equalizer');
       vals.height('inherit');
       vals.each(function(){
         var el = $(this);
@@ -1933,7 +1937,7 @@
         vals.css('height', min);
       }
       settings.after_height_change();
-      equalizer.trigger('after-height-change');
+      equalizer.trigger('after-height-change').trigger('after-height-change.fndtn.equalizer');
     },
 
     reflow : function () {
@@ -2184,7 +2188,7 @@
         this.object($(this['cached_' + type][i]));
       }
 
-      return $(window).trigger('resize');
+      return $(window).trigger('resize').trigger('resize.fndtn.interchange');
     },
 
     convert_directive : function (directive) {
@@ -3392,13 +3396,13 @@
 
     show: function(class_name, $off_canvas) {
       $off_canvas = $off_canvas || this.get_wrapper();
-      $off_canvas.trigger('open');
+      $off_canvas.trigger('open').trigger('open.fndtn.offcanvas');
       $off_canvas.addClass(class_name);
     },
 
     hide: function(class_name, $off_canvas) {
       $off_canvas = $off_canvas || this.get_wrapper();
-      $off_canvas.trigger('close');
+      $off_canvas.trigger('close').trigger('close.fndtn.offcanvas');
       $off_canvas.removeClass(class_name);
     },
 
@@ -3921,6 +3925,7 @@
       close_on_esc: true,
       dismiss_modal_class: 'close-reveal-modal',
       bg_class: 'reveal-modal-bg',
+      root_element: 'body',
       open: function(){},
       opened: function(){},
       close: function(){},
@@ -3951,7 +3956,7 @@
 
       S(this.scope)
         .off('.reveal')
-        .on('click.fndtn.reveal', '[' + this.add_namespace('data-reveal-id') + ']', function (e) {
+        .on('click.fndtn.reveal', '[' + this.add_namespace('data-reveal-id') + ']:not([disabled])', function (e) {
           e.preventDefault();
 
           if (!self.locked) {
@@ -4068,7 +4073,7 @@
         }
 
         this.key_up_on(modal);    // PATCH #3: turning on key up capture only when a reveal window is open
-        modal.trigger('open');
+        modal.trigger('open').trigger('open.fndtn.reveal');
 
         if (open_modal.length < 1) {
           this.toggle_bg(modal, true);
@@ -4119,7 +4124,7 @@
       if (open_modals.length > 0) {
         this.locked = true;
         this.key_up_off(modal);   // PATCH #3: turning on key up capture only when a reveal window is open
-        modal.trigger('close');
+        modal.trigger('close').trigger('close.fndtn.reveal');
         this.toggle_bg(modal, false);
         this.hide(open_modals, settings.css.close, settings);
       }
@@ -4154,19 +4159,18 @@
     show : function (el, css) {
       // is modal
       if (css) {
-        var settings = el.data(this.attr_name(true) + '-init');
-        settings = settings || this.settings;
+        var settings = el.data(this.attr_name(true) + '-init') || this.settings,
+            root_element = settings.root_element;
 
-        if (el.parent('body').length === 0) {
-          var placeholder = el.wrap('<div style="display: none;" />').parent(),
-              rootElement = this.settings.rootElement || 'body';
+        if (el.parent(root_element).length === 0) {
+          var placeholder = el.wrap('<div style="display: none;" />').parent();
 
           el.on('closed.fndtn.reveal.wrapped', function() {
             el.detach().appendTo(placeholder);
             el.unwrap().unbind('closed.fndtn.reveal.wrapped');
           });
 
-          el.detach().appendTo(rootElement);
+          el.detach().appendTo(root_element);
         }
 
         var animData = getAnimationData(settings.animation);
@@ -4185,7 +4189,7 @@
               .css(css)
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
-                el.trigger('opened');
+                el.trigger('opened').trigger('opened.fndtn.reveal');
               }.bind(this))
               .addClass('open');
           }.bind(this), settings.animation_speed / 2);
@@ -4200,13 +4204,13 @@
               .css(css)
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
-                el.trigger('opened');
+                el.trigger('opened').trigger('opened.fndtn.reveal');
               }.bind(this))
               .addClass('open');
           }.bind(this), settings.animation_speed / 2);
         }
 
-        return el.css(css).show().css({opacity: 1}).addClass('open').trigger('opened');
+        return el.css(css).show().css({opacity: 1}).addClass('open').trigger('opened').trigger('opened.fndtn.reveal');
       }
 
       var settings = this.settings;
@@ -4241,7 +4245,7 @@
             return el
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
-                el.css(css).trigger('closed');
+                el.css(css).trigger('closed').trigger('closed.fndtn.reveal');
               }.bind(this))
               .removeClass('open');
           }.bind(this), settings.animation_speed / 2);
@@ -4254,13 +4258,13 @@
             return el
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 this.locked = false;
-                el.css(css).trigger('closed');
+                el.css(css).trigger('closed').trigger('closed.fndtn.reveal');
               }.bind(this))
               .removeClass('open');
           }.bind(this), settings.animation_speed / 2);
         }
 
-        return el.hide().css(css).removeClass('open').trigger('closed');
+        return el.hide().css(css).removeClass('open').trigger('closed').trigger('closed.fndtn.reveal');
       }
 
       var settings = this.settings;
@@ -4356,6 +4360,7 @@
       step: 1,
       initial: null,
       display_selector: '',
+      vertical: false,
       on_change: function(){}
     },
 
@@ -4373,7 +4378,7 @@
       $(this.scope)
         .off('.slider')
         .on('mousedown.fndtn.slider touchstart.fndtn.slider pointerdown.fndtn.slider',
-        '[' + self.attr_name() + '] .range-slider-handle', function(e) {
+        '[' + self.attr_name() + ']:not(.disabled, [disabled]) .range-slider-handle', function(e) {
           if (!self.cache.active) {
             e.preventDefault();
             self.set_active_slider($(e.target));
@@ -4382,7 +4387,17 @@
         .on('mousemove.fndtn.slider touchmove.fndtn.slider pointermove.fndtn.slider', function(e) {
           if (!!self.cache.active) {
             e.preventDefault();
-            self.calculate_position(self.cache.active, e.pageX || e.originalEvent.clientX || e.originalEvent.touches[0].clientX || e.currentPoint.x);
+            if ($.data(self.cache.active[0], 'settings').vertical) {
+              self.calculate_position(self.cache.active, e.pageY || 
+                                                         e.originalEvent.clientY || 
+                                                         e.originalEvent.touches[0].clientY || 
+                                                         e.currentPoint.y);
+            } else {
+              self.calculate_position(self.cache.active, e.pageX || 
+                                                         e.originalEvent.clientX || 
+                                                         e.originalEvent.touches[0].clientX || 
+                                                         e.currentPoint.x);
+            }
           }
         })
         .on('mouseup.fndtn.slider touchend.fndtn.slider pointerup.fndtn.slider', function(e) {
@@ -4408,20 +4423,22 @@
 
     calculate_position : function($handle, cursor_x) {
       var self = this,
-          settings = $.extend({}, self.settings, self.data_options($handle.parent())),
-          handle_w = $.data($handle[0], 'handle_w'),
+          settings = $.data($handle[0], 'settings'),
+          handle_l = $.data($handle[0], 'handle_l'),
           handle_o = $.data($handle[0], 'handle_o'),
-          bar_w = $.data($handle[0], 'bar_w'),
+          bar_l = $.data($handle[0], 'bar_l'),
           bar_o = $.data($handle[0], 'bar_o');
 
       requestAnimationFrame(function(){
         var pct;
 
-        if (Foundation.rtl) {
-          pct = self.limit_to(((bar_o+bar_w-cursor_x)/bar_w),0,1);
+        if (Foundation.rtl && !settings.vertical) {
+          pct = self.limit_to(((bar_o+bar_l-cursor_x)/bar_l),0,1);
         } else {
-          pct = self.limit_to(((cursor_x-bar_o)/bar_w),0,1);
+          pct = self.limit_to(((cursor_x-bar_o)/bar_l),0,1);
         }
+
+        pct = settings.vertical ? 1-pct : pct;
 
         var norm = self.normalized_value(pct, settings.start, settings.end, settings.step);
 
@@ -4430,22 +4447,27 @@
     },
 
     set_ui : function($handle, value) {
-      var settings = $.extend({}, this.settings, this.data_options($handle.parent())),
-          handle_w = $.data($handle[0], 'handle_w'),
-          bar_w = $.data($handle[0], 'bar_w'),
+      var settings = $.data($handle[0], 'settings'),
+          handle_l = $.data($handle[0], 'handle_l'),
+          bar_l = $.data($handle[0], 'bar_l'),
           norm_pct = this.normalized_percentage(value, settings.start, settings.end),
-          handle_offset = norm_pct*(bar_w-handle_w)-1,
-          progress_bar_width = norm_pct*100;
+          handle_offset = norm_pct*(bar_l-handle_l)-1,
+          progress_bar_length = norm_pct*100;
 
-      if (Foundation.rtl) {
+      if (Foundation.rtl && !settings.vertical) {
         handle_offset = -handle_offset;
       }
 
-      this.set_translate($handle, handle_offset);
-      $handle.siblings('.range-slider-active-segment').css('width', progress_bar_width+'%');
+      handle_offset = settings.vertical ? -handle_offset + bar_l - handle_l + 1 : handle_offset;
+      this.set_translate($handle, handle_offset, settings.vertical);
 
-      $handle.parent().attr(this.attr_name(), value);
-      $handle.parent().trigger('change');
+      if (settings.vertical) {
+        $handle.siblings('.range-slider-active-segment').css('height', progress_bar_length + '%');
+      } else {
+        $handle.siblings('.range-slider-active-segment').css('width', progress_bar_length + '%');
+      }
+
+      $handle.parent().attr(this.attr_name(), value).trigger('change').trigger('change.fndtn.slider');
 
       $handle.parent().children('input[type=hidden]').val(value);
 
@@ -4497,12 +4519,22 @@
     },
 
     initialize_settings : function(handle) {
+      var settings = $.extend({}, this.settings, this.data_options($(handle).parent()));
+
+      if (settings.vertical) {
+        $.data(handle, 'bar_o', $(handle).parent().offset().top);
+        $.data(handle, 'bar_l', $(handle).parent().outerHeight());
+        $.data(handle, 'handle_o', $(handle).offset().top);
+        $.data(handle, 'handle_l', $(handle).outerHeight());
+      } else {
+        $.data(handle, 'bar_o', $(handle).parent().offset().left);
+        $.data(handle, 'bar_l', $(handle).parent().outerWidth());
+        $.data(handle, 'handle_o', $(handle).offset().left);
+        $.data(handle, 'handle_l', $(handle).outerWidth());
+      }
+
       $.data(handle, 'bar', $(handle).parent());
-      $.data(handle, 'bar_o', $(handle).parent().offset().left);
-      $.data(handle, 'bar_w', $(handle).parent().outerWidth());
-      $.data(handle, 'handle_o', $(handle).offset().left);
-      $.data(handle, 'handle_w', $(handle).outerWidth());
-      $.data(handle, 'settings', $.extend({}, this.settings, this.data_options($(handle).parent())));
+      $.data(handle, 'settings', settings);
     },
 
     set_initial_position : function($ele) {
@@ -5240,7 +5272,7 @@
       
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
         self.resize.call(self);
-      }, 50)).trigger('resize');
+      }, 50)).trigger('resize').trigger('resize.fndtn.topbar');
 
       S('body').off('.topbar').on('click.fndtn.topbar touchstart.fndtn.topbar', function (e) {
         var parent = S(e.target).closest('li').closest('li.hover');
