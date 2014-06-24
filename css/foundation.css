@@ -1412,6 +1412,10 @@ button, .button {
       button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: #f04124; }
 
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
 @media only screen and (min-width:40.063em) {
   button, .button {
     display: inline-block; } }
