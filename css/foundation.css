@@ -2526,6 +2526,9 @@ div.icon-bar {
   .label.alert {
     background-color: #f04124;
     color: #fff; }
+  .label.warning {
+    background-color: #f08a24;
+    color: #fff; }
   .label.success {
     background-color: #43AC6A;
     color: #fff; }
