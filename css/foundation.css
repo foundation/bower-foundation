@@ -2223,12 +2223,12 @@ input.error, textarea.error {
 label.error {
   color: #f04124; }
 
-div.icon-bar {
+.icon-bar {
   width: 100%;
   font-size: 0;
   display: inline-block;
   background: #333; }
-  div.icon-bar > * {
+  .icon-bar > * {
     text-align: center;
     font-size: 1rem;
     width: 25%;
@@ -2236,48 +2236,48 @@ div.icon-bar {
     display: block;
     padding: 1.25rem;
     float: left; }
-    div.icon-bar > * i, div.icon-bar > * img {
+    .icon-bar > * i, .icon-bar > * img {
       display: block;
       margin: 0 auto; }
-      div.icon-bar > * i + label, div.icon-bar > * img + label {
+      .icon-bar > * i + label, .icon-bar > * img + label {
         margin-top: 0.0625rem; }
-    div.icon-bar > * i {
+    .icon-bar > * i {
       font-size: 1.875rem;
       vertical-align: middle; }
-    div.icon-bar > * img {
+    .icon-bar > * img {
       width: 1.875rem;
       height: 1.875rem; }
-  div.icon-bar.label-right > * i, div.icon-bar.label-right > * img {
+  .icon-bar.label-right > * i, .icon-bar.label-right > * img {
     margin: 0 0.0625rem 0 0;
     display: inline-block; }
-    div.icon-bar.label-right > * i + label, div.icon-bar.label-right > * img + label {
+    .icon-bar.label-right > * i + label, .icon-bar.label-right > * img + label {
       margin-top: 0; }
-  div.icon-bar.label-right > * label {
+  .icon-bar.label-right > * label {
     display: inline-block; }
-  div.icon-bar.vertical.label-right > * {
+  .icon-bar.vertical.label-right > * {
     text-align: left; }
-  div.icon-bar.vertical {
+  .icon-bar.vertical {
     height: 100%;
     width: auto; }
-    div.icon-bar.vertical .item {
+    .icon-bar.vertical .item {
       width: auto;
       margin: auto;
       float: none; }
-  div.icon-bar > * {
+  .icon-bar > * {
     font-size: 1rem;
     padding: 1.25rem; }
-    div.icon-bar > * i + label, div.icon-bar > * img + label {
+    .icon-bar > * i + label, .icon-bar > * img + label {
       margin-top: 0.0625rem; }
-    div.icon-bar > * i {
+    .icon-bar > * i {
       font-size: 1.875rem; }
-    div.icon-bar > * img {
+    .icon-bar > * img {
       width: 1.875rem;
       height: 1.875rem; }
-  div.icon-bar > *:hover {
+  .icon-bar > *:hover {
     background: #008CBA; }
-  div.icon-bar > * label {
+  .icon-bar > * label {
     color: #fff; }
-  div.icon-bar > * i {
+  .icon-bar > * i {
     color: #fff; }
 
 .icon-bar.two-up .item {
