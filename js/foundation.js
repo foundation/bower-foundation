@@ -2497,7 +2497,7 @@
     },
 
     button_text : function (txt) {
-      if (this.settings.next_button) {
+      if (this.settings.tip_settings.next_button) {
         txt = $.trim(txt) || 'Next';
         txt = $(this.settings.template.button).append(txt)[0].outerHTML;
       } else {
@@ -2507,6 +2507,7 @@
     },
 
     create : function (opts) {
+      this.settings.tip_settings = $.extend({}, this.settings, this.data_options(opts.$li));
       var buttonText = opts.$li.attr(this.add_namespace('data-button')) 
         || opts.$li.attr(this.add_namespace('data-text')),
         tipClass = opts.$li.attr('class'),
