@@ -3961,8 +3961,6 @@
         .off('.reveal')
         .on('click.fndtn.reveal', '[' + this.add_namespace('data-reveal-id') + ']:not([disabled])', function (e) {
           e.preventDefault();
-          // e.stopPropagation();
-          // if ($('#' + $(self).data('reveal-id'))[0] == $('[data-reveal].open')[0]) return;
         
           if (!self.locked) {
             var element = S(this),
@@ -4053,7 +4051,6 @@
     open : function (target, ajax_settings) {
       var self = this,
           modal;
-
 
       if (target) {
         if (typeof target.selector !== 'undefined') {
