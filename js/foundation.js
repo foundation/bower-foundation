@@ -1220,6 +1220,11 @@
           label = self.S('.clearing-touch-label', container),
           error = false;
 
+      // Event to disable scrolling on touch devices when Clearing is activated
+      $('body').on('touchmove',function(e){
+        e.preventDefault();
+      });
+
       image.error(function () {
         error = true;
       });
@@ -1290,6 +1295,9 @@
         visible_image.hide();
         visible_image.trigger('closed.fndtn.clearing');        
       }
+
+      // Event to re-enable scrolling on touch devices
+      $('body').off('touchmove');
 
       return false;
     },
