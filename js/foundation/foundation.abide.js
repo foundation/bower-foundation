@@ -165,7 +165,8 @@
             direct_parent = this.S(el).parent(),
             validator = el.getAttribute(this.add_namespace('data-abide-validator')),
             is_radio = el.type === "radio",
-            is_checkbox = el.type === "checkbox",
+            is_checkbox = el.type === "checkbox" ||
+              (el.type === "radio" && /\[\]/i.test(el.getAttribute('name'))),
             label = this.S('label[for="' + el.getAttribute('id') + '"]'),
             valid_length = (required) ? (el.value.length > 0) : true;
 
@@ -180,16 +181,13 @@
           parent = direct_parent.parent();
         }
 
-        if (is_radio && required) {
-          validations.push(this.valid_radio(el, required));
-        } else if (is_checkbox && required) {
+        if (is_checkbox && required) {
           validations.push(this.valid_checkbox(el, required));
-        } else {
-          
-          if (validator) {
-            valid = this.settings.validators[validator].apply(this, [el, required, parent]);
-            validations.push(valid);
-          }
+        } else if (is_radio && required) {
+          validations.push(this.valid_radio(el, required));
+        } else if (validator) {
+          valid = this.settings.validators[validator].apply(this, [el, required, parent])
+          validations.push(valid);
 
           if (el_patterns[i][1].test(value) && valid_length ||
             !required && el.value.length < 1 || $(el).attr('disabled')) {
