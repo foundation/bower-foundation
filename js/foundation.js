@@ -4028,7 +4028,7 @@
         });
 
       S(document)
-        .on('touchend.fndtn.reveal click.fndtn.reveal', this.close_targets(), function (e) {
+        .on('click.fndtn.reveal', this.close_targets(), function (e) {
 
           e.preventDefault();
 
@@ -5086,7 +5086,7 @@
 
       $tip.fadeOut(150, function() {
         $tip.find('.tap-to-close').remove();
-        $tip.off('click.fndtn.tooltip.tapclose touchstart.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
+        $tip.off('click.fndtn.tooltip.tapclose MSPointerDown.fndtn.tapclose');
         $target.removeClass('open');
       });
     },
@@ -5337,7 +5337,7 @@
         self.resize.call(self);
       }, 50)).trigger('resize').trigger('resize.fndtn.topbar');
 
-      S('body').off('.topbar').on('click.fndtn.topbar touchstart.fndtn.topbar', function (e) {
+      S('body').off('.topbar').on('click.fndtn.topbar', function (e) {
         var parent = S(e.target).closest('li').closest('li.hover');
 
         if (parent.length > 0) {
