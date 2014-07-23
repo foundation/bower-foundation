@@ -2152,6 +2152,9 @@ input[type="checkbox"] + label, input[type="radio"] + label {
 input[type="file"] {
   width: 100%; }
 
+/* HTML5 Number spinners settings */
+
+
 /* We add basic fieldset styling */
 fieldset {
   border: 1px solid #ddd;
