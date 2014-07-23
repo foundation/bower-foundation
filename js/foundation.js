@@ -3538,7 +3538,7 @@
       slides_container.wrap('<div class="'+settings.container_class+'"></div>');
       container = slides_container.parent();
       slides_container.addClass(settings.slides_container_class);
-      
+
       if (settings.stack_on_small) {
         container.addClass(settings.stack_on_small_class);
       }
@@ -3590,7 +3590,7 @@
         if (!settings.circular) return false;
         next_idx = slides.length - 1;
       }
-      
+
       var current = $(slides.get(idx));
       var next = $(slides.get(next_idx));
 
@@ -3601,7 +3601,7 @@
       slides_container.trigger('before-slide-change.fndtn.orbit');
       settings.before_slide_change();
       self.update_active_link(next_idx);
-      
+
       var callback = function() {
         var unlock = function() {
           idx = next_idx;
@@ -3622,7 +3622,7 @@
 
       var start_animation = function() {
         if (dir === 'next') {animate.next(current, next, callback);}
-        if (dir === 'prev') {animate.prev(current, next, callback);}        
+        if (dir === 'prev') {animate.prev(current, next, callback);}
       };
 
       if (next.height() > slides_container.height() && settings.variable_height) {
@@ -3631,13 +3631,13 @@
         start_animation();
       }
     };
-    
+
     self.next = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
       self._goto(idx + 1);
     };
-    
+
     self.prev = function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
@@ -3653,7 +3653,7 @@
       }
     };
 
-    self.link_bullet = function(e) {    
+    self.link_bullet = function(e) {
       var index = $(this).attr('data-orbit-slide');
       if ((typeof index === 'string') && (index = $.trim(index)) != "") {
         if(isNaN(parseInt(index)))
@@ -3672,7 +3672,7 @@
     self.timer_callback = function() {
       self._goto(idx + 1, true);
     }
-    
+
     self.compute_dimensions = function() {
       var current = $(self.slides().get(idx));
       var h = current.height();
@@ -3686,8 +3686,8 @@
 
     self.create_timer = function() {
       var t = new Timer(
-        container.find('.'+settings.timer_container_class), 
-        settings, 
+        container.find('.'+settings.timer_container_class),
+        settings,
         self.timer_callback
       );
       return t;
@@ -3701,7 +3701,7 @@
       var t = container.find('.'+settings.timer_container_class);
       if (t.hasClass(settings.timer_paused_class)) {
         if (typeof timer === 'undefined') {timer = self.create_timer();}
-        timer.start();     
+        timer.start();
       }
       else {
         if (typeof timer === 'object') {timer.stop();}
@@ -3711,12 +3711,12 @@
     self.init = function() {
       self.build_markup();
       if (settings.timer) {
-        timer = self.create_timer(); 
+        timer = self.create_timer();
         Foundation.utils.image_loaded(this.slides().children('img'), timer.start);
       }
       animate = new FadeAnimation(settings, slides_container);
-      if (settings.animation === 'slide') 
-        animate = new SlideAnimation(settings, slides_container);        
+      if (settings.animation === 'slide')
+        animate = new SlideAnimation(settings, slides_container);
 
       container.on('click', '.'+settings.next_class, self.next);
       container.on('click', '.'+settings.prev_class, self.prev);
@@ -3775,7 +3775,7 @@
           timer.start();
         }
       });
-      
+
       $(document).on('click', '[data-orbit-link]', self.link_custom);
       $(window).on('load resize', self.compute_dimensions);
       Foundation.utils.image_loaded(this.slides().children('img'), self.compute_dimensions);
@@ -3794,7 +3794,7 @@
     var self = this,
         duration = settings.timer_speed,
         progress = el.find('.'+settings.timer_progress_class),
-        start, 
+        start,
         timeout,
         left = -1;
 
@@ -3837,7 +3837,7 @@
       el.trigger('timer-stopped.fndtn.orbit');
     };
   };
-  
+
   var SlideAnimation = function(settings, container) {
     var duration = settings.animation_speed;
     var is_rtl = ($('html[dir=rtl]').length === 1);
@@ -3936,7 +3936,7 @@
 
     events : function (instance) {
       var orbit_instance = new Orbit(this.S(instance), this.S(instance).data('orbit-init'));
-      this.S(instance).data(self.name + '-instance', orbit_instance);
+      this.S(instance).data(this.name + '-instance', orbit_instance);
     },
 
     reflow : function () {
@@ -3957,7 +3957,7 @@
     }
   };
 
-    
+
 }(jQuery, window, window.document));
 
 ;(function ($, window, document, undefined) {
