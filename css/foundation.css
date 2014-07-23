@@ -2343,6 +2343,8 @@ label.error {
   padding: 1.125rem 1.25rem 1.5rem; }
   .joyride-content-wrapper .button {
     margin-bottom: 0 !important; }
+  .joyride-content-wrapper .joyride-prev-tip {
+    margin-right: 10px; }
 
 /* Add a little css triangle pip, older browser just miss out on the fanciness of it */
 .joyride-tip-guide .joyride-nub {
