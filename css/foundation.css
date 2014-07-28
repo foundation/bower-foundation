@@ -2103,6 +2103,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     background: #fafafa;
     border-color: #999999;
     outline: none; }
+  input[type="text"]:disabled, input[type="password"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="week"]:disabled, input[type="email"]:disabled, input[type="number"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, textarea:disabled {
+    background-color: #ddd;
+    cursor: default; }
   input[type="text"][disabled], input[type="text"][readonly], fieldset[disabled] input[type="text"], input[type="password"][disabled], input[type="password"][readonly], fieldset[disabled] input[type="password"], input[type="date"][disabled], input[type="date"][readonly], fieldset[disabled] input[type="date"], input[type="datetime"][disabled], input[type="datetime"][readonly], fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled], input[type="datetime-local"][readonly], fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled], input[type="month"][readonly], fieldset[disabled] input[type="month"], input[type="week"][disabled], input[type="week"][readonly], fieldset[disabled] input[type="week"], input[type="email"][disabled], input[type="email"][readonly], fieldset[disabled] input[type="email"], input[type="number"][disabled], input[type="number"][readonly], fieldset[disabled] input[type="number"], input[type="search"][disabled], input[type="search"][readonly], fieldset[disabled] input[type="search"], input[type="tel"][disabled], input[type="tel"][readonly], fieldset[disabled] input[type="tel"], input[type="time"][disabled], input[type="time"][readonly], fieldset[disabled] input[type="time"], input[type="url"][disabled], input[type="url"][readonly], fieldset[disabled] input[type="url"], textarea[disabled], textarea[readonly], fieldset[disabled] textarea {
     background-color: #ddd;
     cursor: default; }
@@ -2137,6 +2140,9 @@ select {
   select:hover {
     background-color: #f3f3f3;
     border-color: #999999; }
+  select:disabled {
+    background-color: #ddd;
+    cursor: default; }
 
 /* Adjust margin for form elements below */
 input[type="file"], input[type="checkbox"], input[type="radio"], select {
@@ -3055,45 +3061,46 @@ dialog[open] {
   display: block;
   visibility: visible; }
 
-@media only screen and (min-width:40.063em) {
-  dialog, .reveal-modal {
-    padding: 1.875rem; }
-    dialog.radius, .reveal-modal.radius {
-      border-radius: 3px; }
-    dialog.round, .reveal-modal.round {
-      border-radius: 1000px; }
-    dialog.collapse, .reveal-modal.collapse {
-      padding: 0; }
-    @media only screen and (min-width:40.063em) {
-      dialog.tiny, .reveal-modal.tiny {
-        margin-left: -15%;
-        width: 30%; } }
-    @media only screen and (min-width:40.063em) {
-      dialog.small, .reveal-modal.small {
-        margin-left: -20%;
-        width: 40%; } }
-    @media only screen and (min-width:40.063em) {
-      dialog.medium, .reveal-modal.medium {
-        margin-left: -30%;
-        width: 60%; } }
-    @media only screen and (min-width:40.063em) {
-      dialog.large, .reveal-modal.large {
-        margin-left: -35%;
-        width: 70%; } }
-    @media only screen and (min-width:40.063em) {
-      dialog.xlarge, .reveal-modal.xlarge {
-        margin-left: -47.5%;
-        width: 95%; } }
-  dialog.full, .reveal-modal.full {
-    top: 0;
-    left: 0;
-    height: 100vh;
-    min-height: 100vh;
-    margin-left: 0 !important; }
-    @media only screen and (min-width:40.063em) {
-      dialog.full, .reveal-modal.full {
-        margin-left: -50vw;
-        width: 100vw; } } }
+dialog, .reveal-modal {
+  padding: 1.875rem; }
+  dialog.radius, .reveal-modal.radius {
+    border-radius: 3px; }
+  dialog.round, .reveal-modal.round {
+    border-radius: 1000px; }
+  dialog.collapse, .reveal-modal.collapse {
+    padding: 0; }
+  @media only screen and (min-width:40.063em) {
+    dialog.tiny, .reveal-modal.tiny {
+      margin-left: -15%;
+      width: 30%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.small, .reveal-modal.small {
+      margin-left: -20%;
+      width: 40%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.medium, .reveal-modal.medium {
+      margin-left: -30%;
+      width: 60%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.large, .reveal-modal.large {
+      margin-left: -35%;
+      width: 70%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.xlarge, .reveal-modal.xlarge {
+      margin-left: -47.5%;
+      width: 95%; } }
+
+dialog.full, .reveal-modal.full {
+  top: 0;
+  left: 0;
+  height: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  margin-left: 0 !important; }
+  @media only screen and (min-width:40.063em) {
+    dialog.full, .reveal-modal.full {
+      margin-left: -50vw;
+      width: 100vw; } }
 
 @media print {
   dialog, .reveal-modal {
