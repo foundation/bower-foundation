@@ -3812,12 +3812,15 @@ blockquote, blockquote p {
 @media only screen and (min-width:40.063em) {
   .tabs.vertical {
     width: 20%;
+    max-width: 20%;
     float: left;
-    margin-bottom: 1.25rem; }
+    margin: 0 0 1.25rem; }
   .tabs-content.vertical {
     width: 80%;
+    max-width: 80%;
     float: left;
-    margin-left: -1px; } }
+    margin-left: -1px;
+    padding-left: 1rem; } }
 
 .no-js .tabs-content > .content {
   display: block;
