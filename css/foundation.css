@@ -4429,7 +4429,7 @@ meta.foundation-mq-topbar {
   height: 2.8125rem;
   top: 0; }
   @media only screen and (min-width:40.063em) {
-    .tab-bar-section {
+    .tab-bar-section.left, .tab-bar-section.right {
       text-align: left; } }
   .tab-bar-section.left {
     left: 0;
