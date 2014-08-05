@@ -3872,7 +3872,8 @@ blockquote, blockquote p {
     height: 0;
     border: solid 5px;
     border-color: transparent transparent #333 transparent;
-    top: -10px; }
+    top: -10px;
+    pointer-events: none; }
     .tooltip > .nub.rtl {
       left: auto;
       right: 5px; }
