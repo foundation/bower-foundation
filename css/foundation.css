@@ -3280,7 +3280,10 @@ div.switch label:after {
   height: 1.5rem;
   -webkit-transition: left 0.15s ease-out;
   -moz-transition: left 0.15s ease-out;
-  transition: left 0.15s ease-out; }
+  transition: left 0.15s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 div.switch input:checked + label {
   background: #008CBA; }
 div.switch input:checked + label:after {
