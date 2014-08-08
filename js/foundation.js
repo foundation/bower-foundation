@@ -278,7 +278,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.3.1',
+    version : '5.3.3',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -3416,6 +3416,10 @@
         move_class = 'move-';
         right_postfix = 'right';
         left_postfix = 'left';
+      } else if (this.settings.open_method === 'overlap_single') {
+        move_class = 'offcanvas-overlap-';
+        right_postfix = 'right';
+        left_postfix = 'left';
       } else if (this.settings.open_method === 'overlap') {
         move_class = 'offcanvas-overlap';
       }
@@ -3901,7 +3905,7 @@
   Foundation.libs.orbit = {
     name: 'orbit',
 
-    version: '5.3.1',
+    version: '5.3.3',
 
     settings: {
       animation: 'slide',

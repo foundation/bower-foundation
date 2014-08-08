@@ -2160,8 +2160,6 @@ input[type="file"] {
   width: 100%; }
 
 /* HTML5 Number spinners settings */
-
-
 /* We add basic fieldset styling */
 fieldset {
   border: 1px solid #ddd;
@@ -3280,7 +3278,10 @@ div.switch label:after {
   height: 1.5rem;
   -webkit-transition: left 0.15s ease-out;
   -moz-transition: left 0.15s ease-out;
-  transition: left 0.15s ease-out; }
+  transition: left 0.15s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 div.switch input:checked + label {
   background: #008CBA; }
 div.switch input:checked + label:after {
@@ -3872,7 +3873,8 @@ blockquote, blockquote p {
     height: 0;
     border: solid 5px;
     border-color: transparent transparent #333 transparent;
-    top: -10px; }
+    top: -10px;
+    pointer-events: none; }
     .tooltip > .nub.rtl {
       left: auto;
       right: 5px; }
@@ -4428,7 +4430,7 @@ meta.foundation-mq-topbar {
   height: 2.8125rem;
   top: 0; }
   @media only screen and (min-width:40.063em) {
-    .tab-bar-section {
+    .tab-bar-section.left, .tab-bar-section.right {
       text-align: left; } }
   .tab-bar-section.left {
     left: 0;
@@ -4603,6 +4605,56 @@ ul.off-canvas-list {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   @media only screen and (min-width:40.063em) {
     .offcanvas-overlap .exit-off-canvas:hover {
+      background: rgba(255, 255, 255, 0.05); } }
+
+.offcanvas-overlap-left .right-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+  z-index: 1003; }
+.offcanvas-overlap-left .exit-off-canvas {
+  -webkit-backface-visibility: hidden;
+  transition: background 300ms ease;
+  cursor: pointer;
+  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  @media only screen and (min-width:40.063em) {
+    .offcanvas-overlap-left .exit-off-canvas:hover {
+      background: rgba(255, 255, 255, 0.05); } }
+
+.offcanvas-overlap-right .left-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+  z-index: 1003; }
+.offcanvas-overlap-right .exit-off-canvas {
+  -webkit-backface-visibility: hidden;
+  transition: background 300ms ease;
+  cursor: pointer;
+  box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  @media only screen and (min-width:40.063em) {
+    .offcanvas-overlap-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
 .no-csstransforms .left-off-canvas-menu {
