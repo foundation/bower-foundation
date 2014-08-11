@@ -3043,6 +3043,7 @@ dialog, .reveal-modal {
   z-index: 1005;
   width: 100vw;
   top: 0;
+  border-radius: 3px;
   left: 0;
   background-color: #fff;
   padding: 1.25rem;
@@ -3051,9 +3052,6 @@ dialog, .reveal-modal {
   @media only screen and (max-width: 40em) {
     dialog, .reveal-modal {
       min-height: 100vh; } }
-  @media only screen and (min-width:40.063em) {
-    dialog, .reveal-modal {
-      left: 50%; } }
   dialog .column, dialog .columns, .reveal-modal .column, .reveal-modal .columns {
     min-width: 0; }
   dialog > :first-child, .reveal-modal > :first-child {
@@ -3062,8 +3060,11 @@ dialog, .reveal-modal {
     margin-bottom: 0; }
   @media only screen and (min-width:40.063em) {
     dialog, .reveal-modal {
-      margin-left: -40%;
-      width: 80%; } }
+      width: 80%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     dialog, .reveal-modal {
       top: 6.25rem; } }
@@ -3091,24 +3092,39 @@ dialog, .reveal-modal {
     padding: 0; }
   @media only screen and (min-width:40.063em) {
     dialog.tiny, .reveal-modal.tiny {
-      margin-left: -15%;
-      width: 30%; } }
+      width: 30%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     dialog.small, .reveal-modal.small {
-      margin-left: -20%;
-      width: 40%; } }
+      width: 40%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     dialog.medium, .reveal-modal.medium {
-      margin-left: -30%;
-      width: 60%; } }
+      width: 60%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     dialog.large, .reveal-modal.large {
-      margin-left: -35%;
-      width: 70%; } }
+      width: 70%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
     dialog.xlarge, .reveal-modal.xlarge {
-      margin-left: -47.5%;
-      width: 95%; } }
+      width: 95%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
 
 dialog.full, .reveal-modal.full {
   top: 0;
@@ -3119,8 +3135,11 @@ dialog.full, .reveal-modal.full {
   margin-left: 0 !important; }
   @media only screen and (min-width:40.063em) {
     dialog.full, .reveal-modal.full {
-      margin-left: -50vw;
-      width: 100vw; } }
+      width: 100vw;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
 
 @media print {
   dialog, .reveal-modal {
