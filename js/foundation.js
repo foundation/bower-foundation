@@ -618,7 +618,7 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       live_validate : true,
@@ -913,7 +913,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       active_class: 'active',
@@ -979,7 +979,7 @@
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       callback: function (){}
@@ -1023,7 +1023,7 @@
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version: '{{ VERSION }}',
+    version: '5.3.3',
 
     settings : {
       templates : {
@@ -1582,7 +1582,7 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       active_class: 'open',
@@ -1896,7 +1896,7 @@
   Foundation.libs.equalizer = {
     name : 'equalizer',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       use_tallest: true,
@@ -1971,7 +1971,7 @@
   Foundation.libs.interchange = {
     name : 'interchange',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     cache : {},
 
@@ -2318,7 +2318,7 @@
   Foundation.libs.joyride = {
     name : 'joyride',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     defaults : {
       expose                   : false,     // turn on or off the expose feature
@@ -3204,7 +3204,7 @@
   Foundation.libs['magellan-expedition'] = {
     name : 'magellan-expedition',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       active_class: 'active',
@@ -3394,7 +3394,7 @@
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       open_method: 'move',
@@ -3980,7 +3980,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     locked : false,
 
@@ -4424,7 +4424,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings: {
       start: 0,
@@ -4656,7 +4656,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       active_class: 'active',
@@ -4824,7 +4824,7 @@
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '{{ VERSION }}',
+    version : '5.3.3',
 
     settings : {
       additional_inheritable_classes : [],
@@ -5123,7 +5123,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '{{ VERSION }}',
+    version: '5.3.3',
 
     settings : {
       index : 0,
