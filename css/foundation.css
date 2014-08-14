@@ -3027,16 +3027,17 @@ ul.pagination {
 
 .reveal-modal-bg {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: #000;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1004;
   display: none;
-  top: 0;
   left: 0; }
 
-dialog, .reveal-modal {
+.reveal-modal, dialog {
   visibility: hidden;
   display: none;
   position: absolute;
@@ -3048,27 +3049,83 @@ dialog, .reveal-modal {
   background-color: #fff;
   padding: 1.25rem;
   border: solid 1px #666;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 1.875rem; }
   @media only screen and (max-width: 40em) {
-    dialog, .reveal-modal {
+    .reveal-modal {
       min-height: 100vh; } }
-  dialog .column, dialog .columns, .reveal-modal .column, .reveal-modal .columns {
+  .reveal-modal .column, .reveal-modal dialog, .reveal-modal .columns, .reveal-modal dialog {
     min-width: 0; }
-  dialog > :first-child, .reveal-modal > :first-child {
+  .reveal-modal > :first-child, .reveal-modal > dialog {
     margin-top: 0; }
-  dialog > :last-child, .reveal-modal > :last-child {
+  .reveal-modal > :last-child, .reveal-modal > dialog {
     margin-bottom: 0; }
   @media only screen and (min-width:40.063em) {
-    dialog, .reveal-modal {
+    .reveal-modal {
       width: 80%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width:40.063em) {
-    dialog, .reveal-modal {
+    .reveal-modal {
       top: 6.25rem; } }
-  dialog .close-reveal-modal, .reveal-modal .close-reveal-modal {
+  .reveal-modal.radius, dialog.radius {
+    border-radius: 3px; }
+  .reveal-modal.round, dialog.round {
+    border-radius: 1000px; }
+  .reveal-modal.collapse, dialog.collapse {
+    padding: 0; }
+  @media only screen and (min-width:40.063em) {
+    .reveal-modal.tiny {
+      width: 30%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width:40.063em) {
+    .reveal-modal.small {
+      width: 40%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width:40.063em) {
+    .reveal-modal.medium {
+      width: 60%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width:40.063em) {
+    .reveal-modal.large {
+      width: 70%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  @media only screen and (min-width:40.063em) {
+    .reveal-modal.xlarge {
+      width: 95%;
+      max-width: 62.5rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto; } }
+  .reveal-modal.full, dialog.full {
+    top: 0;
+    left: 0;
+    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    margin-left: 0 !important; }
+    @media only screen and (min-width:40.063em) {
+      .reveal-modal.full {
+        width: 100vw;
+        max-width: 62.5rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto; } }
+  .reveal-modal .close-reveal-modal, .reveal-modal dialog {
     font-size: 2.5rem;
     line-height: 1;
     position: absolute;
@@ -3078,72 +3135,21 @@ dialog, .reveal-modal {
     font-weight: bold;
     cursor: pointer; }
 
-dialog[open] {
-  display: block;
-  visibility: visible; }
-
-dialog, .reveal-modal {
-  padding: 1.875rem; }
-  dialog.radius, .reveal-modal.radius {
-    border-radius: 3px; }
-  dialog.round, .reveal-modal.round {
-    border-radius: 1000px; }
-  dialog.collapse, .reveal-modal.collapse {
-    padding: 0; }
-  @media only screen and (min-width:40.063em) {
-    dialog.tiny, .reveal-modal.tiny {
-      width: 30%;
-      max-width: 62.5rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto; } }
-  @media only screen and (min-width:40.063em) {
-    dialog.small, .reveal-modal.small {
-      width: 40%;
-      max-width: 62.5rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto; } }
-  @media only screen and (min-width:40.063em) {
-    dialog.medium, .reveal-modal.medium {
-      width: 60%;
-      max-width: 62.5rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto; } }
-  @media only screen and (min-width:40.063em) {
-    dialog.large, .reveal-modal.large {
-      width: 70%;
-      max-width: 62.5rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto; } }
-  @media only screen and (min-width:40.063em) {
-    dialog.xlarge, .reveal-modal.xlarge {
-      width: 95%;
-      max-width: 62.5rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto; } }
-
-dialog.full, .reveal-modal.full {
+dialog::backdrop {
+  position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
-  height: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  margin-left: 0 !important; }
-  @media only screen and (min-width:40.063em) {
-    dialog.full, .reveal-modal.full {
-      width: 100vw;
-      max-width: 62.5rem;
-      left: 0;
-      right: 0;
-      margin: 0 auto; } }
+  right: 0;
+  background: #000;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: null;
+  display: none;
+  left: 0; }
 
 @media print {
-  dialog, .reveal-modal {
-    background: #fff !important; } }
+  dialog, .reveal-modal, dialog {
+    display: none; } }
 
 .side-nav {
   display: block;
