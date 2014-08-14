@@ -3818,15 +3818,15 @@ blockquote, blockquote p {
     float: left; }
     .tabs dd > a, .tabs .tab-title > a {
       display: block;
-      background: #efefef;
+      background-color: #efefef;
       color: #222;
       padding: 1rem 2rem;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
       .tabs dd > a:hover, .tabs .tab-title > a:hover {
-        background: #e1e1e1; }
+        background-color: #e1e1e1; }
     .tabs dd.active a, .tabs .tab-title.active a {
-      background: #fff;
+      background-color: #fff;
       color: #222; }
   .tabs.radius dd:first-child a, .tabs.radius .tab:first-child a {
     -webkit-border-bottom-left-radius: 3px;
