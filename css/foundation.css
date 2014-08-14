@@ -3390,7 +3390,9 @@ div.switch.round {
 table {
   background: #fff;
   margin-bottom: 1.25rem;
-  border: solid 1px #ddd; }
+  border: solid 1px #ddd;
+  table-layout: fixed;
+  width: 100%; }
   table caption {
     background: transparent;
     color: #222;
