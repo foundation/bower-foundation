@@ -5135,7 +5135,7 @@
       scrolltop : true, // jump to top when sticky nav menu toggle is clicked
       sticky_on : 'all'
     },
-    
+
     init : function (section, method, options) {
       Foundation.inherit(this, 'add_custom_rule register_media throttle');
       var self = this;
@@ -5147,7 +5147,7 @@
       self.S('[' + this.attr_name() + ']', this.scope).each(function () {
         var topbar = $(this),
             settings = topbar.data(self.attr_name(true) + '-init'),
-            section = self.S('section', this);
+            section = self.S('section, .top-bar-section', this);
         topbar.data('index', 0);
         var topbarContainer = topbar.parent();
         if (topbarContainer.hasClass('fixed') || self.is_sticky(topbar, topbarContainer, settings) ) {
@@ -5186,7 +5186,7 @@
         return true;
       } else if (sticky && this.small() && settings.sticky_on === 'small') {
         return (matchMedia(Foundation.media_queries.small).matches && !matchMedia(Foundation.media_queries.medium).matches &&
-            !matchMedia(Foundation.media_queries.large).matches); 
+            !matchMedia(Foundation.media_queries.large).matches);
         //return true;
       } else if (sticky && this.medium() && settings.sticky_on === 'medium') {
         return (matchMedia(Foundation.media_queries.small).matches && matchMedia(Foundation.media_queries.medium).matches &&
@@ -5213,7 +5213,7 @@
 
       var settings = topbar.data(this.attr_name(true) + '-init');
 
-      var section = self.S('section, .section', topbar);
+      var section = self.S('section, .top-bar-section', topbar);
 
       if (self.breakpoint()) {
         if (!self.rtl) {
@@ -5329,7 +5329,7 @@
 
             var $this = S(this),
                 topbar = $this.closest('[' + self.attr_name() + ']'),
-                section = topbar.find('section, .section'),
+                section = topbar.find('section, .top-bar-section'),
                 dropdownHeight = $this.next('.dropdown').outerHeight(),
                 $selectedLi = $this.closest('li');
 
@@ -5347,10 +5347,13 @@
             topbar.css('height', $this.siblings('ul').outerHeight(true) + topbar.data('height'));
           }
         });
-      
-      S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
-        self.resize.call(self);
-      }, 50)).trigger('resize').trigger('resize.fndtn.topbar');
+
+      S(window).off(".topbar").on("resize.fndtn.topbar", self.throttle(function() {
+          self.resize.call(self);
+      }, 50)).trigger("resize").trigger("resize.fndtn.topbar").load(function(){
+          // Ensure that the offset is calculated after all of the pages resources have loaded
+          S(this).trigger("resize.fndtn.topbar");
+      });
 
       S('body').off('.topbar').on('click.fndtn.topbar', function (e) {
         var parent = S(e.target).closest('li').closest('li.hover');
@@ -5368,7 +5371,7 @@
 
         var $this = S(this),
             topbar = $this.closest('[' + self.attr_name() + ']'),
-            section = topbar.find('section, .section'),
+            section = topbar.find('section, .top-bar-section'),
             settings = topbar.data(self.attr_name(true) + '-init'),
             $movedLi = $this.closest('li.moved'),
             $previousLevelUl = $movedLi.parent();
@@ -5457,7 +5460,7 @@
     assemble : function (topbar) {
       var self = this,
           settings = topbar.data(this.attr_name(true) + '-init'),
-          section = self.S('section', topbar);
+          section = self.S('section, .top-bar-section', topbar);
 
       // Pull element out of the DOM for manipulation
       section.detach();
@@ -5476,7 +5479,7 @@
           } else {
             $titleLi = $('<li class="title back js-generated"><h5><a href="javascript:void(0)"></a></h5>');
           }
-          
+
           // Copy link to subnav
           if (settings.custom_back_text == true) {
             $('h5>a', $titleLi).html(settings.back_text);
@@ -5504,8 +5507,8 @@
       var total = 0,
           self = this;
 
-      $('> li', ul).each(function () { 
-        total += self.S(this).outerHeight(true); 
+      $('> li', ul).each(function () {
+        total += self.S(this).outerHeight(true);
       });
 
       return total;
@@ -5521,7 +5524,7 @@
 
     update_sticky_positioning: function() {
       var klass = '.' + this.settings.sticky_class,
-          $window = this.S(window), 
+          $window = this.S(window),
           self = this;
 
       if (self.settings.sticky_topbar && self.is_sticky(this.settings.sticky_topbar,this.settings.sticky_topbar.parent(), this.settings)) {
