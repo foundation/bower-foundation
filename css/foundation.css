@@ -4375,10 +4375,10 @@ meta.foundation-mq-topbar {
         white-space: nowrap;
         padding: 12px 15px;
         background: #333; }
-      .top-bar-section .dropdown li:not(.has-form) a:not(.button) {
+      .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
         color: #fff;
         background: #333; }
-      .top-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
+      .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
         color: #fff;
         background-color: #555555;
         background: #272727; }
