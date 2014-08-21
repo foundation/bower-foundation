@@ -1248,6 +1248,10 @@ select {
       content: " ";
       margin: 0; }
 
+/* Accessibility - hides the forward slash */
+[aria-label="breadcrumbs"] [aria-hidden="true"]:after {
+  content: "/"; }
+
 button, .button {
   border-style: solid;
   border-width: 0px;
