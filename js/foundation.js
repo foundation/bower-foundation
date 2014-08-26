@@ -630,7 +630,7 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       live_validate : true,
@@ -806,17 +806,17 @@
           parent = direct_parent.parent();
         }
 
+        if (validator) {
+          valid = this.settings.validators[validator].apply(this, [el, required, parent]);
+          validations.push(valid);
+        }
+
         if (is_radio && required) {
           validations.push(this.valid_radio(el, required));
         } else if (is_checkbox && required) {
           validations.push(this.valid_checkbox(el, required));
         } else {
           
-          if (validator) {
-            valid = this.settings.validators[validator].apply(this, [el, required, parent]);
-            validations.push(valid);
-          }
-
           if (el_patterns[i][1].test(value) && valid_length ||
             !required && el.value.length < 1 || $(el).attr('disabled')) {
             validations.push(true);
@@ -828,13 +828,27 @@
 
           if(validations[0]){
             this.S(el).removeAttr(this.invalid_attr);
+            el.setAttribute('aria-invalid', 'false');
+            el.removeAttribute('aria-describedby');
             parent.removeClass('error');
-            if (label.length > 0 && this.settings.error_labels) label.removeClass('error');
+            if (label.length > 0 && this.settings.error_labels) {
+              label.removeClass('error').removeAttr('role');
+            }
             $(el).triggerHandler('valid');
           } else {
-            parent.addClass('error');
             this.S(el).attr(this.invalid_attr, '');
-            if (label.length > 0 && this.settings.error_labels) label.addClass('error');
+            el.setAttribute('aria-invalid', 'true');
+
+            // Try to find the error associated with the input
+            var errorElem = parent.find('small.error, span.error');
+            var errorID = errorElem.length > 0 ? errorElem[0].id : "";
+            if (errorID.length > 0) el.setAttribute('aria-describedby', errorID);
+
+            // el.setAttribute('aria-describedby', $(el).find('.error')[0].id);
+            parent.addClass('error');
+            if (label.length > 0 && this.settings.error_labels) {
+              label.addClass('error').attr('role', 'alert');
+            }
             $(el).triggerHandler('invalid');
           }
 
@@ -925,7 +939,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       active_class: 'active',
@@ -991,7 +1005,7 @@
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       callback: function (){}
@@ -1005,7 +1019,7 @@
       var self = this,
           S = this.S;
 
-      $(this.scope).off('.alert').on('click.fndtn.alert', '[' + this.attr_name() + '] a.close', function (e) {
+      $(this.scope).off('.alert').on('click.fndtn.alert', '[' + this.attr_name() + '] .close', function (e) {
           var alertBox = S(this).closest('[' + self.attr_name() + ']'),
               settings = alertBox.data(self.attr_name(true) + '-init') || self.settings;
 
@@ -1035,7 +1049,7 @@
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version: '5.3.3',
+    version: '5.4.1',
 
     settings : {
       templates : {
@@ -1594,7 +1608,7 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       active_class: 'open',
@@ -1693,9 +1707,12 @@
     close: function (dropdown) {
       var self = this;
       dropdown.each(function () {
+        var original_target = $('[' + self.attr_name() + '=' + dropdown[0].id + ']') || $('aria-controls=' + dropdown[0].id+ ']');
+        original_target.attr('aria-expanded', "false");
         if (self.S(this).hasClass(self.settings.active_class)) {
           self.S(this)
             .css(Foundation.rtl ? 'right':'left', '-99999px')
+            .attr('aria-hidden', "true")
             .removeClass(self.settings.active_class)
             .prev('[' + self.attr_name() + ']')
             .removeClass(self.settings.active_class)
@@ -1719,6 +1736,9 @@
             .addClass(this.settings.active_class), target);
         dropdown.prev('[' + this.attr_name() + ']').addClass(this.settings.active_class);
         dropdown.data('target', target.get(0)).trigger('opened').trigger('opened.fndtn.dropdown', [dropdown, target]);
+        dropdown.attr('aria-hidden', 'false');
+        target.attr('aria-expanded', 'true')
+        dropdown.focus();
     },
 
     data_attr: function () {
@@ -1908,7 +1928,7 @@
   Foundation.libs.equalizer = {
     name : 'equalizer',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       use_tallest: true,
@@ -1983,7 +2003,7 @@
   Foundation.libs.interchange = {
     name : 'interchange',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     cache : {},
 
@@ -2330,7 +2350,7 @@
   Foundation.libs.joyride = {
     name : 'joyride',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     defaults : {
       expose                   : false,     // turn on or off the expose feature
@@ -3244,7 +3264,7 @@
   Foundation.libs['magellan-expedition'] = {
     name : 'magellan-expedition',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       active_class: 'active',
@@ -3434,7 +3454,7 @@
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       open_method: 'move',
@@ -3470,11 +3490,12 @@
           if (self.settings.open_method !== 'overlap'){
             S(".left-submenu").removeClass(move_class + right_postfix);
           }
+          $('.left-off-canvas-toggle').attr('aria-expanded', 'true');
         })
         .on('click.fndtn.offcanvas', '.left-off-canvas-menu a', function (e) {
           var settings = self.get_settings(e);
           var parent = S(this).parent();
-          
+
           if(settings.close_on_click && !parent.hasClass("has-submenu") && !parent.hasClass("back")){
             self.hide.call(self, move_class + right_postfix, self.get_wrapper(e));
             parent.parent().removeClass(move_class + right_postfix);
@@ -3484,18 +3505,20 @@
           }else if(parent.hasClass("back")){
             e.preventDefault();
             parent.parent().removeClass(move_class + right_postfix);
-          }     
+          }
+          $('.left-off-canvas-toggle').attr('aria-expanded', 'true');
         })
         .on('click.fndtn.offcanvas', '.right-off-canvas-toggle', function (e) {
           self.click_toggle_class(e, move_class + left_postfix);
           if (self.settings.open_method !== 'overlap'){
             S(".right-submenu").removeClass(move_class + left_postfix);
           }
+          $('.right-off-canvas-toggle').attr('aria-expanded', 'true');
         })
         .on('click.fndtn.offcanvas', '.right-off-canvas-menu a', function (e) {
           var settings = self.get_settings(e);
           var parent = S(this).parent();
-          
+
           if(settings.close_on_click && !parent.hasClass("has-submenu") && !parent.hasClass("back")){
             self.hide.call(self, move_class + left_postfix, self.get_wrapper(e));
             parent.parent().removeClass(move_class + left_postfix);
@@ -3505,7 +3528,8 @@
           }else if(parent.hasClass("back")){
             e.preventDefault();
             parent.parent().removeClass(move_class + left_postfix);
-          }          
+          }
+          $('.right-off-canvas-toggle').attr('aria-expanded', 'true');
         })
         .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {
           self.click_remove_class(e, move_class + left_postfix);
@@ -3513,6 +3537,15 @@
           if (right_postfix){
             self.click_remove_class(e, move_class + right_postfix);
             S(".left-submenu").removeClass(move_class + left_postfix);
+          }
+          $('.right-off-canvas-toggle').attr('aria-expanded', 'true');
+        })
+        .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {
+          self.click_remove_class(e, move_class + left_postfix);
+          $('.left-off-canvas-toggle').attr('aria-expanded', 'false');
+          if (right_postfix) {
+            self.click_remove_class(e, move_class + right_postfix);
+            $('.right-off-canvas-toggle').attr('aria-expanded', "false");
           }
         });
     },
@@ -4047,7 +4080,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     locked : false,
 
@@ -4491,7 +4524,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings: {
       start: 0,
@@ -4615,6 +4648,15 @@
 
       $handle.parent().children('input[type=hidden]').val(value);
 
+      if (!$handle[0].hasAttribute('aria-valuemin')) {
+        $handle.attr({
+          'aria-valuemin': settings.start,
+          'aria-valuemax': settings.end,
+        });
+      }
+      $handle.attr('aria-valuenow', value);
+
+
       if (settings.input_id != '') {
         $(settings.display_selector).each(function(){
           if (this.hasOwnProperty('value')) {
@@ -4723,7 +4765,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       active_class: 'active',
@@ -4754,17 +4796,20 @@
       var self = this,
           S = this.S;
 
-      S(this.scope)
-        .off('.tab')
-        // Click event: tab title
-        .on('click.fndtn.tab', '[' + this.attr_name() + '] > * > a', function (e) {
+      var usual_tab_behavior =  function (e) {
           var settings = S(this).closest('[' + self.attr_name() +']').data(self.attr_name(true) + '-init');
           if (!settings.is_hover || Modernizr.touch) {
             e.preventDefault();
             e.stopPropagation();
             self.toggle_active_tab(S(this).parent());
           }
-        })
+        };
+
+      S(this.scope)
+        .off('.tab')
+        // Click event: tab title
+        .on('focus.fndtn.tab', '[' + this.attr_name() + '] > * > a', usual_tab_behavior )
+        .on('click.fndtn.tab', '[' + this.attr_name() + '] > * > a', usual_tab_behavior )
         // Hover event: tab title
         .on('mouseenter.fndtn.tab', '[' + this.attr_name() + '] > * > a', function (e) {
           var settings = S(this).closest('[' + self.attr_name() +']').data(self.attr_name(true) + '-init');
@@ -4775,7 +4820,14 @@
       S(window).on('hashchange.fndtn.tab', function (e) {
         e.preventDefault();
         self.handle_location_hash_change();
-      });
+
+      }).on('keyup', function (e) {
+        if (e.keyword == 9) {
+          // active tab
+          console.log(document.querySelector('[data-tab] .tab-title :focus'))
+        }
+      });
+      ;
     },
 
     handle_location_hash_change : function () {
@@ -4815,11 +4867,58 @@
     toggle_active_tab: function (tab, location_hash) {
       var S = this.S,
           tabs = tab.closest('[' + this.attr_name() + ']'),
+          tab_link = tab.find('a'),
           anchor = tab.children('a').first(),
           target_hash = '#' + anchor.attr('href').split('#')[1],
           target = S(target_hash),
           siblings = tab.siblings(),
-          settings = tabs.data(this.attr_name(true) + '-init');
+          settings = tabs.data(this.attr_name(true) + '-init'),
+          interpret_keyup_action = function(e) {
+            // Light modification of Heydon Pickering's Practical ARIA Examples: http://heydonworks.com/practical_aria_examples/js/a11y.js 
+
+            // define current, previous and next (possible) tabs
+
+            var $original = $(this);
+            var $prev = $(this).parents('li').prev().children('[role="tab"]');
+            var $next = $(this).parents('li').next().children('[role="tab"]');
+            var $target;
+
+            // find the direction (prev or next)
+
+            switch (e.keyCode) {
+              case 37:
+                $target = $prev;
+                break;
+              case 39:
+                $target = $next;
+                break;
+              default:
+                $target = false
+                  break;
+            }
+
+            if ($target.length) {
+              $original.attr({
+                'tabindex' : '-1',
+                'aria-selected' : null
+              });
+              $target.attr({
+                'tabindex' : '0',
+                'aria-selected' : true
+              }).focus();
+            }
+
+            // Hide panels
+
+            $('[role="tabpanel"]')
+              .attr('aria-hidden', 'true');
+
+            // Show panel which corresponds to target
+
+            $('#' + $(document.activeElement).attr('href').substring(1))
+              .attr('aria-hidden', null);
+
+          };
 
       // allow usage of data-tab-content attribute instead of href
       if (S(this).data(this.data_attr('tab-content'))) {
@@ -4863,12 +4962,18 @@
       // WARNING: The activation and deactivation of the tab content must
       // occur after the deep linking in order to properly refresh the browser
       // window (notably in Chrome).
+      // Clean up multiple attr instances to done once
       tab.addClass(settings.active_class).triggerHandler('opened');
-      siblings.removeClass(settings.active_class);
-      target.siblings().removeClass(settings.active_class).end().addClass(settings.active_class);
+      tab_link.attr({"aria-selected": "true",  tabindex: 0});
+      siblings.removeClass(settings.active_class)
+      siblings.find('a').attr({"aria-selected": "false",  tabindex: -1});
+      target.siblings().removeClass(settings.active_class).attr({"aria-hidden": "true",  tabindex: -1}).end().addClass(settings.active_class).attr('aria-hidden', 'false').find(':first-child').attr('tabindex', 0);
       settings.callback(tab);
+      target.children().attr('tab-index', 0);
       target.triggerHandler('toggled', [tab]);
       tabs.triggerHandler('toggled', [target]);
+
+      tab_link.on('keydown', interpret_keyup_action );
     },
 
     data_attr: function (str) {
@@ -4891,7 +4996,7 @@
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '5.3.3',
+    version : '5.4.1',
 
     settings : {
       additional_inheritable_classes : [],
@@ -4902,9 +5007,9 @@
       hover_delay: 200,
       show_on : 'all',
       tip_template : function (selector, content) {
-        return '<span data-selector="' + selector + '" class="'
+        return '<span data-selector="' + selector + '" id="' + selector + '" class="'
           + Foundation.libs.tooltip.settings.tooltip_class.substring(1)
-          + '">' + content + '<span class="nub"></span></span>';
+          + '" role="tooltip">' + content + '<span class="nub"></span></span>';
       }
     },
 
@@ -5030,7 +5135,9 @@
 
       if ((id && id.length < 1 || !id) && typeof dataSelector != 'string') {
         dataSelector = this.random_str(6);
-        $target.attr('data-selector', dataSelector);
+        $target
+          .attr('data-selector', dataSelector)
+          .attr('aria-describedby', dataSelector);
       }
 
       return (id && id.length > 0) ? id : dataSelector;
@@ -5190,7 +5297,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.3.3',
+    version: '5.4.1',
 
     settings : {
       index : 0,
@@ -5463,6 +5570,15 @@
           $movedLi.removeClass('moved');
         }, 300);
       });
+
+      // Show dropdown menus when their items are focused
+      S(this.scope).find('.dropdown a')
+        .focus(function() {
+          $(this).parents('.has-dropdown').addClass('hover');
+        })
+        .blur(function() {
+          $(this).parents('.has-dropdown').removeClass('hover');
+        });
     },
 
     resize : function () {
