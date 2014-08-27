@@ -45,7 +45,7 @@ body {
   font-style: normal;
   line-height: 150%;
   position: relative;
-  cursor: default; }
+  cursor: auto; }
 
 a:hover {
   cursor: pointer; }
