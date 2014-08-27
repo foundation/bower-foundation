@@ -4894,6 +4894,7 @@ meta.foundation-mq-topbar {
   top: 0;
   bottom: 0;
   position: absolute;
+  overflow-x: hidden;
   overflow-y: auto;
   background: #333333;
   z-index: 1001;
@@ -4917,6 +4918,7 @@ meta.foundation-mq-topbar {
   top: 0;
   bottom: 0;
   position: absolute;
+  overflow-x: hidden;
   overflow-y: auto;
   background: #333333;
   z-index: 1001;
@@ -5099,6 +5101,7 @@ ul.off-canvas-list {
   bottom: 0;
   position: absolute;
   margin: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   background: #333333;
   z-index: 1002;
@@ -5150,6 +5153,7 @@ ul.off-canvas-list {
   bottom: 0;
   position: absolute;
   margin: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   background: #333333;
   z-index: 1002;
