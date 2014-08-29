@@ -3500,7 +3500,8 @@ dialog {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
   .side-nav li {
     margin: 0 0 0.4375rem 0;
-    font-size: 0.875rem; }
+    font-size: 0.875rem;
+    font-weight: normal; }
     .side-nav li a:not(.button) {
       display: block;
       color: #008CBA;
