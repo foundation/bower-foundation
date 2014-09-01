@@ -4261,7 +4261,7 @@ blockquote, blockquote p {
 .tooltip {
   display: none;
   position: absolute;
-  z-index: 999;
+  z-index: 1006;
   font-weight: normal;
   font-size: 0.875rem;
   line-height: 1.3;
