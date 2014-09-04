@@ -3746,7 +3746,8 @@ dialog {
 table {
   background: #FFFFFF;
   margin-bottom: 1.25rem;
-  border: solid 1px #DDDDDD; }
+  border: solid 1px #DDDDDD;
+  table-layout: auto; }
   table caption {
     background: transparent;
     color: #222222;
