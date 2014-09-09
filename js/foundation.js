@@ -648,7 +648,7 @@
         cvv : /^([0-9]){3,4}$/,
 
         // http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#valid-e-mail-address
-        email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+        email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/,
 
         url: /^(https?|ftp|file|ssh):\/\/(((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/,
         // abc.de
@@ -795,7 +795,8 @@
             is_radio = el.type === "radio",
             is_checkbox = el.type === "checkbox",
             label = this.S('label[for="' + el.getAttribute('id') + '"]'),
-            valid_length = (required) ? (el.value.length > 0) : true;
+            valid_length = (required) ? (el.value.length > 0) : true,
+            el_validations = [];
 
         var parent, valid;
 
@@ -810,25 +811,25 @@
 
         if (validator) {
           valid = this.settings.validators[validator].apply(this, [el, required, parent]);
-          validations.push(valid);
+          el_validations.push(valid);
         }
 
         if (is_radio && required) {
-          validations.push(this.valid_radio(el, required));
+          el_validations.push(this.valid_radio(el, required));
         } else if (is_checkbox && required) {
-          validations.push(this.valid_checkbox(el, required));
+          el_validations.push(this.valid_checkbox(el, required));
         } else {
 
           if (el_patterns[i][1].test(value) && valid_length ||
             !required && el.value.length < 1 || $(el).attr('disabled')) {
-            validations.push(true);
+            el_validations.push(true);
           } else {
-            validations.push(false);
+            el_validations.push(false);
           }
 
-          validations = [validations.every(function(valid){return valid;})];
+          el_validations = [el_validations.every(function(valid){return valid;})];
 
-          if(validations[0]){
+          if(el_validations[0]){
             this.S(el).removeAttr(this.invalid_attr);
             el.setAttribute('aria-invalid', 'false');
             el.removeAttribute('aria-describedby');
@@ -853,10 +854,10 @@
             }
             $(el).triggerHandler('invalid');
           }
-
+          validations.push(el_validations[0]);
         }
       }
-
+      validations = [validations.every(function(valid){return valid;})];
       return validations;
     },
 
@@ -904,9 +905,11 @@
       if (valid) {
         this.S(el).removeAttr(this.invalid_attr);
         parent.removeClass('error');
+        if (label.length > 0 && settings.error_labels) label.removeClass('error');
       } else {
         this.S(el).attr(this.invalid_attr, '');
         parent.addClass('error');
+        if (label.length > 0 && settings.error_labels) label.addClass('error');
       }
 
       return valid;
@@ -1617,6 +1620,13 @@
       mega_class: 'mega',
       align: 'bottom',
       is_hover: false,
+      smart_position: true,
+      smart_position_arrays: {
+        right:   ['right', 'bottom', 'top', 'left', 'right'],
+        left:    ['left', 'right', 'bottom', 'top', 'left'],
+        top:     ['top', 'right', 'bottom', 'left', 'top'],
+        bottom : ['bottom', 'top', 'right', 'left', 'bottom']
+      },
       opened: function(){},
       closed: function(){}
     },
@@ -1806,9 +1816,44 @@
 
     style : function (dropdown, target, settings) {
       var css = $.extend({position: 'absolute'},
-        this.dirs[settings.align].call(dropdown, target, settings));
+
+        this.position(dropdown, target, settings));
 
       dropdown.attr('style', '').css(css);
+    },
+    // return CSS property object
+    position: function(d, t, s) {
+      var res = {},
+        vp = {},
+        list = s.smart_position_arrays[s.align],
+        len = list.length,
+        dd_w = d.outerWidth(),
+        dd_h = d.outerHeight(),
+        o = d.offsetParent().offset();
+
+        if (s.smart_position) {
+          var $win = $(window);
+          vp.top =  $win.scrollTop();
+          vp.left = $win.scrollLeft();
+          vp.right  = vp.left + $win.width();
+          vp.bottom = vp.top + $win.height();
+
+          for (var i=0; i < len; i++) {
+            res = this.dirs[list[i]].call(d, t, s);
+            if (this.is_out(vp, res.top + o.top, res.left + o.left, dd_w, dd_h, 3) === false)
+              break;
+          }
+        }
+        else {
+          res = this.dirs[s.align].call(d, t, s);
+        }
+
+        return res;
+    },
+
+    is_out: function (vp, top, left, width, height, buffer) {
+      return (top < vp.top + buffer || left < vp.left + buffer
+           || top + height > vp.bottom - buffer || left + width > vp.right - buffer);
     },
 
     // return CSS property object
@@ -1871,6 +1916,7 @@
         return {left: p.left + t.outerWidth(), top: p.top};
       }
     },
+
 
     // Insert rule to style psuedo elements
     adjust_pip : function (dropdown,target,settings,position) {
@@ -3277,7 +3323,7 @@
       destination_threshold: 20, // pixels from the top of destination for it to be considered active
       throttle_delay: 30, // calculation throttling to increase framerate
       fixed_top: 0 // top distance in pixels assigend to the fixed element on scroll
-    }, 
+    },
 
     init : function (scope, method, options) {
       Foundation.inherit(this, 'throttle');
@@ -3300,10 +3346,10 @@
               settings = expedition.data('magellan-expedition-init'),
               hash = this.hash.split('#').join(''),
               target = $("a[name='"+hash+"']");
-          
+
           if (target.length === 0) {
             target = $('#'+hash);
-            
+
           }
 
 
@@ -3323,7 +3369,7 @@
           });
         })
         .on('scroll.fndtn.magellan', self.throttle(this.check_for_arrivals.bind(this), settings.throttle_delay));
-      
+
       $(window)
         .on('resize.fndtn.magellan', self.throttle(this.set_expedition_position.bind(this), settings.throttle_delay));
     },
@@ -4291,6 +4337,7 @@
           $.ajax(ajax_settings);
         }
       }
+      self.S(window).trigger('resize');
     },
 
     close : function (modal) {
@@ -4661,16 +4708,15 @@
       }
       $handle.attr('aria-valuenow', value);
 
-
-      if (settings.input_id != '') {
-        $(settings.display_selector).each(function(){
-          if (this.hasOwnProperty('value')) {
-            $(this).val(value);
-          } else {
-            $(this).text(value);
-          }
-        });
-      }
+      // if (settings.input_id != '') {
+      //   $(settings.display_selector).each(function(){
+      //     if (this.hasOwnProperty('value')) {
+      //       $(this).val(value);
+      //     } else {
+      //       $(this).text(value);
+      //     }
+      //   });
+      // }
 
     },
 
@@ -4836,6 +4882,7 @@
     },
 
     handle_location_hash_change : function () {
+
       var self = this,
           S = this.S;
 
@@ -4843,7 +4890,13 @@
         var settings = S(this).data(self.attr_name(true) + '-init');
         if (settings.deep_linking) {
           // Match the location hash to a label
-          var hash = self.scope.location.hash;
+          var hash;
+          if (settings.scroll_to_content) {
+            hash = self.scope.location.hash;
+          } else {
+            // prefix the hash to prevent anchor scrolling
+            hash = self.scope.location.hash.replace('fndtn-', '');
+          }
           if (hash != '') {
             // Check whether the location hash references a tab content div or
             // another element on the page (inside or outside the tab content div)
@@ -4932,34 +4985,21 @@
       }
 
       if (settings.deep_linking) {
-        // Get the scroll Y position prior to moving to the hash ID
-        var cur_ypos = $('body,html').scrollTop();
-
-        // Update the location hash to preserve browser history
-        // Note that the hash does not need to correspond to the
-        // tab content ID anchor; it can be an ID inside or outside of the tab
-        // content div.
-        if (location_hash != undefined) {
-          window.location.hash = location_hash;
-        } else {
-          window.location.hash = target_hash;
-        }
 
         if (settings.scroll_to_content) {
-          // If the user is requesting the content of a tab, then scroll to the
-          // top of the title area; otherwise, scroll to the element within
-          // the content area as defined by the hash value.
+          // retain current hash to scroll to content
+          window.location.hash = location_hash || target_hash;
           if (location_hash == undefined || location_hash == target_hash) {
             tab.parent()[0].scrollIntoView();
           } else {
             S(target_hash)[0].scrollIntoView();
           }
         } else {
-          // Adjust the scrollbar to the Y position prior to setting the hash
-          // Only do this for the tab content anchor, otherwise there will be
-          // conflicts with in-tab anchor links nested in the tab-content div
-          if (location_hash == undefined || location_hash == target_hash) {
-            $('body,html').scrollTop(cur_ypos);
+          // prefix the hashes so that the browser doesn't scroll down
+          if (location_hash != undefined) {
+            window.location.hash = 'fndtn-' + location_hash.replace('#', '');
+          } else {
+            window.location.hash = 'fndtn-' + target_hash.replace('#', '');
           }
         }
       }

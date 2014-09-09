@@ -22,7 +22,7 @@
         cvv : /^([0-9]){3,4}$/,
 
         // http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#valid-e-mail-address
-        email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+        email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/,
 
         url: /^(https?|ftp|file|ssh):\/\/(((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-zA-Z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-zA-Z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/,
         // abc.de
@@ -169,7 +169,8 @@
             is_radio = el.type === "radio",
             is_checkbox = el.type === "checkbox",
             label = this.S('label[for="' + el.getAttribute('id') + '"]'),
-            valid_length = (required) ? (el.value.length > 0) : true;
+            valid_length = (required) ? (el.value.length > 0) : true,
+            el_validations = [];
 
         var parent, valid;
 
@@ -184,25 +185,25 @@
 
         if (validator) {
           valid = this.settings.validators[validator].apply(this, [el, required, parent]);
-          validations.push(valid);
+          el_validations.push(valid);
         }
 
         if (is_radio && required) {
-          validations.push(this.valid_radio(el, required));
+          el_validations.push(this.valid_radio(el, required));
         } else if (is_checkbox && required) {
-          validations.push(this.valid_checkbox(el, required));
+          el_validations.push(this.valid_checkbox(el, required));
         } else {
 
           if (el_patterns[i][1].test(value) && valid_length ||
             !required && el.value.length < 1 || $(el).attr('disabled')) {
-            validations.push(true);
+            el_validations.push(true);
           } else {
-            validations.push(false);
+            el_validations.push(false);
           }
 
-          validations = [validations.every(function(valid){return valid;})];
+          el_validations = [el_validations.every(function(valid){return valid;})];
 
-          if(validations[0]){
+          if(el_validations[0]){
             this.S(el).removeAttr(this.invalid_attr);
             el.setAttribute('aria-invalid', 'false');
             el.removeAttribute('aria-describedby');
@@ -227,10 +228,10 @@
             }
             $(el).triggerHandler('invalid');
           }
-
+          validations.push(el_validations[0]);
         }
       }
-
+      validations = [validations.every(function(valid){return valid;})];
       return validations;
     },
 
@@ -278,9 +279,11 @@
       if (valid) {
         this.S(el).removeAttr(this.invalid_attr);
         parent.removeClass('error');
+        if (label.length > 0 && settings.error_labels) label.removeClass('error');
       } else {
         this.S(el).attr(this.invalid_attr, '');
         parent.addClass('error');
+        if (label.length > 0 && settings.error_labels) label.addClass('error');
       }
 
       return valid;
