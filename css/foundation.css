@@ -3639,7 +3639,8 @@ ul.pagination {
   border-color: #d8d8d8;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  color: #333333; }
   .panel > :first-child {
     margin-top: 0; }
   .panel > :last-child {
@@ -3657,7 +3658,8 @@ ul.pagination {
     border-color: #b6edff;
     margin-bottom: 1.25rem;
     padding: 1.25rem;
-    background: #ecfaff; }
+    background: #ecfaff;
+    color: #333333; }
     .panel.callout > :first-child {
       margin-top: 0; }
     .panel.callout > :last-child {
