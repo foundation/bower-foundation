@@ -3951,6 +3951,7 @@ dialog {
     right: 0;
     background: #000000;
     background: rgba(0, 0, 0, 0.45);
+    z-index: auto;
     display: none;
     left: 0; }
   dialog[open] {
