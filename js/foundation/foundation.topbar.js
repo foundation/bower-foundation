@@ -4,7 +4,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.4.4',
+    version: '5.4.5',
 
     settings : {
       index : 0,
