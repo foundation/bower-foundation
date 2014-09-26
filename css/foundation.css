@@ -5826,7 +5826,7 @@ ul.off-canvas-list {
     clip: rect(1px, 1px, 1px, 1px); }
 
   table.show-for-small-only, table.show-for-small-up, table.show-for-small, table.show-for-small-down, table.hide-for-medium-only, table.hide-for-medium-up, table.hide-for-medium, table.show-for-medium-down, table.hide-for-large-only, table.hide-for-large-up, table.hide-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up {
-    display: table; }
+    display: table !important; }
 
   thead.show-for-small-only, thead.show-for-small-up, thead.show-for-small, thead.show-for-small-down, thead.hide-for-medium-only, thead.hide-for-medium-up, thead.hide-for-medium, thead.show-for-medium-down, thead.hide-for-large-only, thead.hide-for-large-up, thead.hide-for-large, thead.show-for-large-down, thead.hide-for-xlarge-only, thead.hide-for-xlarge-up, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up {
     display: table-header-group !important; }
@@ -5862,7 +5862,7 @@ ul.off-canvas-list {
     clip: rect(1px, 1px, 1px, 1px); }
 
   table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.show-for-medium-only, table.show-for-medium-up, table.show-for-medium, table.show-for-medium-down, table.hide-for-large-only, table.hide-for-large-up, table.hide-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up {
-    display: table; }
+    display: table !important; }
 
   thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.show-for-medium-only, thead.show-for-medium-up, thead.show-for-medium, thead.show-for-medium-down, thead.hide-for-large-only, thead.hide-for-large-up, thead.hide-for-large, thead.show-for-large-down, thead.hide-for-xlarge-only, thead.hide-for-xlarge-up, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up {
     display: table-header-group !important; }
@@ -5898,7 +5898,7 @@ ul.off-canvas-list {
     clip: rect(1px, 1px, 1px, 1px); }
 
   table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.show-for-large-only, table.show-for-large-up, table.show-for-large, table.show-for-large-down, table.hide-for-xlarge-only, table.hide-for-xlarge-up, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up {
-    display: table; }
+    display: table !important; }
 
   thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.hide-for-medium, thead.hide-for-medium-down, thead.show-for-large-only, thead.show-for-large-up, thead.show-for-large, thead.show-for-large-down, thead.hide-for-xlarge-only, thead.hide-for-xlarge-up, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up {
     display: table-header-group !important; }
@@ -5934,7 +5934,7 @@ ul.off-canvas-list {
     clip: rect(1px, 1px, 1px, 1px); }
 
   table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-large-only, table.show-for-large-up, table.hide-for-large, table.hide-for-large-down, table.show-for-xlarge-only, table.show-for-xlarge-up, table.hide-for-xxlarge-only, table.hide-for-xxlarge-up {
-    display: table; }
+    display: table !important; }
 
   thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-large-only, thead.show-for-large-up, thead.hide-for-large, thead.hide-for-large-down, thead.show-for-xlarge-only, thead.show-for-xlarge-up, thead.hide-for-xxlarge-only, thead.hide-for-xxlarge-up {
     display: table-header-group !important; }
@@ -5970,7 +5970,7 @@ ul.off-canvas-list {
     clip: rect(1px, 1px, 1px, 1px); }
 
   table.hide-for-small-only, table.show-for-small-up, table.hide-for-small, table.hide-for-small-down, table.hide-for-medium-only, table.show-for-medium-up, table.hide-for-medium, table.hide-for-medium-down, table.hide-for-large-only, table.show-for-large-up, table.hide-for-large, table.hide-for-large-down, table.hide-for-xlarge-only, table.show-for-xlarge-up, table.show-for-xxlarge-only, table.show-for-xxlarge-up {
-    display: table; }
+    display: table !important; }
 
   thead.hide-for-small-only, thead.show-for-small-up, thead.hide-for-small, thead.hide-for-small-down, thead.hide-for-medium-only, thead.show-for-medium-up, thead.hide-for-medium, thead.hide-for-medium-down, thead.hide-for-large-only, thead.show-for-large-up, thead.hide-for-large, thead.hide-for-large-down, thead.hide-for-xlarge-only, thead.show-for-xlarge-up, thead.show-for-xxlarge-only, thead.show-for-xxlarge-up {
     display: table-header-group !important; }
@@ -5994,7 +5994,7 @@ ul.off-canvas-list {
 
 /* Specific visibility for tables */
 table.hide-for-landscape, table.show-for-portrait {
-  display: table; }
+  display: table !important; }
 
 thead.hide-for-landscape, thead.show-for-portrait {
   display: table-header-group !important; }
@@ -6021,7 +6021,7 @@ th.show-for-portrait {
 
   /* Specific visibility for tables */
   table.show-for-landscape, table.hide-for-portrait {
-    display: table; }
+    display: table !important; }
 
   thead.show-for-landscape, thead.hide-for-portrait {
     display: table-header-group !important; }
@@ -6047,7 +6047,7 @@ th.show-for-portrait {
 
   /* Specific visibility for tables */
   table.show-for-portrait, table.hide-for-landscape {
-    display: table; }
+    display: table !important; }
 
   thead.show-for-portrait, thead.hide-for-landscape {
     display: table-header-group !important; }
@@ -6077,10 +6077,10 @@ th.show-for-portrait {
 
 /* Specific visibility for tables */
 table.hide-for-touch {
-  display: table; }
+  display: table !important; }
 
 .touch table.show-for-touch {
-  display: table; }
+  display: table !important; }
 
 thead.hide-for-touch {
   display: table-header-group !important; }
@@ -6121,7 +6121,7 @@ th.hide-for-touch {
     display: none; }
 
   table.show-for-print {
-    display: table; }
+    display: table !important; }
 
   thead.show-for-print {
     display: table-header-group !important; }
