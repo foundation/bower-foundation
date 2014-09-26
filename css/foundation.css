@@ -2881,6 +2881,10 @@ input[type="submit"] {
 textarea[rows] {
   height: auto; }
 
+/* Not allow resize out of parent */
+textarea {
+  max-width: 100%; }
+
 /* Add height value for select elements to match text input height */
 select {
   -webkit-appearance: none !important;
