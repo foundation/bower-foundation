@@ -2728,7 +2728,7 @@
         // skip non-existant targets
         } else if (this.settings.$li && this.settings.$target.length < 1) {
 
-          this.show(init, is_prev);
+          this.show();
 
         } else {
 
