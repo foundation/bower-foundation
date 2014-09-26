@@ -5004,7 +5004,7 @@ meta.foundation-mq-topbar {
           box-shadow: 0 0px 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white;
           width: 16px; }
         .top-bar .toggle-topbar.menu-icon a span:hover:after {
-          box-shadow: 0 0px 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white; }
+          box-shadow: 0 0px 0 1px "", 0 7px 0 1px "", 0 14px 0 1px ""; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -5012,8 +5012,8 @@ meta.foundation-mq-topbar {
       background: #333333; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
-      .top-bar.expanded .toggle-topbar a::after {
-        box-shadow: 0 10px 0 1px #888888, 0 16px 0 1px #888888, 0 22px 0 1px #888888; }
+      .top-bar.expanded .toggle-topbar a span::after {
+        box-shadow: 0 0px 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888; }
 
 .top-bar-section {
   left: 0;
