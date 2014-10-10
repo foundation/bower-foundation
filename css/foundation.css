@@ -2480,7 +2480,7 @@ button::-moz-focus-inner {
 .dropdown.button, button.dropdown {
   position: relative;
   padding-right: 3.5625rem; }
-  .dropdown.button:after, button.dropdown:after {
+  .dropdown.button::after, button.dropdown::after {
     position: absolute;
     content: "";
     width: 0;
@@ -2489,35 +2489,35 @@ button::-moz-focus-inner {
     border-style: solid;
     border-color: white transparent transparent transparent;
     top: 50%; }
-  .dropdown.button:after, button.dropdown:after {
+  .dropdown.button::after, button.dropdown::after {
     border-width: 0.375rem;
     right: 1.40625rem;
     margin-top: -0.15625rem; }
-  .dropdown.button:after, button.dropdown:after {
+  .dropdown.button::after, button.dropdown::after {
     border-color: white transparent transparent transparent; }
   .dropdown.button.tiny, button.dropdown.tiny {
     padding-right: 2.625rem; }
-    .dropdown.button.tiny:before, button.dropdown.tiny:before {
+    .dropdown.button.tiny::before, button.dropdown.tiny::before {
       border-width: 0.375rem;
       right: 1.125rem;
       margin-top: -0.125rem; }
-    .dropdown.button.tiny:after, button.dropdown.tiny:after {
+    .dropdown.button.tiny::after, button.dropdown.tiny::after {
       border-color: white transparent transparent transparent; }
   .dropdown.button.small, button.dropdown.small {
     padding-right: 3.0625rem; }
-    .dropdown.button.small:after, button.dropdown.small:after {
+    .dropdown.button.small::after, button.dropdown.small::after {
       border-width: 0.4375rem;
       right: 1.3125rem;
       margin-top: -0.15625rem; }
-    .dropdown.button.small:after, button.dropdown.small:after {
+    .dropdown.button.small::after, button.dropdown.small::after {
       border-color: white transparent transparent transparent; }
   .dropdown.button.large, button.dropdown.large {
     padding-right: 3.625rem; }
-    .dropdown.button.large:after, button.dropdown.large:after {
+    .dropdown.button.large::after, button.dropdown.large::after {
       border-width: 0.3125rem;
       right: 1.71875rem;
       margin-top: -0.15625rem; }
-    .dropdown.button.large:after, button.dropdown.large:after {
+    .dropdown.button.large::after, button.dropdown.large::after {
       border-color: white transparent transparent transparent; }
   .dropdown.button.secondary:after, button.dropdown.secondary:after {
     border-color: #333333 transparent transparent transparent; }
@@ -2589,7 +2589,7 @@ label {
     text-transform: capitalize;
     color: #676767; }
 
-select::-ms-expand {
+select {
   display: none; }
 
 /* Attach elements to the beginning or end of an input */
@@ -2905,6 +2905,8 @@ select {
   line-height: normal;
   border-radius: 0;
   height: 2.3125rem; }
+  select::-ms-expand {
+    display: none; }
   select.radius {
     border-radius: 3px; }
   select:hover {
@@ -4141,7 +4143,11 @@ dialog {
 .switch {
   padding: 0;
   border: none;
-  position: relative; }
+  position: relative;
+  outline: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
   .switch label {
     display: block;
     margin-bottom: 1rem;
