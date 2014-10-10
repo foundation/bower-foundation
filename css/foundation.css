@@ -2235,6 +2235,7 @@ button::-moz-focus-inner {
   left: -9999px;
   list-style: none;
   margin-left: 0;
+  outline: none;
   width: 100%;
   max-height: none;
   height: auto;
@@ -2283,6 +2284,7 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
+    outline: none;
     width: 100%;
     max-height: none;
     height: auto;
@@ -2326,6 +2328,7 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
+    outline: none;
     width: 100%;
     max-height: none;
     height: auto;
@@ -2371,6 +2374,7 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
+    outline: none;
     width: 100%;
     max-height: none;
     height: auto;
@@ -2431,6 +2435,7 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
+    outline: none;
     padding: 1.25rem;
     width: 100%;
     height: auto;
@@ -2460,6 +2465,7 @@ button::-moz-focus-inner {
 
 .dropdown.button, button.dropdown {
   position: relative;
+  outline: none;
   padding-right: 3.5625rem; }
   .dropdown.button::after, button.dropdown::after {
     position: absolute;
