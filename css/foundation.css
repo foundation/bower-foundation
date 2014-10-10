@@ -1714,7 +1714,6 @@ button::-moz-focus-inner {
     clear: both; }
   .button-group > li {
     margin: 0 -2px;
-    float: left;
     display: inline-block; }
     .button-group > li > button, .button-group > li .button {
       border-left: 1px solid;
@@ -1723,7 +1722,6 @@ button::-moz-focus-inner {
       border-left: 0; }
   .button-group.stack > li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     display: block;
     margin: 0;
@@ -1743,7 +1741,6 @@ button::-moz-focus-inner {
       border-top: 0; }
   .button-group.stack-for-small > li {
     margin: 0 -2px;
-    float: left;
     display: inline-block; }
     .button-group.stack-for-small > li > button, .button-group.stack-for-small > li .button {
       border-left: 1px solid;
@@ -1753,7 +1750,6 @@ button::-moz-focus-inner {
     @media only screen and (max-width: 40em) {
       .button-group.stack-for-small > li {
         margin: 0 -2px;
-        float: left;
         display: inline-block;
         display: block;
         margin: 0; }
@@ -1772,7 +1768,6 @@ button::-moz-focus-inner {
           border-top: 0; } }
   .button-group.radius > * {
     margin: 0 -2px;
-    float: left;
     display: inline-block; }
     .button-group.radius > * > button, .button-group.radius > * .button {
       border-left: 1px solid;
@@ -1793,7 +1788,6 @@ button::-moz-focus-inner {
       border-top-right-radius: 3px; }
   .button-group.radius.stack > * {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     display: block;
     margin: 0; }
@@ -1825,7 +1819,6 @@ button::-moz-focus-inner {
   @media only screen and (min-width: 40.063em) {
     .button-group.radius.stack-for-small > * {
       margin: 0 -2px;
-      float: left;
       display: inline-block; }
       .button-group.radius.stack-for-small > * > button, .button-group.radius.stack-for-small > * .button {
         border-left: 1px solid;
@@ -1847,7 +1840,6 @@ button::-moz-focus-inner {
   @media only screen and (max-width: 40em) {
     .button-group.radius.stack-for-small > * {
       margin: 0 -2px;
-      float: left;
       display: inline-block;
       display: block;
       margin: 0; }
@@ -1878,7 +1870,6 @@ button::-moz-focus-inner {
         border-bottom-right-radius: 3px; } }
   .button-group.round > * {
     margin: 0 -2px;
-    float: left;
     display: inline-block; }
     .button-group.round > * > button, .button-group.round > * .button {
       border-left: 1px solid;
@@ -1899,7 +1890,6 @@ button::-moz-focus-inner {
       border-top-right-radius: 1000px; }
   .button-group.round.stack > * {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     display: block;
     margin: 0; }
@@ -1931,7 +1921,6 @@ button::-moz-focus-inner {
   @media only screen and (min-width: 40.063em) {
     .button-group.round.stack-for-small > * {
       margin: 0 -2px;
-      float: left;
       display: inline-block; }
       .button-group.round.stack-for-small > * > button, .button-group.round.stack-for-small > * .button {
         border-left: 1px solid;
@@ -1953,7 +1942,6 @@ button::-moz-focus-inner {
   @media only screen and (max-width: 40em) {
     .button-group.round.stack-for-small > * {
       margin: 0 -2px;
-      float: left;
       display: inline-block;
       display: block;
       margin: 0; }
@@ -1984,7 +1972,6 @@ button::-moz-focus-inner {
         border-bottom-right-radius: 1rem; } }
   .button-group.even-2 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 50%; }
     .button-group.even-2 li > button, .button-group.even-2 li .button {
@@ -1996,7 +1983,6 @@ button::-moz-focus-inner {
       width: 100%; }
   .button-group.even-3 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 33.33333%; }
     .button-group.even-3 li > button, .button-group.even-3 li .button {
@@ -2008,7 +1994,6 @@ button::-moz-focus-inner {
       width: 100%; }
   .button-group.even-4 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 25%; }
     .button-group.even-4 li > button, .button-group.even-4 li .button {
@@ -2020,7 +2005,6 @@ button::-moz-focus-inner {
       width: 100%; }
   .button-group.even-5 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 20%; }
     .button-group.even-5 li > button, .button-group.even-5 li .button {
@@ -2032,7 +2016,6 @@ button::-moz-focus-inner {
       width: 100%; }
   .button-group.even-6 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 16.66667%; }
     .button-group.even-6 li > button, .button-group.even-6 li .button {
@@ -2044,7 +2027,6 @@ button::-moz-focus-inner {
       width: 100%; }
   .button-group.even-7 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 14.28571%; }
     .button-group.even-7 li > button, .button-group.even-7 li .button {
@@ -2056,7 +2038,6 @@ button::-moz-focus-inner {
       width: 100%; }
   .button-group.even-8 li {
     margin: 0 -2px;
-    float: left;
     display: inline-block;
     width: 12.5%; }
     .button-group.even-8 li > button, .button-group.even-8 li .button {
