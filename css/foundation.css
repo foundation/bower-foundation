@@ -81,7 +81,11 @@ img {
   clear: both; }
 
 .hide {
-  display: none; }
+  display: none !important;
+  visibility: hidden; }
+
+.invisible {
+  visibility: hidden; }
 
 .antialiased {
   -webkit-font-smoothing: antialiased;
