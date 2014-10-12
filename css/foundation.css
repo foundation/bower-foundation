@@ -2581,9 +2581,6 @@ label {
     text-transform: capitalize;
     color: #676767; }
 
-select {
-  display: none; }
-
 /* Attach elements to the beginning or end of an input */
 .prefix,
 .postfix {
