@@ -1136,7 +1136,8 @@ select {
     margin-top: -0.6875rem;
     right: 0.25rem;
     color: #333333;
-    opacity: 0.3; }
+    opacity: 0.3;
+    background: inherit; }
     .alert-box .close:hover, .alert-box .close:focus {
       opacity: 0.5; }
   .alert-box.radius {
