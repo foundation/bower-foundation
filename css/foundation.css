@@ -2489,7 +2489,7 @@ button::-moz-focus-inner {
     border-color: white transparent transparent transparent; }
   .dropdown.button.tiny, button.dropdown.tiny {
     padding-right: 2.625rem; }
-    .dropdown.button.tiny::before, button.dropdown.tiny::before {
+    .dropdown.button.tiny:after, button.dropdown.tiny:after {
       border-width: 0.375rem;
       right: 1.125rem;
       margin-top: -0.125rem; }
