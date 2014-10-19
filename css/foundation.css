@@ -4284,6 +4284,7 @@ table {
     list-style: none;
     float: left; }
     .tabs dd > a, .tabs .tab-title > a {
+      outline: none;
       display: block;
       background-color: #efefef;
       color: #222222;
