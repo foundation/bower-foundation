@@ -4089,10 +4089,8 @@ dialog {
   display: block;
   width: auto;
   overflow: hidden;
-  margin: -0.25rem 0 1.125rem;
-  padding-top: 0.25rem;
-  margin-right: 0;
-  margin-left: -0.75rem; }
+  margin-bottom: -0.25rem 0 1.125rem;
+  padding-top: 0.25rem; }
   .sub-nav dt {
     text-transform: uppercase; }
   .sub-nav dt,
@@ -4101,7 +4099,7 @@ dialog {
     float: left;
     display: inline;
     margin-left: 1rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0;
     font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: normal;
     font-size: 0.875rem;
