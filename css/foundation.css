@@ -3677,6 +3677,8 @@ ul.pagination {
         line-height: 1.4; }
     .panel.callout a:not(.button) {
       color: #008cba; }
+      .panel.callout a:not(.button):hover, .panel.callout a:not(.button):focus {
+        color: #0078a0; }
   .panel.radius {
     border-radius: 3px; }
 
