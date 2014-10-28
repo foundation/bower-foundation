@@ -278,7 +278,7 @@
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -630,7 +630,7 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       live_validate : true,
@@ -945,7 +945,7 @@
   Foundation.libs.accordion = {
     name : 'accordion',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       content_class: 'content',
@@ -1012,7 +1012,7 @@
   Foundation.libs.alert = {
     name : 'alert',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       callback: function (){}
@@ -1056,7 +1056,7 @@
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version: '5.4.6',
+    version: '5.4.7',
 
     settings : {
       templates : {
@@ -1615,7 +1615,7 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       active_class: 'open',
@@ -1942,7 +1942,7 @@
   Foundation.libs.equalizer = {
     name : 'equalizer',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       use_tallest: true,
@@ -2017,7 +2017,7 @@
   Foundation.libs.interchange = {
     name : 'interchange',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     cache : {},
 
@@ -2364,7 +2364,7 @@
   Foundation.libs.joyride = {
     name : 'joyride',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     defaults : {
       expose                   : false,     // turn on or off the expose feature
@@ -3280,7 +3280,7 @@
   Foundation.libs['magellan-expedition'] = {
     name : 'magellan-expedition',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       active_class: 'active',
@@ -3470,7 +3470,7 @@
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       open_method: 'move',
@@ -4021,7 +4021,7 @@
   Foundation.libs.orbit = {
     name: 'orbit',
 
-    version: '5.4.6',
+    version: '5.4.7',
 
     settings: {
       animation: 'slide',
@@ -4096,7 +4096,7 @@
   Foundation.libs.reveal = {
     name : 'reveal',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     locked : false,
 
@@ -4541,7 +4541,7 @@
   Foundation.libs.slider = {
     name : 'slider',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings: {
       start: 0,
@@ -4781,7 +4781,7 @@
   Foundation.libs.tab = {
     name : 'tab',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       active_class: 'active',
@@ -4999,7 +4999,7 @@
   Foundation.libs.tooltip = {
     name : 'tooltip',
 
-    version : '5.4.6',
+    version : '5.4.7',
 
     settings : {
       additional_inheritable_classes : [],
@@ -5300,7 +5300,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version: '5.4.6',
+    version: '5.4.7',
 
     settings : {
       index : 0,
