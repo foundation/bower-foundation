@@ -4287,7 +4287,8 @@
           $.extend(ajax_settings, {
             success: function (data, textStatus, jqXHR) {
               if ( $.isFunction(old_success) ) {
-                old_success(data, textStatus, jqXHR);
+                var result = old_success(data, textStatus, jqXHR);
+                if (typeof result == 'string') data = result;
               }
 
               modal.html(data);
