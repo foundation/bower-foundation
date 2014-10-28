@@ -4505,11 +4505,11 @@ meta.foundation-mq-topbar {
     height: 45px;
     margin: 0;
     font-size: 16px; }
-    .top-bar .name h1 {
+    .top-bar .name h1, .top-bar .name h2, .top-bar .name h3, .top-bar .name h4, .top-bar .name p, .top-bar .name span {
       line-height: 45px;
       font-size: 1.0625rem;
       margin: 0; }
-      .top-bar .name h1 a {
+      .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a {
         font-weight: normal;
         color: white;
         width: 75%;
