@@ -3068,12 +3068,16 @@ label.error {
     .icon-bar > * img {
       width: 1.875rem;
       height: 1.875rem; }
-  .icon-bar > *:hover {
-    background: #008cba; }
   .icon-bar > * label {
     color: white; }
   .icon-bar > * i {
     color: white; }
+  .icon-bar > a:hover {
+    background: #008cba; }
+    .icon-bar > a:hover label {
+      color: white; }
+    .icon-bar > a:hover i {
+      color: white; }
 
 .icon-bar.two-up .item {
   width: 50%; }
