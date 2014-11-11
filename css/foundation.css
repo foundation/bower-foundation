@@ -3209,7 +3209,7 @@ kbd {
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  margin-bottom: inherit;
+  margin-bottom: auto;
   padding: 0.25rem 0.5rem 0.25rem;
   font-size: 0.6875rem;
   background-color: #008cba;
