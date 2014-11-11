@@ -158,23 +158,23 @@
 
   window.matchMedia = window.matchMedia || (function( doc ) {
 
-    "use strict";
+    'use strict';
 
     var bool,
         docElem = doc.documentElement,
         refNode = docElem.firstElementChild || docElem.firstChild,
         // fakeBody required for <FF4 when executed in <head>
-        fakeBody = doc.createElement( "body" ),
-        div = doc.createElement( "div" );
+        fakeBody = doc.createElement( 'body' ),
+        div = doc.createElement( 'div' );
 
-    div.id = "mq-test-1";
-    div.style.cssText = "position:absolute;top:-100em";
-    fakeBody.style.background = "none";
+    div.id = 'mq-test-1';
+    div.style.cssText = 'position:absolute;top:-100em';
+    fakeBody.style.background = 'none';
     fakeBody.appendChild(div);
 
     return function (q) {
 
-      div.innerHTML = "&shy;<style media=\"" + q + "\"> #mq-test-1 { width: 42px; }</style>";
+      div.innerHTML = '&shy;<style media="' + q + '"> #mq-test-1 { width: 42px; }</style>';
 
       docElem.insertBefore( fakeBody, refNode );
       bool = div.offsetWidth === 42;
@@ -213,10 +213,10 @@
       jqueryFxAvailable = 'undefined' !== typeof jQuery.fx;
 
   for (; lastTime < vendors.length && !requestAnimationFrame; lastTime++) {
-    requestAnimationFrame = window[ vendors[lastTime] + "RequestAnimationFrame" ];
+    requestAnimationFrame = window[ vendors[lastTime] + 'RequestAnimationFrame' ];
     cancelAnimationFrame = cancelAnimationFrame ||
-      window[ vendors[lastTime] + "CancelAnimationFrame" ] ||
-      window[ vendors[lastTime] + "CancelRequestAnimationFrame" ];
+      window[ vendors[lastTime] + 'CancelAnimationFrame' ] ||
+      window[ vendors[lastTime] + 'CancelRequestAnimationFrame' ];
   }
 
   function raf() {
@@ -504,7 +504,7 @@
         ii = opts_arr.length;
 
         function isNumber (o) {
-          return ! isNaN (o-0) && o !== null && o !== "" && o !== false && o !== true;
+          return ! isNaN (o-0) && o !== null && o !== '' && o !== false && o !== true;
         }
 
         function trim (str) {
@@ -1444,7 +1444,7 @@
     load : function ($image) {
       var href;
 
-      if ($image[0].nodeName === "A") {
+      if ($image[0].nodeName === 'A') {
         href = $image.attr('href');
       } else {
         href = $image.parent().attr('href');
@@ -1664,7 +1664,7 @@
             target = $this;
           } else {
             dropdown = $this;
-            target = S("[" + self.attr_name() + "='" + dropdown.attr('id') + "']");
+            target = S('[' + self.attr_name() + '="' + dropdown.attr('id') + '"]');
           }
 
           var settings = target.data(self.attr_name(true) + '-init') || self.settings;
@@ -1723,11 +1723,11 @@
       var self = this;
       dropdown.each(function () {
         var original_target = $('[' + self.attr_name() + '=' + dropdown[0].id + ']') || $('aria-controls=' + dropdown[0].id+ ']');
-        original_target.attr('aria-expanded', "false");
+        original_target.attr('aria-expanded', 'false');
         if (self.S(this).hasClass(self.settings.active_class)) {
           self.S(this)
             .css(Foundation.rtl ? 'right':'left', '-99999px')
-            .attr('aria-hidden', "true")
+            .attr('aria-hidden', 'true')
             .removeClass(self.settings.active_class)
             .prev('[' + self.attr_name() + ']')
             .removeClass(self.settings.active_class)
@@ -1736,12 +1736,12 @@
           self.S(this).trigger('closed').trigger('closed.fndtn.dropdown', [dropdown]);
         }
       });
-      dropdown.removeClass("f-open-" + this.attr_name(true));
+      dropdown.removeClass('f-open-' + this.attr_name(true));
     },
 
     closeall: function() {
       var self = this;
-      $.each(self.S(".f-open-" + this.attr_name(true)), function() {
+      $.each(self.S('.f-open-' + this.attr_name(true)), function() {
         self.close.call(self, self.S(this));
       });
     },
@@ -1755,7 +1755,7 @@
         dropdown.attr('aria-hidden', 'false');
         target.attr('aria-expanded', 'true');
         dropdown.focus();
-        dropdown.addClass("f-open-" + this.attr_name(true));
+        dropdown.addClass('f-open-' + this.attr_name(true));
     },
 
     data_attr: function () {
@@ -1789,7 +1789,7 @@
 
     resize : function () {
       var dropdown = this.S('[' + this.attr_name() + '-content].open'),
-          target = this.S("[" + this.attr_name() + "='" + dropdown.attr('id') + "']");
+          target = this.S('[' + this.attr_name() + '="' + dropdown.attr('id') + '"]');
 
       if (dropdown.length && target.length) {
         this.css(dropdown, target);
@@ -1849,15 +1849,15 @@
 		//lets see if the panel will be off the screen
 		//get the actual width of the page and store it
 		var actualBodyWidth;
-		if (document.getElementsByClassName("row")[0]) {
-			actualBodyWidth = document.getElementsByClassName("row")[0].clientWidth;
+		if (document.getElementsByClassName('row')[0]) {
+			actualBodyWidth = document.getElementsByClassName('row')[0].clientWidth;
 		} else {
 			actualBodyWidth = window.outerWidth;
 		}
 		var actualMarginWidth = (window.outerWidth - actualBodyWidth) / 2;
 		var actualBoundary = actualBodyWidth;
 		
-		if (!this.hasClass("mega")) {
+		if (!this.hasClass('mega')) {
 			//miss top
 			if (t.offset().top <= this.outerHeight()) {
 				p.missTop = true;
@@ -2564,7 +2564,7 @@
           this.end(this.settings.abort_on_close);
         }.bind(this))
 
-        .on("keyup.fndtn.joyride", function(e) {
+        .on('keyup.fndtn.joyride', function(e) {
           // Don't do anything if keystrokes are disabled
           // or if the joyride is not being shown
           if (!this.settings.keyboard || !this.settings.riding) return;
@@ -2887,7 +2887,7 @@
     },
 
     set_next_tip : function () {
-      this.settings.$next_tip = $(".joyride-tip-guide").eq(this.settings.$li.index());
+      this.settings.$next_tip = $('.joyride-tip-guide').eq(this.settings.$li.index());
       this.settings.$next_tip.data('closed', '');
     },
 
@@ -3406,7 +3406,7 @@
           var expedition = $(this).closest('[' + self.attr_name() + ']'),
               settings = expedition.data('magellan-expedition-init'),
               hash = this.hash.split('#').join(''),
-              target = $("a[name='"+hash+"']");
+              target = $('a[name="'+hash+'"]');
 
           if (target.length === 0) {
             target = $('#'+hash);
@@ -3606,7 +3606,7 @@
         .on('click.fndtn.offcanvas', '.left-off-canvas-toggle', function (e) {
           self.click_toggle_class(e, move_class + right_postfix);
           if (self.settings.open_method !== 'overlap'){
-            S(".left-submenu").removeClass(move_class + right_postfix);
+            S('.left-submenu').removeClass(move_class + right_postfix);
           }
           $('.left-off-canvas-toggle').attr('aria-expanded', 'true');
         })
@@ -3614,13 +3614,13 @@
           var settings = self.get_settings(e);
           var parent = S(this).parent();
 
-          if(settings.close_on_click && !parent.hasClass("has-submenu") && !parent.hasClass("back")){
+          if(settings.close_on_click && !parent.hasClass('has-submenu') && !parent.hasClass('back')){
             self.hide.call(self, move_class + right_postfix, self.get_wrapper(e));
             parent.parent().removeClass(move_class + right_postfix);
-          }else if(S(this).parent().hasClass("has-submenu")){
+          }else if(S(this).parent().hasClass('has-submenu')){
             e.preventDefault();
-            S(this).siblings(".left-submenu").toggleClass(move_class + right_postfix);
-          }else if(parent.hasClass("back")){
+            S(this).siblings('.left-submenu').toggleClass(move_class + right_postfix);
+          }else if(parent.hasClass('back')){
             e.preventDefault();
             parent.parent().removeClass(move_class + right_postfix);
           }
@@ -3629,7 +3629,7 @@
         .on('click.fndtn.offcanvas', '.right-off-canvas-toggle', function (e) {
           self.click_toggle_class(e, move_class + left_postfix);
           if (self.settings.open_method !== 'overlap'){
-            S(".right-submenu").removeClass(move_class + left_postfix);
+            S('.right-submenu').removeClass(move_class + left_postfix);
           }
           $('.right-off-canvas-toggle').attr('aria-expanded', 'true');
         })
@@ -3637,13 +3637,13 @@
           var settings = self.get_settings(e);
           var parent = S(this).parent();
 
-          if(settings.close_on_click && !parent.hasClass("has-submenu") && !parent.hasClass("back")){
+          if(settings.close_on_click && !parent.hasClass('has-submenu') && !parent.hasClass('back')){
             self.hide.call(self, move_class + left_postfix, self.get_wrapper(e));
             parent.parent().removeClass(move_class + left_postfix);
-          }else if(S(this).parent().hasClass("has-submenu")){
+          }else if(S(this).parent().hasClass('has-submenu')){
             e.preventDefault();
-            S(this).siblings(".right-submenu").toggleClass(move_class + left_postfix);
-          }else if(parent.hasClass("back")){
+            S(this).siblings('.right-submenu').toggleClass(move_class + left_postfix);
+          }else if(parent.hasClass('back')){
             e.preventDefault();
             parent.parent().removeClass(move_class + left_postfix);
           }
@@ -3651,10 +3651,10 @@
         })
         .on('click.fndtn.offcanvas', '.exit-off-canvas', function (e) {
           self.click_remove_class(e, move_class + left_postfix);
-          S(".right-submenu").removeClass(move_class + left_postfix);
+          S('.right-submenu').removeClass(move_class + left_postfix);
           if (right_postfix){
             self.click_remove_class(e, move_class + right_postfix);
-            S(".left-submenu").removeClass(move_class + left_postfix);
+            S('.left-submenu').removeClass(move_class + left_postfix);
           }
           $('.right-off-canvas-toggle').attr('aria-expanded', 'true');
         })
@@ -3663,7 +3663,7 @@
           $('.left-off-canvas-toggle').attr('aria-expanded', 'false');
           if (right_postfix) {
             self.click_remove_class(e, move_class + right_postfix);
-            $('.right-off-canvas-toggle').attr('aria-expanded', "false");
+            $('.right-off-canvas-toggle').attr('aria-expanded', 'false');
           }
         });
     },
@@ -3879,7 +3879,7 @@
     self.link_custom = function(e) {
       e.preventDefault();
       var link = $(this).attr('data-orbit-link');
-      if ((typeof link === 'string') && (link = $.trim(link)) != "") {
+      if ((typeof link === 'string') && (link = $.trim(link)) != '') {
         var slide = container.find('[data-orbit-slide='+link+']');
         if (slide.index() != -1) {self._goto(slide.index());}
       }
@@ -3887,7 +3887,7 @@
 
     self.link_bullet = function(e) {
       var index = $(this).attr('data-orbit-slide');
-      if ((typeof index === 'string') && (index = $.trim(index)) != "") {
+      if ((typeof index === 'string') && (index = $.trim(index)) != '') {
         if(isNaN(parseInt(index)))
         {
           var slide = container.find('[data-orbit-slide='+index+']');
@@ -5085,11 +5085,11 @@
       // window (notably in Chrome).
       // Clean up multiple attr instances to done once
       tab.addClass(settings.active_class).triggerHandler('opened');
-      tab_link.attr({"aria-selected": "true",  tabindex: 0});
+      tab_link.attr({'aria-selected': 'true',  tabindex: 0});
       siblings.removeClass(settings.active_class)
-      siblings.find('a').attr({"aria-selected": "false",  tabindex: -1});
-      target.siblings().removeClass(settings.active_class).attr({"aria-hidden": "true",  tabindex: -1});
-      target.addClass(settings.active_class).attr('aria-hidden', 'false').removeAttr("tabindex");
+      siblings.find('a').attr({'aria-selected': 'false',  tabindex: -1});
+      target.siblings().removeClass(settings.active_class).attr({'aria-hidden': 'true',  tabindex: -1});
+      target.addClass(settings.active_class).attr('aria-hidden', 'false').removeAttr('tabindex');
       settings.callback(tab);
       target.triggerHandler('toggled', [tab]);
       tabs.triggerHandler('toggled', [target]);
@@ -5643,11 +5643,11 @@
           }
         });
 
-      S(window).off(".topbar").on("resize.fndtn.topbar", self.throttle(function() {
+      S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function() {
           self.resize.call(self);
-      }, 50)).trigger("resize").trigger("resize.fndtn.topbar").load(function(){
+      }, 50)).trigger('resize').trigger('resize.fndtn.topbar').load(function(){
           // Ensure that the offset is calculated after all of the pages resources have loaded
-          S(this).trigger("resize.fndtn.topbar");
+          S(this).trigger('resize.fndtn.topbar');
       });
 
       S('body').off('.topbar').on('click.fndtn.topbar', function (e) {
