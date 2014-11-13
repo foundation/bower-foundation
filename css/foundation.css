@@ -1535,7 +1535,7 @@ button, .button {
   text-decoration: none;
   text-align: center;
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
+  border-radius: 0;
   display: inline-block;
   padding-top: 1rem;
   padding-right: 2rem;
@@ -2661,7 +2661,7 @@ span.postfix, label.postfix {
 /* We use this to get basic styling on all basic form elements */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
   -webkit-appearance: none;
-  -webkit-border-radius: 0px;
+  border-radius: 0px;
   background-color: white;
   font-family: inherit;
   border-style: solid;
@@ -2754,7 +2754,7 @@ form .row .postfix-round.row.collapse .postfix {
 
 input[type="submit"] {
   -webkit-appearance: none;
-  -webkit-border-radius: 0px; }
+  border-radius: 0px; }
 
 /* Respect enforced amount of rows for textarea */
 textarea[rows] {
@@ -2767,7 +2767,7 @@ textarea {
 /* Add height value for select elements to match text input height */
 select {
   -webkit-appearance: none !important;
-  -webkit-border-radius: 0px;
+  border-radius: 0px;
   background-color: #fafafa;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
   background-position: 100% center;
