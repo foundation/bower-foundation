@@ -3,7 +3,7 @@ meta.foundation-version {
 
 meta.foundation-mq-small {
   font-family: "/only screen/";
-  width: 0em; }
+  width: 0; }
 
 meta.foundation-mq-medium {
   font-family: "/only screen and (min-width:40.063em)/";
