@@ -2966,6 +2966,12 @@ label.error {
       color: white; }
     .icon-bar > a:hover i {
       color: white; }
+  .icon-bar > a.active {
+    background: #008cba; }
+    .icon-bar > a.active label {
+      color: white; }
+    .icon-bar > a.active i {
+      color: white; }
 
 .icon-bar.two-up .item {
   width: 50%; }
