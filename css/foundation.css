@@ -3332,7 +3332,7 @@ kbd {
       width: 100%;
       margin-left: 100%; }
       .orbit-container .orbit-slides-container > *:first-child {
-        margin-left: 0%; }
+        margin-left: 0; }
       .orbit-container .orbit-slides-container > * .orbit-caption {
         position: absolute;
         bottom: 0;
@@ -3363,7 +3363,7 @@ kbd {
       height: 3px;
       background-color: rgba(255, 255, 255, 0.3);
       display: block;
-      width: 0%;
+      width: 0;
       position: relative;
       right: 20px;
       top: 5px; }
@@ -3475,7 +3475,7 @@ kbd {
     height: auto !important; }
   .orbit-stack-on-small .orbit-slides-container > * {
     position: relative;
-    margin: 0% !important;
+    margin: 0 !important;
     opacity: 1 !important; }
   .orbit-stack-on-small .orbit-slide-number {
     display: none; }
@@ -4067,9 +4067,11 @@ dialog {
     height: 1.5rem;
     -webkit-transition: left 0.15s ease-out;
     -moz-transition: left 0.15s ease-out;
+    -o-transition: translate3d(0, 0, 0);
     transition: left 0.15s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .switch input:checked + label {
     background: #008cba; }
