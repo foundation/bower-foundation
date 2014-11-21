@@ -1,9 +1,16 @@
 {
   "name": "foundation",
+<<<<<<< HEAD
   "version": "5.3.8",
+=======
+  "version": "5.4.7",
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
   "main": [
     "css/foundation.css",
+    "css/foundation.css.map",
     "js/foundation.js"
+  ],
+  "ignore": [
   ],
   "dependencies": {
     "jquery": ">= 2.1.0",
