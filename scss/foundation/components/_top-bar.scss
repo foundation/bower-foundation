@@ -236,7 +236,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
             }
             height: 34px;
             line-height: 33px;
-            padding: 0 $topbar-link-padding+25 0 $topbar-link-padding;
+            padding: 0 $topbar-link-padding + rem-calc(25) 0 $topbar-link-padding;
             color: $topbar-menu-link-color;
             position: relative;
 
@@ -267,13 +267,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
 
         .toggle-topbar {
           a { color: $topbar-menu-link-color-toggled;
-			span::after {
-              // Shh, don't tell, but box-shadows create the menu icon :)
-              // Change the color of the bars when the menu is expanded, using given thickness from hamburger() above
-              box-shadow: 0 0 0 1px $topbar-menu-icon-color-toggled,
-                          0 7px 0 1px $topbar-menu-icon-color-toggled,
-                          0 14px 0 1px $topbar-menu-icon-color-toggled;
-            }
+            @include hamburger(16px, false, 0, 1px, 6px, $topbar-menu-icon-color-toggled, $topbar-menu-icon-color-toggled, false);
           }
         }
       }
@@ -358,7 +352,7 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
             color: $topbar-link-color-active-hover;
           }
         }
-      }
+      }_switches.scss
 
       // Add some extra padding for list items contains buttons
       .has-form { padding: $topbar-link-padding; }

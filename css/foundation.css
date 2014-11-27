@@ -4032,6 +4032,88 @@ dialog {
   padding: 0;
   border: none;
   position: relative;
+<<<<<<< HEAD
+  color: transparent;
+  background: #ddd;
+  text-indent: 100%;
+  width: 4rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: left 0.15s ease-out; }
+div.switch input {
+  display: none; }
+  div.switch input + label {
+    margin-left: 0;
+    margin-right: 0; }
+div.switch label:after {
+  content: "";
+  display: block;
+  background: #fff;
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+div.switch input:checked + label {
+  background: #008CBA; }
+div.switch input:checked + label:after {
+  left: 2.25rem; }
+div.switch label {
+  width: 4rem;
+  height: 2rem; }
+div.switch label:after {
+  width: 1.5rem;
+  height: 1.5rem; }
+div.switch input:checked + label:after {
+  left: 2.25rem; }
+div.switch label {
+  color: transparent;
+  background: #ddd; }
+div.switch label:after {
+  background: #fff; }
+div.switch input:checked + label {
+  background: #008CBA; }
+div.switch.large label {
+  width: 5rem;
+  height: 2.5rem; }
+div.switch.large label:after {
+  width: 2rem;
+  height: 2rem; }
+div.switch.large input:checked + label:after {
+  left: 2.75rem; }
+div.switch.small label {
+  width: 3.5rem;
+  height: 1.75rem; }
+div.switch.small label:after {
+  width: 1.25rem;
+  height: 1.25rem; }
+div.switch.small input:checked + label:after {
+  left: 2rem; }
+div.switch.tiny label {
+  width: 3rem;
+  height: 1.5rem; }
+div.switch.tiny label:after {
+  width: 1rem;
+  height: 1rem; }
+div.switch.tiny input:checked + label:after {
+  left: 1.75rem; }
+div.switch.radius label {
+  border-radius: 4px; }
+div.switch.radius label:after {
+  border-radius: 3px; }
+div.switch.round {
+  border-radius: 1000px; }
+  div.switch.round label {
+    border-radius: 2rem; }
+  div.switch.round label:after {
+    border-radius: 2rem; }
+=======
   outline: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4126,6 +4208,7 @@ dialog {
       border-radius: 2rem; }
     .switch.round label:after {
       border-radius: 2rem; }
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
 
 table {
   background: white;
@@ -4940,11 +5023,49 @@ meta.foundation-mq-topbar {
   .xlarge-text-center {
     text-align: center !important; }
 
+<<<<<<< HEAD
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  padding: 0.75rem;
+  max-width: 300px;
+  left: 50%;
+  width: 100%;
+  color: #fff;
+  background: #333; }
+  .tooltip > .nub {
+    display: block;
+    left: 5px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid 5px;
+    border-color: transparent transparent #333 transparent;
+    top: -10px;
+    pointer-events: none; }
+    .tooltip > .nub.rtl {
+      left: auto;
+      right: 5px; }
+  .tooltip.radius {
+    border-radius: 3px; }
+  .tooltip.round {
+    border-radius: 1000px; }
+    .tooltip.round > .nub {
+      left: 2rem; }
+  .tooltip.opened {
+    color: #008CBA !important;
+    border-bottom: dotted 1px #004054 !important; }
+=======
   .xlarge-text-justify {
     text-align: justify !important; } }
 @media only screen and (min-width: 120.063em) and (max-width: 99999999em) {
   .xxlarge-only-text-left {
     text-align: left !important; }
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
 
   .xxlarge-only-text-right {
     text-align: right !important; }
@@ -5349,7 +5470,11 @@ blockquote p {
   text-align: center;
   height: 2.8125rem;
   top: 0; }
+<<<<<<< HEAD
+  @media only screen and (min-width:40.063em) {
+=======
   @media only screen and (min-width: 40.063em) {
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
     .tab-bar-section.left, .tab-bar-section.right {
       text-align: left; } }
   .tab-bar-section.left {
@@ -5551,8 +5676,13 @@ ul.off-canvas-list {
   left: 0;
   right: 0;
   z-index: 1002;
+<<<<<<< HEAD
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  @media only screen and (min-width:40.063em) {
+=======
   -webkit-tap-highlight-color: transparent; }
   @media only screen and (min-width: 40.063em) {
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
     .offcanvas-overlap-left .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 
@@ -5576,8 +5706,13 @@ ul.off-canvas-list {
   left: 0;
   right: 0;
   z-index: 1002;
+<<<<<<< HEAD
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  @media only screen and (min-width:40.063em) {
+=======
   -webkit-tap-highlight-color: transparent; }
   @media only screen and (min-width: 40.063em) {
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
     .offcanvas-overlap-right .exit-off-canvas:hover {
       background: rgba(255, 255, 255, 0.05); } }
 

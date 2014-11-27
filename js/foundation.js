@@ -277,7 +277,11 @@
   window.Foundation = {
     name : 'Foundation',
 
+<<<<<<< HEAD
+    version : '5.3.3',
+=======
     version : '5.4.7',
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
 
     media_queries : {
       small : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
@@ -4138,7 +4142,11 @@
   Foundation.libs.orbit = {
     name: 'orbit',
 
+<<<<<<< HEAD
+    version: '5.3.3',
+=======
     version: '5.4.7',
+>>>>>>> 325ec27b33173027114d26473b292accd08985b9
 
     settings: {
       animation: 'slide',
