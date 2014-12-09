@@ -2605,7 +2605,6 @@ label {
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
-  line-height: 2.125rem;
   border: none; }
 
 .prefix.button {
@@ -2614,7 +2613,6 @@ label {
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
-  line-height: 2.125rem;
   border: none; }
 
 .prefix.button.radius {
