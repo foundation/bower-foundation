@@ -3736,7 +3736,7 @@ ul.pagination {
     background: #007ba4; }
 
 .reveal-modal-bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -3849,7 +3849,7 @@ ul.pagination {
 dialog {
   display: none; }
   dialog::backdrop, dialog + .backdrop {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
