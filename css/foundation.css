@@ -5296,7 +5296,6 @@ blockquote p {
     -webkit-overflow-scrolling: touch; }
 
 .inner-wrap {
-  -webkit-backface-visibility: hidden;
   position: relative;
   width: 100%;
   -webkit-transition: -webkit-transform 500ms ease;
