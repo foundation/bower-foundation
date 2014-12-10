@@ -4003,7 +4003,7 @@ dialog {
   display: block;
   width: auto;
   overflow: hidden;
-  margin-bottom: -0.25rem 0 1.125rem;
+  margin: -0.25rem 0 1.125rem;
   padding-top: 0.25rem; }
   .sub-nav dt {
     text-transform: uppercase; }
