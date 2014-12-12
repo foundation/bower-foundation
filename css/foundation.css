@@ -3895,8 +3895,8 @@ ul.pagination {
     font-size: 2.5rem;
     line-height: 1;
     position: absolute;
-    top: 0.5rem;
-    right: 0.6875rem;
+    top: 0.625rem;
+    right: 1.375rem;
     color: #aaaaaa;
     font-weight: bold;
     cursor: pointer; }
