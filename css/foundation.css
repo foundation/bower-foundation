@@ -5403,8 +5403,10 @@ blockquote p {
   height: 2.8125rem;
   top: 0; }
   @media only screen and (min-width: 40.063em) {
-    .tab-bar-section.left, .tab-bar-section.right {
-      text-align: left; } }
+    .tab-bar-section.left {
+      text-align: left; }
+    .tab-bar-section.right {
+      text-align: right; } }
   .tab-bar-section.left {
     left: 0;
     right: 2.8125rem; }
