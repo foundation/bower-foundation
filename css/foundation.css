@@ -5687,7 +5687,7 @@ ul.off-canvas-list {
       content: "\AB";
       margin-right: 0.5rem;
       display: inline; }
-  .left-submenu.move-right {
+  .left-submenu.move-right, .left-submenu.offcanvas-overlap-right, .left-submenu.offcanvas-overlap {
     -ms-transform: translate(0%, 0);
     -webkit-transform: translate3d(0%, 0, 0);
     -moz-transform: translate3d(0%, 0, 0);
@@ -5739,7 +5739,7 @@ ul.off-canvas-list {
       content: "\BB";
       margin-left: 0.5rem;
       display: inline; }
-  .right-submenu.move-left {
+  .right-submenu.move-left, .right-submenu.offcanvas-overlap-left, .right-submenu.offcanvas-overlap {
     -ms-transform: translate(0%, 0);
     -webkit-transform: translate3d(0%, 0, 0);
     -moz-transform: translate3d(0%, 0, 0);
