@@ -4,7 +4,7 @@
   Foundation.libs.offcanvas = {
     name : 'offcanvas',
 
-    version : '5.4.7',
+    version : '5.5.0',
 
     settings : {
       open_method: 'move',
