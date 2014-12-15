@@ -1563,7 +1563,7 @@ select {
       .breadcrumbs > *.unavailable a:focus {
         text-decoration: none;
         color: #999999;
-        cursor: default; }
+        cursor: not-allowed; }
     .breadcrumbs > *:before {
       content: "/";
       color: #AAAAAA;
@@ -3756,7 +3756,7 @@ ul.pagination {
         background: #007ba4; }
   .range-slider.disabled, .range-slider[disabled] {
     background: #FAFAFA;
-    cursor: default;
+    cursor: not-allowed;
     opacity: 0.7; }
     .range-slider.disabled .range-slider-handle, .range-slider[disabled] .range-slider-handle {
       background: #008CBA;
