@@ -1797,6 +1797,8 @@ button::-moz-focus-inner {
       border-left-width: 0;
       margin: 0;
       display: block; }
+    .button-group.stack > li > button {
+      width: 100%; }
     .button-group.stack > li:first-child button, .button-group.stack > li:first-child .button {
       border-top: 0; }
   .button-group.stack-for-small > li {
@@ -1824,6 +1826,8 @@ button::-moz-focus-inner {
           border-left-width: 0;
           margin: 0;
           display: block; }
+        .button-group.stack-for-small > li > button {
+          width: 100%; }
         .button-group.stack-for-small > li:first-child button, .button-group.stack-for-small > li:first-child .button {
           border-top: 0; } }
   .button-group.radius > * {
@@ -1862,6 +1866,8 @@ button::-moz-focus-inner {
       border-left-width: 0;
       margin: 0;
       display: block; }
+    .button-group.radius.stack > * > button {
+      width: 100%; }
     .button-group.radius.stack > *:first-child button, .button-group.radius.stack > *:first-child .button {
       border-top: 0; }
     .button-group.radius.stack > *, .button-group.radius.stack > * > a, .button-group.radius.stack > * > button, .button-group.radius.stack > * > .button {
@@ -1914,6 +1920,8 @@ button::-moz-focus-inner {
         border-left-width: 0;
         margin: 0;
         display: block; }
+      .button-group.radius.stack-for-small > * > button {
+        width: 100%; }
       .button-group.radius.stack-for-small > *:first-child button, .button-group.radius.stack-for-small > *:first-child .button {
         border-top: 0; }
       .button-group.radius.stack-for-small > *, .button-group.radius.stack-for-small > * > a, .button-group.radius.stack-for-small > * > button, .button-group.radius.stack-for-small > * > .button {
@@ -1964,6 +1972,8 @@ button::-moz-focus-inner {
       border-left-width: 0;
       margin: 0;
       display: block; }
+    .button-group.round.stack > * > button {
+      width: 100%; }
     .button-group.round.stack > *:first-child button, .button-group.round.stack > *:first-child .button {
       border-top: 0; }
     .button-group.round.stack > *, .button-group.round.stack > * > a, .button-group.round.stack > * > button, .button-group.round.stack > * > .button {
@@ -2016,6 +2026,8 @@ button::-moz-focus-inner {
         border-left-width: 0;
         margin: 0;
         display: block; }
+      .button-group.round.stack-for-small > * > button {
+        width: 100%; }
       .button-group.round.stack-for-small > *:first-child button, .button-group.round.stack-for-small > *:first-child .button {
         border-top: 0; }
       .button-group.round.stack-for-small > *, .button-group.round.stack-for-small > * > a, .button-group.round.stack-for-small > * > button, .button-group.round.stack-for-small > * > .button {
