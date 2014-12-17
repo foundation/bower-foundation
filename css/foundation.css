@@ -4045,6 +4045,18 @@ dialog {
     -webkit-border-top-right-radius: 1000px;
     border-bottom-right-radius: 1000px;
     border-top-right-radius: 1000px; }
+  .split.button.no-pip span:before {
+    border-style: none; }
+  .split.button.no-pip span:after {
+    border-style: none; }
+  .split.button.no-pip span {
+    padding-top: 0.84375rem; }
+  .split.button.no-pip.tiny span {
+    padding-top: 0.75rem; }
+  .split.button.no-pip.small span {
+    padding-top: 0.65625rem; }
+  .split.button.no-pip.large span {
+    padding-top: 1rem; }
 
 .sub-nav {
   display: block;
