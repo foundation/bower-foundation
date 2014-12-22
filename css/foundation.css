@@ -3088,6 +3088,16 @@ label.error {
 @media only screen and (min-width: 64.063em) {
   .icon-bar.six-up.large-vertical .item {
     width: auto; } }
+.icon-bar.seven-up .item {
+  width: 14.28%; }
+.icon-bar.seven-up.vertical .item, .icon-bar.seven-up.small-vertical .item {
+  width: auto; }
+@media only screen and (min-width: 40.063em) {
+  .icon-bar.seven-up.medium-vertical .item {
+    width: auto; } }
+@media only screen and (min-width: 64.063em) {
+  .icon-bar.seven-up.large-vertical .item {
+    width: auto; } }
 
 .inline-list {
   margin: 0 auto 1.0625rem auto;
