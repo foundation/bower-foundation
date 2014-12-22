@@ -3089,7 +3089,7 @@ label.error {
   .icon-bar.six-up.large-vertical .item {
     width: auto; } }
 .icon-bar.seven-up .item {
-  width: 14.28%; }
+  width: 14.28571%; }
 .icon-bar.seven-up.vertical .item, .icon-bar.seven-up.small-vertical .item {
   width: auto; }
 @media only screen and (min-width: 40.063em) {
@@ -3097,6 +3097,16 @@ label.error {
     width: auto; } }
 @media only screen and (min-width: 64.063em) {
   .icon-bar.seven-up.large-vertical .item {
+    width: auto; } }
+.icon-bar.eight-up .item {
+  width: 12.5%; }
+.icon-bar.eight-up.vertical .item, .icon-bar.eight-up.small-vertical .item {
+  width: auto; }
+@media only screen and (min-width: 40.063em) {
+  .icon-bar.eight-up.medium-vertical .item {
+    width: auto; } }
+@media only screen and (min-width: 64.063em) {
+  .icon-bar.eight-up.large-vertical .item {
     width: auto; } }
 
 .inline-list {
