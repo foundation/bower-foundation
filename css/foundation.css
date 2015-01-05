@@ -3832,7 +3832,7 @@ ul.pagination {
   display: none;
   left: 0; }
 
-.reveal-modal, dialog {
+.reveal-modal {
   visibility: hidden;
   display: none;
   position: absolute;
@@ -3847,66 +3847,66 @@ ul.pagination {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   padding: 1.875rem; }
   @media only screen and (max-width: 40em) {
-    .reveal-modal, dialog {
+    .reveal-modal {
       min-height: 100vh; } }
-  .reveal-modal .column, dialog .column, .reveal-modal .columns, dialog .columns {
+  .reveal-modal .column, .reveal-modal .columns {
     min-width: 0; }
-  .reveal-modal > :first-child, dialog > :first-child {
+  .reveal-modal > :first-child {
     margin-top: 0; }
-  .reveal-modal > :last-child, dialog > :last-child {
+  .reveal-modal > :last-child {
     margin-bottom: 0; }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal, dialog {
+    .reveal-modal {
       width: 80%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal, dialog {
+    .reveal-modal {
       top: 6.25rem; } }
-  .reveal-modal.radius, dialog.radius {
+  .reveal-modal.radius {
     border-radius: 3px; }
-  .reveal-modal.round, dialog.round {
+  .reveal-modal.round {
     border-radius: 1000px; }
-  .reveal-modal.collapse, dialog.collapse {
+  .reveal-modal.collapse {
     padding: 0; }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal.tiny, dialog.tiny {
+    .reveal-modal.tiny {
       width: 30%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal.small, dialog.small {
+    .reveal-modal.small {
       width: 40%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal.medium, dialog.medium {
+    .reveal-modal.medium {
       width: 60%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal.large, dialog.large {
+    .reveal-modal.large {
       width: 70%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
   @media only screen and (min-width: 40.063em) {
-    .reveal-modal.xlarge, dialog.xlarge {
+    .reveal-modal.xlarge {
       width: 95%;
       max-width: 62.5rem;
       left: 0;
       right: 0;
       margin: 0 auto; } }
-  .reveal-modal.full, dialog.full {
+  .reveal-modal.full {
     top: 0;
     left: 0;
     height: 100%;
@@ -3915,13 +3915,13 @@ ul.pagination {
     max-width: none !important;
     margin-left: 0 !important; }
     @media only screen and (min-width: 40.063em) {
-      .reveal-modal.full, dialog.full {
+      .reveal-modal.full {
         width: 100vw;
         max-width: 62.5rem;
         left: 0;
         right: 0;
         margin: 0 auto; } }
-  .reveal-modal .close-reveal-modal, dialog .close-reveal-modal {
+  .reveal-modal .close-reveal-modal {
     font-size: 2.5rem;
     line-height: 1;
     position: absolute;
@@ -3931,26 +3931,6 @@ ul.pagination {
     font-weight: bold;
     cursor: pointer; }
 
-dialog {
-  display: none; }
-  dialog::backdrop, dialog + .backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #000000;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: auto;
-    display: none;
-    left: 0; }
-  dialog[open] {
-    display: block; }
-
-@media print {
-  dialog, .reveal-modal, dialog {
-    display: none;
-    background: #FFFFFF !important; } }
 .side-nav {
   display: block;
   margin: 0;
