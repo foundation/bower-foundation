@@ -1138,7 +1138,7 @@
 
       // comma delimited list of selectors that, on click, will close clearing,
       // add 'div.clearing-blackout, div.visible-img' to close on background click
-      close_selectors : '.clearing-close, div.clearing-blackout', 
+      close_selectors : '.clearing-close, div.clearing-blackout',
 
       // Default to the entire li element.
       open_selectors : '',
@@ -1282,7 +1282,7 @@
       if ($el.parent().hasClass('carousel')) {
         return;
       }
-      
+
       $el.after('<div id="foundationClearingHolder"></div>');
 
       var grid = $el.detach(),
@@ -1293,7 +1293,7 @@
       } else {
         grid_outerHTML = grid[0].outerHTML;
       }
-      
+
       var holder = this.S('#foundationClearingHolder'),
           settings = $el.data(this.attr_name(true) + '-init'),
           data = {
@@ -1394,7 +1394,7 @@
           .removeClass('clearing-blackout');
         container.removeClass('clearing-container');
         visible_image.hide();
-        visible_image.trigger('closed.fndtn.clearing');        
+        visible_image.trigger('closed.fndtn.clearing');
       }
 
       // Event to re-enable scrolling on touch devices
@@ -1474,34 +1474,18 @@
     },
 
     center_and_label : function (target, label) {
-      if (!this.rtl) {
-        target.css({
-          marginLeft : -(target.outerWidth() / 2),
-          marginTop : -(target.outerHeight() / 2)
+      if (!this.rtl && label.length > 0) {
+        label.css({
+          marginLeft : -(label.outerWidth() / 2),
+          marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10
         });
-
-        if (label.length > 0) {
-          label.css({
-            marginLeft : -(label.outerWidth() / 2),
-            marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10
-          });
-        }
       } else {
-        target.css({
-          marginRight : -(target.outerWidth() / 2),
-          marginTop : -(target.outerHeight() / 2),
+        label.css({
+          marginRight : -(label.outerWidth() / 2),
+          marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10,
           left: 'auto',
           right: '50%'
         });
-
-        if (label.length > 0) {
-          label.css({
-            marginRight : -(label.outerWidth() / 2),
-            marginTop : -(target.outerHeight() / 2)-label.outerHeight()-10,
-            left: 'auto',
-            right: '50%'
-          });
-        }
       }
       return this;
     },
@@ -1558,7 +1542,7 @@
           .hide();
       }
       return this;
-    }, 
+    },
 
     // directional methods
 

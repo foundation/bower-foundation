@@ -2179,7 +2179,9 @@ button::-moz-focus-inner {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
     max-height: 100%;
     max-width: 100%; }
 
