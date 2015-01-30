@@ -346,7 +346,7 @@ $cursor-text-value: text !default;
   // Forward slash placed around everything to convince PhantomJS to read the value.
 
   meta.foundation-version {
-    font-family: "/5.5.0/";
+    font-family: "/5.5.1/";
   }
 
   meta.foundation-mq-small {
@@ -449,8 +449,7 @@ $cursor-text-value: text !default;
 
     // Hide visually and from screen readers
     .hide {
-      display: none !important;
-      visibility: hidden;
+      display: none;
     }
 
     // Hide visually and from screen readers, but maintain layout
