@@ -4516,6 +4516,7 @@
       var settings = modal.data(self.attr_name(true) + '-init');
       settings = settings || this.settings;
 
+
       if (modal.hasClass('open') && target.attr('data-reveal-id') == modal.attr('id')) {
         return self.close(modal);
       }
@@ -4529,7 +4530,11 @@
         }
 
         this.key_up_on(modal);    // PATCH #3: turning on key up capture only when a reveal window is open
-
+        
+        modal.on('open.fndtn.reveal', function(e) {
+          if (e.namespace !== 'fndnt.reveal') return;
+        });
+        
         modal.on('open.fndtn.reveal').trigger('open.fndtn.reveal');
 
         if (open_modal.length < 1) {
@@ -5728,6 +5733,7 @@
        if (sticky && navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
         return true;
        }
+       
        return false;
     },
 
