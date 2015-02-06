@@ -2310,6 +2310,7 @@ button::-moz-focus-inner {
   list-style: none;
   margin-left: 0;
   outline: none;
+  display: none;
   width: 100%;
   max-height: none;
   height: auto;
@@ -2319,6 +2320,8 @@ button::-moz-focus-inner {
   z-index: 89;
   margin-top: 2px;
   max-width: 200px; }
+  .f-dropdown.open {
+    display: block; }
   .f-dropdown > *:first-child {
     margin-top: 0; }
   .f-dropdown > *:last-child {
@@ -2359,6 +2362,7 @@ button::-moz-focus-inner {
     list-style: none;
     margin-left: 0;
     outline: none;
+    display: none;
     width: 100%;
     max-height: none;
     height: auto;
@@ -2369,6 +2373,8 @@ button::-moz-focus-inner {
     margin-top: 0;
     margin-left: 2px;
     max-width: 200px; }
+    .f-dropdown.drop-right.open {
+      display: block; }
     .f-dropdown.drop-right > *:first-child {
       margin-top: 0; }
     .f-dropdown.drop-right > *:last-child {
@@ -2403,6 +2409,7 @@ button::-moz-focus-inner {
     list-style: none;
     margin-left: 0;
     outline: none;
+    display: none;
     width: 100%;
     max-height: none;
     height: auto;
@@ -2413,6 +2420,8 @@ button::-moz-focus-inner {
     margin-top: 0;
     margin-left: -2px;
     max-width: 200px; }
+    .f-dropdown.drop-left.open {
+      display: block; }
     .f-dropdown.drop-left > *:first-child {
       margin-top: 0; }
     .f-dropdown.drop-left > *:last-child {
@@ -2449,6 +2458,7 @@ button::-moz-focus-inner {
     list-style: none;
     margin-left: 0;
     outline: none;
+    display: none;
     width: 100%;
     max-height: none;
     height: auto;
@@ -2459,6 +2469,8 @@ button::-moz-focus-inner {
     margin-top: -2px;
     margin-left: 0;
     max-width: 200px; }
+    .f-dropdown.drop-top.open {
+      display: block; }
     .f-dropdown.drop-top > *:first-child {
       margin-top: 0; }
     .f-dropdown.drop-top > *:last-child {
@@ -2510,6 +2522,7 @@ button::-moz-focus-inner {
     list-style: none;
     margin-left: 0;
     outline: none;
+    display: none;
     padding: 1.25rem;
     width: 100%;
     height: auto;
@@ -2519,6 +2532,8 @@ button::-moz-focus-inner {
     font-size: 0.875rem;
     z-index: 89;
     max-width: 200px; }
+    .f-dropdown.content.open {
+      display: block; }
     .f-dropdown.content > *:first-child {
       margin-top: 0; }
     .f-dropdown.content > *:last-child {
