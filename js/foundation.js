@@ -4998,7 +4998,7 @@
 
       if (settings.display_selector != '') {
         $(settings.display_selector).each(function () {
-          if (this.hasOwnProperty('value')) {
+          if (this.hasAttribute('value')) {
             $(this).val(value);
           } else {
             $(this).text(value);
