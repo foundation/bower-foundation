@@ -4102,6 +4102,7 @@ ul.pagination {
   border: none;
   position: relative;
   outline: 0;
+  margin-bottom: 1.5rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none; }
