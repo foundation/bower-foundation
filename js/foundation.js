@@ -782,6 +782,7 @@
           form = self.S(scope).attr('novalidate', 'novalidate'),
           settings = form.data(this.attr_name(true) + '-init') || {};
 
+
       this.invalid_attr = this.add_namespace('data-invalid');
 
       form
@@ -1050,6 +1051,15 @@
       }
 
       return valid;
+    },
+
+    reflow : function() {
+      var self = this,
+          form = this.S('[' + this.attr_name() + ']').attr('novalidate', 'novalidate');
+
+      this.S(form).each(function (idx, el) {
+        self.events(el);
+      });
     }
   };
 }(jQuery, window, window.document));
