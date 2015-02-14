@@ -5482,6 +5482,8 @@ ul.off-canvas-list {
     transition: background 300ms ease; }
     ul.off-canvas-list li a:hover {
       background: #242424; }
+    ul.off-canvas-list li a:active {
+      background: #242424; }
 
 .move-right > .inner-wrap {
   -webkit-transform: translate3d(15.625rem, 0, 0);
