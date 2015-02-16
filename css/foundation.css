@@ -1895,7 +1895,10 @@ button::-moz-focus-inner {
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.radius > *:first-child button, .button-group.radius > *:first-child .button {
       border-left: 0; }
-    .button-group.radius > *, .button-group.radius > * > a, .button-group.radius > * > button, .button-group.radius > * > .button {
+    .button-group.radius > *,
+    .button-group.radius > * > a,
+    .button-group.radius > * > button,
+    .button-group.radius > * > .button {
       border-radius: 0; }
     .button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button {
       -webkit-border-bottom-left-radius: 3px;
@@ -1925,7 +1928,10 @@ button::-moz-focus-inner {
       width: 100%; }
     .button-group.radius.stack > *:first-child button, .button-group.radius.stack > *:first-child .button {
       border-top: 0; }
-    .button-group.radius.stack > *, .button-group.radius.stack > * > a, .button-group.radius.stack > * > button, .button-group.radius.stack > * > .button {
+    .button-group.radius.stack > *,
+    .button-group.radius.stack > * > a,
+    .button-group.radius.stack > * > button,
+    .button-group.radius.stack > * > .button {
       border-radius: 0; }
     .button-group.radius.stack > *:first-child, .button-group.radius.stack > *:first-child > a, .button-group.radius.stack > *:first-child > button, .button-group.radius.stack > *:first-child > .button {
       -webkit-top-left-radius: 3px;
@@ -1946,7 +1952,10 @@ button::-moz-focus-inner {
         border-color: rgba(255, 255, 255, 0.5); }
       .button-group.radius.stack-for-small > *:first-child button, .button-group.radius.stack-for-small > *:first-child .button {
         border-left: 0; }
-      .button-group.radius.stack-for-small > *, .button-group.radius.stack-for-small > * > a, .button-group.radius.stack-for-small > * > button, .button-group.radius.stack-for-small > * > .button {
+      .button-group.radius.stack-for-small > *,
+      .button-group.radius.stack-for-small > * > a,
+      .button-group.radius.stack-for-small > * > button,
+      .button-group.radius.stack-for-small > * > .button {
         border-radius: 0; }
       .button-group.radius.stack-for-small > *:first-child, .button-group.radius.stack-for-small > *:first-child > a, .button-group.radius.stack-for-small > *:first-child > button, .button-group.radius.stack-for-small > *:first-child > .button {
         -webkit-border-bottom-left-radius: 3px;
@@ -1977,7 +1986,10 @@ button::-moz-focus-inner {
         width: 100%; }
       .button-group.radius.stack-for-small > *:first-child button, .button-group.radius.stack-for-small > *:first-child .button {
         border-top: 0; }
-      .button-group.radius.stack-for-small > *, .button-group.radius.stack-for-small > * > a, .button-group.radius.stack-for-small > * > button, .button-group.radius.stack-for-small > * > .button {
+      .button-group.radius.stack-for-small > *,
+      .button-group.radius.stack-for-small > * > a,
+      .button-group.radius.stack-for-small > * > button,
+      .button-group.radius.stack-for-small > * > .button {
         border-radius: 0; }
       .button-group.radius.stack-for-small > *:first-child, .button-group.radius.stack-for-small > *:first-child > a, .button-group.radius.stack-for-small > *:first-child > button, .button-group.radius.stack-for-small > *:first-child > .button {
         -webkit-top-left-radius: 3px;
@@ -1997,7 +2009,10 @@ button::-moz-focus-inner {
       border-color: rgba(255, 255, 255, 0.5); }
     .button-group.round > *:first-child button, .button-group.round > *:first-child .button {
       border-left: 0; }
-    .button-group.round > *, .button-group.round > * > a, .button-group.round > * > button, .button-group.round > * > .button {
+    .button-group.round > *,
+    .button-group.round > * > a,
+    .button-group.round > * > button,
+    .button-group.round > * > .button {
       border-radius: 0; }
     .button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button {
       -webkit-border-bottom-left-radius: 1000px;
@@ -2027,7 +2042,10 @@ button::-moz-focus-inner {
       width: 100%; }
     .button-group.round.stack > *:first-child button, .button-group.round.stack > *:first-child .button {
       border-top: 0; }
-    .button-group.round.stack > *, .button-group.round.stack > * > a, .button-group.round.stack > * > button, .button-group.round.stack > * > .button {
+    .button-group.round.stack > *,
+    .button-group.round.stack > * > a,
+    .button-group.round.stack > * > button,
+    .button-group.round.stack > * > .button {
       border-radius: 0; }
     .button-group.round.stack > *:first-child, .button-group.round.stack > *:first-child > a, .button-group.round.stack > *:first-child > button, .button-group.round.stack > *:first-child > .button {
       -webkit-top-left-radius: 1rem;
@@ -2048,7 +2066,10 @@ button::-moz-focus-inner {
         border-color: rgba(255, 255, 255, 0.5); }
       .button-group.round.stack-for-small > *:first-child button, .button-group.round.stack-for-small > *:first-child .button {
         border-left: 0; }
-      .button-group.round.stack-for-small > *, .button-group.round.stack-for-small > * > a, .button-group.round.stack-for-small > * > button, .button-group.round.stack-for-small > * > .button {
+      .button-group.round.stack-for-small > *,
+      .button-group.round.stack-for-small > * > a,
+      .button-group.round.stack-for-small > * > button,
+      .button-group.round.stack-for-small > * > .button {
         border-radius: 0; }
       .button-group.round.stack-for-small > *:first-child, .button-group.round.stack-for-small > *:first-child > a, .button-group.round.stack-for-small > *:first-child > button, .button-group.round.stack-for-small > *:first-child > .button {
         -webkit-border-bottom-left-radius: 1000px;
@@ -2079,7 +2100,10 @@ button::-moz-focus-inner {
         width: 100%; }
       .button-group.round.stack-for-small > *:first-child button, .button-group.round.stack-for-small > *:first-child .button {
         border-top: 0; }
-      .button-group.round.stack-for-small > *, .button-group.round.stack-for-small > * > a, .button-group.round.stack-for-small > * > button, .button-group.round.stack-for-small > * > .button {
+      .button-group.round.stack-for-small > *,
+      .button-group.round.stack-for-small > * > a,
+      .button-group.round.stack-for-small > * > button,
+      .button-group.round.stack-for-small > * > .button {
         border-radius: 0; }
       .button-group.round.stack-for-small > *:first-child, .button-group.round.stack-for-small > *:first-child > a, .button-group.round.stack-for-small > *:first-child > button, .button-group.round.stack-for-small > *:first-child > .button {
         -webkit-top-left-radius: 1rem;
@@ -4872,7 +4896,8 @@ meta.foundation-mq-topbar {
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }
-    .top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+    .top-bar-section > ul > .divider,
+    .top-bar-section > ul > [role="separator"] {
       border-bottom: none;
       border-top: none;
       border-right: solid 1px #4e4e4e;
