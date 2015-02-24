@@ -4451,7 +4451,8 @@
 
           if (!self.locked) {
             var element = S(this),
-                ajax = element.data(self.data_attr('reveal-ajax'));
+                ajax = element.data(self.data_attr('reveal-ajax'))
+                replaceContentSel = element.data(self.data_attr('reveal-replace-content'));
 
             self.locked = true;
 
@@ -4460,7 +4461,7 @@
             } else {
               var url = ajax === true ? element.attr('href') : ajax;
 
-              self.open.call(self, element, {url : url});
+              self.open.call(self, element, {url : url}, { replaceContentSel : replaceContentSel });
             }
           }
         });
@@ -4608,7 +4609,11 @@
                 }
               }
 
-              modal.html(data);
+              if (typeof options !== 'undefined' && typeof options.replaceContentSel !== 'undefined') {
+                modal.find(options.replaceContentSel).html(data);
+              } else {
+                modal.html(data);
+              }
 
               self.S(modal).foundation('section', 'reflow');
               self.S(modal).children().foundation();
@@ -4649,6 +4654,7 @@
 
         this.locked = true;
         this.key_up_off(modal);   // PATCH #3: turning on key up capture only when a reveal window is open
+
         modal.trigger('close.fndtn.reveal');
 
         if ((settings.multiple_opened && open_modals.length === 1) || !settings.multiple_opened || modal.length > 1) {
