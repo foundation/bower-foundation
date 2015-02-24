@@ -829,14 +829,14 @@
           if (this.settings.focus_on_invalid) {
             els[i].focus();
           }
-          form.trigger('invalid').trigger('invalid.fndtn.abide');
+          form.trigger('invalid.fndtn.abide');
           this.S(els[i]).closest('form').attr(this.invalid_attr, '');
           return false;
         }
       }
 
       if (submit_event || is_ajax) {
-        form.trigger('valid').trigger('valid.fndtn.abide');
+        form.trigger('valid.fndtn.abide');
       }
 
       form.removeAttr(this.invalid_attr);
@@ -1159,12 +1159,12 @@
         if (Modernizr.csstransitions) {
           alertBox.addClass('alert-close');
           alertBox.on('transitionend webkitTransitionEnd oTransitionEnd', function (e) {
-            S(this).trigger('close').trigger('close.fndtn.alert').remove();
+            S(this).trigger('close.fndtn.alert').remove();
             settings.callback();
           });
         } else {
           alertBox.fadeOut(300, function () {
-            S(this).trigger('close').trigger('close.fndtn.alert').remove();
+            S(this).trigger('close.fndtn.alert').remove();
             settings.callback();
           });
         }
@@ -1479,7 +1479,7 @@
         this.go(clearing, 'prev');
       }
       if (e.which === ESC_KEY) {
-        this.S('a.clearing-close').trigger('click').trigger('click.fndtn.clearing');
+        this.S('a.clearing-close').trigger('click.fndtn.clearing');
       }
     },
 
@@ -1624,7 +1624,7 @@
 
       if (target.length) {
         this.S('img', target)
-          .trigger('click', [current, target]).trigger('click.fndtn.clearing', [current, target])
+          .trigger('click.fndtn.clearing', [current, target])
           .trigger('change.fndtn.clearing');
       }
     },
@@ -1877,7 +1877,7 @@
             .removeClass(self.settings.active_class)
             .removeData('target');
 
-          self.S(this).trigger('closed').trigger('closed.fndtn.dropdown', [dropdown]);
+          self.S(this).trigger('closed.fndtn.dropdown', [dropdown]);
         }
       });
       dropdown.removeClass('f-open-' + this.attr_name(true));
@@ -1895,7 +1895,7 @@
         .css(dropdown
         .addClass(this.settings.active_class), target);
       dropdown.prev('[' + this.attr_name() + ']').addClass(this.settings.active_class);
-      dropdown.data('target', target.get(0)).trigger('opened').trigger('opened.fndtn.dropdown', [dropdown, target]);
+      dropdown.data('target', target.get(0)).trigger('opened.fndtn.dropdown', [dropdown, target]);
       dropdown.attr('aria-hidden', 'false');
       target.attr('aria-expanded', 'true');
       dropdown.focus();
@@ -2233,7 +2233,7 @@
       }
       var firstTopOffset = vals.first().offset().top;
       settings.before_height_change();
-      equalizer.trigger('before-height-change').trigger('before-height-change.fndth.equalizer');
+      equalizer.trigger('before-height-change.fndth.equalizer');
       vals.height('inherit');
       vals.each(function () {
         var el = $(this);
@@ -2258,7 +2258,7 @@
         vals.css('height', min);
       }
       settings.after_height_change();
-      equalizer.trigger('after-height-change').trigger('after-height-change.fndtn.equalizer');
+      equalizer.trigger('after-height-change.fndtn.equalizer');
     },
 
     reflow : function () {
@@ -2407,7 +2407,7 @@
           if (passed) {
             this.settings.directives[passed
               .scenario[1]].call(this, passed.el, passed.scenario[0], (function (passed) {
-                if (arguments[0] instanceof Array) { 
+                if (arguments[0] instanceof Array) {
                   var args = arguments[0];
                 } else {
                   var args = Array.prototype.slice.call(arguments, 0);
@@ -2517,7 +2517,7 @@
         this.object($(this['cached_' + type][i]));
       }
 
-      return $(window).trigger('resize').trigger('resize.fndtn.interchange');
+      return $(window).trigger('resize.fndtn.interchange');
     },
 
     convert_directive : function (directive) {
@@ -3879,13 +3879,13 @@
 
     show : function (class_name, $off_canvas) {
       $off_canvas = $off_canvas || this.get_wrapper();
-      $off_canvas.trigger('open').trigger('open.fndtn.offcanvas');
+      $off_canvas.trigger('open.fndtn.offcanvas');
       $off_canvas.addClass(class_name);
     },
 
     hide : function (class_name, $off_canvas) {
       $off_canvas = $off_canvas || this.get_wrapper();
-      $off_canvas.trigger('close').trigger('close.fndtn.offcanvas');
+      $off_canvas.trigger('close.fndtn.offcanvas');
       $off_canvas.removeClass(class_name);
     },
 
@@ -4568,7 +4568,7 @@
         modal.attr('tabindex','0').attr('aria-hidden','false');
 
         this.key_up_on(modal);    // PATCH #3: turning on key up capture only when a reveal window is open
-        
+
         // Prevent namespace event from triggering twice
         modal.on('open.fndtn.reveal', function(e) {
           if (e.namespace !== 'fndtn.reveal') return;
@@ -4649,13 +4649,13 @@
 
         this.locked = true;
         this.key_up_off(modal);   // PATCH #3: turning on key up capture only when a reveal window is open
-        modal.trigger('close').trigger('close.fndtn.reveal');
-        
+        modal.trigger('close.fndtn.reveal');
+
         if ((settings.multiple_opened && open_modals.length === 1) || !settings.multiple_opened || modal.length > 1) {
           self.toggle_bg(modal, false);
           self.to_front(modal);
         }
-        
+
         if (settings.multiple_opened) {
           self.hide(modal, settings.css.close, settings);
           self.to_front($($.makeArray(open_modals).reverse()[1]));
@@ -4725,7 +4725,7 @@
               .css(css)
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 context.locked = false;
-                el.trigger('opened').trigger('opened.fndtn.reveal');
+                el.trigger('opened.fndtn.reveal');
               })
               .addClass('open');
           }, settings.animation_speed / 2);
@@ -4740,13 +4740,13 @@
               .css(css)
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 context.locked = false;
-                el.trigger('opened').trigger('opened.fndtn.reveal');
+                el.trigger('opened.fndtn.reveal');
               })
               .addClass('open');
           }, settings.animation_speed / 2);
         }
 
-        return el.css(css).show().css({opacity : 1}).addClass('open').trigger('opened').trigger('opened.fndtn.reveal');
+        return el.css(css).show().css({opacity : 1}).addClass('open').trigger('opened.fndtn.reveal');
       }
 
       var settings = this.settings;
@@ -4760,11 +4760,11 @@
 
       return el.show();
     },
-    
+
     to_back : function(el) {
       el.addClass('toback');
     },
-    
+
     to_front : function(el) {
       el.removeClass('toback');
     },
@@ -4790,7 +4790,7 @@
             return el
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 context.locked = false;
-                el.css(css).trigger('closed').trigger('closed.fndtn.reveal');
+                el.css(css).trigger('closed.fndtn.reveal');
               })
               .removeClass('open');
           }, settings.animation_speed / 2);
@@ -4803,13 +4803,13 @@
             return el
               .animate(end_css, settings.animation_speed, 'linear', function () {
                 context.locked = false;
-                el.css(css).trigger('closed').trigger('closed.fndtn.reveal');
+                el.css(css).trigger('closed.fndtn.reveal');
               })
               .removeClass('open');
           }, settings.animation_speed / 2);
         }
 
-        return el.hide().css(css).removeClass('open').trigger('closed').trigger('closed.fndtn.reveal');
+        return el.hide().css(css).removeClass('open').trigger('closed.fndtn.reveal');
       }
 
       var settings = this.settings;
@@ -5032,7 +5032,7 @@
         $handle.siblings('.range-slider-active-segment').css('width', progress_bar_length + '%');
       }
 
-      $handle_parent.attr(this.attr_name(), value).trigger('change').trigger('change.fndtn.slider');
+      $handle_parent.attr(this.attr_name(), value).trigger('change.fndtn.slider');
 
       $hidden_inputs.val(value);
       if (settings.trigger_input_change) {
@@ -5803,7 +5803,7 @@
       var smallMatch = matchMedia(Foundation.media_queries.small).matches;
       var medMatch   = matchMedia(Foundation.media_queries.medium).matches;
       var lrgMatch   = matchMedia(Foundation.media_queries.large).matches;
-      
+
        if (sticky && settings.sticky_on === 'all') {
           return true;
        }
@@ -5821,7 +5821,7 @@
        if (sticky && navigator.userAgent.match(/(iPad|iPhone|iPod)/g)) {
         return true;
        }
-       
+
        return false;
     },
 
@@ -5986,7 +5986,7 @@
 
       S(window).off('.topbar').on('resize.fndtn.topbar', self.throttle(function () {
           self.resize.call(self);
-      }, 50)).trigger('resize').trigger('resize.fndtn.topbar').load(function () {
+      }, 50)).trigger('resize.fndtn.topbar').load(function () {
           // Ensure that the offset is calculated after all of the pages resources have loaded
           S(this).trigger('resize.fndtn.topbar');
       });
