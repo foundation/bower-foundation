@@ -4636,6 +4636,14 @@ meta.foundation-mq-topbar {
           background-color: #cf6e0e; }
         .top-bar-section ul li > a.button.warning:hover, .top-bar-section ul li > a.button.warning:focus {
           color: #FFFFFF; }
+      .top-bar-section ul li > a.button.info {
+        background-color: #a0d3e8;
+        border-color: #61b6d9;
+        color: #333333; }
+        .top-bar-section ul li > a.button.info:hover, .top-bar-section ul li > a.button.info:focus {
+          background-color: #61b6d9; }
+        .top-bar-section ul li > a.button.info:hover, .top-bar-section ul li > a.button.info:focus {
+          color: #FFFFFF; }
     .top-bar-section ul li > button {
       font-size: 0.8125rem;
       padding-right: 0.9375rem;
@@ -4678,6 +4686,14 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
           background-color: #cf6e0e; }
         .top-bar-section ul li > button.warning:hover, .top-bar-section ul li > button.warning:focus {
+          color: #FFFFFF; }
+      .top-bar-section ul li > button.info {
+        background-color: #a0d3e8;
+        border-color: #61b6d9;
+        color: #333333; }
+        .top-bar-section ul li > button.info:hover, .top-bar-section ul li > button.info:focus {
+          background-color: #61b6d9; }
+        .top-bar-section ul li > button.info:hover, .top-bar-section ul li > button.info:focus {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
       background-color: #555555;
