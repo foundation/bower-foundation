@@ -4556,7 +4556,7 @@
 
           if (!self.locked) {
             var element = S(this),
-                ajax = element.data(self.data_attr('reveal-ajax'))
+                ajax = element.data(self.data_attr('reveal-ajax')),
                 replaceContentSel = element.data(self.data_attr('reveal-replace-content'));
 
             self.locked = true;
