@@ -50,6 +50,7 @@ html {
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
 html,
@@ -2307,7 +2308,6 @@ button::-moz-focus-inner {
   left: -9999px;
   list-style: none;
   margin-left: 0;
-  outline: none;
   display: none;
   width: 100%;
   max-height: none;
@@ -2359,7 +2359,6 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
-    outline: none;
     display: none;
     width: 100%;
     max-height: none;
@@ -2406,7 +2405,6 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
-    outline: none;
     display: none;
     width: 100%;
     max-height: none;
@@ -2455,7 +2453,6 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
-    outline: none;
     display: none;
     width: 100%;
     max-height: none;
@@ -2519,7 +2516,6 @@ button::-moz-focus-inner {
     left: -9999px;
     list-style: none;
     margin-left: 0;
-    outline: none;
     display: none;
     padding: 1.25rem;
     width: 100%;
@@ -2552,7 +2548,6 @@ button::-moz-focus-inner {
 
 .dropdown.button, button.dropdown {
   position: relative;
-  outline: none;
   padding-right: 3.5625rem; }
   .dropdown.button::after, button.dropdown::after {
     position: absolute;
@@ -2741,6 +2736,7 @@ span.postfix, label.postfix {
 /* We use this to get basic styling on all basic form elements */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
   -webkit-appearance: none;
+  -moz-appearance: none;
   border-radius: 0;
   background-color: #FFFFFF;
   font-family: inherit;
@@ -2756,6 +2752,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   height: 2.3125rem;
   width: 100%;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: border-color 0.15s linear, background 0.15s linear;
   -moz-transition: border-color 0.15s linear, background 0.15s linear;
@@ -2838,6 +2835,7 @@ form .row .postfix-round.row.collapse .postfix {
 
 input[type="submit"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   border-radius: 0; }
 
 /* Respect enforced amount of rows for textarea */
@@ -2851,6 +2849,7 @@ textarea {
 /* Add height value for select elements to match text input height */
 select {
   -webkit-appearance: none !important;
+  -moz-appearance: none !important;
   border-radius: 0;
   background-color: #FAFAFA;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
@@ -3367,23 +3366,21 @@ kbd {
 
 @-webkit-keyframes rotate {
   from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-@-moz-keyframes rotate {
-  from {
-    -moz-transform: rotate(0deg); }
-  to {
-    -moz-transform: rotate(360deg); } }
-@-o-keyframes rotate {
-  from {
-    -o-transform: rotate(0deg); }
-  to {
-    -o-transform: rotate(360deg); } }
-@keyframes rotate {
-  from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg); } }
 /* Orbit Graceful Loading */
 .slideshow-wrapper {
@@ -3431,7 +3428,11 @@ kbd {
     margin: 0;
     padding: 0;
     position: relative;
-    -webkit-transform: translateZ(0); }
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0); }
     .orbit-container .orbit-slides-container img {
       display: block;
       max-width: 100%; }
@@ -4089,7 +4090,7 @@ ul.pagination {
   display: block;
   width: auto;
   overflow: hidden;
-  margin-bottom: -0.25rem 0 1.125rem;
+  margin: -0.25rem 0 1.125rem;
   padding-top: 0.25rem; }
   .sub-nav dt {
     text-transform: uppercase; }
@@ -4135,6 +4136,7 @@ ul.pagination {
   margin-bottom: 1.5rem;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
   .switch label {
     display: block;
@@ -4171,6 +4173,7 @@ ul.pagination {
     transition: left 0.15s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .switch input:checked + label {
@@ -4292,8 +4295,6 @@ table {
       font-size: 1rem; }
       .tabs dd > a:hover, .tabs .tab-title > a:hover {
         background-color: #e1e1e1; }
-      .tabs dd > a:focus, .tabs .tab-title > a:focus {
-        outline: none; }
     .tabs dd.active a, .tabs .tab-title.active a {
       background-color: #FFFFFF;
       color: #222222; }
