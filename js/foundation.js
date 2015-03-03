@@ -3718,7 +3718,6 @@
           if (settings.offset_by_height) {
             scroll_top = scroll_top - expedition.outerHeight();
           }
-
           $('html, body').stop().animate({
             'scrollTop' : scroll_top
           }, settings.duration, settings.easing, function () {
@@ -3730,9 +3729,6 @@
           });
         })
         .on('scroll.fndtn.magellan', self.throttle(this.check_for_arrivals.bind(this), settings.throttle_delay));
-
-      $(window)
-        .on('resize.fndtn.magellan', self.throttle(this.set_expedition_position.bind(this), settings.throttle_delay));
     },
 
     check_for_arrivals : function () {
