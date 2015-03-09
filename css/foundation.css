@@ -84,7 +84,10 @@ img {
 #map_canvas object,
 .map_canvas img,
 .map_canvas embed,
-.map_canvas object {
+.map_canvas object,
+.mqa-display img,
+.mqa-display embed,
+.mqa-display object {
   max-width: none !important; }
 
 .left {
