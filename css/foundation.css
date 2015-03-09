@@ -5197,8 +5197,8 @@ h6 {
   margin-bottom: 0.5rem; }
 
 hr {
-  border-width: 1px 0 0;
   border: solid #DDDDDD;
+  border-width: 1px 0 0;
   clear: both;
   height: 0;
   margin: 1.25rem 0 1.1875rem; }
