@@ -6083,6 +6083,27 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important; }
 
+/* Screen reader-specific classes */
+.show-for-sr {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.show-on-focus {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+  .show-on-focus:focus, .show-on-focus:active {
+    position: static !important;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto; }
+
 /*
  * Print styles.
  *
