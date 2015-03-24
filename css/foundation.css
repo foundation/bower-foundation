@@ -3648,7 +3648,6 @@ ul.pagination {
 
 /* Panels */
 .panel {
-  border-color: #d8d8d8;
   border-style: solid;
   border-width: 1px;
   border-color: #d8d8d8;
@@ -3668,7 +3667,6 @@ ul.pagination {
     .panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
       line-height: 1.4; }
   .panel.callout {
-    border-color: #b6edff;
     border-style: solid;
     border-width: 1px;
     border-color: #d8d8d8;
