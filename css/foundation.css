@@ -3651,6 +3651,7 @@ ul.pagination {
   border-color: #d8d8d8;
   border-style: solid;
   border-width: 1px;
+  border-color: #d8d8d8;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
   background: #f2f2f2;
@@ -3670,6 +3671,7 @@ ul.pagination {
     border-color: #b6edff;
     border-style: solid;
     border-width: 1px;
+    border-color: #d8d8d8;
     margin-bottom: 1.25rem;
     padding: 1.25rem;
     background: #ecfaff;
