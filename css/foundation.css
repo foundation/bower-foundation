@@ -4488,9 +4488,11 @@ meta.foundation-mq-topbar {
   .top-bar .row {
     max-width: none; }
   .top-bar form,
-  .top-bar input {
+  .top-bar input,
+  .top-bar select {
     margin-bottom: 0; }
-  .top-bar input {
+  .top-bar input,
+  .top-bar select {
     font-size: 0.75rem;
     height: 1.75rem;
     padding-bottom: .35rem;
@@ -4803,6 +4805,7 @@ meta.foundation-mq-topbar {
     .top-bar .name h6 a {
       width: auto; }
     .top-bar input,
+    .top-bar select,
     .top-bar .button,
     .top-bar button {
       font-size: 0.875rem;
