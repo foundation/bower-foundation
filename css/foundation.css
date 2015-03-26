@@ -3795,6 +3795,9 @@ ul.pagination {
       margin-top: 0;
       position: absolute; }
     .range-slider.vertical-range .range-slider-active-segment {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      border-top-left-radius: initial;
       bottom: 0;
       height: auto;
       width: 0.875rem; }
@@ -3827,6 +3830,8 @@ ul.pagination {
 
 .range-slider-active-segment {
   background: #e5e5e5;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
   display: inline-block;
   height: 0.875rem;
   position: absolute; }
