@@ -2353,7 +2353,7 @@
       var isStacked = false,
           group = equalizer.data('equalizer'),
           vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible'),
-          settings = equalizer.data(this.attr_name(true)+'-init'),
+          settings = equalizer.data(this.attr_name(true)+'-init') || this.settings,
           firstTopOffset;
 
       if (vals.length === 0) {
@@ -4591,7 +4591,6 @@
               self.open.call(self, element);
             } else {
               var url = ajax === true ? element.attr('href') : ajax;
-
               self.open.call(self, element, {url : url}, { replaceContentSel : replaceContentSel });
             }
           }
@@ -4730,7 +4729,6 @@
           this.show(modal, settings.css.open);
         } else {
           var old_success = typeof ajax_settings.success !== 'undefined' ? ajax_settings.success : null;
-
           $.extend(ajax_settings, {
             success : function (data, textStatus, jqXHR) {
               if ( $.isFunction(old_success) ) {
