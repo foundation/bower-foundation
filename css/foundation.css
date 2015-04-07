@@ -4032,95 +4032,16 @@ ul.pagination {
       top: 48%; }
   .split.button span:after {
     border-color: #FFFFFF transparent transparent transparent; }
-  .split.button.secondary {
-    position: relative; }
-    .split.button.secondary span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.secondary span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.secondary span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.secondary span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
-  .split.button.alert {
-    position: relative; }
-    .split.button.alert span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.alert span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.alert span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.alert span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
-  .split.button.success {
-    position: relative; }
-    .split.button.success span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.success span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.success span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.success span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
+  .split.button.secondary span {
+    border-left-color: #e7e7e7; }
+  .split.button.secondary span:after {
+    border-color: #FFFFFF transparent transparent transparent; }
+  .split.button.alert span {
+    border-left-color: #f04124; }
+  .split.button.success span {
+    border-left-color: #43AC6A; }
   .split.button.tiny {
-    position: relative;
     padding-right: 3.75rem; }
-    .split.button.tiny span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.tiny span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.tiny span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.tiny span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
     .split.button.tiny span {
       width: 2.25rem; }
       .split.button.tiny span:after {
@@ -4129,28 +4050,7 @@ ul.pagination {
         margin-left: -0.375rem;
         top: 48%; }
   .split.button.small {
-    position: relative;
     padding-right: 4.375rem; }
-    .split.button.small span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.small span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.small span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.small span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
     .split.button.small span {
       width: 2.625rem; }
       .split.button.small span:after {
@@ -4159,28 +4059,7 @@ ul.pagination {
         margin-left: -0.375rem;
         top: 48%; }
   .split.button.large {
-    position: relative;
     padding-right: 5.5rem; }
-    .split.button.large span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.large span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.large span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.large span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
     .split.button.large span {
       width: 3.4375rem; }
       .split.button.large span:after {
@@ -4190,28 +4069,8 @@ ul.pagination {
         top: 48%; }
   .split.button.expand {
     padding-left: 2rem; }
-  .split.button.secondary {
-    position: relative; }
-    .split.button.secondary span {
-      border-left: solid 1px;
-      display: block;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .split.button.secondary span:after {
-        border-style: inset;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-        top: 50%;
-        width: 0;
-        left: 50%; }
-      .split.button.secondary span:active {
-        background-color: rgba(0, 0, 0, 0.1); }
-    .split.button.secondary span {
-      border-left-color: rgba(255, 255, 255, 0.5); }
+  .split.button.secondary span:after {
+    border-color: #333333 transparent transparent transparent; }
   .split.button.radius span {
     -webkit-border-bottom-right-radius: 3px;
     -webkit-border-top-right-radius: 3px;
