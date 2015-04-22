@@ -3265,9 +3265,9 @@ label.error {
     border-right-color: transparent !important;
     top: -20px; }
   .joyride-tip-guide .joyride-nub.bottom {
+    border-color: #333333 !important;
     border-bottom-color: transparent !important;
     border-bottom-style: solid;
-    border-color: #333333 !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     bottom: -20px; }
@@ -3351,8 +3351,8 @@ label.error {
     width: 300px;
     left: inherit; }
     .joyride-tip-guide .joyride-nub.bottom {
-      border-bottom-color: transparent !important;
       border-color: #333333 !important;
+      border-bottom-color: transparent !important;
       border-left-color: transparent !important;
       border-right-color: transparent !important;
       bottom: -20px; }
@@ -3365,8 +3365,8 @@ label.error {
       right: -20px;
       top: 22px; }
     .joyride-tip-guide .joyride-nub.left {
-      border-bottom-color: transparent !important;
       border-color: #333333 !important;
+      border-bottom-color: transparent !important;
       border-left-color: transparent !important;
       border-top-color: transparent !important;
       left: -20px;
