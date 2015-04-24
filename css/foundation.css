@@ -6292,5 +6292,8 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+@media not print {
+  .show-for-print {
+    display: none !important; } }
 
 /*# sourceMappingURL=foundation.css.map */
