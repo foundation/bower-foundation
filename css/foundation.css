@@ -5041,13 +5041,6 @@ meta.foundation-mq-topbar {
     clip: initial; }
   .top-bar.expanded .top-bar-section .has-dropdown:not(.moved) > ul {
     padding: 0; } }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .top-bar.expanded .top-bar-section .has-dropdown.moved > .dropdown {
-    clip: initial; }
-  .top-bar.expanded .top-bar-section .dropdown {
-    clip: initial; }
-  .top-bar.expanded .top-bar-section .has-dropdown:not(.moved) > ul {
-    padding: 0; } }
 .text-left {
   text-align: left !important; }
 
