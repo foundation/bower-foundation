@@ -1884,7 +1884,7 @@
           var settings = S(this).data(self.attr_name(true) + '-init') || self.settings;
           if (!settings.is_hover || Modernizr.touch) {
             e.preventDefault();
-            if (S(this).parent('[data-reveal-id]')) {
+            if (S(this).parent('[data-reveal-id]').length) {
               e.stopPropagation();
             }
             self.toggle($(this));
@@ -2324,7 +2324,8 @@
       use_tallest : true,
       before_height_change : $.noop,
       after_height_change : $.noop,
-      equalize_on_stack : false
+      equalize_on_stack : false,
+      act_on_hidden_el: false
     },
 
     init : function (scope, method, options) {
@@ -2342,10 +2343,17 @@
     equalize : function (equalizer) {
       var isStacked = false,
           group = equalizer.data('equalizer'),
-          vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible'),
           settings = equalizer.data(this.attr_name(true)+'-init') || this.settings,
+          vals,
           firstTopOffset;
 
+      if (settings.act_on_hidden_el) {
+        vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]') : equalizer.find('['+this.attr_name()+'-watch]');
+      }
+      else {
+        vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible');
+      }
+      
       if (vals.length === 0) {
         return;
       }
