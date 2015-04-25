@@ -4637,6 +4637,12 @@ meta.foundation-mq-topbar {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span::after {
         box-shadow: 0 0 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888; }
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      .top-bar.expanded .top-bar-section .has-dropdown.moved > .dropdown,
+      .top-bar.expanded .top-bar-section .dropdown {
+        clip: initial; }
+      .top-bar.expanded .top-bar-section .has-dropdown:not(.moved) > ul {
+        padding: 0; } }
 
 .top-bar-section {
   left: 0;
@@ -4772,8 +4778,8 @@ meta.foundation-mq-topbar {
           color: #FFFFFF; }
     .top-bar-section ul li:hover:not(.has-form) > a {
       background-color: #555555;
-      background: #222222;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      background: #222222; }
     .top-bar-section ul li.active > a {
       background: #008CBA;
       color: #FFFFFF; }
@@ -4800,27 +4806,27 @@ meta.foundation-mq-topbar {
     .top-bar-section .has-dropdown.moved {
       position: static; }
       .top-bar-section .has-dropdown.moved > .dropdown {
-        display: block;
         position: static !important;
         height: auto;
         width: auto;
         overflow: visible;
         clip: auto;
+        display: block;
         position: absolute !important;
         width: 100%; }
       .top-bar-section .has-dropdown.moved > a:after {
         display: none; }
   .top-bar-section .dropdown {
-    padding: 0;
-    position: absolute;
-    top: 0;
-    z-index: 99;
-    display: block;
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
     position: absolute !important;
     width: 1px;
+    display: block;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 99;
     left: 100%; }
     .top-bar-section .dropdown li {
       height: auto;
@@ -4841,7 +4847,8 @@ meta.foundation-mq-topbar {
             background: none; }
       .top-bar-section .dropdown li.has-form {
         padding: 8px 0.9375rem; }
-      .top-bar-section .dropdown li .button, .top-bar-section .dropdown li button {
+      .top-bar-section .dropdown li .button,
+      .top-bar-section .dropdown li button {
         top: auto; }
     .top-bar-section .dropdown label {
       color: #777777;
@@ -4935,27 +4942,27 @@ meta.foundation-mq-topbar {
     .top-bar-section .has-dropdown.moved {
       position: relative; }
       .top-bar-section .has-dropdown.moved > .dropdown {
-        display: block;
         clip: rect(1px, 1px, 1px, 1px);
         height: 1px;
         overflow: hidden;
         position: absolute !important;
-        width: 1px; }
+        width: 1px;
+        display: block; }
     .top-bar-section .has-dropdown.hover > .dropdown, .top-bar-section .has-dropdown.not-click:hover > .dropdown {
-      display: block;
       position: static !important;
       height: auto;
       width: auto;
       overflow: visible;
       clip: auto;
+      display: block;
       position: absolute !important; }
     .top-bar-section .has-dropdown > a:focus + .dropdown {
-      display: block;
       position: static !important;
       height: auto;
       width: auto;
       overflow: visible;
       clip: auto;
+      display: block;
       position: absolute !important; }
     .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
       border: none;
@@ -5019,28 +5026,21 @@ meta.foundation-mq-topbar {
     background: #008CBA;
     color: #FFFFFF; }
   .no-js .top-bar-section .has-dropdown:hover > .dropdown {
-    display: block;
     position: static !important;
     height: auto;
     width: auto;
     overflow: visible;
     clip: auto;
+    display: block;
     position: absolute !important; }
   .no-js .top-bar-section .has-dropdown > a:focus + .dropdown {
-    display: block;
     position: static !important;
     height: auto;
     width: auto;
     overflow: visible;
     clip: auto;
+    display: block;
     position: absolute !important; } }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .top-bar.expanded .top-bar-section .has-dropdown.moved > .dropdown {
-    clip: initial; }
-  .top-bar.expanded .top-bar-section .dropdown {
-    clip: initial; }
-  .top-bar.expanded .top-bar-section .has-dropdown:not(.moved) > ul {
-    padding: 0; } }
 .text-left {
   text-align: left !important; }
 
