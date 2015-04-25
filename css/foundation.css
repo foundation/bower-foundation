@@ -165,10 +165,17 @@ select {
   width: 100%;
   float: left; }
 
-[class*="column"] + [class*="column"]:last-child {
+.column + .column:last-child,
+.columns + .column:last-child, .column +
+.columns:last-child,
+.columns +
+.columns:last-child {
   float: right; }
-
-[class*="column"] + [class*="column"].end {
+.column + .column.end,
+.columns + .column.end, .column +
+.columns.end,
+.columns +
+.columns.end {
   float: left; }
 
 @media only screen {
