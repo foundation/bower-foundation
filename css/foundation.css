@@ -4076,20 +4076,20 @@ ul.pagination {
   position: relative;
   padding-right: 5.0625rem; }
   .split.button span {
-    border-left: solid 1px;
     display: block;
     height: 100%;
     position: absolute;
+    right: 0;
     top: 0;
-    right: 0; }
+    border-left: solid 1px; }
     .split.button span:after {
-      border-style: inset;
-      content: "";
-      display: block;
-      height: 0;
       position: absolute;
-      top: 50%;
+      content: "";
       width: 0;
+      height: 0;
+      display: block;
+      border-style: inset;
+      top: 50%;
       left: 50%; }
     .split.button span:active {
       background-color: rgba(0, 0, 0, 0.1); }
@@ -4105,13 +4105,13 @@ ul.pagination {
   .split.button span:after {
     border-color: #FFFFFF transparent transparent transparent; }
   .split.button.secondary span {
-    border-left-color: #e7e7e7; }
+    border-left-color: rgba(255, 255, 255, 0.5); }
   .split.button.secondary span:after {
     border-color: #FFFFFF transparent transparent transparent; }
   .split.button.alert span {
-    border-left-color: #f04124; }
+    border-left-color: rgba(255, 255, 255, 0.5); }
   .split.button.success span {
-    border-left-color: #43AC6A; }
+    border-left-color: rgba(255, 255, 255, 0.5); }
   .split.button.tiny {
     padding-right: 3.75rem; }
     .split.button.tiny span {
