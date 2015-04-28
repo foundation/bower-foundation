@@ -3537,24 +3537,24 @@ kbd {
       font-weight: 700;
       padding: 0.3125rem; }
   .orbit-container .orbit-timer {
-    height: 6px;
     position: absolute;
     top: 12px;
+    right: 10px;
+    height: 6px;
     width: 100px;
-    z-index: 10;
-    right: 10px; }
+    z-index: 10; }
     .orbit-container .orbit-timer .orbit-progress {
+      height: 3px;
       background-color: rgba(255, 255, 255, 0.3);
       display: block;
-      height: 3px;
+      width: 0;
       position: relative;
       right: 20px;
-      top: 5px;
-      width: 0; }
+      top: 5px; }
     .orbit-container .orbit-timer > span {
+      border: solid 4px #FFFFFF;
       border-bottom: none;
       border-top: none;
-      border: solid 4px #FFFFFF;
       display: none;
       height: 14px;
       position: absolute;
@@ -3562,13 +3562,13 @@ kbd {
       width: 11px;
       right: 0; }
     .orbit-container .orbit-timer.paused > span {
-      border-color: transparent;
-      border-left-color: #FFFFFF;
-      border-left-style: solid;
-      border: inset 8px;
-      height: 14px;
       top: 0;
       width: 11px;
+      height: 14px;
+      border: inset 8px;
+      border-left-style: solid;
+      border-color: transparent;
+      border-left-color: #FFFFFF;
       right: -4px; }
       .orbit-container .orbit-timer.paused > span.dark {
         border-left-color: #333333; }
