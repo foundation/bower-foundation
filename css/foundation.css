@@ -5164,7 +5164,7 @@ meta.foundation-mq-topbar {
 
   .xlarge-text-justify {
     text-align: justify !important; } }
-@media only screen and (min-width: 120.0625em) and (max-width: 99999999em) {
+@media only screen and (min-width: 120.0625em) and (max-width: 6249999.9375em) {
   .xxlarge-only-text-left {
     text-align: left !important; }
 
