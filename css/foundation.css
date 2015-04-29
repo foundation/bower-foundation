@@ -4982,9 +4982,7 @@ meta.foundation-mq-topbar {
     .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
       border: none;
       content: "\00bb";
-      line-height: 1.2;
-      margin-top: -1px;
-      top: 1rem;
+      top: 0.1875rem;
       right: 5px; }
     .top-bar-section .dropdown {
       left: 0;
