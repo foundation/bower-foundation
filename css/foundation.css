@@ -4686,7 +4686,7 @@ meta.foundation-mq-topbar {
       font-size: 0.8125rem;
       font-weight: normal;
       padding-left: 0.9375rem;
-      padding: 12px 0 12px 0;
+      padding: 12px 0 12px 0.9375rem;
       text-transform: none;
       width: 100%; }
       .top-bar-section ul li > a.button {
