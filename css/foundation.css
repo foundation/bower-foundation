@@ -2850,6 +2850,20 @@ textarea[rows] {
 textarea {
   max-width: 100%; }
 
+::-webkit-input-placeholder {
+  color: #cccccc; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #cccccc; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #cccccc; }
+
+:-ms-input-placeholder {
+  color: #cccccc; }
+
 /* Add height value for select elements to match text input height */
 select {
   -webkit-appearance: none !important;
