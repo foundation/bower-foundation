@@ -4718,7 +4718,7 @@
       settings = settings || this.settings;
 
 
-      if (modal.hasClass('open') && target.attr('data-reveal-id') == modal.attr('id')) {
+      if (modal.hasClass('open') && target !== undefined && target.attr('data-reveal-id') == modal.attr('id')) {
         return self.close(modal);
       }
 
