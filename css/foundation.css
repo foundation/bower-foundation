@@ -2848,18 +2848,18 @@ textarea {
   max-width: 100%; }
 
 ::-webkit-input-placeholder {
-  color: #cccccc; }
+  color: #666666; }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #cccccc; }
+  color: #666666; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #cccccc; }
+  color: #666666; }
 
 :-ms-input-placeholder {
-  color: #cccccc; }
+  color: #666666; }
 
 /* Add height value for select elements to match text input height */
 select {
