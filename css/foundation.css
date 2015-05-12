@@ -2684,7 +2684,12 @@ label {
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
 .postfix.button {
-  border-color: true; }
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  text-align: center; }
 
 .prefix.button {
   border: none;
