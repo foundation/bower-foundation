@@ -4920,6 +4920,10 @@ meta.foundation-mq-topbar {
       height: 1.75rem;
       position: relative;
       top: 0.53125rem; }
+    .top-bar .has-form > .button,
+    .top-bar .has-form > button {
+      padding-top: 0.3125rem;
+      top: 0.4375rem; }
     .top-bar.expanded {
       background: #333333; }
 
