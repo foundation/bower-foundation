@@ -3713,7 +3713,8 @@ ul.pagination {
       background: #e6e6e6; }
     ul.pagination li.unavailable a, ul.pagination li.unavailable button {
       cursor: default;
-      color: #999999; }
+      color: #999999;
+      pointer-events: none; }
     ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus, ul.pagination li.unavailable:hover button, ul.pagination li.unavailable button:focus {
       background: transparent; }
     ul.pagination li.current a, ul.pagination li.current button {
