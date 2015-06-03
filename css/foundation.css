@@ -1879,7 +1879,8 @@ button::-moz-focus-inner {
     @media only screen and (max-width: 40em) {
       .button-group.stack-for-small > li {
         display: block;
-        margin: 0; }
+        margin: 0;
+        width: 100%; }
         .button-group.stack-for-small > li > button, .button-group.stack-for-small > li .button {
           border-left: 1px solid;
           border-color: rgba(255, 255, 255, 0.5); }
