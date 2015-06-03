@@ -1879,8 +1879,7 @@ button::-moz-focus-inner {
     @media only screen and (max-width: 40em) {
       .button-group.stack-for-small > li {
         display: block;
-        margin: 0;
-        width: 100%; }
+        margin: 0; }
         .button-group.stack-for-small > li > button, .button-group.stack-for-small > li .button {
           border-left: 1px solid;
           border-color: rgba(255, 255, 255, 0.5); }
@@ -3714,8 +3713,7 @@ ul.pagination {
       background: #e6e6e6; }
     ul.pagination li.unavailable a, ul.pagination li.unavailable button {
       cursor: default;
-      color: #999999;
-      pointer-events: none; }
+      color: #999999; }
     ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus, ul.pagination li.unavailable:hover button, ul.pagination li.unavailable button:focus {
       background: transparent; }
     ul.pagination li.current a, ul.pagination li.current button {
