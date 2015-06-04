@@ -1879,7 +1879,8 @@ button::-moz-focus-inner {
     @media only screen and (max-width: 40em) {
       .button-group.stack-for-small > li {
         display: block;
-        margin: 0; }
+        margin: 0;
+        width: 100%; }
         .button-group.stack-for-small > li > button, .button-group.stack-for-small > li .button {
           border-left: 1px solid;
           border-color: rgba(255, 255, 255, 0.5); }
@@ -3229,9 +3230,10 @@ label.error {
 
 .inline-list {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 1.0625rem;
   margin-left: -1.375rem;
   margin-right: 0;
-  margin: 0 auto 1.0625rem auto;
   overflow: hidden;
   padding: 0; }
   .inline-list > li {
@@ -3713,7 +3715,8 @@ ul.pagination {
       background: #e6e6e6; }
     ul.pagination li.unavailable a, ul.pagination li.unavailable button {
       cursor: default;
-      color: #999999; }
+      color: #999999;
+      pointer-events: none; }
     ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus, ul.pagination li.unavailable:hover button, ul.pagination li.unavailable button:focus {
       background: transparent; }
     ul.pagination li.current a, ul.pagination li.current button {
