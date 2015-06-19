@@ -3840,19 +3840,45 @@ ul.pagination {
   .progress .meter {
     background: #008CBA;
     display: block;
-    height: 100%; }
+    height: 100%;
+    float: left;
+    width: 0%; }
+    .progress .meter.secondary {
+      background: #e7e7e7;
+      display: block;
+      height: 100%;
+      float: left;
+      width: 0%; }
+    .progress .meter.success {
+      background: #43AC6A;
+      display: block;
+      height: 100%;
+      float: left;
+      width: 0%; }
+    .progress .meter.alert {
+      background: #f04124;
+      display: block;
+      height: 100%;
+      float: left;
+      width: 0%; }
   .progress.secondary .meter {
     background: #e7e7e7;
     display: block;
-    height: 100%; }
+    height: 100%;
+    float: left;
+    width: 0%; }
   .progress.success .meter {
     background: #43AC6A;
     display: block;
-    height: 100%; }
+    height: 100%;
+    float: left;
+    width: 0%; }
   .progress.alert .meter {
     background: #f04124;
     display: block;
-    height: 100%; }
+    height: 100%;
+    float: left;
+    width: 0%; }
   .progress.radius {
     border-radius: 3px; }
     .progress.radius .meter {
