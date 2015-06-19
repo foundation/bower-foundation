@@ -2514,8 +2514,6 @@ button::-moz-focus-inner {
     margin: 0; }
     .f-dropdown li:hover, .f-dropdown li:focus {
       background: #EEEEEE; }
-    .f-dropdown li.radius {
-      border-radius: 3px; }
     .f-dropdown li a {
       display: block;
       padding: 0.5rem;
@@ -2541,6 +2539,8 @@ button::-moz-focus-inner {
       margin-top: 0; }
     .f-dropdown.content > *:last-child {
       margin-bottom: 0; }
+  .f-dropdown.radius {
+    border-radius: 3px; }
   .f-dropdown.tiny {
     max-width: 200px; }
   .f-dropdown.small {
