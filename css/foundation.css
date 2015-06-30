@@ -5369,13 +5369,6 @@ dl {
 
 ul {
   margin-left: 1.1rem; }
-  ul.no-bullet {
-    margin-left: 0; }
-    ul.no-bullet li ul,
-    ul.no-bullet li ol {
-      margin-left: 1.25rem;
-      margin-bottom: 0;
-      list-style: none; }
 
 /* Unordered Lists */
 ul li ul,
@@ -5393,8 +5386,6 @@ ul.circle {
 ul.disc {
   list-style-type: disc;
   margin-left: 1.1rem; }
-ul.no-bullet {
-  list-style: none; }
 
 /* Ordered Lists */
 ol {
@@ -5403,6 +5394,15 @@ ol {
   ol li ol {
     margin-left: 1.25rem;
     margin-bottom: 0; }
+
+.no-bullet {
+  list-style-type: none;
+  margin-left: 0; }
+  .no-bullet li ul,
+  .no-bullet li ol {
+    margin-left: 1.25rem;
+    margin-bottom: 0;
+    list-style: none; }
 
 /* Definition Lists */
 dl dt {
