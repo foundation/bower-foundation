@@ -1657,8 +1657,12 @@ button, .button {
     padding: 0.625rem 1.25rem 0.6875rem 1.25rem;
     font-size: 0.6875rem; }
   button.expand, .button.expand {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 1rem 2rem 1.0625rem 2rem;
+    font-size: 1rem;
+    padding-bottom: 1.0625rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 100%; }
   button.left-align, .button.left-align {
     text-align: left;
