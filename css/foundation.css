@@ -2932,8 +2932,8 @@ fieldset {
   fieldset legend {
     background: #FFFFFF;
     font-weight: bold;
-    margin-left: -0.1875rem;
     margin: 0;
+    margin-left: -0.1875rem;
     padding: 0 0.1875rem; }
 
 /* Error Handling */
