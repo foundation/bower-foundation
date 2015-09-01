@@ -2743,6 +2743,7 @@ span.prefix, label.prefix {
 
 span.postfix, label.postfix {
   background: #f2f2f2;
+  border-left: none;
   color: #333333;
   border-color: #cccccc; }
 
