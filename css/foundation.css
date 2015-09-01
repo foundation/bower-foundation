@@ -2897,7 +2897,7 @@ select {
     display: none; }
   select.radius {
     border-radius: 3px; }
-  select:hover {
+  select:focus {
     background-color: #f3f3f3;
     border-color: #999999; }
   select:disabled {
