@@ -3265,7 +3265,7 @@ label.error {
   position: absolute;
   top: 0;
   width: 95%;
-  z-index: 101;
+  z-index: 103;
   left: 2.5%; }
 
 .lt-ie9 .joyride-tip-guide {
