@@ -4532,8 +4532,8 @@ table {
   z-index: 1006;
   left: 50%; }
   .tooltip > .nub {
-    border-color: transparent transparent #333333 transparent;
     border: solid 5px;
+    border-color: transparent transparent #333333 transparent;
     display: block;
     height: 0;
     pointer-events: none;
