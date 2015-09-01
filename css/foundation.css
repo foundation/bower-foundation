@@ -3378,7 +3378,7 @@ label.error {
   z-index: 9999; }
 
 /* Styles for screens that are at least 768px; */
-@media only screen and (min-width: 40.0625em) {
+@media only screen {
   .joyride-tip-guide {
     width: 300px;
     left: inherit; }
@@ -4560,7 +4560,7 @@ table {
   font-size: 0.625rem;
   font-weight: normal; }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen {
   .tooltip > .nub {
     border-color: transparent transparent #333333 transparent;
     top: -10px; }
