@@ -1145,7 +1145,8 @@ select {
     right: 91.66667%;
     left: auto; } }
 .accordion {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-left: 0; }
   .accordion:before, .accordion:after {
     content: " ";
     display: table; }
