@@ -5006,8 +5006,9 @@
           }, settings.animation_speed / 2);
         }
 
+        css.top = $(window).scrollTop() + el.data('css-top') + 'px';
+
         if (animData.fade) {
-          css.top = $(window).scrollTop() + el.data('css-top') + 'px';
           var end_css = {opacity: 1};
 
           return setTimeout(function () {
