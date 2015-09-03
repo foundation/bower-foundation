@@ -742,11 +742,12 @@
     settings : {
       live_validate : true, // validate the form as you go
       validate_on_blur : true, // validate whenever you focus/blur on an input field
-      // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events) 
+      // validate_on: 'tab', // tab (when user tabs between fields), change (input changes), manual (call custom events)
+
       focus_on_invalid : true, // automatically bring the focus to an invalid input field
-      error_labels : true, // labels with a for="inputId" will recieve an `error` class
-      error_class : 'error', // labels with a for="inputId" will recieve an `error` class
-      // the amount of time Abide will take before it validates the form (in ms). 
+      error_labels : true, // labels with a for="inputId" will receive an `error` class
+      error_class : 'error', // labels with a for="inputId" will receive an `error` class
+      // the amount of time Abide will take before it validates the form (in ms).
       // smaller time will result in faster validation
       timeout : 1000,
       patterns : {
@@ -812,7 +813,6 @@
         }.bind(originalSelf), settings.timeout);
       }
 
-
       form
         .off('.abide')
         .on('submit.fndtn.abide', function (e) {
@@ -825,15 +825,21 @@
           }
         })
         .on('reset', function (e) {
-          return self.reset($(this), e);          
+          return self.reset($(this), e);
         })
         .find('input, textarea, select').not(":hidden, [data-abide-ignore]")
           .off('.abide')
           .on('blur.fndtn.abide change.fndtn.abide', function (e) {
+              var id = this.getAttribute('id'),
+                  eqTo = form.find('[data-equalto="'+ id +'"]');
             // old settings fallback
             // will be deprecated with F6 release
             if (settings.validate_on_blur && settings.validate_on_blur === true) {
               validate(this, e);
+            }
+            // checks if there is an equalTo equivalent related by id
+            if(typeof eqTo.get(0) !== "undefined" && eqTo.val().length){
+              validate(eqTo.get(0),e);
             }
             // new settings combining validate options into one setting
             if (settings.validate_on === 'change') {
@@ -841,10 +847,16 @@
             }
           })
           .on('keydown.fndtn.abide', function (e) {
+            var id = this.getAttribute('id'),
+                eqTo = form.find('[data-equalto="'+ id +'"]');
             // old settings fallback
             // will be deprecated with F6 release
             if (settings.live_validate && settings.live_validate === true && e.which != 9) {
               validate(this, e);
+            }
+            // checks if there is an equalTo equivalent related by id
+            if(typeof eqTo.get(0) !== "undefined" && eqTo.val().length){
+              validate(eqTo.get(0),e);
             }
             // new settings combining validate options into one setting
             if (settings.validate_on === 'tab' && e.which === 9) {
@@ -859,7 +871,7 @@
               $('html, body').animate({
                   scrollTop: $(e.target).offset().top
               }, 100);
-            } 
+            }
           });
     },
 
@@ -1061,20 +1073,20 @@
           disabled = false;
 
       // Has to count up to make sure the focus gets applied to the top error
-        for (var i=0; i < count; i++) {
-            if( group[i].getAttribute('disabled') ){
-                disabled=true;
-                valid=true;
-            } else {
-                if (group[i].checked){
-                    valid = true;
-                } else {
-                    if( disabled ){
-                        valid = false;
-                    }
-                }
+      for (var i=0; i < count; i++) {
+        if( group[i].getAttribute('disabled') ){
+          disabled=true;
+          valid=true;
+        } else {
+          if (group[i].checked){
+            valid = true;
+          } else {
+            if( disabled ){
+              valid = false;
             }
+          }
         }
+      }
 
       // Has to count up to make sure the focus gets applied to the top error
       for (var i = 0; i < count; i++) {
@@ -1306,7 +1318,7 @@
 
       touch_label : '',
 
-      // event initializers and locks
+      // event initializer and locks
       init : false,
       locked : false
     },
@@ -3300,67 +3312,67 @@
       }
 
       if (!/body/i.test(this.settings.$target.selector)) {
-          var topAdjustment = this.settings.tip_settings.tipAdjustmentY ? parseInt(this.settings.tip_settings.tipAdjustmentY) : 0,
-              leftAdjustment = this.settings.tip_settings.tipAdjustmentX ? parseInt(this.settings.tip_settings.tipAdjustmentX) : 0;
+        var topAdjustment = this.settings.tip_settings.tipAdjustmentY ? parseInt(this.settings.tip_settings.tipAdjustmentY) : 0,
+            leftAdjustment = this.settings.tip_settings.tipAdjustmentX ? parseInt(this.settings.tip_settings.tipAdjustmentX) : 0;
 
-          if (this.bottom()) {
-            if (this.rtl) {
-              this.settings.$next_tip.css({
-                top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
-                left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth() + leftAdjustment});
-            } else {
-              this.settings.$next_tip.css({
-                top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
-                left : this.settings.$target.offset().left + leftAdjustment});
-            }
-
-            this.nub_position($nub, this.settings.tip_settings.nub_position, 'top');
-
-          } else if (this.top()) {
-            if (this.rtl) {
-              this.settings.$next_tip.css({
-                top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
-                left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth()});
-            } else {
-              this.settings.$next_tip.css({
-                top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
-                left : this.settings.$target.offset().left + leftAdjustment});
-            }
-
-            this.nub_position($nub, this.settings.tip_settings.nub_position, 'bottom');
-
-          } else if (this.right()) {
-
+        if (this.bottom()) {
+          if (this.rtl) {
             this.settings.$next_tip.css({
-              top : this.settings.$target.offset().top + topAdjustment,
-              left : (this.settings.$target.outerWidth() + this.settings.$target.offset().left + nub_width + leftAdjustment)});
-
-            this.nub_position($nub, this.settings.tip_settings.nub_position, 'left');
-
-          } else if (this.left()) {
-
+              top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
+              left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth() + leftAdjustment});
+          } else {
             this.settings.$next_tip.css({
-              top : this.settings.$target.offset().top + topAdjustment,
-              left : (this.settings.$target.offset().left - this.settings.$next_tip.outerWidth() - nub_width + leftAdjustment)});
-
-            this.nub_position($nub, this.settings.tip_settings.nub_position, 'right');
-
+              top : (this.settings.$target.offset().top + nub_height + this.settings.$target.outerHeight() + topAdjustment),
+              left : this.settings.$target.offset().left + leftAdjustment});
           }
 
-          if (!this.visible(this.corners(this.settings.$next_tip)) && this.settings.attempts < this.settings.tip_settings.tip_location_pattern.length) {
+          this.nub_position($nub, this.settings.tip_settings.nub_position, 'top');
 
-            $nub.removeClass('bottom')
-              .removeClass('top')
-              .removeClass('right')
-              .removeClass('left');
-
-            this.settings.tip_settings.tip_location = this.settings.tip_settings.tip_location_pattern[this.settings.attempts];
-
-            this.settings.attempts++;
-
-            this.pos_default();
-
+        } else if (this.top()) {
+          if (this.rtl) {
+            this.settings.$next_tip.css({
+              top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
+              left : this.settings.$target.offset().left + this.settings.$target.outerWidth() - this.settings.$next_tip.outerWidth()});
+          } else {
+            this.settings.$next_tip.css({
+              top : (this.settings.$target.offset().top - this.settings.$next_tip.outerHeight() - nub_height + topAdjustment),
+              left : this.settings.$target.offset().left + leftAdjustment});
           }
+
+          this.nub_position($nub, this.settings.tip_settings.nub_position, 'bottom');
+
+        } else if (this.right()) {
+
+          this.settings.$next_tip.css({
+            top : this.settings.$target.offset().top + topAdjustment,
+            left : (this.settings.$target.outerWidth() + this.settings.$target.offset().left + nub_width + leftAdjustment)});
+
+          this.nub_position($nub, this.settings.tip_settings.nub_position, 'left');
+
+        } else if (this.left()) {
+
+          this.settings.$next_tip.css({
+            top : this.settings.$target.offset().top + topAdjustment,
+            left : (this.settings.$target.offset().left - this.settings.$next_tip.outerWidth() - nub_width + leftAdjustment)});
+
+          this.nub_position($nub, this.settings.tip_settings.nub_position, 'right');
+
+        }
+
+        if (!this.visible(this.corners(this.settings.$next_tip)) && this.settings.attempts < this.settings.tip_settings.tip_location_pattern.length) {
+
+          $nub.removeClass('bottom')
+            .removeClass('top')
+            .removeClass('right')
+            .removeClass('left');
+
+          this.settings.tip_settings.tip_location = this.settings.tip_settings.tip_location_pattern[this.settings.attempts];
+
+          this.settings.attempts++;
+
+          this.pos_default();
+
+        }
 
       } else if (this.settings.$li.length) {
 
@@ -5507,13 +5519,13 @@
           S = this.S;
 
       var usual_tab_behavior =  function (e, target) {
-          var settings = S(target).closest('[' + self.attr_name() + ']').data(self.attr_name(true) + '-init');
-          if (!settings.is_hover || Modernizr.touch) {
-            e.preventDefault();
-            e.stopPropagation();
-            self.toggle_active_tab(S(target).parent());
-          }
-        };
+        var settings = S(target).closest('[' + self.attr_name() + ']').data(self.attr_name(true) + '-init');
+        if (!settings.is_hover || Modernizr.touch) {
+          e.preventDefault();
+          e.stopPropagation();
+          self.toggle_active_tab(S(target).parent());
+        }
+      };
 
       S(this.scope)
         .off('.tab')
@@ -6223,17 +6235,17 @@
           self.toggle(this);
         })
         .on('click.fndtn.topbar contextmenu.fndtn.topbar', '.top-bar .top-bar-section li a[href^="#"],[' + this.attr_name() + '] .top-bar-section li a[href^="#"]', function (e) {
-            var li = $(this).closest('li'),
-                topbar = li.closest('[' + self.attr_name() + ']'),
-                settings = topbar.data(self.attr_name(true) + '-init');
+          var li = $(this).closest('li'),
+              topbar = li.closest('[' + self.attr_name() + ']'),
+              settings = topbar.data(self.attr_name(true) + '-init');
 
-            if (settings.dropdown_autoclose && settings.is_hover) {
-              var hoverLi = $(this).closest('.hover');
-              hoverLi.removeClass('hover');
-            }
-            if (self.breakpoint() && !li.hasClass('back') && !li.hasClass('has-dropdown')) {
-              self.toggle();
-            }
+          if (settings.dropdown_autoclose && settings.is_hover) {
+            var hoverLi = $(this).closest('.hover');
+            hoverLi.removeClass('hover');
+          }
+          if (self.breakpoint() && !li.hasClass('back') && !li.hasClass('has-dropdown')) {
+            self.toggle();
+          }
 
         })
         .on('click.fndtn.topbar', '[' + this.attr_name() + '] li.has-dropdown', function (e) {
