@@ -5236,7 +5236,7 @@
       start : 0,
       end : 100,
       step : 1,
-      precision : null,
+      precision : 2,
       initial : null,
       display_selector : '',
       vertical : false,
