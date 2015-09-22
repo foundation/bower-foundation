@@ -4019,11 +4019,14 @@ ul.pagination {
     .reveal-modal {
       top: 6.25rem; } }
   .reveal-modal.radius {
+    box-shadow: none;
     border-radius: 3px; }
   .reveal-modal.round {
+    box-shadow: none;
     border-radius: 1000px; }
   .reveal-modal.collapse {
-    padding: 0; }
+    padding: 0;
+    box-shadow: none; }
   @media only screen and (min-width: 40.0625em) {
     .reveal-modal.tiny {
       left: 0;
