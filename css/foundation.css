@@ -6583,33 +6583,5 @@ th.hide-for-touch {
 
   .show-for-print {
     display: inherit !important; } }
-/* Print visibility */
-@media print {
-  .show-for-print {
-    display: block; }
-
-  .hide-for-print {
-    display: none; }
-
-  table.show-for-print {
-    display: table !important; }
-
-  thead.show-for-print {
-    display: table-header-group !important; }
-
-  tbody.show-for-print {
-    display: table-row-group !important; }
-
-  tr.show-for-print {
-    display: table-row !important; }
-
-  td.show-for-print {
-    display: table-cell !important; }
-
-  th.show-for-print {
-    display: table-cell !important; } }
-@media not print {
-  .show-for-print {
-    display: none !important; } }
 
 /*# sourceMappingURL=foundation.css.map */
