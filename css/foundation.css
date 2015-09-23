@@ -4431,8 +4431,8 @@ table {
       .tabs dd > a:hover,
       .tabs .tab-title > a:hover {
         background-color: #e1e1e1; }
-    .tabs dd.active a,
-    .tabs .tab-title.active a {
+    .tabs dd.active > a,
+    .tabs .tab-title.active > a {
       background-color: #FFFFFF;
       color: #222222; }
   .tabs.radius dd:first-child a,
