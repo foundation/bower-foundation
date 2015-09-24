@@ -3679,6 +3679,10 @@
     },
 
     corners : function (el) {
+      if (el.length === 0) {
+         return [false, false, false, false];   
+      }
+      
       var w = $(window),
           window_half = w.height() / 2,
           //using this to calculate since scroll may not have finished yet.
@@ -3776,7 +3780,6 @@
       $('.joyride-close-tip, .joyride-next-tip, .joyride-modal-bg').off('.joyride');
       $('.joyride-tip-guide, .joyride-modal-bg').remove();
       clearTimeout(this.settings.automate);
-      this.settings = {};
     },
 
     reflow : function () {}
