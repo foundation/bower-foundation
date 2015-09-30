@@ -5541,7 +5541,7 @@ blockquote p {
     max-width: 100% !important; }
 
   @page {
-    margin: 0.5cm; }
+    margin: 0.34in; }
   p,
   h2,
   h3 {
@@ -6545,23 +6545,17 @@ th.hide-for-touch {
     clip: auto; }
 
 /* Print visibility */
-.print-only {
-  display: none !important; }
-
+.print-only,
 .show-for-print {
   display: none !important; }
 
 @media print {
-  .print-only {
-    display: block !important; }
-
+  .print-only,
   .show-for-print {
     display: block !important; }
 
+  .hide-on-print,
   .hide-for-print {
-    display: none !important; }
-
-  .hide-on-print {
     display: none !important; }
 
   table.show-for-print {
