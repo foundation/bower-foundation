@@ -4,7 +4,7 @@
   Foundation.libs.abide = {
     name : 'abide',
 
-    version : '5.5.3',
+    version : '5.5.2',
 
     settings : {
       live_validate : true, // validate the form as you go
