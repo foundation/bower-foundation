@@ -4083,6 +4083,9 @@ ul.pagination {
     line-height: 1;
     position: absolute;
     top: 0.625rem;
+    padding: 0;
+    background-color: transparent;
+    border: none;
     right: 1.375rem; }
 
 .side-nav {
