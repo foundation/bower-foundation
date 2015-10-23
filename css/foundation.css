@@ -1569,18 +1569,18 @@ select {
         color: #999999;
         cursor: not-allowed;
         text-decoration: none; }
-    .breadcrumbs > *:before {
+    .breadcrumbs > *:after {
       color: #AAAAAA;
       content: "/";
       margin: 0 0.75rem;
       position: relative;
       top: 1px; }
-    .breadcrumbs > *:first-child:before {
+    .breadcrumbs > *:last-child:after {
       content: " ";
       margin: 0; }
 
-/* Accessibility - hides the forward slash */
-[aria-label="breadcrumbs"] [aria-hidden="true"]:after {
+/* Accessibility - hides the backward slash */
+[aria-label="breadcrumbs"] [aria-hidden="true"]:before {
   content: "/"; }
 
 button, .button {
