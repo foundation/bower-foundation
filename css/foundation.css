@@ -4598,7 +4598,12 @@ table {
     left: -10px;
     margin-top: -5px;
     right: auto;
-    top: 50%; } }
+    top: 50%; }
+
+  .tooltip.tip-override > .nub {
+    border-color: transparent transparent #333333 transparent; }
+  .tooltip.tip-override.tip-left > .nub, .tooltip.tip-override.tip-right > .nub {
+    margin-top: 0; } }
 meta.foundation-mq-topbar {
   font-family: "/only screen and (min-width:40.0625em)/";
   width: 40.0625em; }
