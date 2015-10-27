@@ -4102,7 +4102,8 @@ ul.pagination {
     line-height: 1;
     position: absolute;
     top: 0.625rem;
-    right: 1.375rem; }
+    right: 1.375rem;
+    text-decoration: none; }
 
 .side-nav {
   display: block;
