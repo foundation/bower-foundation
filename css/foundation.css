@@ -2682,7 +2682,7 @@ label {
     text-align: right; }
   label.inline {
     margin: 0 0 1rem 0;
-    padding: 0.5625rem 0; }
+    line-height: 2.375rem; }
   label small {
     text-transform: capitalize;
     color: #676767; }
