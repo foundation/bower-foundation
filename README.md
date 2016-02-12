@@ -11,6 +11,7 @@ To get started, check out <http://foundation.zurb.com/docs>
 ## Quickstart
 
 **Looking for Foundation 6?**
+
 The Bower package for Foundation 6 in now stored in the [main repo](https://github.com/zurb/foundation-sites). You can install through Bower: `bower install foundation-sites`
 
 
